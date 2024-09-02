@@ -3,7 +3,7 @@ title: Flame Graphs - czy aby na pewno nie pali się na produkcji?
 tags: []
 id: '4281'
 categories:
-  - - Java
+  - java
 date: 2020-04-28 12:01:32
 ---
 
@@ -17,13 +17,15 @@ date: 2020-04-28 12:01:32
 
 [![](https://codecouple.pl/wp-content/uploads/2020/04/cpu-mysql-updated.svg)](https://codecouple.pl/wp-content/uploads/2020/04/cpu-mysql-updated.svg)
 
-Jest to sposób reprezentacji danych zaproponowany przez [Brendana Gregga](http://www.brendangregg.com/flamegraphs.html), który jest "gościem od performance" w firmie **Netflix**. Dzięki takiej reprezentacji unikniemy nadmiernej analizy danych, które w większości nie są danymi **najważniejszymi**.
+Jest to sposób reprezentacji danych zaproponowany przez [Brendana Gregga](http://www.brendangregg.com/flamegraphs.html), który jest "gościem od performance" w firmie **Netflix**. Dzięki takiej reprezentacji unikniemy nadmiernej analizy danych, które w większości nie są danymi **najważniejszymi**.
 
 ### Github
 
-Aby **wygenerować** wykres najlepiej **sklonować** repozytorium **Brendana** [https://github.com/brendangregg/FlameGraph](https://github.com/brendangregg/FlameGraph). W repozytorium tym znajduje się plik `flamegraph.pl`, którzy służy do **generowania** wykresu. Najczęściej wydajemy polecenie:
+Aby **wygenerować** wykres najlepiej **sklonować** repozytorium **Brendana** [https://github.com/brendangregg/FlameGraph](https://github.com/brendangregg/FlameGraph). W repozytorium tym znajduje się plik `flamegraph.pl`, którzy służy do **generowania** wykresu. Najczęściej wydajemy polecenie:
 
+```shell
 ./flamegraph.pl pilk-z-danymi.txt > plik-wynikowy.svg
+```
 
 Po uruchomieniu tego polecania wystarczy otworzyć wygenerowany **plik** na przykład w przeglądarce.
 
@@ -31,17 +33,23 @@ Po uruchomieniu tego polecania wystarczy otworzyć wygenerowany **plik** na przy
 
 Dane prezentowane na wykresie powinny być dostarczone w odpowiednim **formacie**:
 
+```shell
 funkcja-1();funckja-2() czas-CPU-spędzony-na-wykonywaniu-funkcji-2
+```
 
- Sprawdźmy to w praktyce dla **danych**:
+ Sprawdźmy to w praktyce dla **danych**:
 
+```shell
 a();b();c() 1
 a();b();d() 1
+```
 
 [![](https://codecouple.pl/wp-content/uploads/2020/04/file-1.svg)](https://codecouple.pl/wp-content/uploads/2020/04/file-1.svg)
 
+```shell
 a();b();c() 1
 a();b();d() 2
+```
 
 [![](https://codecouple.pl/wp-content/uploads/2020/04/file-2.svg)](https://codecouple.pl/wp-content/uploads/2020/04/file-2.svg)
 
@@ -55,7 +63,7 @@ Na wykresie znajdują się **dwie** osie:
 *   oś x (pozioma) - pokazuje nazwy procesów w kolejności **alfabetycznej**
 *   **kolory** - wbrew pozorom nie mają **znaczenia**
 
-Najważniejsze **procesy** to te, które znajdują się na samej górze. Są one tak zwanymi procesami **on-CPU**, czyli procesami, które tak naprawdę są wykonywane na **procesorze.** Procesy poniżej to te, które wywołały **proces** na górze (w dokumentacji spotkacie się z określeniem tych procesów jako przodkowie _ancestry_).
+Najważniejsze **procesy** to te, które znajdują się na samej górze. Są one tak zwanymi procesami **on-CPU**, czyli procesami, które tak naprawdę są wykonywane na **procesorze.** Procesy poniżej to te, które wywołały **proces** na górze (w dokumentacji spotkacie się z określeniem tych procesów jako przodkowie _ancestry_).
 
 ### Dane
 
@@ -66,17 +74,18 @@ W poprzednich **akapitach** przedstawiłem wam przykładowe **dane**. Jednakże 
 *   **jstack**
 *   **pprof**
 
-Każde z tych narzędzi generuje dane w innym formacie. Autor **Flame Graphs** dostarczył konwertery, które pozwalają zmienić format wyjściowy na format obsługiwany dla **Flame Graphs**. Na [https://github.com/brendangregg/FlameGraph](https://github.com/brendangregg/FlameGraph) znajdziecie wiele konwerterów:
+Każde z tych narzędzi generuje dane w innym formacie. Autor **Flame Graphs** dostarczył konwertery, które pozwalają zmienić format wyjściowy na format obsługiwany dla **Flame Graphs**. Na [https://github.com/brendangregg/FlameGraph](https://github.com/brendangregg/FlameGraph) znajdziecie wiele konwerterów:
 
-*   `stackcollapse.pl` - dla DTrace stacks
-*   `stackcollapse-perf.pl` - dla Linux'owego perf\_events "perf script" wyniku
-*   `stackcollapse-jstack.pl` - dla jstack
-*   `stackcollapse-go.pl` - dla GoLangowego pprof
+*   `stackcollapse.pl` - dla DTrace stacks
+*   `stackcollapse-perf.pl` - dla Linux'owego perf_events "perf script" wyniku
+*   `stackcollapse-jstack.pl` - dla jstack
+*   `stackcollapse-go.pl` - dla GoLangowego pprof
 
 ### Dodatkowe opcje
 
 Samo narzędzie ma sporo **dodatkowych** opcji:
 
+```shell
 USAGE: ./flamegraph.pl \[options\] infile > outfile.svg
 
   --title TEXT     # change title text
@@ -104,3 +113,4 @@ USAGE: ./flamegraph.pl \[options\] infile > outfile.svg
 
   eg,
   ./flamegraph.pl --title="Flame Graph: malloc()" trace.txt > graph.svg
+```
