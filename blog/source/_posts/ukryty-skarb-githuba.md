@@ -1,10 +1,11 @@
 ---
 title: Ukryty skarb GitHub'a
 tags:
-  - github git
+  - github
+  - git
 id: '4392'
 categories:
-  - - GIT
+  - GIT
 date: 2020-10-02 12:01:15
 ---
 
@@ -14,7 +15,7 @@ Jaki piękny, **clickbaitowy** tytuł udało mi się wymyślić tym razem. W nie
 <!-- more -->
 ### Moje konto na Github
 
-Bardzo często nasze konta na platformie **Github** traktowane są jako "wizytówka" **programisty**. Cytując klasyka "_talk is cheap, show me the cod_e" właśnie na **Githubie** możemy znaleźć kod napisany przez innych a tym samym podpatrzeć czy też ocenić inne rozwiązania. Co do ocen bardzo często profil na **Githubie** brany jest pod uwagę podczas rekrutacji, więc moim zdaniem warto w niego zainwestować. Zobaczmy jak wygląda aktualnie mój **profil**:
+Bardzo często nasze konta na platformie **Github** traktowane są jako "wizytówka" **programisty**. Cytując klasyka "talk is cheap, show me the code" właśnie na **Githubie** możemy znaleźć kod napisany przez innych a tym samym podpatrzeć czy też ocenić inne rozwiązania. Co do ocen bardzo często profil na **Githubie** brany jest pod uwagę podczas rekrutacji, więc moim zdaniem warto w niego zainwestować. Zobaczmy jak wygląda aktualnie mój **profil**:
 
 ![](https://codecouple.pl/wp-content/uploads/2020/09/github-without-profile-1024x418.png)
 
@@ -24,7 +25,7 @@ Wygląda w porządku, ale można by go troche "podrasować" umieszczając **wię
 
 Podczas tworzenia nowego **repozytorium** wystarczy jako nazwę podać nazwę naszego **konta**:
 
-\[caption id="attachment\_4394" align="aligncenter" width="730"\]![Github](https://codecouple.pl/wp-content/uploads/2020/09/Screen-Shot-2020-09-30-at-16.07.56-1024x622.png) Github\[/caption\]
+![Github](https://codecouple.pl/wp-content/uploads/2020/09/Screen-Shot-2020-09-30-at-16.07.56-1024x622.png)
 
 **Uwaga**! To repozytorium musi być **publiczne**. Następnie wystarczy umieścić plik **README.md** z interesującymi informacjami o nas.
 
