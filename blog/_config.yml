@@ -102,3 +102,10 @@ theme: codecouple_v1
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# Hexo-generator-feed
+feed:
+  type: rss2
+  path: feed.xml
+  limit: 20
+  order_by: -date
