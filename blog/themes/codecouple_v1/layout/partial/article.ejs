@@ -7,8 +7,12 @@
             <%= page.date %>
         </div>
     </header>
-    <%- post.excerpt %>
-    <br>
-    <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
-    <hr>
+    <% if(index) { %>
+        <%- post.excerpt %>
+        <br>
+        <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
+        <hr>
+    <% } else {%>
+        <%- post.content %>
+    <% } %>
 </article>
