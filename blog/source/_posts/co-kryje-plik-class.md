@@ -5,7 +5,7 @@ tags:
   - class
 id: '2931'
 categories:
-  - - Java
+  - Java
 date: 2018-06-15 12:01:35
 ---
 
@@ -15,18 +15,21 @@ Dziś zejdziemy poziom niżej w stosunku do kodu, z którym mamy styczność na 
 <!-- more -->
 ### HelloWorld
 
-Na samym początku napiszemy sobie nic innego, jak prostego enterprisowego **Hello World'a**:
+Na samym początku napiszemy sobie nic innego, jak prostego enterprisowego **Hello World'a**:
 
+```java
 public class Main {
 
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
         System.out.println("Hello World!");
     }
 
 }
+```
 
 Po skompilowaniu kodu, sprawdzamy [bytecode](http://codecouple.pl/2016/03/20/java-bytecode/) zawarty w pliku `.class`. Aby podejrzeć **bytecode** w postaci zjadliwej dla człowieka, a nie maszyny, możemy wykorzystać narzędzie `javap`, najlepiej z przełącznikiem `-v` (lub dłuższa wersja `-verbose`):
 
+```shell
 javap -v Main
 ...
  Last modified 2018-06-04; size 414 bytes
@@ -36,7 +39,7 @@ public class Main
  SourceFile: "Main.java"
  minor version: 0
  major version: 51
- flags: ACC\_PUBLIC, ACC\_SUPER 
+ flags: ACC_PUBLIC, ACC_SUPER 
 Constant pool:
  #1 = Methodref #6.#15 // java/lang/Object."<init>":()V
  #2 = Fieldref #16.#17 // java/lang/System.out:Ljava/io/PrintStream;
@@ -68,19 +71,19 @@ Constant pool:
  #28 = Utf8 (Ljava/lang/String;)V
 {
  public Main();
- flags: ACC\_PUBLIC 
+ flags: ACC_PUBLIC 
  Code:
- stack=1, locals=1, args\_size=1
- 0: aload\_0 
+ stack=1, locals=1, args_size=1
+ 0: aload_0 
  1: invokespecial #1 // Method java/lang/Object."<init>":()V
  4: return 
  LineNumberTable:
  line 1: 0
 
- public static void main(java.lang.String\[\]);
- flags: ACC\_PUBLIC, ACC\_STATIC 
+ public static void main(java.lang.String[]);
+ flags: ACC_PUBLIC, ACC_STATIC 
  Code:
- stack=2, locals=1, args\_size=1
+ stack=2, locals=1, args_size=1
  0: getstatic #2 // Field java/lang/System.out:Ljava/io/PrintStream;
  3: ldc #3 // String Hello World!
  5: invokevirtual #4 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
@@ -89,9 +92,11 @@ Constant pool:
  line 4: 0
  line 5: 8
 }
+```
 
-W pliku `.class` dane przechowywane są w formacie **HEX**. Możemy podejrzeć nasz plik korzystając z dowolnego edytor'a **HEX'ów** (polecam command linowy `xxd`):
+W pliku `.class` dane przechowywane są w formacie **HEX**. Możemy podejrzeć nasz plik korzystając z dowolnego edytor'a **HEX'ów** (polecam command linowy `xxd`):
 
+```shell
 00000000: cafe babe 0000 0033 001d 0a00 0600 0f09  .......3........
 00000010: 0010 0011 0800 120a 0013 0014 0700 1507  ................
 00000020: 0016 0100 063c 696e 6974 3e01 0003 2829  .....<init>...()
@@ -118,8 +123,9 @@ W pliku `.class` dane przechowywane są w formacie **HEX**. Możemy podejrzeć n
 00000170: 0200 0100 0000 09b2 0002 1203 b600 04b1  ................
 00000180: 0000 0001 000a 0000 000a 0002 0000 0004  ................
 00000190: 0008 0005 0001 000d 0000 0002 000e       ..............
+```
 
-No dobra, wiemy, że nasza metoda z **HelloWorld** zawarta jest w:
+No dobra, wiemy, że nasza metoda z **HelloWorld** zawarta jest w:
 
 …**b2** 0002 **12** 03 **b6** 0004 **b1** 0000…
 
@@ -136,7 +142,7 @@ Jeśli wrócimy do pliku w postaci **HEX**, widzimy, iż w tym pliku znajduje si
 
 ![](http://www.faeriewood.com/Images/Full_size/catceltic.png)
 
-Każda litera tego zdania ma znaczenie. Już wyjaśniam.
+Każda litera tego zdania ma znaczenie. Już wyjaśniam.
 
 P.S muszą być **koty**!
 
@@ -144,6 +150,7 @@ P.S muszą być **koty**!
 
 Zanim przejdziemy do wyjaśnień opowieści o kocie, należy zapoznać się ze strutkturą skompilowanej klasy:
 
+```shell
 ClassFile {
     u4             magic;
     u2             minor\_version;
@@ -162,18 +169,19 @@ ClassFile {
     u2             attributes\_count;
     attribute\_info attributes\[attributes\_count\];
 }
+```
 
 ### M - Magic Number
 
-**Magiczny numer**, wykorzystywany jest do jednoznacznego identyfikowania typu pliku. W przypadku plików `.class` jest to **HEX** o wartości **0xCAFEBABE**. Mimo, iż pierwsze skojarzenia prowadzą nas na "_Java, kawa więc pewnie dlatego CAFE BABE_", jednakże historia tego **magic number** jest trochę inna:
+**Magiczny numer**, wykorzystywany jest do jednoznacznego identyfikowania typu pliku. W przypadku plików `.class` jest to **HEX** o wartości **0xCAFEBABE**. Mimo, iż pierwsze skojarzenia prowadzą nas na "_Java, kawa więc pewnie dlatego CAFE BABE_", jednakże historia tego **magic number** jest trochę inna:
 
-> "We used to go to lunch at a place called St Michael's Alley. According to local legend, in the deep dark past, the [Grateful Dead](https://en.wikipedia.org/wiki/Grateful_Dead "Grateful Dead") used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When [Jerry](https://en.wikipedia.org/wiki/Jerry_Garcia "Jerry Garcia") died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming) "Magic number (programming)"): one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in [grepping](https://en.wikipedia.org/wiki/Grep "Grep") for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI.
+> "We used to go to lunch at a place called St Michael's Alley. According to local legend, in the deep dark past, the [Grateful Dead](https://en.wikipedia.org/wiki/Grateful_Dead "Grateful Dead") used to perform there before they made it big. It was a pretty funky place that was definitely a Grateful Dead Kinda Place. When [Jerry](https://en.wikipedia.org/wiki/Jerry_Garcia "Jerry Garcia") died, they even put up a little Buddhist-esque shrine. When we used to go there, we referred to the place as Cafe Dead. Somewhere along the line it was noticed that this was a HEX number. I was re-vamping some file format code and needed a couple of [magic numbers](https://en.wikipedia.org/wiki/Magic_number_(programming) "Magic number (programming)"): one for the persistent object file, and one for classes. I used CAFEDEAD for the object file format, and in [grepping](https://en.wikipedia.org/wiki/Grep "Grep") for 4 character hex words that fit after "CAFE" (it seemed to be a good theme) I hit on BABE and decided to use it. At that time, it didn't seem terribly important or destined to go anywhere but the trash-can of history. So CAFEBABE became the class file format, and CAFEDEAD was the persistent object format. But the persistent object facility went away, and along with it went the use of CAFEDEAD - it was eventually replaced by RMI.
 
 Jeśli wartość ta jest niepoprawna, **JVM** rzuca wyjątek typu `java.lang.ClassFormatError.`
 
 ### V - Version
 
-Kolejna wartość określa wersję w jakiej został wygenerowany plik. Jeśli **JVM** wykryje, iż wersja pliku `.class` jest niewspierana, dostaniemy wyjątek typu `java.lang.UnsupportedClassVersionError`. Tak prezentują się wartości wersji:
+Kolejna wartość określa wersję w jakiej został wygenerowany plik. Jeśli **JVM** wykryje, iż wersja pliku `.class` jest niewspierana, dostaniemy wyjątek typu `java.lang.UnsupportedClassVersionError`. Tak prezentują się wartości wersji:
 
 *   Java SE 10 = 54 (0x36 hex)
 *   Java SE 9 = 53 (0x35 hex)
@@ -184,12 +192,15 @@ Kolejna wartość określa wersję w jakiej został wygenerowany plik. Jeśli **
 
 W naszym HelloWorld (Java 7 here ;)):
 
+```
 00000000: cafe babe 0000 0033 001d 0a00 0600 0f09  .......3........
+```
 
 ### C - Constant Pool
 
 Pula ta przechowuje wszystkie informacje o stałych w klasie, między innymi nazwy pól czy metod:
 
+```shell
 Constant pool:
  #1 = Methodref #6.#15 // java/lang/Object."<init>":()V
  #2 = Fieldref #16.#17 // java/lang/System.out:Ljava/io/PrintStream;
@@ -219,14 +230,24 @@ Constant pool:
  #26 = Utf8 java/io/PrintStream
  #27 = Utf8 println
  #28 = Utf8 (Ljava/lang/String;)V
+```
 
-Informacje z tej puli ładowane są do obszaru pamięci zwanego **permament generation** (dokładniej do **metaspace**).
+Informacje z tej puli ładowane są do obszaru pamięci zwanego **permament generation** (dokładniej do **metaspace**).
 
 ### A - Access Flags
 
 W tej części znajdziemy informacje na temat flag dostępowych do klasy:
 
-\[table id=4 /\]
+| Nazwa flagi    | Wartość |
+|----------------|:-------:|
+| ACC_PUBLIC     | 0x0001  |
+| ACC_FINAL      | 0x0010  |
+| ACC_SUPER      | 0x0020  |
+| ACC_INTERFACE  | 0x0200  |
+| ACC_ABSTRACT   | 0x0400  |
+| ACC_SYNTHETIC  | 0x1000  |
+| ACC_ANNOTATION | 0x2000  |
+| ACC_ENUM       | 0x4000  |
 
 ### T - This Class
 
@@ -244,4 +265,4 @@ Tak jak wskazują nazwy, kolejne obszary zawierają informacje o interfejsach wy
 
 Wyobraźmy sobie skrajną sytuację, w której korzystamy z biblioteki X. Okazało się, iż w bibliotece X, ważna dla nas metoda jest typu **private** (a miała być **public** w wersji 1.1.1). Robisz zgłoszenie na **GitHub'ie**, okazuje się, że rzeczywiście jest błąd, jednakże nowa wersja będzie wydana dopiero za pół roku... Jedyne co możemy zrobić, to zmodyfikować plik `.class`. Nigdy nie mamy pewności, że ten błąd zostanie naprawiony za pół roku. Oczywiście, jest to sytuacja skrajna, ale czasem życie zmusza nas do takich rozwiązań.
 
-Ponadto na **off-heapie** w obszarze **metaspace** znajdują się dane z załadowanej przez **classloader** klasy. Informacje, które zostały załadowane (z pliku `.class`) i są wykorzystywane w aplikacji. Warto wiedzieć, gdzie przed załadowaniem takie informacje się znajdują. Warto mieć także świadomość, iż pliki `.class` nie są zbytnio bezpieczne, jeśli możemy bez problemu zmienić modyfikator dostępu ;).
+Ponadto na **off-heapie** w obszarze **metaspace** znajdują się dane z załadowanej przez **classloader** klasy. Informacje, które zostały załadowane (z pliku `.class`) i są wykorzystywane w aplikacji. Warto wiedzieć, gdzie przed załadowaniem takie informacje się znajdują. Warto mieć także świadomość, iż pliki `.class` nie są zbytnio bezpieczne, jeśli możemy bez problemu zmienić modyfikator dostępu ;).
