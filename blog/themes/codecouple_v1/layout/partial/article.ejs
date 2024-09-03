@@ -1,0 +1,14 @@
+<article class="article">
+    <header class="article-header">
+        <h1 class="article-header-title">
+            <a href="<%- post.path %>"><%- post.title %></a>
+        </h1>
+        <div class="article-header-meta">
+            <%= page.date %>
+        </div>
+    </header>
+    <%- post.excerpt %>
+    <br>
+    <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
+    <hr>
+</article>

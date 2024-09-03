@@ -1,6 +1,3 @@
-Index
 <% site.posts.forEach(function (post) { %>
-    <li>
-        <a href="<%- post.path %>"><%- post.title %></a>
-    </li>
+    <%- partial('partial/article', {post: post}) %>
 <% }) %>
