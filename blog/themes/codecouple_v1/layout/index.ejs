@@ -1,3 +1,3 @@
-<% site.posts.forEach(function (post) { %>
+<% site.posts.sort('date', -1).forEach(function (post) { %>
     <%- partial('partial/article', {post: post}) %>
 <% }) %>
