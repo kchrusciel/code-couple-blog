@@ -1,7 +1,11 @@
 <article class="article">
     <header class="article-header">
         <h1 class="article-header-title">
-            <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+            <% if(index) { %>
+                <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+            <% } else {%>
+                <%- post.title %>
+            <% } %>
         </h1>
         <div class="article-header-meta">
             <%= page.date %>
