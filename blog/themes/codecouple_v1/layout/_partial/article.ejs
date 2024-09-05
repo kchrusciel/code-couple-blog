@@ -11,12 +11,14 @@
             <%= page.date %>
         </div>
     </header>
-    <% if(index) { %>
-        <%- post.excerpt %>
-        <br>
-        <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
-        <hr>
-    <% } else {%>
-        <%- post.content %>
-    <% } %>
+    <div class="article-body">
+        <% if(index) { %>
+            <%- post.excerpt %>
+            <br>
+            <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
+            <hr>
+        <% } else {%>
+            <%- post.content %>
+        <% } %>
+    </div>
 </article>
