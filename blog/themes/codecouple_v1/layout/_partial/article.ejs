@@ -1,6 +1,6 @@
 <article class="article">
     <header class="article-header">
-        <h1 class="article-header-title">
+        <h1>
             <% if(index) { %>
                 <a href="<%- url_for(post.path) %>"><%- post.title %></a>
             <% } else {%>
@@ -8,7 +8,8 @@
             <% } %>
         </h1>
         <div class="article-header-meta">
-            <%= page.date %>
+            <%= post.author %>
+            <%= date(post.date, 'DD-MM-yyyy') %>
         </div>
     </header>
     <div class="article-body">
@@ -16,7 +17,6 @@
             <%- post.excerpt %>
             <br>
             <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
-            <hr>
         <% } else {%>
             <%- post.content %>
         <% } %>
