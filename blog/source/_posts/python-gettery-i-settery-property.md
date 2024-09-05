@@ -7,6 +7,7 @@ id: '417'
 categories:
   - - Python
 date: 2016-03-04 15:02:15
+author: 'Krzysztof Chruściel'
 ---
 
 **Gettry** i **settery** nazywane też **akcesorami**/**mutatorami,** wykorzystywane są odpowiednio do pobierania i ustawiania wartości atrybutu obiektu. Zapewniają one **enkapsulacje** danych. W **Pythonie** istnieje kilka przykładów, które na pierwszy rzut oka nie są trywialne. Przyjrzyjmy się im dokładniej.

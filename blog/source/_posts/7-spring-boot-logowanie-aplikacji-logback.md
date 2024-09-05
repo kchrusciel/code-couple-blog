@@ -7,6 +7,7 @@ id: '847'
 categories:
   - - Spring Boot
 date: 2016-09-13 12:25:52
+author: 'Krzysztof Chruściel'
 ---
 
 > Skąd brać informacje jak nie z logów aplikacji. W Spring Boot'cie dzięki temu, że wszystko jest automatyczne i łatwo konfigurowalne możemy dostosować logowanie do naszych potrzeb. Wykorzystamy do tego bardzo dobrze znany plik application.properties. Wpis ten dotyczy konfiguracji rozwiązania jakim jest `LogBack`.

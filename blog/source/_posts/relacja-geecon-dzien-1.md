@@ -7,6 +7,7 @@ id: '1749'
 categories:
   - - Konferencje
 date: 2017-05-28 22:08:08
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)W tym roku miałam przyjemność uczestniczyć w **GeeCONie** - konferencji skupiającej miłośników **Javy** i **JVM**. Odbyła się ona w Multikinie w **Krakowie** i trwała 3 dni (**17-19.05**). Zapraszam na relację z pierwszego dnia!

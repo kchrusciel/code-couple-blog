@@ -12,6 +12,7 @@ categories:
   - - Message Broker
   - - Spring Boot
 date: 2017-11-03 12:05:54
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)

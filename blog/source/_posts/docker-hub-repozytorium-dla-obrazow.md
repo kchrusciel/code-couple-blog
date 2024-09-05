@@ -9,6 +9,7 @@ categories:
   - - Cloud
   - - Docker
 date: 2017-12-01 12:22:28
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://www.docker.com/sites/default/files/Whale%20Logo332_5.png)

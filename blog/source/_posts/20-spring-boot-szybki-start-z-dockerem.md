@@ -9,6 +9,7 @@ categories:
   - - Docker
   - - Spring Boot
 date: 2017-10-13 12:15:52
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)

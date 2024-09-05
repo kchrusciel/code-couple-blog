@@ -8,6 +8,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2017-04-07 15:30:53
+author: 'Krzysztof Chruściel'
 ---
 
 [![springBootArt](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)Gdy potrzebujemy zrobić jakąś funkcjonalność opcjonalną lub nie chcemy hardkodować danych w aplikacji powinniśmy użyć własny plików **properties**. **Spring Boot** dostarcza bardzo sprytny mechanizm do obsługi nowy **properties** wraz z podpowiedziami.

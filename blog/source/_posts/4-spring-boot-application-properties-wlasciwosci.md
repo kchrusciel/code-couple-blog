@@ -9,6 +9,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2016-06-21 12:43:07
+author: 'Krzysztof Chruściel'
 ---
 
 Kolejny wpis o pliku właściwości. Chcę zamknąć temat, bo już trochę tych wpisów się zrobiło (tylko na temat **application.properties**). Jednakże z drugiej strony nie chciałem zrobić jednego dużego wpisu, bo moim zdaniem lepiej czyta się krótkie. No dobrze, więc o czym dziś? Tematem będą wbudowane **właściwości**.

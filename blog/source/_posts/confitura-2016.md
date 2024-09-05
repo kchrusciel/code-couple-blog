@@ -7,6 +7,7 @@ id: '616'
 categories:
   - - Java
 date: 2016-06-09 07:34:39
+author: 'Krzysztof Chruściel'
 ---
 
 Kolejny wpis o konferencji, no cóż taki okres. Choć bilety na pociąg kupiliśmy już jakiś czas temu, to nadal nie mieliśmy wykupionych cegiełek, które uprawniają nas do udziału w **Confiturze** 2016. Udało nam się je kupić po mimo, iż znikały one w przeciągu 30 sekund, także 2 lipca widzimy się na **Confiturze**!

@@ -9,6 +9,7 @@ categories:
   - - Java
   - - Streams
 date: 2016-02-15 08:00:14
+author: 'Krzysztof Chruściel'
 ---
 
 Bardzo fajnym dodatkiem w **Javie 8** są strumienie danych. Znajdują się one w pakiecie **java.util.stream**. Są one odpowiedzialne za przetwarzanie danych w postaci strumieni oraz za operacje na wielu elementach. Do reprezentowania kolekcji w trakcie przetwarzania służy nowy interfejs **Stream<T>**. Na strumieniach możemy wykonać szereg operacji, aby na końcu pobrać wynik (metoda agregująca) tych operacji bez zmiany stanu samego strumienia.

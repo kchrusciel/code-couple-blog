@@ -11,6 +11,7 @@ categories:
   - - Clean Code
   - - Python
 date: 2016-02-28 18:29:07
+author: 'Krzysztof Chruściel'
 ---
 
 Mam dla was kolejną dawkę JetBrains'owych **IDE**. Ten wpis będzie dotyczył **PyCharm'a**, który jest dedykowany dla **Pythona**. O IntelliJ IDEA możecie przeczytać w [artykule Krzyśka](http://codecouple.pl/2016/02/23/intellij-idea-poprawa-wydajnosci-pracy/). Przygotowałam dla Was krótki opis samego **IDE** oraz zestawienie ciekawych skrótów, które warto zapamiętać, żeby ułatwić sobie życie i przyspieszyć pisanie kodu.

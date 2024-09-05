@@ -9,6 +9,7 @@ categories:
   - - Java
   - - JVM
 date: 2016-03-09 07:00:06
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)

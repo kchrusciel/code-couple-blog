@@ -7,6 +7,7 @@ id: '3222'
 categories:
   - - Books
 date: 2018-10-05 12:01:33
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2018/10/projektFeniks.png)Kolejna IT **powieść** na moim koncie. Gdy po przeczytaniu [Trzy kluczowe cechy idealnego członka zespołu](http://codecouple.pl/2018/09/28/book-trzy-kluczowe-cechy-idealnego-czlonka-zespolu/) zastanawiałem się jaką następną lekturę wybrać natrafiłem na "_Projekt Feniks_". Ponieważ format opowiada bardzo mi się spodobał wybór ten stał się dla mnie oczywisty. Książka "_Projekt Feniks_" autorstwa **Gene Kim**, **Kevin'a Behr** oraz **George Spafford'a** jest opisem "pożarów" i sposobów ich gaszenia w firmie **Parts Unlimited**.

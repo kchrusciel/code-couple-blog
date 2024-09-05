@@ -8,6 +8,7 @@ categories:
   - - Clean Code
   - - Konferencje
 date: 2016-06-06 20:01:59
+author: 'Krzysztof Chruściel'
 ---
 
 **25 czerwca** odbędzie się konferencja związana z **jakością oprogramowania**. Organizowana jest ona przez firmę **Future Processing**, nie jestem w żaden sposób związany z tą firmą. Wpis traktuje jako wpis informacyjny i wszystkich chętnych zapraszam na tą konferencję.

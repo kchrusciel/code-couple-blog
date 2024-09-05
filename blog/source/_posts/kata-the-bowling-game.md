@@ -8,6 +8,7 @@ categories:
   - - Java
   - - Kata
 date: 2017-09-01 12:05:44
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)

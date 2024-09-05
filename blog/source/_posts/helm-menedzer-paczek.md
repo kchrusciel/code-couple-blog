@@ -9,6 +9,7 @@ id: '3788'
 categories:
   - - Cloud
 date: 2019-04-12 12:01:59
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2019/03/helm.png)

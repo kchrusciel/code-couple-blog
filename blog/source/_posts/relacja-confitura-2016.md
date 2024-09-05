@@ -6,6 +6,7 @@ id: '798'
 categories:
   - - Konferencje
 date: 2016-07-09 20:42:53
+author: 'Krzysztof Chruściel'
 ---
 
 W dniu 2 lipca odbyła się okrągła, 10-ta edycja konferencji Confitura 2016. Zapraszamy na relację z tego wydarzenia. ![Confitura](http://codecouple.pl/wp-content/uploads/2016/07/DSC_0373.jpg)

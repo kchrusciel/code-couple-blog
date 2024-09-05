@@ -10,6 +10,7 @@ categories:
   - - DB
   - - neo4j
 date: 2017-02-10 12:20:20
+author: 'Krzysztof Chruściel'
 ---
 
 ![neo4j_logo](http://codecouple.pl/wp-content/uploads/2017/02/neo4j_logo-facebook-300x156.png)

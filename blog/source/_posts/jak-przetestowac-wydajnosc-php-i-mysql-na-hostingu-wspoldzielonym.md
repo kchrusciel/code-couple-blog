@@ -10,6 +10,7 @@ id: '4427'
 categories:
   - - Testing
 date: 2021-05-30 13:18:37
+author: 'Krzysztof Chruściel'
 ---
 
 Test wydajności PHP i MySQL na hostingu to bardzo dobry pomysł. Dzięki niemu możesz określić, jaka jest prędkość i przepustowość serwera w zakresie przetwarzania zapytań do baz danych - a tym samym, jak poradzi sobie z aplikacją czy stroną internetową. Zobacz, jak szybko przeprowadzić taki test.

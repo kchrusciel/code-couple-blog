@@ -7,6 +7,7 @@ id: '3421'
 categories:
   - - Konferencje
 date: 2018-11-30 12:01:00
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2018/11/coreDump-White-Full.png)

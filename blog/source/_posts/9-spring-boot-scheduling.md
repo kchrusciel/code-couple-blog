@@ -11,6 +11,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2016-12-22 20:01:06
+author: 'Krzysztof Chruściel'
 ---
 
 ![schedulerpost](http://codecouple.pl/wp-content/uploads/2016/12/SchedulerPost.png)

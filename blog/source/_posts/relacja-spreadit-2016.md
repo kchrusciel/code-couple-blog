@@ -8,6 +8,7 @@ id: '1030'
 categories:
   - - Konferencje
 date: 2016-11-26 07:56:38
+author: 'Krzysztof Chruściel'
 ---
 
 * * *

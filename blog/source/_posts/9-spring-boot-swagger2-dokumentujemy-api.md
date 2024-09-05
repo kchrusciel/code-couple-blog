@@ -9,6 +9,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2017-01-07 11:42:18
+author: 'Krzysztof Chruściel'
 ---
 
 [![swagger-logo-bw](http://codecouple.pl/wp-content/uploads/2016/12/swagger-logo-bw.png)](http://codecouple.pl/wp-content/uploads/2016/12/swagger-logo-bw.png)

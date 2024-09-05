@@ -15,6 +15,7 @@ categories:
   - - Spring
   - - Spring Boot
 date: 2018-01-05 12:04:13
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/neo4j_logo-facebook-300x156.png)

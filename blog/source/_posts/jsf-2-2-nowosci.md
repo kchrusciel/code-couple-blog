@@ -7,6 +7,7 @@ id: '76'
 categories:
   - - JSF
 date: 2016-02-07 12:15:59
+author: 'Krzysztof Chruściel'
 ---
 
 Choć od premiery frameworku **Java Server Faces** minęło już sporo czasu (premiera: 2013-05-21), dopiero niedawno musiałem wykorzystać nowe funkcje zawarte w **JSF** w wersji **2.2**. Wprowadzono kilka nowych komponentów oraz pojawiło się wsparcie dla **HTML5**.

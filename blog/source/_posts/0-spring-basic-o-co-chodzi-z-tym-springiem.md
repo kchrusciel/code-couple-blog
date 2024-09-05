@@ -12,6 +12,7 @@ id: '2513'
 categories:
   - - Spring
 date: 2018-02-02 12:05:55
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal.png)

@@ -8,6 +8,7 @@ id: '66'
 categories:
   - - GIT
 date: 2016-02-05 13:45:44
+author: 'Krzysztof Chruściel'
 ---
 
 **System kontroli wersji** służy między innymi do śledzenia informacji o zmianach na plikach. Dostarcza takie możliwości jak przywrócenie zmian, dodanie nowych modyfikacji, czy sprawdzenie jakie zmiany zostały ostatnio wykonane. **VCS – version control system** Systemy kontroli wersji dzielimy na trzy rodzaje: - lokalne - **VCS** - scentralizowane – **CVCS** - Centralized - rozproszone – **DVCS** – Distributed

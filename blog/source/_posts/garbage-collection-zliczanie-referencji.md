@@ -9,6 +9,7 @@ categories:
   - - Algorytmy
   - - JVM
 date: 2016-02-18 19:08:39
+author: 'Krzysztof Chruściel'
 ---
 
 **Garbage collector** - potocznie nazywany "odśmiecaczem". Jest tak naprawdę automatycznym procesem odpowiedzialnym za identyfikowanie nieużywanych obiektów, a następnie za ich usunięcie. Nieużywane obiekty to takie, do których nie ma żadnych referencji, czyli nie mamy możliwości dostania się do tego obiektu. Brak możliwości dostania się do obiektu jest jednoznaczny z usunięciem obiektu, a to oznacza zwolnienie obszaru pamięci.

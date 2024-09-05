@@ -9,6 +9,7 @@ categories:
   - - Spring Boot
   - - Testing
 date: 2018-02-09 12:11:43
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)

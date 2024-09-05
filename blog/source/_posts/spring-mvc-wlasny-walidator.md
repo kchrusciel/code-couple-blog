@@ -5,6 +5,7 @@ id: '3715'
 categories:
   - - Java
 date: 2019-03-01 12:01:42
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal-300x98.png)

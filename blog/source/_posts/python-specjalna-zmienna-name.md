@@ -7,6 +7,7 @@ categories:
   - - Python
   - - Testing
 date: 2016-02-27 12:26:36
+author: 'Krzysztof Chruściel'
 ---
 
 Czy podczas importowania modułów **Python'owych** zastanawiałeś się w jakim celu wykorzystywane jest sprawdzenie:

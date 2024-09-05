@@ -12,6 +12,7 @@ categories:
   - - Docker
   - - Java
 date: 2016-03-14 09:48:12
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://www.docker.com/sites/default/files/Whale%20Logo332_5.png)

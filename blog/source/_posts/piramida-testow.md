@@ -7,6 +7,7 @@ id: '1717'
 categories:
   - - Testing
 date: 2017-05-12 15:30:33
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)

@@ -8,6 +8,7 @@ id: '1696'
 categories:
   - - Konferencje
 date: 2017-05-05 15:30:41
+author: 'Krzysztof Chruściel'
 ---
 
 [](http://codecouple.pl/wp-content/uploads/2016/12/CodeEurope2016Relacja.png)[![relacjaKonferencja](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)26 kwietnia odbyła się w Krakowie (**ICE**) konferencja **Code Europe** nazwana największą konferencją programistyczną w Polsce. Oprócz Krakowa odbywać będzie się ona również we Wrocławiu 23 maja w **Hali Stulecia** oraz w Warszawie 25 maja na **PGE Narodowym**. Zapraszamy na relację z krakowskiej edycji, ze ścieżki wybranej przez **CodeCouple**.

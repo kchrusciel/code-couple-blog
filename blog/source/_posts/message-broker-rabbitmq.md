@@ -8,6 +8,7 @@ id: '2240'
 categories:
   - - Message Broker
 date: 2017-10-27 12:01:26
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/10/rabbitmq.png)

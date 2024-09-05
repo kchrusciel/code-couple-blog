@@ -8,6 +8,7 @@ id: '1126'
 categories:
   - - Konferencje
 date: 2016-12-16 07:00:16
+author: 'Krzysztof Chruściel'
 ---
 
 [![codeeurope2016relacja](http://codecouple.pl/wp-content/uploads/2016/12/CodeEurope2016Relacja.png)](http://codecouple.pl/wp-content/uploads/2016/12/CodeEurope2016Relacja.png)5 i 7 grudnia odbyła się "największa programistyczna konferencja w Polsce" - **Code Europe**. W tym roku miała ona miejsce w **Centrum Kongresowym ICE** w Krakowie (5.12) oraz na **Stadionie Narodowym** w Warszawie (7.12). My z racji odległości wybraliśmy Kraków. Zapraszam do przeczytania krótkiej relacji.

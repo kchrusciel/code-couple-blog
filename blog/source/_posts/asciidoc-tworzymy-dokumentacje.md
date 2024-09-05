@@ -9,6 +9,7 @@ id: '2121'
 categories:
   - - Documentation
 date: 2017-09-08 12:05:40
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/09/documentation.png)](http://codecouple.pl/wp-content/uploads/2017/09/documentation.png)Artykuł ten powiązany jest z [poprzednim wpisem](http://codecouple.pl/2017/08/25/18-spring-boot-tddocumentation-spring-rest-docs/) na temat **Spring Rest Docs,** czyli automatycznego generowania dokumentacji na podstawie testów. Dzięki **Spring Rest Docs** generowane były snippety, czyli fragmenty dokumentacji, które następnie umieszczało się w pliku zbiorczym z rozszerzeniem `adoc`. Na końcu należało te fragmenty ładnie opakować korzystając ze składni **AsciiDoc'a**.

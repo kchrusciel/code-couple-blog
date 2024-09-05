@@ -8,6 +8,7 @@ id: '3236'
 categories:
   - - Kata
 date: 2018-10-26 20:34:19
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)

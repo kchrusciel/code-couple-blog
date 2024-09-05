@@ -6,6 +6,7 @@ id: '1953'
 categories:
   - - REST
 date: 2017-07-28 12:04:11
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)

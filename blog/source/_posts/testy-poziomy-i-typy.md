@@ -9,6 +9,7 @@ id: '298'
 categories:
   - - Testing
 date: 2016-02-17 22:07:05
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)

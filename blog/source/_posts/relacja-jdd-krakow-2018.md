@@ -7,6 +7,7 @@ id: '3250'
 categories:
   - - Konferencje
 date: 2018-10-15 10:59:32
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2018/08/jdd.png)

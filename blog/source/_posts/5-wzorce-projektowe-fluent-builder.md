@@ -12,6 +12,7 @@ categories:
   - - Java
   - - Wzorce projektowe
 date: 2018-01-26 12:04:12
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)

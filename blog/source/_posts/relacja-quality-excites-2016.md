@@ -6,6 +6,7 @@ categories:
   - - Inne
   - - Konferencje
 date: 2016-06-27 15:20:04
+author: 'Krzysztof Chruściel'
 ---
 
 Jak pisaliśmy w poprzednich wpisach, nie jesteśmy w żaden sposób związani z firmą **Future Processing,** jednakże nie można powiedzieć złego słowa na temat organizacji konferencji. Jak dla nas przebiegła ona perfekcyjnie!

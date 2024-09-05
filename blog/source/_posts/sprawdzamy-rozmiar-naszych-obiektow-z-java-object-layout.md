@@ -7,6 +7,7 @@ id: '3498'
 categories:
   - - Java
 date: 2019-01-04 12:01:52
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)Jeśli ktoś podobnie jak ja zastanawia się "_ciekawe ile ten obiekt zajmuje miejsca w pamięci?_" to mam dla was dobrą wiadomość! **Java Object Layout** (JOL) jest mini-programem, który potrafi policzyć jaki będzie rozmiar **obiektu** przechowywanego w **pamięci**. Oczywiście dobrze wiemy, iż w aktualnych czasach pamięć jest "tania", jednakże jeśli chcielibyśmy się przekonać, który obiekt zajmuje mniej miejsca w pamięci to zapraszam do artykułu.

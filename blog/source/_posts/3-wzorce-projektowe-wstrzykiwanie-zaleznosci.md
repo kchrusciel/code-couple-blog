@@ -8,6 +8,7 @@ id: '2525'
 categories:
   - - Wzorce projektowe
 date: 2017-12-29 12:02:32
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)

@@ -7,6 +7,7 @@ id: '541'
 categories:
   - - DB
 date: 2016-03-27 09:08:34
+author: 'Krzysztof Chruściel'
 ---
 
 Dziś bardziej **bazodanowo**, czyli słów kilka o **ACID**. **ACID** jest anagramem, czyli słowem zbudowanym z pierwszych liter innych słów. Jest to zbiór właściwości, które pozwalają osiągnąć spójność danych. Prawie wszystkie aktualne aplikacje korzystają z bazy danych warto więc widzieć coś na temat: **A** - _atomowość_, **C** - _spójność_, **I** - _izolacja_, **D** - _trwałość_.

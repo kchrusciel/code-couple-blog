@@ -10,6 +10,7 @@ id: '1527'
 categories:
   - - Books
 date: 2017-03-04 09:25:34
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://static01.helion.com.pl/helion/img/rozne/selling/box_1180x419_DROPPP.png)

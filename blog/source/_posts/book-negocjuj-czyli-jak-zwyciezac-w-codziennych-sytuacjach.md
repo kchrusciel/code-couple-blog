@@ -10,6 +10,7 @@ id: '2728'
 categories:
   - - Books
 date: 2018-02-23 12:01:46
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2018/02/negocjuc.png)Wiem, że nie jest to blog typowo "lajfstajlowy" tylko **techniczny**, jednakże często czytam książki niekoniecznie związane z **programowaniem** i światem **IT**. Tym razem zostałem przekonany bardzo dobrym wystąpieniem **Wojtka Wóźniczki** w podcaście "_Więcej niż oszczędzanie pięniedzy_" Michała Szafrańskiego i postanowiłem zakupić **książkę** dotyczącą **negocjacji**. **Negocjowanie** to umiejętność, która może znacząco (**pieniądze**) wpłynąć na nasze życie!

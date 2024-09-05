@@ -10,6 +10,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2016-08-30 22:10:19
+author: 'Krzysztof Chruściel'
 ---
 
 Wracamy po wakacyjnej przerwie! Dziś bardzo praktyczny wpis. Każdy kto zajmuje się **frontend'em** w **Spring Boot'cie** wykorzystując na przykład **Thymeleaf** musi za każdym razem budować projekt. Jednakże można przyśpieszyć tą operację.

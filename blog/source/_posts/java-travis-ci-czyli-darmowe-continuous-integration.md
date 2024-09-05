@@ -10,6 +10,7 @@ id: '3305'
 categories:
   - - Java
 date: 2019-02-08 12:01:05
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travisci.png)

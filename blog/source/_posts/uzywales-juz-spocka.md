@@ -10,6 +10,7 @@ categories:
   - - Java
   - - Testing
 date: 2017-08-11 12:05:04
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)

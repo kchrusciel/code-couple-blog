@@ -7,6 +7,7 @@ id: '1049'
 categories:
   - - Apache Solr
 date: 2016-12-09 08:00:52
+author: 'Krzysztof Chruściel'
 ---
 
 ![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)

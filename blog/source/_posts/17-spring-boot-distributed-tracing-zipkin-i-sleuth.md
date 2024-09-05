@@ -10,6 +10,7 @@ categories:
   - - Cloud
   - - Spring Boot
 date: 2017-07-21 13:13:19
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)

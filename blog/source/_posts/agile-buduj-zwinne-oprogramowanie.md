@@ -8,6 +8,7 @@ id: '564'
 categories:
   - - Agile
 date: 2016-05-02 23:12:53
+author: 'Krzysztof Chruściel'
 ---
 
 O tym jak zwinnie budować niezawodne systemy przeczytać możecie w **[Manifeście Agile](http://agilemanifesto.org/iso/pl/).** 15 lat temu grupa 17-stu osób spotkała się w górach w okolicy Salt Lake City i spisała dokument, który zapoczątkował zmianę myślenia osób tworzących oprogramowanie. Składa się on z 4 głównych wartości oraz 12 zwinnych zasad. Zacznijmy od tych pierwszych.

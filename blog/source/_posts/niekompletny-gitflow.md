@@ -7,6 +7,7 @@ id: '1636'
 categories:
   - - GIT
 date: 2017-04-28 16:00:14
+author: 'Krzysztof Chruściel'
 ---
 
 [![git-logo](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)[W jednym z pierwszych artykułów opisywałem GitFlow](http://codecouple.pl/2016/02/11/gitflow-workflow-model-pracy-z-gitem/) jako metodykę pracy z **Gitem**. Zaczynamy teraz wdrażać ten model w firmie i zaczynają pojawiać się problemy/pytania. No właśnie, **GitFlow** miał rozwiązywać wszystkie problemy i odpowiadać na wszystkie pytania, czy aby na pewno?

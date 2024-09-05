@@ -9,6 +9,7 @@ id: '1685'
 categories:
   - - Wzorce projektowe
 date: 2017-06-16 15:27:03
+author: 'Krzysztof Chruściel'
 ---
 
 [![canary-release-logo](http://codecouple.pl/wp-content/uploads/2017/04/canary-release-logo.png)](http://codecouple.pl/wp-content/uploads/2017/04/canary-release-logo.png)

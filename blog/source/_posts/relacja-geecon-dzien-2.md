@@ -7,6 +7,7 @@ id: '1751'
 categories:
   - - Konferencje
 date: 2017-06-02 20:09:09
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png) Pora na relację z kolejnego dnia konferencji. Zaczęliśmy z samego rana o 9:00.

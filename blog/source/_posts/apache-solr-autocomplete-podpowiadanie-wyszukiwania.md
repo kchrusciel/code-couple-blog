@@ -12,6 +12,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2017-01-27 13:03:01
+author: 'Krzysztof Chruściel'
 ---
 
 [![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)

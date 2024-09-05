@@ -6,6 +6,7 @@ id: '1275'
 categories:
   - - Gradle
 date: 2017-01-13 14:00:54
+author: 'Krzysztof Chruściel'
 ---
 
 [![gradlelogo](http://codecouple.pl/wp-content/uploads/2017/01/GradleLogo.png)](http://codecouple.pl/wp-content/uploads/2017/01/GradleLogo.png)

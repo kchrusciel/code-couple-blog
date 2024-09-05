@@ -13,6 +13,7 @@ id: '585'
 categories:
   - - Java
 date: 2016-06-02 08:00:36
+author: 'Krzysztof Chruściel'
 ---
 
 **SableCC** jest generatorem parserów dla Javy. Więcej informacji możecie znaleźć [TUTAJ](http://www.sablecc.org/). W swoim artykule chciałam skupić się na konfiguracji IntelliJ, skompilowaniu prostej gramatyki napisanej właśnie w **SableCC** i przetestowaniu jej z wykorzystaniem własnego interpretera napisanego w Javie.

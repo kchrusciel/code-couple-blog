@@ -9,6 +9,7 @@ id: '4338'
 categories:
   - - Java
 date: 2020-09-25 12:00:00
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)

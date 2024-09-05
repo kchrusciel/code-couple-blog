@@ -7,6 +7,7 @@ id: '1653'
 categories:
   - - GIT
 date: 2017-05-19 16:00:18
+author: 'Krzysztof Chruściel'
 ---
 
 [![git-logo](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)Zaczyna się bardzo niekulturalnie, ale uwierzcie, z pożytkiem! Jak [wspominałem w ostatnim wpisie](http://codecouple.pl/2017/04/28/niekompletny-gitflow/), u mnie w pracy "na tapecie" jest teraz tematyka wdrożenia **GitFlow** jako modelu pracy z **Gitem**. Jest to dobra okazja, aby dodać kilka wpisów pokazujących jak poprawić swoją efektywność w pracy z **Gitem**.

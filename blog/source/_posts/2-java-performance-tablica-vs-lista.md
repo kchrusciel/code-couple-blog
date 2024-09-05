@@ -7,6 +7,7 @@ id: '2357'
 categories:
   - - Java
 date: 2017-12-15 12:14:55
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)

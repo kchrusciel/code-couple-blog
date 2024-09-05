@@ -13,6 +13,7 @@ categories:
   - - Cloud
   - - Spring Boot
 date: 2017-09-29 12:05:38
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)**Service Discovery** jest kolejnym mechanizmem wykorzystywanym w środowisku **cloudowym**. Najpopularniejsze implementacje tego mechanizmu to między innymi: **Consul**, **Zookeeper** czy **Eureka** ze stajni Netflix. **Spring Cloud** wykorzystał implementacje firmy Netflix i stworzył swój wrapper, który w bardzo szybki i łatwy sposób pozwala integrować się z całym stosem **Spring Cloud**.

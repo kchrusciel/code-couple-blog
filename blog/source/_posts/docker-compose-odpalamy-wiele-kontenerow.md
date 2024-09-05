@@ -7,6 +7,7 @@ id: '2269'
 categories:
   - - Docker
 date: 2017-11-10 12:05:32
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://www.docker.com/sites/default/files/Whale%20Logo332_5.png)

@@ -8,6 +8,7 @@ categories:
   - - Java
   - - Testing
 date: 2018-11-02 12:12:28
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)

@@ -10,6 +10,7 @@ categories:
   - - Java
   - - JVM
 date: 2017-02-03 13:39:04
+author: 'Krzysztof Chruściel'
 ---
 
 [![java-logo](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)

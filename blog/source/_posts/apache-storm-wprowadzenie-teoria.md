@@ -7,6 +7,7 @@ id: '300'
 categories:
   - - Streams
 date: 2016-03-06 22:16:10
+author: 'Krzysztof Chruściel'
 ---
 
 **Apache Storm** jest projektem open source i służy do przetwarzania strumieniowego w czasie rzeczywistym. Ułatwia wykonywanie działań na nieograniczonych strumieniach danych. Może być używany z dowolnym językiem programowania. Przed samym rozpoczęciem zabawy z **Apache Storm** przygotowałam trochę teorii, która ułatwi nam późniejszą pracę z tym projektem.

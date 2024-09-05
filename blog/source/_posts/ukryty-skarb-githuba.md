@@ -7,6 +7,7 @@ id: '4392'
 categories:
   - GIT
 date: 2020-10-02 12:01:15
+author: 'Krzysztof Chruściel'
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)

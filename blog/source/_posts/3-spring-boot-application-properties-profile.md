@@ -9,6 +9,7 @@ categories:
   - - Java
   - - Spring Boot
 date: 2016-06-18 09:39:20
+author: 'Krzysztof Chruściel'
 ---
 
 Artykuł ten [nawiązuje do poprzedniego wpisu](http://codecouple.pl/2016/06/14/2-spring-boot-application-properties/), który dotyczy pliku właściwości **application.properties**. Dziś wpis dotyczący profili, czyli mechanizmu, który pomoże nam pracować z różnymi danymi. Możemy zdefiniować różne właściwości w zależności np. od tego na jakim środowisku chcemy pracować.

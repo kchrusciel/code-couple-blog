@@ -9,6 +9,7 @@ id: '2388'
 categories:
   - - Spring Boot
 date: 2017-12-08 12:12:44
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)

@@ -11,6 +11,7 @@ categories:
   - - Spring Boot
   - - Testing
 date: 2017-10-16 12:05:25
+author: 'Krzysztof Chruściel'
 ---
 
 ![spreadit2016](http://codecouple.pl/wp-content/uploads/2016/11/spreadIT2016-1024x423.png)

@@ -8,6 +8,7 @@ id: '1579'
 categories:
   - - Wzorce projektowe
 date: 2017-04-14 15:45:44
+author: 'Krzysztof Chruściel'
 ---
 
 [![blueGreenDeployment](http://codecouple.pl/wp-content/uploads/2017/03/blueGreenDeployment.png)](http://codecouple.pl/wp-content/uploads/2017/03/blueGreenDeployment.png)[Ciągłe dostarczanie oprogramowania](https://en.wikipedia.org/wiki/Continuous_delivery) sprawiło powstanie wielu ciekawych wzorców związanych z różnymi fazami developmentu. Jedną z tych faz jest **deployment**. No właśnie, ale jak wdrożyć nową wersję aplikacji na produkcję, z której korzystają klienci? Jednym z dostępnych rozwiązań jest wzorzec **Blue-Green-Deployment**.

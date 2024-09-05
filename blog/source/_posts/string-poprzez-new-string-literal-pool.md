@@ -15,6 +15,7 @@ categories:
   - - Java
   - - JVM
 date: 2016-06-11 09:00:33
+author: 'Krzysztof Chruściel'
 ---
 
 **String**, chyba najpopularniejszy obiektowy typ danych wykorzystywany w **Javie**. Kluczowe słowo to **obiektowy.** Jak dobrze wiemy, obiekty tworzymy poprzez słówko **new**, natomiast jak typowo tworzymy obiekt typu **String,** to nie używamy tego słowa kluczowego.

@@ -9,6 +9,7 @@ categories:
   - - Kata
   - - Testing
 date: 2017-08-18 12:05:25
+author: 'Krzysztof Chruściel'
 ---
 
 [![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)

@@ -6,6 +6,7 @@ id: '950'
 categories:
   - - Java
 date: 2016-10-08 11:36:48
+author: 'Krzysztof Chruściel'
 ---
 
 Mała odskocznia od artykułów na temat Spring Boot'a, które ostatnio zdominowały nasz blog. Interfejsy funkcyjne są jednym z wielu nowych elementów w Javie 8. Wszystkie interfejsy funkcyjne znajdują się w pakiecie `java.util.function`.

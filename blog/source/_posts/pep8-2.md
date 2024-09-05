@@ -8,6 +8,7 @@ categories:
   - - Clean Code
   - - Python
 date: 2016-02-16 21:48:26
+author: 'Krzysztof Chruściel'
 ---
 
 Dokument, który chciałam przedstawić zawiera konwencję zapisu kodu Pythonowego. Stosowanie się do niego nie przyspiesza wykonywania programów, ale sprawia, że kod staje się bardziej czytelny. Jeden z autorów **PEP8** (Guido van Rossum) zaznacza, że kod jest znacznie częściej czytany niż pisany i właśnie dlatego tak ważne jest dbanie o jego czytelność i jednolitość. Poniżej przedstawiłam kilka ważniejszych zasad PEP8.

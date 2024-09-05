@@ -8,6 +8,7 @@ id: '2973'
 categories:
   - - Books
 date: 2018-06-22 12:01:32
+author: 'Krzysztof Chruściel'
 ---
 
 ![](http://codecouple.pl/wp-content/uploads/2018/06/DSC_0074.png)

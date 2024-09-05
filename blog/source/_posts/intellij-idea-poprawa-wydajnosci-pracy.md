@@ -8,6 +8,7 @@ id: '174'
 categories:
   - - Clean Code
 date: 2016-02-23 18:56:23
+author: 'Krzysztof Chruściel'
 ---
 
 **IDE** (ang. _Integrated Development Environment_) - czyli zintegrowane środowisko programistyczne. Jest to aplikacja, która służy do tworzenia, modyfikowania i testowania kodu. Chodź **IntelliJ IDEA** nie znalazł się na liście najbardziej popularnych **IDE** na [stackoverflow](http://stackoverflow.com/research/developer-survey-2015#tech-editor), jest on coraz częściej wykorzystywanym środowiskiem developerskim. Jeśli zdecydowaliśmy się na korzystanie z tego **IDE**, warto poświęcić niewiele czasu, aby usprawnić swoją prace w **IntelliJ IDEA**.
