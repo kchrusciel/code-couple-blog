@@ -5,36 +5,39 @@ tags:
   - spring boot 2
 id: '3935'
 categories:
-  - - Java
-  - - Spring
-  - - Spring Boot
+  - Java
+  - Spring
+  - Spring Boot
 date: 2019-05-31 12:01:34
 ---
 
 ![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
 
-Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalność **WebMvc.fn**. Jest to implementacja **funkcyjnego** podejścia do definiownia **endpointów** podobnie jak jest to realizowane przy wykorzystaniu **Spring WebFlux** o czym można było przeczytać w jednym z naszych artykułów [#1 Spring Boot 2 – Router functions](https://codecouple.pl/2018/07/20/1-spring-boot-2-router-functions/). Dziś sprawdzimy jak to **funkcyjne** podejście sprawdzi się w klasycznym stosie **MVC**.
+Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalność **WebMvc.fn**. Jest to implementacja **funkcyjnego** podejścia do definiownia **endpointów** podobnie jak jest to realizowane przy wykorzystaniu **Spring WebFlux** o czym można było przeczytać w jednym z naszych artykułów [#1 Spring Boot 2 – Router functions](https://codecouple.pl/2018/07/20/1-spring-boot-2-router-functions/). Dziś sprawdzimy jak to **funkcyjne** podejście sprawdzi się w klasycznym stosie **MVC**.
 <!-- more -->
 ### WebMvc.fn
 
-Jak pisałem we wstępie, w nowym **Spring Boot’cie** **2** możemy tworzyć naszą część serwerową na dwa sposoby (można je mieszać w jednej aplikacji):
+Jak pisałem we wstępie, w nowym **Spring Boot’cie** **2** możemy tworzyć naszą część serwerową na dwa sposoby (można je mieszać w jednej aplikacji):
 
-*   **“Po staremu”** – korzystając z adnotacji `@Controller` i innych związanych z **Web’em**
-*   **“Po nowemu”** – korzystając z podejścia funkcyjnego przy użyciu **WebMvc.fn**
+*   **“Po staremu”** – korzystając z adnotacji `@Controller` i innych związanych z **Web’em**
+*   **“Po nowemu”** – korzystając z podejścia funkcyjnego przy użyciu **WebMvc.fn**
 
 ### Zależności
 
 Z racji iż wspracie dla **funkcyjnego podejścia** pojawiło się dla stosu **MVC** wystarczy, że w naszym projekcie dorzucimy standardowy moduł **Web**:
 
+```xml
 <dependency>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
+```
 
 ### Router Function
 
 Podobnie jak przy **Spring WebFlux** tworzymy konfigurację z wykorzystaniem klasy `RouterFunction`:
 
+```java
 package pl.codecouple.webmvc.fn.configuration;
 
 import org.springframework.context.annotation.Bean;
@@ -73,6 +76,7 @@ class RouterConfig {
     }
 
 }
+```
 
 W wyniku naszej **lambdy** otrzymujemy obiekt typu `ServerRequest`, z którego możemy odczytać bardzo wiele informacji:
 
@@ -80,12 +84,13 @@ W wyniku naszej **lambdy** otrzymujemy obiekt typu `ServerRequest`, z którego m
 *   `headers()` - otrzymujemy **nagłówki**
 *   `sessions()` - otrzymujemy **sesje**
 *   `pathVariable(name)` - otrzymujemy **zmienną** ze ścieżki
-*   `servletRequest()` - otrzymujemy obiekt typu `HttpServletRequest`, z którego możemy wyciągnać wszystkie informacje
+*   `servletRequest()` - otrzymujemy obiekt typu `HttpServletRequest`, z którego możemy wyciągnać wszystkie informacje
 
 ### Handler
 
 Jeśli chcemy oddzielić nasz routing od logiki to możemy przygotować klasę ze wszystkimi handlerami. Metody **HTTP** przyjmują obiekt typu `HandlerFunction<ServerResponse>`:
 
+```java
 @Bean
 public RouterFunction<ServerResponse> routes(DataHandler dataHandler) {
   return route()
@@ -123,6 +128,7 @@ public class DataHandler {
     }
 
 }
+```
 
 ### Github
 
