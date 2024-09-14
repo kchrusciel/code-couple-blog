@@ -7,8 +7,7 @@ tags:
   - testing
   - wordpress
 id: '4427'
-categories:
-  - Testing
+category: Testing
 date: 2021-05-30 13:18:37
 author: 'Mateusz Mazurek'
 ---
@@ -23,7 +22,7 @@ Jednak niektóre parametry w ogóle nie są prezentowane w ofertach - mimo tego,
 
 ### PHP i MySQL - a wydajność serwera
 
-Dynamiczne strony internetowe wykorzystują zarówno PHP, jak i MySQL. Język PHP wysyła zapytanie do bazy danych, a zwrócone dane są następnie wyświetlana jako treść strony. Jeżeli te dwa elementy okażą się tzw. “wąskim gardłem” hostingu, może to mieć wpływ na szybkość wyświetlania się strony (lub uruchomienia danej aplikacji internetowej). W końcu - jeżeli czas potrzebny na przetworzenie zapytania będzie się wydłużać, to wyświetlenie witryny także potrwa dłużej.
+Dynamiczne strony internetowe wykorzystują zarówno PHP, jak i MySQL. Język PHP wysyła zapytanie do bazy danych, a zwrócone dane są następnie wyświetlana jako treść strony. Jeżeli te dwa elementy okażą się tzw. "wąskim gardłem" hostingu, może to mieć wpływ na szybkość wyświetlania się strony (lub uruchomienia danej aplikacji internetowej). W końcu - jeżeli czas potrzebny na przetworzenie zapytania będzie się wydłużać, to wyświetlenie witryny także potrwa dłużej.
 
 Gdy mowa o testowaniu strony internetowej, od razu nasuwają się rozwiązania takie jak Google PageSpeed Insights. Owszem - testowanie strony internetowej z wykorzystaniem tego narzędzia daje pewien ogląd na temat wydajności witryny. Co najważniejsze - ocenia ją pod kątem Core Web Vitals, czyli kluczowych wskaźników, mających wpływ na ocenę jakości strony przez wyszukiwarkę.
 
@@ -38,7 +37,7 @@ Na szybkość PHP wpływ ma zastosowana wersja języka. Jeżeli masz możliwoś�
 Żeby przeprowadzić test, wystarczy kilka prostych kroków.
 
 - Pobierz [plik testowy](https://github.com/vanilla-php/benchmark-php/archive/master.zip)
-- Otwórz plik _php_ w edytorze tekstowym i w sekcji _Setup_ uzupełnij dane dostępowe do bazy danych MySQL, którą chcesz testować. Nie zapomnij, że aby skrypt był aktywny, musisz usunąć znaczniki “/\*” i “\*/” na początku i końcu sekcji.
+- Otwórz plik _php_ w edytorze tekstowym i w sekcji _Setup_ uzupełnij dane dostępowe do bazy danych MySQL, którą chcesz testować. Nie zapomnij, że aby skrypt był aktywny, musisz usunąć znaczniki "/\*" i "\*/" na początku i końcu sekcji.
 - Umieść plik benchmark.php na serwerze.
 - Wpisz adres domeny i lokalizację pliku na serwerze w przeglądarce, np.: twojadomena.pl/test/benchmark.php
 

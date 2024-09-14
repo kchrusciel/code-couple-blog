@@ -4,10 +4,7 @@ tags:
   - spring boot
   - spring boot 2
 id: '3935'
-categories:
-  - Java
-  - Spring
-  - Spring Boot
+category: Spring Boot 2
 date: 2019-05-31 12:01:34
 author: 'Krzysztof Chruściel'
 ---
@@ -20,8 +17,8 @@ Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalnoś�
 
 Jak pisałem we wstępie, w nowym **Spring Boot’cie** **2** możemy tworzyć naszą część serwerową na dwa sposoby (można je mieszać w jednej aplikacji):
 
-*   **“Po staremu”** – korzystając z adnotacji `@Controller` i innych związanych z **Web’em**
-*   **“Po nowemu”** – korzystając z podejścia funkcyjnego przy użyciu **WebMvc.fn**
+*   **"Po staremu"** – korzystając z adnotacji `@Controller` i innych związanych z **Web’em**
+*   **"Po nowemu"** – korzystając z podejścia funkcyjnego przy użyciu **WebMvc.fn**
 
 ### Zależności
 

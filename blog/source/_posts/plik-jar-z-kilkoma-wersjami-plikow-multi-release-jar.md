@@ -5,8 +5,7 @@ tags:
   - java
   - java 9
 id: '4032'
-categories:
-  - - Java
+category: Java
 date: 2019-09-02 12:01:05
 author: 'Krzysztof Chruściel'
 ---

@@ -2,8 +2,7 @@
 title: Flame Graphs - czy aby na pewno nie pali się na produkcji?
 tags: []
 id: '4281'
-categories:
-  - java
+category: Java
 date: 2020-04-28 12:01:32
 author: 'Krzysztof Chruściel'
 ---

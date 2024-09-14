@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 Jak zwykle końcówkę czerwca spędziliśmy w stolicy biorąc udział w **Confiturze**. Jest to największa darmowa konferencja Javova w Polsce, na której występują najbardziej znane osoby ze środowiska **JVM**. W tym roku odbyła się ona w nowy miejscu jakim jest budynek **Expo XXI**. Zapraszamy na relację!
 <!-- more -->
-### “Co by się stało gdyby Spring zniknął na tydzień…?”
+### "Co by się stało gdyby Spring zniknął na tydzień…?"
 
 No właśnie, co by się stało gdyby Spring zniknął na tydzień? Gdy pojawiło się to pytanie, sami zaczęliśmy się nad tym zastanawiać. **Maciej Próchniak** w dość humorystyczny sposób starał się nas przekonać do tego, że istnieje świat po za Springiem. Powinniśmy zawsze się zastanowić, czy aby na pewno potrzebujemy Springa. Jeśli dobrze zaplanujemy budowanie aplikacji, może okazać się, iż jest on mocno nadmiarowy. Oczywiście należy pamiętać o tym, że Spring jest technologią dojrzałą. Posiada bardzo dobrze rozbudowaną i czytelną dokumentację oraz mnóstwo innych pomocnych materiałów. Często ta cecha może zaważyć nad wyborem Spring vs reszta świata. Maciek zaproponował w jaki sposób możemy zastąpić niektóre komponenty Springowe takie jak kontener IoC, metryki czy dostęp do warstwy persystencji. Hmmmm....no tak, ale w Springu mam to załatwione przy pomocy jednej adnotacji! Okazuje się, że bez Springa nie zajmuje to dużo więcej linii, a pozbywamy się nadmiarowości nieużytych komponentów. Istnieją takie rozwiązania jak OSGI, Ratpack czy JDBI. Wybierajmy mądrze!
 

@@ -4,8 +4,7 @@ tags:
   - github
   - git
 id: '4392'
-categories:
-  - GIT
+category: GIT
 date: 2020-10-02 12:01:15
 author: 'Krzysztof Chruściel'
 ---

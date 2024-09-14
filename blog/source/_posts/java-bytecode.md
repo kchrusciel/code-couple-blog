@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-Schodzimy nisko, ale czy to coś złego? Według **IBM** developerWorks: „_Znajomość kodu bajtowego Javy pomaga programiście tak, jak znajomość asemblera pomaga programistom języków C i C++_” i ja z tym stwierdzeniem się zgadzam. W tym wpisie postaram się przybliżyć wam kod bajtowych.
+Schodzimy nisko, ale czy to coś złego? Według **IBM** developerWorks: „_Znajomość kodu bajtowego Javy pomaga programiście tak, jak znajomość asemblera pomaga programistom języków C i C++_" i ja z tym stwierdzeniem się zgadzam. W tym wpisie postaram się przybliżyć wam kod bajtowych.
 <!-- more -->
 ### Cykl życia
 

@@ -4,8 +4,7 @@ tags:
   - java
   - thread
 id: '4233'
-categories:
-  - Java
+category: Java
 date: 2020-03-20 12:02:01
 author: 'Krzysztof Chruściel'
 ---

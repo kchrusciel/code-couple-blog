@@ -6,8 +6,7 @@ tags:
   - JEP 360
   - sealed
 id: '4338'
-categories:
-  - Java
+category: Java
 date: 2020-09-25 12:00:00
 author: 'Krzysztof Chruściel'
 ---
