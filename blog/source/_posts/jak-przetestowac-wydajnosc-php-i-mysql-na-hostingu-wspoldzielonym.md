@@ -27,7 +27,7 @@ Dynamiczne strony internetowe wykorzystują zarówno PHP, jak i MySQL. Język PH
 
 Gdy mowa o testowaniu strony internetowej, od razu nasuwają się rozwiązania takie jak Google PageSpeed Insights. Owszem - testowanie strony internetowej z wykorzystaniem tego narzędzia daje pewien ogląd na temat wydajności witryny. Co najważniejsze - ocenia ją pod kątem Core Web Vitals, czyli kluczowych wskaźników, mających wpływ na ocenę jakości strony przez wyszukiwarkę.
 
-**Jednak sam raport PageSpeed Insights niewiele m****ó****wi na temat samego serwera**. Dzięki testowi dowiesz się, czy Twoja strona ma poprawny HTML, CSS, czy obrazki nie są zbyt duże oraz czy poszczególne skrypty nie blokują się wzajemnie. Owszem - to bardzo ważne dla działania strony, jednak nie dowiesz się stąd niczego na temat wydajności PHP i MySQL na hostingu. Żeby przetestować hosting pod kątem tych dwóch aspektów, potrzebne będzie Ci bardziej specjalistyczne narzędzie.
+**Jednak sam raport PageSpeed Insights niewiele mówi na temat samego serwera**. Dzięki testowi dowiesz się, czy Twoja strona ma poprawny HTML, CSS, czy obrazki nie są zbyt duże oraz czy poszczególne skrypty nie blokują się wzajemnie. Owszem - to bardzo ważne dla działania strony, jednak nie dowiesz się stąd niczego na temat wydajności PHP i MySQL na hostingu. Żeby przetestować hosting pod kątem tych dwóch aspektów, potrzebne będzie Ci bardziej specjalistyczne narzędzie.
 
 ### Benchmark PHP - przydatne, uniwersalne narzędzie
 
@@ -37,16 +37,16 @@ Na szybkość PHP wpływ ma zastosowana wersja języka. Jeżeli masz możliwoś�
 
 Żeby przeprowadzić test, wystarczy kilka prostych kroków.
 
-1.  Pobierz [plik testowy](https://github.com/vanilla-php/benchmark-php/archive/master.zip)
-2.  Otwórz plik _php_ w edytorze tekstowym i w sekcji _Setup_ uzupełnij dane dostępowe do bazy danych MySQL, którą chcesz testować. Nie zapomnij, że aby skrypt był aktywny, musisz usunąć znaczniki “/\*” i “\*/” na początku i końcu sekcji.
-3.  Umieść plik benchmark.php na serwerze.
-4.  Wpisz adres domeny i lokalizację pliku na serwerze w przeglądarce, np.: twojadomena.pl/test/benchmark.php
+- Pobierz [plik testowy](https://github.com/vanilla-php/benchmark-php/archive/master.zip)
+- Otwórz plik _php_ w edytorze tekstowym i w sekcji _Setup_ uzupełnij dane dostępowe do bazy danych MySQL, którą chcesz testować. Nie zapomnij, że aby skrypt był aktywny, musisz usunąć znaczniki “/\*” i “\*/” na początku i końcu sekcji.
+- Umieść plik benchmark.php na serwerze.
+- Wpisz adres domeny i lokalizację pliku na serwerze w przeglądarce, np.: twojadomena.pl/test/benchmark.php
 
 Po uruchomieniu programu, otrzymasz wyniki w poniższej formie.
 
-\[caption id="attachment\_4428" align="aligncenter" width="459"\]![](https://codecouple.pl/wp-content/uploads/2021/05/Picture-1-459x1024.jpg) Wyniki przedstawiane po uruchomieniu skryptu Benchmark PHP.\[/caption\]
+![](https://codecouple.pl/wp-content/uploads/2021/05/Picture-1-459x1024.jpg)
 
-Sekcja _Benchmark_ odnosi się do wydajności interpretera PHP. Przedstawia ona m.in. szybkość wykonywania operacji matematycznych przez serwer, a także iteracji pętli i przetwarzania zapytań warunkowych. Natomiast _MySQL_ \- odnosi się do szybkości bazy danych, gdzie badany jest m.in. czas reakcji bazy na przesłane zapytanie. **Im ni****ższe wyniki - tym wyższa wydajność serwera (szybsze przetwarzanie zapytań).**
+Sekcja _Benchmark_ odnosi się do wydajności interpretera PHP. Przedstawia ona m.in. szybkość wykonywania operacji matematycznych przez serwer, a także iteracji pętli i przetwarzania zapytań warunkowych. Natomiast _MySQL_ \- odnosi się do szybkości bazy danych, gdzie badany jest m.in. czas reakcji bazy na przesłane zapytanie. **Im niższe wyniki - tym wyższa wydajność serwera (szybsze przetwarzanie zapytań).**
 
 Test warto przeprowadzić o różnych porach dnia. Pamiętaj, że na hostingu współdzielonym, dostępność niektórych zasobów może zmieniać się na przestrzeni czasu.
 
@@ -56,10 +56,10 @@ Test warto przeprowadzić o różnych porach dnia. Pamiętaj, że na hostingu ws
 
 Żeby to zrobić:
 
-1.  Pobierz wtyczkę [WPPerformanceTester](https://wordpress.org/plugins/wpperformancetester/).
-2.  Zainstaluj ją i aktywuj na swojej stronie opartej na WordPress.
-3.  Uruchom wtyczkę (_Narzędzia_ -> _WP Performance Tester_).
-4.  Kliknij w Begin _Performance Test_
+- Pobierz wtyczkę [WPPerformanceTester](https://wordpress.org/plugins/wpperformancetester/).
+- Zainstaluj ją i aktywuj na swojej stronie opartej na WordPress.
+- Uruchom wtyczkę (_Narzędzia_ -> _WP Performance Tester_).
+- Kliknij w Begin _Performance Test_
 
 Wtyczka wykonuje szereg testów, dotyczących np. szybkości wykonywania funkcji matematycznych. Wykonuje m.in. 1 000 000 iteracji pętli oraz testuje 1 000 000 instrukcji warunkowych. Testowane są także podstawowe funkcje MySQL (połączenie, zapytanie, wersję oraz kodowanie).
 
@@ -67,7 +67,7 @@ Po przeprowadzonym benchmarku otrzymasz wyniki w następującej formie:
 
 ![](https://codecouple.pl/wp-content/uploads/2021/05/Picture-2.jpg)
 
-Jak widzisz - raport pokazuje informacje dotyczące zarówno PHP jak i MySQL. Jak je czytać? Sekcja _Server Performance Benchmarks_ odnosi się do wydajności baz danych. **Im ni****ższy wynik w sekcji Total - tym lepiej radzi sobie serwer z przetwarzaniem zapytań**.
+Jak widzisz - raport pokazuje informacje dotyczące zarówno PHP jak i MySQL. Jak je czytać? Sekcja _Server Performance Benchmarks_ odnosi się do wydajności baz danych. **Im niższy wynik w sekcji Total - tym lepiej radzi sobie serwer z przetwarzaniem zapytań**.
 
 Z kolei sekcja _WordPress Performance Benchmarks_ odnosi się do wydajności PHP **w kontekście silnika WordPressa**. W sekcji _Execution Time_ wynik powinien być niższy niż 1 sekunda (im mniej, tym lepiej). Natomiast w _Queries Per Second_ \- im wyższy wynik, tym większa jest liczba zapytań obsługiwanych w ciągu sekundy. Jeżeli wartość ta przekracza 1000 - bardzo dobrze świadczy to o wydajności hostingu.
 
@@ -75,8 +75,8 @@ Z kolei sekcja _WordPress Performance Benchmarks_ odnosi się do wydajności PHP
 
 Wiesz już, w jaki sposób możesz przetestować wydajność PHP i MySQL, jednak tak naprawdę… co Ci daje taka wiedza? Oczywiście wiadomo, że im szybciej i więcej, tym lepiej, ale czy w ogóle warto zaprzątać sobie głowy tymi tematami?
 
-Oczywiście, że tak. **Jeżeli zależy Ci na dobrych wynikach strony w wyszukiwarkach, ale także na maksymalizowaniu użyteczności Twojej witryny - warto zatroszczyć się o każdy parametr, kt****ó****ry pozwoli na jej szybsze załadowanie - choćby o kilkanaście milisekund.**
+Oczywiście, że tak. **Jeżeli zależy Ci na dobrych wynikach strony w wyszukiwarkach, ale także na maksymalizowaniu użyteczności Twojej witryny - warto zatroszczyć się o każdy parametr, który pozwoli na jej szybsze załadowanie - choćby o kilkanaście milisekund.**
 
 Przeprowadzenie testów PHP i MySQL to naprawdę dobry pomysł, jeżeli masz możliwość skorzystania z okresu testowego na hostingu. Żeby wyciągnąć wnioski z powyższych testów, najlepiej porównywać wyniki z prób przeprowadzanych na różnych serwerach. W ten sposób jesteś w stanie wskazać, który z nich zapewnia lepsze osiągi.
 
-Gdy już zobaczysz, który z hostingów oferuje najwyższą wydajność - skonfrontuj to z jego innymi parametrami, takimi jak m.in. rodzaj dysku twardego, limity czy kwestie związane z bezpieczeństwem. Dzięki temu **uda Ci si****ę wybrać serwer, kt****ó****ry pozwoli płynnie działać Twojej stronie internetowej - a przynajmniej jej w tym nie przeszkodzi**.
+Gdy już zobaczysz, który z hostingów oferuje najwyższą wydajność - skonfrontuj to z jego innymi parametrami, takimi jak m.in. rodzaj dysku twardego, limity czy kwestie związane z bezpieczeństwem. Dzięki temu **uda Ci się wybrać serwer, który pozwoli płynnie działać Twojej stronie internetowej - a przynajmniej jej w tym nie przeszkodzi**.

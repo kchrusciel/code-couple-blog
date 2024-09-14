@@ -69,7 +69,7 @@ public class Event {
     private final Date date;
 }
 
-Teraz pora na **repozytorium**. Wykorzystamy `ReactiveMongoRepository` ze **Spring Data**. Otrzymujemy **out-of-the-bo****x** podstawowe zapytania do bazy. Aby wskazać, że dane zapytanie ma wykorzystywać kursor **tailable** wystarczy dodać adnotację `@Tailable`. Ponadto, zapytania mogą zawierać warunki wyszukiwania:
+Teraz pora na **repozytorium**. Wykorzystamy `ReactiveMongoRepository` ze **Spring Data**. Otrzymujemy **out-of-the-box** podstawowe zapytania do bazy. Aby wskazać, że dane zapytanie ma wykorzystywać kursor **tailable** wystarczy dodać adnotację `@Tailable`. Ponadto, zapytania mogą zawierać warunki wyszukiwania:
 
 @RestController
 @RequestMapping("/events")

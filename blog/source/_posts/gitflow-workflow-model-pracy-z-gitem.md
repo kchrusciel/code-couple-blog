@@ -9,7 +9,7 @@ date: 2016-02-11 09:13:22
 author: 'Krzysztof Chruściel'
 ---
 
-**GIT** - czyli najpopularniejszy system kontroli wersji. Zyskał on swoją popularność między innymi dzięki bardzo prostej pracy z **branchami** ([Więcej informacji na temat systemów kontroli wersji](http://codecouple.pl/2016/02/05/system-kontroli-wersji-opis-oraz-definicje/)). Po pewnym czasie developerzy zauważyli, iż dałoby się uogólnić model pracy z **GIT'em,** czyli **Workflow,** lub jak też bywa nazwany w kontekście GIT - ****Gitflow****.
+**GIT** - czyli najpopularniejszy system kontroli wersji. Zyskał on swoją popularność między innymi dzięki bardzo prostej pracy z **branchami** ([Więcej informacji na temat systemów kontroli wersji](http://codecouple.pl/2016/02/05/system-kontroli-wersji-opis-oraz-definicje/)). Po pewnym czasie developerzy zauważyli, iż dałoby się uogólnić model pracy z **GIT'em,** czyli **Workflow,** lub jak też bywa nazwany w kontekście GIT - Gitflow.
 <!-- more -->
 Na początku przyjrzyjmy się rysunkowi, który przedstawia schemat pracy w modelu **Gitflow**:
 

@@ -63,7 +63,7 @@ A to widok po zalogowaniu:
 
 ![spring_social_view3](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_view3.png) Analogiczne widoki otrzymamy dla **Facebook'a**.
 
-Widzicie jakie to proste? Mamy ustawione tak naprawdę tylko propertiesy, a całość załatwia za nas **Spring Social**. Widoki te oczywiście możemy dostosować do własnych potrzeb. Należy przede wszystkim usunąć wpis o domyślnych widokach z properties'ów. Potem stworzyć swoje widoki w plikach _**{p****roviderID}Connect**_ i _**{p****roviderID}Connected**_ (w naszym przypadku twitterConnect i twitterConnected) i umieścić je w folderze _**connect**_.
+Widzicie jakie to proste? Mamy ustawione tak naprawdę tylko propertiesy, a całość załatwia za nas **Spring Social**. Widoki te oczywiście możemy dostosować do własnych potrzeb. Należy przede wszystkim usunąć wpis o domyślnych widokach z properties'ów. Potem stworzyć swoje widoki w plikach _**{providerID}Connect**_ i _**{providerID}Connected**_ (w naszym przypadku twitterConnect i twitterConnected) i umieścić je w folderze _**connect**_.
 
 Należy zauważyć, że **Spring Social** to nie tylko **Facebook** czy **Twitter**. Możemy wykorzystać go również do połączeń z wieloma innymi usługami:
 

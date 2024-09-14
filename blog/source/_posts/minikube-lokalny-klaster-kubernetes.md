@@ -71,7 +71,7 @@ Od teraz korzystamy z **Docker'a**, który znajduje się na **minikube**. Wart
 
 ### Konfiguracja
 
-**Minikube** w momencie uruchamiania wirtualnej maszyny z **K****ubernetes** wykorzystuje poniższe ustawienia **domyślne**:
+**Minikube** w momencie uruchamiania wirtualnej maszyny z **Kubernetes** wykorzystuje poniższe ustawienia **domyślne**:
 
 *   `DefaultMemory` - domyślna ilość pamięci - **2GB**
 *   `DefaultCPUS` - domyślna ilość procesorów - **2**
@@ -163,7 +163,7 @@ W wyniku tego polecenia otrzymujemy następujące **dodatki**:
 
 ### Stopowanie
 
-Polecenie `minikube stop` zatrzymuje klaster **Kubernetes****.** Przy ponownym uruchomieniu **minikube** cały poprzedni stan jest **przywracany** (nie tracimy naszej pracy).
+Polecenie `minikube stop` zatrzymuje klaster **Kubernetes.** Przy ponownym uruchomieniu **minikube** cały poprzedni stan jest **przywracany** (nie tracimy naszej pracy).
 
 ### Usuwanie
 

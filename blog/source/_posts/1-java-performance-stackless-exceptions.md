@@ -85,7 +85,7 @@ Natomiast nas interesują same wyniki:
 
 \[table\] Benchmark,Mode,Cnt,Score,Error,Units MyBenchmark.withStacktrace,avgt,10,**1.612**,0.044,us/op MyBenchmark.withoutStacktrace,avgt,10,**0.018**,0.001,us/op \[/table\]
 
-Na podstawie tych wyników można określić, iż wywołanie wyjątku, który jest **Stackless** jest około **9****0** razy szybsze.
+Na podstawie tych wyników można określić, iż wywołanie wyjątku, który jest **Stackless** jest około **90** razy szybsze.
 
 Warto wspomnieć że twórcy **JIT'a** (kompilator wbudowany w **JVM**), przewidzieli tą optymalizację (jest włączona domyślnie) i w przypadku bardzo częstego występowania danego wyjątku niweluje ona stos wywołań. Opcje tą można wyłączyć wykorzystując flagę `-XX:-OmitStackTraceInFastThrow`.  Na czas testów flaga ta została wyłączona.
 

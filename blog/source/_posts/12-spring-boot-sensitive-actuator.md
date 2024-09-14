@@ -190,7 +190,7 @@ Podobnie możemy zrobić z ich dostępnością, wszystkie endpointy wymagąją z
 endpoints.sensitive\=true
 endpoints.info.sensitive\=false
 
-Możemy także dodać własny **E****ndpoint**. Nasza klasa musi jedynie implementować odpowiedni interfejs. Metoda `getId()` zwraca nam adres.
+Możemy także dodać własny **Endpoint**. Nasza klasa musi jedynie implementować odpowiedni interfejs. Metoda `getId()` zwraca nam adres.
 
 @Component
 public class MyCustomIndicator implements Endpoint<List<String>>{

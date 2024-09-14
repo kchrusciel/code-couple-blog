@@ -155,4 +155,4 @@ Ostatnia **prezentacja** tego dnia dotyczyła **architektury** aplikacji. Przeds
 *   Dla modułów powinniśmy mieć **osobne** bazy,  tabele albo chociaż schematy
 *   Do integracji modułów powinniśmy stosować **mediatora** w celu koordynacji komunikacji
 *   **Odwzorowanie** procesów w kodzie (np. czekamy na potwierdzenie użytkownika)
-*   Powinniśmy stosować **s****agi** jeśli chcemy w łatwy sposób zmieniać wymagania aplikacji
+*   Powinniśmy stosować **sagi** jeśli chcemy w łatwy sposób zmieniać wymagania aplikacji

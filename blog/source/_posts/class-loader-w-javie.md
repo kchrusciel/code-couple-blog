@@ -27,7 +27,7 @@ Poniższy obrazek prezentuje **hierachię** **ClassLoader'ów**:
 
 ### Bootstrap Class Loader
 
-Pierwszym **Class Loader'em** w hierarchii jest tak zwany **Bootstrap**/**Null**/**Primordial** Class Loader. Jest to **Class Loader** napisany w kodzie natywnym, którego zadaniem jest dostarczenie wszystkich elementów z folderu `$JAVA_HOME/lib/*.jar`. Znajduję się tam między innymi `rt.jar`, które zawiera podstawowe klasy jak `String` czy **k****olekcje**. Ponadto ładowane są Javowe **Class Loader'y**. Każdy kolejny typ **Class Loader'a** jest już napisany w **Javie**.
+Pierwszym **Class Loader'em** w hierarchii jest tak zwany **Bootstrap**/**Null**/**Primordial** Class Loader. Jest to **Class Loader** napisany w kodzie natywnym, którego zadaniem jest dostarczenie wszystkich elementów z folderu `$JAVA_HOME/lib/*.jar`. Znajduję się tam między innymi `rt.jar`, które zawiera podstawowe klasy jak `String` czy **kolekcje**. Ponadto ładowane są Javowe **Class Loader'y**. Każdy kolejny typ **Class Loader'a** jest już napisany w **Javie**.
 
 ### Extension Class Loader
 
