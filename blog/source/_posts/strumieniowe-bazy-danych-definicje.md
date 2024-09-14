@@ -5,12 +5,10 @@ tags:
   - streams
 id: '134'
 categories:
-  - - Streams
+  - Streams
 date: 2016-02-07 23:26:51
 author: 'Krzysztof Chruściel'
 ---
-
-* * *
 
 Ostatnimi czasy sporo czasu poświęciłam zagadnieniom strumieniowych języków i baz danych. Związane było to z tworzeniem własnego **języka strumieniowego**. W dzisiejszych czasach istnieje wiele systemów, w których wymagane jest przetwarzanie bardzo dużych ilości danych, napływających z wielu źródeł w trybie on-line. Z punktu widzenia zarówno użytkownika bardzo ważne jest, aby analiza i prezentacja wyników była ciągła i dynamiczna. Przykładami takich systemów mogą być systemy monitorujące ruch drogowy lub systemy giełdowe. W obu przypadkach niezbędna jest minimalizacja opóźnień przetwarzania danych. Konsekwencją może być zwrócenie nieaktualnych danych. Klasyczne systemy bazodanowe mogą okazać się nieefektywne, ponieważ przed przetworzeniem danych następuje ich zapis (znacząco spowalnia to pracę przy dużych zbiorach). Innym przykładem może być system monitorujący bezpieczeństwo. Kładzie się tu nacisk na inne funkcjonalności niż we wcześniejszych przypadkach. Opóźnienia nie są tak ważne, jak pewność zwrócenia wszystkich danych, bez pominięcia żadnych wartości. Różnorodność ta sprawia, że budowa systemu ogólnego zastosowania wiąże się ze stworzeniem nowych rozwiązań. Jednym z nich może być właśnie **system przetwarzania strumieniowego**.
 <!-- more -->
