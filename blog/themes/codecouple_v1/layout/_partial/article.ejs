@@ -17,7 +17,7 @@
         <% if(index) { %>
             <%- post.excerpt %>
             <br>
-            <a href="<%- url_for(post.path) %>">Czytaj więcej</a>
+            <a href="<%- url_for(post.path) %>" class="read-more">Czytaj więcej</a>
         <% } else {%>
             <%- post.content %>
         <% } %>
