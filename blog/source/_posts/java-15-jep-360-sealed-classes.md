@@ -7,7 +7,7 @@ tags:
   - sealed
 id: '4338'
 categories:
-  - - Java
+  - Java
 date: 2020-09-25 12:00:00
 author: 'Krzysztof Chruściel'
 ---
