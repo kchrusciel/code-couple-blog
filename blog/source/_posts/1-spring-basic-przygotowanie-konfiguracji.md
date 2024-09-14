@@ -10,11 +10,11 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal.png)
 
-W poprzednim wpisie opisałem czym jest **Spring** i jaki [problem rozwiązuje](https://codecouple.pl/2018/02/02/0-spring-basic-o-co-chodzi-z-tym-springiem/). Tym razem chciałem wam przedstawić jak zacząć swoją przygodę ze **Springiem**. Jako pierwszy temat zaczniemy od sposobów tworzenia konfiguracji **beanów**. **Konfiguracje** można tworzyć na dwa sposoby, **jawnie** korzystając z adnotacji `@Bean` oraz **automatycznie** korzystając z adnotacji `@Component`.
+W poprzednim wpisie opisałem czym jest **Spring** i jaki [problem rozwiązuje](https://codecouple.pl/2018/02/02/0-spring-basic-o-co-chodzi-z-tym-springiem/). Tym razem chciałem wam przedstawić jak zacząć swoją przygodę ze **Springiem**. Jako pierwszy temat zaczniemy od sposobów tworzenia konfiguracji **beanów**. **Konfiguracje** można tworzyć na dwa sposoby, **jawnie** korzystając z adnotacji `@Bean` oraz **automatycznie** korzystając z adnotacji `@Component`.
 <!-- more -->
 ### Zależności
 
-Aby zacząć korzystanie z frameworku **Spring** (i wszystkich dobrodziejstw **IoC**) musimy dodać do naszego projektu nową zależność `spring-context` (w tym przypadku korzystamy z narzędzia **Maven**, ale może być to dowolne inne narzędzie do zarządzania **zależnościami**):
+Aby zacząć korzystanie z frameworku **Spring** (i wszystkich dobrodziejstw **IoC**) musimy dodać do naszego projektu nową zależność `spring-context` (w tym przypadku korzystamy z narzędzia **Maven**, ale może być to dowolne inne narzędzie do zarządzania **zależnościami**):
 
 <dependency>
     <groupId>org.springframework</groupId>
@@ -30,13 +30,13 @@ W **Spring’u** obiekty stworzone i zarządzane przez kontener **IoC** nazywane
 
 ### Konfiguracja
 
-Kontener IoC w **Spring'u** zarządza tak zwanymi **Bean'ami**. Bean tworzony jest poprzez kontener **IoC** na podstawie dostarczonej **konfiguracji**. Konfiguracją mogą być między innymi:
+Kontener IoC w **Spring'u** zarządza tak zwanymi **Bean'ami**. Bean tworzony jest poprzez kontener **IoC** na podstawie dostarczonej **konfiguracji**. Konfiguracją mogą być między innymi:
 
 *   plik **XML**
 *   klasy konfiguracyjne w **Javie** (najpopularniejszy aktualnie typ)
 *   klasy konfiguracyjne w **Groovym**
 
-### Konfiguracja w XML
+### Konfiguracja w XML
 
 Konfigurację w **XML** umieszczamy w nowym pliku `.xml`. Najczęściej jest to plik o nazwie `Beans.xml`, nazwa ta może być dowolna. Plik ten musi znaleźć się na tak zwanym `CLASSPATH` (w naszym przykładach będziemy umieszczać go w folderze `src/main/resources`). Wszystkie definicje **Bean’ów** umieszczamy pomiędzy znacznikami `<beans></beans>`, natomiast definicje jednego **Bean’a** umieszczamy pomiędzy `<bean></bean>`:
 
@@ -45,12 +45,12 @@ Konfigurację w **XML** umieszczamy w nowym pliku `.xml`. Najczęściej jest to 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="..." class="...">
-        <!-- dodatkowe informacje -->
-    </bean>
-    <bean id="..." class="...">
-        <!-- dodatkowe informacje -->
-    </bean>
+    <bean id="..." class="...">
+        <!-- dodatkowe informacje -->
+    </bean>
+    <bean id="..." class="...">
+        <!-- dodatkowe informacje -->
+    </bean>
     <!-- kolejne definicje -->
 </beans>
 
@@ -61,7 +61,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 *   jawną
 *   automatyczną
 
-### Konfiguracja jawna
+### Konfiguracja jawna
 
 Pierwszym opisywanym typem **konfiguracji** jest konfiguracja **jawna**. **Jawna**, ponieważ jawnie musimy określić w jaki sposób ma być tworzony **Bean**. Deklarację **Bean’a** oznaczamy adnotacją `@Bean`:
 
@@ -116,7 +116,7 @@ package pl.sda;
 class CarConfiguration {
 }
 
- Jednakże, po uruchomieniu naszego kodu dostajemy **wyjątek**:
+ Jednakże, po uruchomieniu naszego kodu dostajemy **wyjątek**:
 
 exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException:
 No qualifying bean of type 'pl.sda.Tire' available:

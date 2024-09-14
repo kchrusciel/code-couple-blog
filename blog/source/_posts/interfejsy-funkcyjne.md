@@ -17,7 +17,7 @@ Interfejsy funkcyjne wykorzystywane są przy współpracy z wyrażeniami Lambda.
 *   `Consumer <T>` - przyjmuje dowolny obiekt, ale nic nie zwraca (T, void),
 *   `Supplier <T>` - nic nie przyjmuje, ale zwraca dowolny obiekt (void, T),
 *   `Predicate <T>` - przyjmuje dowolny obiekt, ale zwraca boolean (T, boolean),
-*   `UnaryOperator <T, T>` - przyjmuje oraz zwraca obiekt dowolnego typu, ale muszą być takie same (T, T) szczególny przypadek `Function`,
+*   `UnaryOperator <T, T>` - przyjmuje oraz zwraca obiekt dowolnego typu, ale muszą być takie same (T, T) szczególny przypadek `Function`,
 
 # Interfejs Function
 
@@ -29,7 +29,7 @@ public interface Function<T, R> {
      ...
 }
 
-Czyli tak jak napisałem powyżej, przyjmuje on oraz zwraca dowolny typ. Najważniejszą metodą w tym interfejsie jest metoda `R apply(T t).` Wywołuje ona pożądaną dla nas akcję.
+Czyli tak jak napisałem powyżej, przyjmuje on oraz zwraca dowolny typ. Najważniejszą metodą w tym interfejsie jest metoda `R apply(T t).` Wywołuje ona pożądaną dla nas akcję.
 
 Function<Integer, String> showCodeCouple = x -> x + " CodeCouple";
 System.out.println(showCodeCouple.apply(10));
@@ -73,7 +73,7 @@ Stream.of("10", "20", "30")
         .forEach(System.out::println);
 //10, 20, 30
 
-# Interfejs Consumer
+# Interfejs Consumer
 
 Zacznijmy od implementacji tego intefejsu:
 
@@ -100,7 +100,7 @@ Stream.of("show", "Code", "Couple")
 
 Podobnie jak interfejs `Function` posiada on metodę `andThen(Consumer<? super T>),` która działa tak samo. Służy do tworzenia łańcuchów wywołań kolejnych `Consumerów`.
 
-# Interfejs Supplier
+# Interfejs Supplier
 
 Zacznijmy od implementacji tego intefejsu:
 
@@ -117,7 +117,7 @@ System.out.println(returnCodeCouple.get());
 
 Interfejs ten nie ma żadnych dodatkowych metod.
 
-# Interfejs Predicate
+# Interfejs Predicate
 
 Zacznijmy od implementacji tego intefejsu:
 
@@ -133,7 +133,7 @@ Predicate<String> checkCodeCoupleIsTheBest = text -> text.contains("best");
 System.out.println("Is Code Couple the best? " + checkCodeCoupleIsTheBest.test("CodeCouple is the best"));
 //Is Code Couple the best? true
 
-Interefejs ten z racji na swoją zero-jedynkową naturę posiada użyteczne metody `and()`, `or()` oraz `negate()`.
+Interefejs ten z racji na swoją zero-jedynkową naturę posiada użyteczne metody `and()`, `or()` oraz `negate()`.
 
 Predicate<String> containsCode = textToCheck -> textToCheck.contains("Code");
 
@@ -175,7 +175,7 @@ Stream.of("showCode", "Code", "CodeCouple")
          .forEach(System.out::println);
 //Code
 
-# Interfejs UnaryOperator
+# Interfejs UnaryOperator
 
 Zacznijmy od implementacji tego intefejsu:
 
@@ -196,14 +196,14 @@ Podobnie jak `Function` posiada on metodę `indentity()`. Tak jak pisałem we ws
 
 # Własny interfejs
 
-Jedynym warunkiem, który musi być spełniony aby móc nazwać interfejs interefejsem funkcyjnym to posiadanie tylko jednej metody (może mieć więcej metod, jednakże muszą to być metody typu `default` lub `static`).
+Jedynym warunkiem, który musi być spełniony aby móc nazwać interfejs interefejsem funkcyjnym to posiadanie tylko jednej metody (może mieć więcej metod, jednakże muszą to być metody typu `default` lub `static`).
 
 @FunctionalInterface
 public interface PersonChecker {
     boolean checkNameContainsJan(Person person);
 }
 
-W powyższym przykładzie stworzyłem interfejs funkcyjny `PersonChecker,` który będzie sprawdzał czy obiekt `Person` zawiera imię Jan. Sama adnotacja `@FunctionalInterface` nic nie wnosi w naszym kodzie. Jest użyteczna, gdy używamy **IntelliJ,** ponieważ podpowiada zachowania dla interfejsu funkcyjnego. Aby użyć tego interfejsu należy go zaimplementować i wywołać naszą metodę:
+W powyższym przykładzie stworzyłem interfejs funkcyjny `PersonChecker,` który będzie sprawdzał czy obiekt `Person` zawiera imię Jan. Sama adnotacja `@FunctionalInterface` nic nie wnosi w naszym kodzie. Jest użyteczna, gdy używamy **IntelliJ,** ponieważ podpowiada zachowania dla interfejsu funkcyjnego. Aby użyć tego interfejsu należy go zaimplementować i wywołać naszą metodę:
 
 PersonChecker personChecker = (p) -> p.getName().contains("Jan");
 System.out.println("Check: " + personChecker.checkNameContainsJan(Person.JAN));

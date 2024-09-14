@@ -13,15 +13,15 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-Chociaż tytuł wpisu brzmi bardzo **złowieszczo** to nie zapowiada on niczego złego. Pojęcie wątków **demonicznych** pojawiło się już we [wpisie związanym z ThreadFactory](http://codecouple.pl/2018/03/31/threadfactory-czyli-pool-n-thread-m/), natomiast dziś chciałbym przedstawić wam jak tworzyć takie wątki. Ponadto odpowiemy sobie na pytanie kiedy warto stosować ten typ zadań.
+Chociaż tytuł wpisu brzmi bardzo **złowieszczo** to nie zapowiada on niczego złego. Pojęcie wątków **demonicznych** pojawiło się już we [wpisie związanym z ThreadFactory](http://codecouple.pl/2018/03/31/threadfactory-czyli-pool-n-thread-m/), natomiast dziś chciałbym przedstawić wam jak tworzyć takie wątki. Ponadto odpowiemy sobie na pytanie kiedy warto stosować ten typ zadań.
 <!-- more -->
 ### Różnice
 
-W naszych aplikacjach mamy dwa typy **wątków**. Jednym z nich są wątki **klienckie** (na przykład wątek **main**), natomiast drugim typem są wątki **demoniczne**. Maszyna wirtualna (**JVM**) kończy swoją pracę wtedy, gdy zakończy się ostatni wątek kliencki (**niedemoniczny**). Oznacza to, że jeśli w naszej aplikacji mamy wątki typu **demon**, aplikacja zamknie się pomimo tego, że jest wykonywana tam jakaś praca. Znając tą cechę, należy pamiętać, aby nie umieszczać tam żadnych zadań związanych z **I/O**!
+W naszych aplikacjach mamy dwa typy **wątków**. Jednym z nich są wątki **klienckie** (na przykład wątek **main**), natomiast drugim typem są wątki **demoniczne**. Maszyna wirtualna (**JVM**) kończy swoją pracę wtedy, gdy zakończy się ostatni wątek kliencki (**niedemoniczny**). Oznacza to, że jeśli w naszej aplikacji mamy wątki typu **demon**, aplikacja zamknie się pomimo tego, że jest wykonywana tam jakaś praca. Znając tą cechę, należy pamiętać, aby nie umieszczać tam żadnych zadań związanych z **I/O**!
 
 ### Zastosowanie
 
-Najczęściej w takich **wątkach** realizowane są zadania niezwiązane ściśle z logiką biznesową. **Demony** wykorzystywane są przez **JVM** do odśmiecania pamięci czy też do przechowywania **referencji** obiektów do usunięcia. W naszym przypadku możemy umieszczać tam zadania związane z **monitoringiem** aplikacji, który może być zakończony w dowolnym momencie.
+Najczęściej w takich **wątkach** realizowane są zadania niezwiązane ściśle z logiką biznesową. **Demony** wykorzystywane są przez **JVM** do odśmiecania pamięci czy też do przechowywania **referencji** obiektów do usunięcia. W naszym przypadku możemy umieszczać tam zadania związane z **monitoringiem** aplikacji, który może być zakończony w dowolnym momencie.
 
 ### Tworzenie
 
@@ -49,7 +49,7 @@ void shouldThrowIllegalThreadStateException() {
     assertThrows(IllegalThreadStateException.class, () -> thread.setDaemon(true));
 }
 
-Typ **wątku** **dziedziczony** jest z **wątku** z jakiego został stworzony. Głównym **wątkiem** jest **wątek** **main**, który jest **wątkiem** klienckim. Oznacza to, że każdy tworzonym **wątek** jest domyślnie **wątkiem** klienckim:
+Typ **wątku** **dziedziczony** jest z **wątku** z jakiego został stworzony. Głównym **wątkiem** jest **wątek** **main**, który jest **wątkiem** klienckim. Oznacza to, że każdy tworzonym **wątek** jest domyślnie **wątkiem** klienckim:
 
 @Test
 void shouldCreateClientThread() {

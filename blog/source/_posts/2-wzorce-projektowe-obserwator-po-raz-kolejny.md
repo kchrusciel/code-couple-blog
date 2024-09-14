@@ -15,9 +15,9 @@ author: 'Krzysztof Chruściel'
 
 Ile to już wody upłynęło od czasu wydania książki z wzorcami projektowymi "**Gang of Four**" na temat wzorców projektowych. Planuję napisać kilka artykułów na temat **programowania reaktywnego,** a jakby nie patrzeć **wzorzec obserwator** ma z tym paradygmatem programowania wiele wspólnego.
 <!-- more -->
-### 1. Obserwator
+### 1. Obserwator
 
-**Wzorzec obserwator** jest **wzorcem behawioralnym**. Jak sama nazwa mówi jest to wzorzec do obserwowania/nasłuchiwania na jakieś zdarzenie (np. zmianę stanu). Jeśli to zdarzenie wystąpi, wszystkie obiekty które "zapisały" się do nasłuchiwania na ten **event** zostaną o tym fakcie poinformowane. Tworzy się tu relacja **jeden-do-wielu,** która łączy ze sobą grupę obiektów, które zostaną poinformowane o zmianie stanu.
+**Wzorzec obserwator** jest **wzorcem behawioralnym**. Jak sama nazwa mówi jest to wzorzec do obserwowania/nasłuchiwania na jakieś zdarzenie (np. zmianę stanu). Jeśli to zdarzenie wystąpi, wszystkie obiekty które "zapisały" się do nasłuchiwania na ten **event** zostaną o tym fakcie poinformowane. Tworzy się tu relacja **jeden-do-wielu,** która łączy ze sobą grupę obiektów, które zostaną poinformowane o zmianie stanu.
 
 ### 2\. Hierarchia klas
 
@@ -25,19 +25,19 @@ Tak prezentuję się hierarchia klas z konkretną implementacją:
 
 [![observerClassDiagram](http://codecouple.pl/wp-content/uploads/2017/03/observerClassDiagram.png)](http://codecouple.pl/wp-content/uploads/2017/03/observerClassDiagram.png) Najważniejsze dwa interfejsy to **Observer** oraz **Subject**.
 
-### 3. Observer
+### 3. Observer
 
-Czyli nasz **obserwator**.  Obiekt, który chce obserwować, posiada w sobie tylko jedną metodę `update()` (nie musi być ona tak nazwana jednakże jest to "good practice"). Metoda ta wykonuję logikę, która wywoływana jest w momencie pojawienia się nowego zdarzenie. Zdarzenie to publikowane jest przez **Subject** (nazywanego też czasem **Publisher**).
+Czyli nasz **obserwator**.  Obiekt, który chce obserwować, posiada w sobie tylko jedną metodę `update()` (nie musi być ona tak nazwana jednakże jest to "good practice"). Metoda ta wykonuję logikę, która wywoływana jest w momencie pojawienia się nowego zdarzenie. Zdarzenie to publikowane jest przez **Subject** (nazywanego też czasem **Publisher**).
 
-### 4. Subject
+### 4. Subject
 
 Interfejs, który posiada trzy metody:
 
-*   `registerObserver` - dodaj subskrybenta,
-*   `unregisterObserver` - usuwa z listy subskrybentów,
+*   `registerObserver` - dodaj subskrybenta,
+*   `unregisterObserver` - usuwa z listy subskrybentów,
 *   `notifyObservers` - poinformuj wszystkich subskrybentów z listy.
 
-### 5. Jak korzystać
+### 5. Jak korzystać
 
 Jako przykład tworzymy Subject/Publisher'a, który publikuje informację o nowym wpisie na blogu:
 
@@ -143,7 +143,7 @@ Hi Krzysztof, you have 2 new articles to read
 Article: DesignThird added
 Hi Krzysztof, you have 3 new articles to read
 
-### 6. Reaktywny obserwator
+### 6. Reaktywny obserwator
 
 [![reactiveObserver](http://codecouple.pl/wp-content/uploads/2017/03/reactiveObserver.png)](http://codecouple.pl/wp-content/uploads/2017/03/reactiveObserver.png) **Observable** obserwuje jakieś zdarzenie i informuje o tym eventem. **Observer** chce obserwować ten event więc subskrybuje się do **Observable**.
 

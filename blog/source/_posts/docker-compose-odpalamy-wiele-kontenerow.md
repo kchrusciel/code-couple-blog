@@ -12,7 +12,7 @@ author: 'Krzysztof Chruściel'
 
 ![](https://www.docker.com/sites/default/files/Whale%20Logo332_5.png)
 
-**Docker Compose** jest kolejnym krokiem w pracy z kontenerami. Służy do uruchamiania i definiowania aplikacji składającej się z wielu kontenerów. Definiując pojedynczy plik **Dockerfile** nie mamy problemu z uruchomieniem go, jeśli natomiast mamy wiele takich plików pojawia się bardzo duża złożoność. Rozwiązaniem problemu jest **Docker Compose**.
+**Docker Compose** jest kolejnym krokiem w pracy z kontenerami. Służy do uruchamiania i definiowania aplikacji składającej się z wielu kontenerów. Definiując pojedynczy plik **Dockerfile** nie mamy problemu z uruchomieniem go, jeśli natomiast mamy wiele takich plików pojawia się bardzo duża złożoność. Rozwiązaniem problemu jest **Docker Compose**.
 <!-- more -->
 **Uwaga!** Aby korzystać z **Docker Compose** wymagana jest [instalacja **Dockera**.](https://codecouple.pl/2016/03/14/docker-pierwsze-kroki/)
 
@@ -32,7 +32,7 @@ EXPOSE 8082
 EXPOSE 8002
 ENTRYPOINT \["java", "-agentlib:jdwp=transport=dt\_socket,server=y,suspend=n,address=8002", "-jar", "consumer-docker.jar"\]
 
-Gdy stworzyliśmy pliki **Dockerfile** możemy przystąpić do utworzenia pliku `docker-compose.yml`.
+Gdy stworzyliśmy pliki **Dockerfile** możemy przystąpić do utworzenia pliku `docker-compose.yml`.
 
 version: '3'
 services:
@@ -79,11 +79,11 @@ Aby sprawdzić czy nasze kontenery pracują:
 
 docker-compose ps
 
-Teraz wystarczy udać się pod wybrany przez nas adres. Jeśli zakończyliśmy pracę z naszymi kontenerami wydajemy polecenie (tam gdzie mamy plik `docker-compose.yml`), które stopuje kontenery:
+Teraz wystarczy udać się pod wybrany przez nas adres. Jeśli zakończyliśmy pracę z naszymi kontenerami wydajemy polecenie (tam gdzie mamy plik `docker-compose.yml`), które stopuje kontenery:
 
 docker-compose stop
 
-Usunięcie kontenerów osiągniemy dzięki (polecenie uruchamiamy tam gdzie mamy plik `docker-compose.yml`):
+Usunięcie kontenerów osiągniemy dzięki (polecenie uruchamiamy tam gdzie mamy plik `docker-compose.yml`):
 
 docker-compose rm
 

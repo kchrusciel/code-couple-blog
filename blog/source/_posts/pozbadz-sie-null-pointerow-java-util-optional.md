@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-**Null pointer exception** jest chyba najbardziej rozpoznawalnym i najczęściej występującym wyjątkiem w **Javie**. Wyjątek ten może doprowadzać do wielu niepożądanych zachowań (w tym przerwanie działania aplikacji). **Java 8** dostarcza nam nową klasę **Optional** z pakietu `java.util.*`, która pozwala nam w lepszy sposób zabezpieczyć się przed tego typu **wyjątkiem**.
+**Null pointer exception** jest chyba najbardziej rozpoznawalnym i najczęściej występującym wyjątkiem w **Javie**. Wyjątek ten może doprowadzać do wielu niepożądanych zachowań (w tym przerwanie działania aplikacji). **Java 8** dostarcza nam nową klasę **Optional** z pakietu `java.util.*`, która pozwala nam w lepszy sposób zabezpieczyć się przed tego typu **wyjątkiem**.
 <!-- more -->
 ### Problem
 
@@ -118,7 +118,7 @@ void shouldReturnFalseWhenValueIsNotPresent() {
     assertThat(isPresent).isFalse();
 }
 
-Ponadto otrzymaliśmy bardziej funkcyjną metodę do wywołania logiki w przypadku wystąpienia danych. Jest to metoda `ifPresent`, która przyjmuje `Consumer`:
+Ponadto otrzymaliśmy bardziej funkcyjną metodę do wywołania logiki w przypadku wystąpienia danych. Jest to metoda `ifPresent`, która przyjmuje `Consumer`:
 
 @Test
 void shouldCallMethodWhenValueIsPresentOnIfPresent() {
@@ -251,7 +251,7 @@ void shouldThrowIllegalStateExceptionWhenValueIsEmpty() {
 
 ### Optional jako parametr metody
 
-`Optional` powinien być wykorzystywany tylko do zwracania opcjonalnych danych. Nie **powinniśmy** stosować klasy `Optional` jako typ w **paramaterze** metody. Jeśli posiadamy metodę, w której jeden z parametrów jest opcjonalny to możemy taką metodę **przeciążyć** (OOP):
+`Optional` powinien być wykorzystywany tylko do zwracania opcjonalnych danych. Nie **powinniśmy** stosować klasy `Optional` jako typ w **paramaterze** metody. Jeśli posiadamy metodę, w której jeden z parametrów jest opcjonalny to możemy taką metodę **przeciążyć** (OOP):
 
 void methodWithOptional(
         final String value,
@@ -275,4 +275,4 @@ Zdefiniowanie pola typu `Optional` może powodować problemy jeśli nasza klasa 
 
 ### GitHub
 
-Całość jak zawsze na [GitHub'ie](https://github.com/kchrusciel/CodeCouple/tree/master/Optional).
+Całość jak zawsze na [GitHub'ie](https://github.com/kchrusciel/CodeCouple/tree/master/Optional).

@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
 
-Autorzy rozwiązania **Spring Boot** bardzo mocno stawiają na fakt, iż aplikacja napisana z wykorzystaniem ich frameworku powinna być _production-ready_. Zgodnie z **12 factor manifesto**, apikacja sama w sobie powinna dostarczać informacji na temat swojej **telemetrii**. Projekt **actuator** jest mechanizmem zbliżającym nas do pojęcia  _production-ready_. Dostarcza on podstawowe metryki oraz informacje na temat aplikacji.
+Autorzy rozwiązania **Spring Boot** bardzo mocno stawiają na fakt, iż aplikacja napisana z wykorzystaniem ich frameworku powinna być _production-ready_. Zgodnie z **12 factor manifesto**, apikacja sama w sobie powinna dostarczać informacji na temat swojej **telemetrii**. Projekt **actuator** jest mechanizmem zbliżającym nas do pojęcia  _production-ready_. Dostarcza on podstawowe metryki oraz informacje na temat aplikacji.
 <!-- more -->
 ### Zależności
 
@@ -28,11 +28,11 @@ Standardowo zaczniemy od dodania nowej **zależności** do naszego projektu, tym
 
 ### Domyślnie
 
-Dodanie powyższej **zależności** do naszego projektu sprawiło, iż pojawią się nowe **funkcjonalności**. Wszystkie dodatkowe informacje o aplikacji dostępne pod adresem `/actuator`. Domyślnie **włączonymi** adresami są `/info` oraz `/health`.
+Dodanie powyższej **zależności** do naszego projektu sprawiło, iż pojawią się nowe **funkcjonalności**. Wszystkie dodatkowe informacje o aplikacji dostępne pod adresem `/actuator`. Domyślnie **włączonymi** adresami są `/info` oraz `/health`.
 
 ### Health
 
-Adres `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
+Adres `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
 
 {
    "status": "UP" // jeśli aplikacja działa poprawnie
@@ -44,7 +44,7 @@ Adres `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
 
 ### Info
 
-Adres `/info` zwraca ustawione przez nas **informacje** o aplikacji (domyślnie zwraca pusty **JSON**).  Aby ustawić wartości pod adresem `/info` wystarczy w pliku `application.properties` dodać wpis:
+Adres `/info` zwraca ustawione przez nas **informacje** o aplikacji (domyślnie zwraca pusty **JSON**).  Aby ustawić wartości pod adresem `/info` wystarczy w pliku `application.properties` dodać wpis:
 
 #Zawartość adresu /info
 info.app.name=Code Couple Application
@@ -66,7 +66,7 @@ Wszystko co dostępne jest po kluczu `info` dodawane jest do adresu `/info`. W w
  }
 }
 
-Jest to bardzo przydatny **adres**, jeśli chcemy poinformować innych o aktualnej **wersji** lub gdy przygotowujemy **dashboard** zbierający **informacje** o aplikacjach.
+Jest to bardzo przydatny **adres**, jeśli chcemy poinformować innych o aktualnej **wersji** lub gdy przygotowujemy **dashboard** zbierający **informacje** o aplikacjach.
 
 ### Actuator
 
@@ -81,7 +81,7 @@ Jednakże, projekt **actuator** to nie tylko `/info` oraz `/health`. **Projekt**
 *   `/threaddump` – zwraca zrzut **wątków** naszej **JVM'owej** aplikacji
 *   `/scheduledtasks` – zwraca informacje o **zadaniach** wykonywanych w tle w naszej aplikacji
 *   `/sessions` – zwraca informacje o **sesjach** HTTP z wykorzystaniem technologii **Spring Session**
-*   `/metrics` – zwraca **metryki** aplikacji
+*   `/metrics` – zwraca **metryki** aplikacji
 *   `/prometheus` - zwraca **metryki** aplikacji dostosowane do aplikacji **Prometheus**
 *   `/shutdown` – wyłącza aplikację poprzez żądanie **POST** (domyślnie jest **wyłączony**)
 

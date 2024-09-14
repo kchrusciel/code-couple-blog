@@ -13,11 +13,11 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-**Spring Cloud** we współpracy z **Netflixem** w bardzo pozytywny sposób ułatwiają pracę w architekturze **mikroserwisów**. Dostarczają oni wiele mechanizmów które pozwalają spełnić założenia jakie stawia poprawne tworzenie **mikroserwisów**. Pierwszym narzędziem **Cloudowym** który przedstawię jest **Cloud Config**.
+**Spring Cloud** we współpracy z **Netflixem** w bardzo pozytywny sposób ułatwiają pracę w architekturze **mikroserwisów**. Dostarczają oni wiele mechanizmów które pozwalają spełnić założenia jakie stawia poprawne tworzenie **mikroserwisów**. Pierwszym narzędziem **Cloudowym** który przedstawię jest **Cloud Config**.
 <!-- more -->
 ### 12 Factor manifesto
 
-[12 Factor manifesto](https://12factor.net/pl/) zawiera 12 punktów które powinna spełnia aplikacja w środowisku rozproszonym. Jeden z punktów mówi o tym, że ustawienia specyficzne dla danego środowiska powinny znajdować się tylko na nim. Domyślna implementacja **application.properties** spełnia te założenia, jednakże rozwiązanie to ma kilka wad.
+[12 Factor manifesto](https://12factor.net/pl/) zawiera 12 punktów które powinna spełnia aplikacja w środowisku rozproszonym. Jeden z punktów mówi o tym, że ustawienia specyficzne dla danego środowiska powinny znajdować się tylko na nim. Domyślna implementacja **application.properties** spełnia te założenia, jednakże rozwiązanie to ma kilka wad.
 
 ### Brak historii
 
@@ -33,7 +33,7 @@ W kwestii bezpieczeństwa przechowywanie **haseł** czystym **plain textem** nie
 
 ### Zmiany w plikach
 
-Problemem jest także przeładowywanie aplikacji po każdej zmianie w **properties**. **Killer featurem** który rozwiązuje ten problem jest `@RefreshScope.` **Spring Cloud Config** dostarcza mechanizm który w łatwy sposób może odświeżyć kontekst aplikacji bez potrzeby ponownego jej uruchomienia.
+Problemem jest także przeładowywanie aplikacji po każdej zmianie w **properties**. **Killer featurem** który rozwiązuje ten problem jest `@RefreshScope.` **Spring Cloud Config** dostarcza mechanizm który w łatwy sposób może odświeżyć kontekst aplikacji bez potrzeby ponownego jej uruchomienia.
 
 ### Config Server
 
@@ -55,7 +55,7 @@ server.port=8888
 #URI to GIT with all properties
 spring.cloud.config.server.git.uri=GIT-URI-HERE
 
-Po uruchomieniu serwera wystarczy wejść pod adres [http://localhost:8888/application/master](http://localhost:8888/application/master) aby zobaczyć wpisy dla naszego pliku `application.properties`. Natomiast każde inne **property** poprzedzamy nazwą pliku. Dla `client-service.properties` będzie to adres [http://localhost:8888/client-service/master](http://localhost:8888/client-service/master). GitHub dla serwera: [https://github.com/kchrusciel/spring-boot-config-server-example](https://github.com/kchrusciel/spring-boot-config-server-example).
+Po uruchomieniu serwera wystarczy wejść pod adres [http://localhost:8888/application/master](http://localhost:8888/application/master) aby zobaczyć wpisy dla naszego pliku `application.properties`. Natomiast każde inne **property** poprzedzamy nazwą pliku. Dla `client-service.properties` będzie to adres [http://localhost:8888/client-service/master](http://localhost:8888/client-service/master). GitHub dla serwera: [https://github.com/kchrusciel/spring-boot-config-server-example](https://github.com/kchrusciel/spring-boot-config-server-example).
 
 ### Config Client
 
@@ -88,7 +88,7 @@ public class ConfigClientController {
 
 }
 
-Który wyświetla nam zawartość property `info.property`. Dodajmy teraz ten wpis do naszego `config-client.properties`, przykładowo `info.property=CodeCouple` (należy **zacommitować** tą zmianę jeśli korzystamy z GIT'a) a następnie uruchamiamy aplikację. Pod endpointem `/message` wyświetli nam się napis **CodeCouple**. Teraz zmieniamy znów tą wartość w pliku `config-client.properties` na `info.property=CodeCouple roxx!!`. Po ponownym odświeżeniu `/message` nadal widzimy starą wartość. Aby wykorzystać możliwości `@RefreshScope` musimy wykorzystać acutatory i wysłać puste żądanie **POST** na endpoint `/refresh`, teraz bez potrzeby restartu aplikacji powinniśmy widzieć nową zawartość (odśwież przeglądarkę jeśli nie widzisz zmiany).
+Który wyświetla nam zawartość property `info.property`. Dodajmy teraz ten wpis do naszego `config-client.properties`, przykładowo `info.property=CodeCouple` (należy **zacommitować** tą zmianę jeśli korzystamy z GIT'a) a następnie uruchamiamy aplikację. Pod endpointem `/message` wyświetli nam się napis **CodeCouple**. Teraz zmieniamy znów tą wartość w pliku `config-client.properties` na `info.property=CodeCouple roxx!!`. Po ponownym odświeżeniu `/message` nadal widzimy starą wartość. Aby wykorzystać możliwości `@RefreshScope` musimy wykorzystać acutatory i wysłać puste żądanie **POST** na endpoint `/refresh`, teraz bez potrzeby restartu aplikacji powinniśmy widzieć nową zawartość (odśwież przeglądarkę jeśli nie widzisz zmiany).
 
 ### Szyfrowanie
 

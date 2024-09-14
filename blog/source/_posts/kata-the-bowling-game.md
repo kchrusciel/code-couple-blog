@@ -20,8 +20,8 @@ Jak napisałem we wstępie, ćwiczenie to dotyczy **gry w kręgle** (ang. bowlin
 *   Jeśli wszystkie twoje rzuty (ang. roll/throw) były chybione to wynik końcowy wynosi **zero**
 *   W każdym rzucie został strącony tylko jeden kręgiel (ang. pin). Wynik końcowy wynosi **20**.
 *   W pierwszej turze (ang. frame) został trafiony **spare**, następnie zostały strącone trzy kręgle. Wynik końcowy wynosi **16**.
-*   W pierwszej turze został trafiony **strike**, następnie zostały strącone trzy i cztery kręgle. Reszta rzutów była chybiona. Wynik końcowy wynosi **24**.
-*   Wszystkie rzuty to **strikes.** Wynik końcowy wynosi **300**.
+*   W pierwszej turze został trafiony **strike**, następnie zostały strącone trzy i cztery kręgle. Reszta rzutów była chybiona. Wynik końcowy wynosi **24**.
+*   Wszystkie rzuty to **strikes.** Wynik końcowy wynosi **300**.
 
 Podczas gry w kręgle obowiązują pewne zasady:
 

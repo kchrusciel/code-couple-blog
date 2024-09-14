@@ -11,7 +11,7 @@ categories:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travisci.png)
 
-W poprzednim wpisie stworzyliśmy naprawde prosty proces ciągłej intregacji. W przypadku gdy testy nie przeszły nasz build również nie zakończył się sukcesem. W Travis CI zostało to przedstawione jako "czerowny" build. Jednakże aby dowiedzieć się czy nas proces budowania zakończył się sukcesem musimy co jakiś czas sprawdzać Travis'a. Rozwiązaniem tego problemu są notyfikacje, które poinformują nas o wydarzeniach w procesie budowania.
+W poprzednim wpisie stworzyliśmy naprawde prosty proces ciągłej intregacji. W przypadku gdy testy nie przeszły nasz build również nie zakończył się sukcesem. W Travis CI zostało to przedstawione jako "czerowny" build. Jednakże aby dowiedzieć się czy nas proces budowania zakończył się sukcesem musimy co jakiś czas sprawdzać Travis'a. Rozwiązaniem tego problemu są notyfikacje, które poinformują nas o wydarzeniach w procesie budowania.
 <!-- more -->
 ### Zanim zaczniemy...
 
@@ -41,7 +41,7 @@ Czasem może zdarzyć się że nie otrzymaliśmy powiadomienia na email. Travis 
 
 ### Slack
 
-Drugim sposobem informowania nas o postępach jest aplikacja **Slack**. Aktualnie **Slack** jest jednym z najpopularniejszych komunikatorów wykorzystywanych w branży **IT**. Aby dodać integrację należy wejść pod adres [https://my.slack.com/services/new/travis](https://my.slack.com/services/new/travis) i wybrać kanał, na który chcemy aby publikowane były wiadomości:
+Drugim sposobem informowania nas o postępach jest aplikacja **Slack**. Aktualnie **Slack** jest jednym z najpopularniejszych komunikatorów wykorzystywanych w branży **IT**. Aby dodać integrację należy wejść pod adres [https://my.slack.com/services/new/travis](https://my.slack.com/services/new/travis) i wybrać kanał, na który chcemy aby publikowane były wiadomości:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travis-channel.png)
 
@@ -65,7 +65,7 @@ Oprócz opisanych powyżej sposobów **Travis CI** potrafi **integrować** się 
 
 ### Więcej
 
-Więcej informacji na temat notyfikacji znajdziecie na stronie [https://docs.travis-ci.com/user/notifications/](https://docs.travis-ci.com/user/notifications/).
+Więcej informacji na temat notyfikacji znajdziecie na stronie [https://docs.travis-ci.com/user/notifications/](https://docs.travis-ci.com/user/notifications/).
 
 ### Github
 

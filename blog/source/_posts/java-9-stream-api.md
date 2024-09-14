@@ -42,7 +42,7 @@ Stream.iterate("", s -> s + "s")
 
 ### iterate
 
-Przykład podobny do tego powyżej. Metoda `iterate` ma teraz swoją trójargumentową wersję. Chcemy wypisać 10 liczb po kolei:
+Przykład podobny do tego powyżej. Metoda `iterate` ma teraz swoją trójargumentową wersję. Chcemy wypisać 10 liczb po kolei:
 
 Stream.iterate(0, i -> i < 10, i -> i + 1)
         .forEach(this::log);
@@ -53,7 +53,7 @@ Stream.iterate(0, i -> i + 1)
         .limit(10)
         .forEach(this::log);
 
-Ale teraz wyobraźmy sobie, że mamy bardziej skomplikowany obiekt, na przykład wypisz mi wszystkie daty od początku roku do dziś:
+Ale teraz wyobraźmy sobie, że mamy bardziej skomplikowany obiekt, na przykład wypisz mi wszystkie daty od początku roku do dziś:
 
 Stream.iterate(startDate, date -> date.plusDays(1))
         .filter(date->date.isBefore(LocalDate.now()))

@@ -13,7 +13,7 @@ categories:
 
 ![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
 
-Szybkość dostarczania nowych funkcjonalności, jest jedym z kluczowych elementów w nowoczesnym procesie wytwarzania oprogramowania.
+Szybkość dostarczania nowych funkcjonalności, jest jedym z kluczowych elementów w nowoczesnym procesie wytwarzania oprogramowania.
 <!-- more -->
 ## Maven
 

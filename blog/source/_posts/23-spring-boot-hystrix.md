@@ -17,7 +17,7 @@ author: 'Krzysztof Chruściel'
 <!-- more -->
 ### Zasada działania
 
-W architekturze mikroserwisów odpytujemy inne usługi o informacje, które wymagane są do realizacji naszej logiki. Często odpytujemy usługi, które nie są tworzone przez nas. Może zdarzyć się, iż usługa nie działa poprawnie, lub jest niedostępna. Wtedy "opakowujemy" naszą logikę odpowiedzialną za odpytywanie innych usług, jako komendę **Hystrix'ową**. W przypadku wystąpienia błędu, wywoływana jest metoda (ang. _fallback method_) odpowiedzialna za obsługę zdarzenia krytycznego.  Jeśli dalej będziemy odpytywać niedziałającą lub wolno działającą usługę, na pewno jej to nie pomoże. Nasze kolejne odpytywania mogą jeszcze bardziej zwolnić usługę. **Hystrix** zapobiega takim praktykom. W momencie, gdy biblioteka widzi, iż usługa nie odpowiada lub działa niepoprawnie zostaje wtedy włączony bezpiecznik (ang. _circuit breaker_). Po włączeniu bezpiecznika automatycznie zwracana jest wartość metody fallback. Dzięki temu, usługa zewnętrzna ma czas na restart lub realizację zadań, co umożliwi jej ponowne poprawne działanie. Wyłączenie bezpiecznika następuję wtedy, gdy usługa, którą odpytujemy działa już poprawnie. Tyle teorii, jeśli nadal jest to niejasne, kod wszystko wyjaśni!
+W architekturze mikroserwisów odpytujemy inne usługi o informacje, które wymagane są do realizacji naszej logiki. Często odpytujemy usługi, które nie są tworzone przez nas. Może zdarzyć się, iż usługa nie działa poprawnie, lub jest niedostępna. Wtedy "opakowujemy" naszą logikę odpowiedzialną za odpytywanie innych usług, jako komendę **Hystrix'ową**. W przypadku wystąpienia błędu, wywoływana jest metoda (ang. _fallback method_) odpowiedzialna za obsługę zdarzenia krytycznego.  Jeśli dalej będziemy odpytywać niedziałającą lub wolno działającą usługę, na pewno jej to nie pomoże. Nasze kolejne odpytywania mogą jeszcze bardziej zwolnić usługę. **Hystrix** zapobiega takim praktykom. W momencie, gdy biblioteka widzi, iż usługa nie odpowiada lub działa niepoprawnie zostaje wtedy włączony bezpiecznik (ang. _circuit breaker_). Po włączeniu bezpiecznika automatycznie zwracana jest wartość metody fallback. Dzięki temu, usługa zewnętrzna ma czas na restart lub realizację zadań, co umożliwi jej ponowne poprawne działanie. Wyłączenie bezpiecznika następuję wtedy, gdy usługa, którą odpytujemy działa już poprawnie. Tyle teorii, jeśli nadal jest to niejasne, kod wszystko wyjaśni!
 
 ### Włączamy Hystrix'a
 
@@ -28,7 +28,7 @@ Zaczynamy od dodania zależności **Mavenowej**:
    <artifactId>spring-cloud-starter-hystrix</artifactId>
 </dependency>
 
-Aby uruchomić **Hystrix'a** w naszej aplikacji należy użyć adnotacji `@EnableCircuitBreaker`:
+Aby uruchomić **Hystrix'a** w naszej aplikacji należy użyć adnotacji `@EnableCircuitBreaker`:
 
 @SpringBootApplication
 @EnableCircuitBreaker
@@ -41,7 +41,7 @@ public class HystrixExampleApplication {
 
 ### Tworzymy kontroler
 
-Aby skorzystać z **Hystrix'a** należy użyć adnotacji `@HystrixCommand`, a jako parametr `fallbackMethod` wskazać metodę, która będzie wywoływana w przypadku błędu. Naszym błędem, będzie wylosowanie liczby większej niż 5. **Uwaga!** Metoda `fallbackMethod` musi mieć takie same parametry jak metoda z adnotacją.
+Aby skorzystać z **Hystrix'a** należy użyć adnotacji `@HystrixCommand`, a jako parametr `fallbackMethod` wskazać metodę, która będzie wywoływana w przypadku błędu. Naszym błędem, będzie wylosowanie liczby większej niż 5. **Uwaga!** Metoda `fallbackMethod` musi mieć takie same parametry jak metoda z adnotacją.
 
 @RestController
 class RandomController {
@@ -64,9 +64,9 @@ class RandomController {
 
 ### Wartości domyślne
 
-Bardzo ważnym aspektem związanym z pracą biblioteki **Hystrix** jest poznanie wartości domyślnych. Domyślny timeout dla commendy to jedna sekunda. Hystrix zbiera także statystki z ostatnich **dziesięciu sekund** w przesuwnym oknie czasowym. Na podstawie tych statystyk podejmowana jest decyzja czy włączyć bezpiecznik. Aby bezpiecznik się włączył (przejście w stan **OPEN**) w danym oknie czasowym musi być spełnionych kilka warunków:
+Bardzo ważnym aspektem związanym z pracą biblioteki **Hystrix** jest poznanie wartości domyślnych. Domyślny timeout dla commendy to jedna sekunda. Hystrix zbiera także statystki z ostatnich **dziesięciu sekund** w przesuwnym oknie czasowym. Na podstawie tych statystyk podejmowana jest decyzja czy włączyć bezpiecznik. Aby bezpiecznik się włączył (przejście w stan **OPEN**) w danym oknie czasowym musi być spełnionych kilka warunków:
 
-*   minimum 50 %  żądań zakończonych niepowodzeniem
+*   minimum 50 %  żądań zakończonych niepowodzeniem
 *   tych żądań musi być minimum 20
 
 Po włączeniu bezpiecznika wywoływana jest metoda fallback, jednakże nie trwa to w nieskończoność. Po okołu 5 sekundach nasz bezpiecznik przechodzi w stan **HALF-OPEN**, co oznacza, że jedno z żądań klienta zostanie wysłane to usługi. Jeśli działa ona poprawnie, nasz bezpiecznik się wyłącza (przechodzi w stan **CLOSED**).

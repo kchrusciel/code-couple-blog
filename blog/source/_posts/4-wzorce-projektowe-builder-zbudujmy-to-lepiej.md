@@ -26,11 +26,11 @@ Zacznijmy od diagramu z klasami, na przykładzie których przedstawię Wam wzorz
 
 ### Produkt
 
-To co nas najbardziej interesuje, czyli tworzony produkt. W naszym przypadku będzie to paczka świąteczna (`ChristmasPack`) jako, że jeszcze jesteśmy w tym świątecznym klimacie. Klasa składa się z prezentów oraz opakowania (pola `Present` oraz `Wrapping`) oraz settery do nich, które nie zostały przedstawione na diagramie, żeby nie zaciemniać rysunku.
+To co nas najbardziej interesuje, czyli tworzony produkt. W naszym przypadku będzie to paczka świąteczna (`ChristmasPack`) jako, że jeszcze jesteśmy w tym świątecznym klimacie. Klasa składa się z prezentów oraz opakowania (pola `Present` oraz `Wrapping`) oraz settery do nich, które nie zostały przedstawione na diagramie, żeby nie zaciemniać rysunku.
 
 ### Builder
 
-Kolejnym elementem wzorca jest sam **builder**. Jest to zazwyczaj interfejs lub klasa abstrakcyjna, w której mamy metody odpowiedzialne za tworzenie kolejnych części produktu. W naszym przypadku jest to interfejs `ChristmasPackBuilder` z dwoma metodami dodającymi do paczki prezenty oraz opakowanie.
+Kolejnym elementem wzorca jest sam **builder**. Jest to zazwyczaj interfejs lub klasa abstrakcyjna, w której mamy metody odpowiedzialne za tworzenie kolejnych części produktu. W naszym przypadku jest to interfejs `ChristmasPackBuilder` z dwoma metodami dodającymi do paczki prezenty oraz opakowanie.
 
 ### Konkretne implementacje buildera
 
@@ -38,7 +38,7 @@ Są to klasy implementujące opisany wyżej **builder**. Na diagramie widzimy, �
 
 ### Director (zarządca)
 
-Naszym zarządcą jest klasa `Packer`, która decyduje/zarządza według jakiej **instrukcji** ma być tworzony produkt. W metodzie `createChristmasPack()` wywoływane są metody z kolejnymi krokami pakowania paczki.
+Naszym zarządcą jest klasa `Packer`, która decyduje/zarządza według jakiej **instrukcji** ma być tworzony produkt. W metodzie `createChristmasPack()` wywoływane są metody z kolejnymi krokami pakowania paczki.
 
 class Packer {
     private final ChristmasPackBuilder christmasPackBuilder;
@@ -56,7 +56,7 @@ class Packer {
 
 ### Uruchamiamy
 
-W naszej klasie klienckiej tworzymy zarządcę (`Packer`), do którego przekazujemy konkretną implementację **buildera**, a tym samym instrukcję z odpowiednimi parametrami dla konkretnej paczki (naughty or nice).
+W naszej klasie klienckiej tworzymy zarządcę (`Packer`), do którego przekazujemy konkretną implementację **buildera**, a tym samym instrukcję z odpowiednimi parametrami dla konkretnej paczki (naughty or nice).
 
 Packer packer = new Packer(new NaughtyChristmasPackBuilder());
 ChristmasPack christmasPack = packer.createChristmasPack();
@@ -72,7 +72,7 @@ Nie ma co ukrywać, przykład nie jest skomplikowany, ale na takich najlepiej mo
 
 Wzorzec **builder** pozwala nam całkowicie zakryć sposób tworzenia obiektów przed klientem. Otrzymuje on gotowy produkt, który w zależności od rodzaju jest tworzony w inny sposób. W naszym przykładzie zarówno tworzenie prezentu jak i opakowania wyglądało tak samo, czyli wywoływane były kolejne settery ustawiające odpowiednie wartości, ale równie dobrze możemy wykonać zupełnie inną logikę dla jednego typu paczki i inną dla drugiego.
 
-Wzorzec builder ostatnio często mylony jest z wzorcem zwanym **Test Data Builder**, który nazywany jest również **Fluent Builder'em** lub **Appender'em**, ale o nim opowiem w kolejnym wpisie.
+Wzorzec builder ostatnio często mylony jest z wzorcem zwanym **Test Data Builder**, który nazywany jest również **Fluent Builder'em** lub **Appender'em**, ale o nim opowiem w kolejnym wpisie.
 
 ### GitHub
 

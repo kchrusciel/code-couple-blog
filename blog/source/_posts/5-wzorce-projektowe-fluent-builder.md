@@ -17,7 +17,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
 
-Dzisiaj na tapete bierzemy wzorzec **Test Data Builder**. Nazywany jest również **Fluent Builder'em** lub **Appender'em**. Z jego pomocą jesteśmy w stanie budować obiekty w prosty i przejrzysty sposób. Zetknęliście się kiedyś z kodem, w którym tworzenie obiektu z dużą ilością pól odbywało się przez konstruktor, a wy kilka razy musieliście sprawdzać w jakiej kolejności podawać następne parametry? Jest na to proste rozwiązanie - **Test Data Builder**.
+Dzisiaj na tapete bierzemy wzorzec **Test Data Builder**. Nazywany jest również **Fluent Builder'em** lub **Appender'em**. Z jego pomocą jesteśmy w stanie budować obiekty w prosty i przejrzysty sposób. Zetknęliście się kiedyś z kodem, w którym tworzenie obiektu z dużą ilością pól odbywało się przez konstruktor, a wy kilka razy musieliście sprawdzać w jakiej kolejności podawać następne parametry? Jest na to proste rozwiązanie - **Test Data Builder**.
 <!-- more -->
 Implementacja
 
@@ -69,7 +69,7 @@ class Author {
     }
 }
 
-Biblioteka **Lombok** dostarcza nam gotowy mechanizm **Test Data Buildera**. Adnotacja nad daną klasą pozwala nam korzystać z **buildera** poprzez wywołanie metody `builder()` na początku łańcucha oraz metody `build()` na jej końcu. Klasa posiada tylko pola, które chcemy ustawiać, a budując obiekt nie używamy słowa kluczowego `new`. Więcej informacji na temat lombokowego buildera znajdziecie [TUTAJ](https://projectlombok.org/features/Builder).
+Biblioteka **Lombok** dostarcza nam gotowy mechanizm **Test Data Buildera**. Adnotacja nad daną klasą pozwala nam korzystać z **buildera** poprzez wywołanie metody `builder()` na początku łańcucha oraz metody `build()` na jej końcu. Klasa posiada tylko pola, które chcemy ustawiać, a budując obiekt nie używamy słowa kluczowego `new`. Więcej informacji na temat lombokowego buildera znajdziecie [TUTAJ](https://projectlombok.org/features/Builder).
 
 @Builder
 class Category {

@@ -16,7 +16,7 @@ date: 2017-09-29 12:05:38
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)**Service Discovery** jest kolejnym mechanizmem wykorzystywanym w środowisku **cloudowym**. Najpopularniejsze implementacje tego mechanizmu to między innymi: **Consul**, **Zookeeper** czy **Eureka** ze stajni Netflix. **Spring Cloud** wykorzystał implementacje firmy Netflix i stworzył swój wrapper, który w bardzo szybki i łatwy sposób pozwala integrować się z całym stosem **Spring Cloud**.
+[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)**Service Discovery** jest kolejnym mechanizmem wykorzystywanym w środowisku **cloudowym**. Najpopularniejsze implementacje tego mechanizmu to między innymi: **Consul**, **Zookeeper** czy **Eureka** ze stajni Netflix. **Spring Cloud** wykorzystał implementacje firmy Netflix i stworzył swój wrapper, który w bardzo szybki i łatwy sposób pozwala integrować się z całym stosem **Spring Cloud**.
 <!-- more -->
 ### Server
 
@@ -27,7 +27,7 @@ Zaczynamy od uruchomienia serwera. Dodajemy zależność do **Mavena**:
    <artifactId>spring-cloud-starter-eureka-server</artifactId>
 </dependency>
 
-Aby wskazać, iż nasza aplikacja będzie serwerem należy użyć adnotacji `@EnableEurekaServer`.
+Aby wskazać, iż nasza aplikacja będzie serwerem należy użyć adnotacji `@EnableEurekaServer`.
 
 @SpringBootApplication
 @EnableEurekaServer
@@ -53,11 +53,11 @@ eureka.client.fetch-registry=false
 security.user.name=user
 security.user.password=password
 
-Portem dla serwera według konwencji jest **8761**. Domyślnie nasz serwer zarejestruje siebie samego, aby wyłączyć tą opcje dodajemy wpis `eureka.client.register-with-eureka=false`. Warto pomyśleć także nad zabezpieczeniem tej usługi!
+Portem dla serwera według konwencji jest **8761**. Domyślnie nasz serwer zarejestruje siebie samego, aby wyłączyć tą opcje dodajemy wpis `eureka.client.register-with-eureka=false`. Warto pomyśleć także nad zabezpieczeniem tej usługi!
 
 ### Client
 
-Dodajmy teraz klienta, czyli aplikację, która będzie rejestrować się na serwerze. W naszej aplikacji umieszczamy adnotację `@EnableDiscoveryClient`, która aktywuje implementacje `DiscoveryClient`. Domyślnie jest to implementacja **Netflix Eureka**, jednakże tak jak pisałem we wstępie, istnieją także inne implementacje jak **Zookeeper** czy **Consul**.
+Dodajmy teraz klienta, czyli aplikację, która będzie rejestrować się na serwerze. W naszej aplikacji umieszczamy adnotację `@EnableDiscoveryClient`, która aktywuje implementacje `DiscoveryClient`. Domyślnie jest to implementacja **Netflix Eureka**, jednakże tak jak pisałem we wstępie, istnieją także inne implementacje jak **Zookeeper** czy **Consul**.
 
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -68,7 +68,7 @@ public class SpringBootEurekaClientExampleApplication {
    }
 }
 
-Dodajemy zależność do **Mavena**:
+Dodajemy zależność do **Mavena**:
 
 <dependency>
    <groupId>org.springframework.cloud</groupId>
@@ -114,7 +114,7 @@ public class SpringBootEurekaAppExampleApplication {
    }
 }
 
-Dodajemy zależność do **Mavena**:
+Dodajemy zależność do **Mavena**:
 
 <dependency>
    <groupId>org.springframework.cloud</groupId>

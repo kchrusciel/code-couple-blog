@@ -14,7 +14,7 @@ Kontynuując temat logowania przy użycia frameworku **LogBack** dziś przedstaw
 <!-- more -->
 ## Główne ustawienia
 
-Jak pisałem w poprzednim [WPISIE](http://codecouple.pl/2016/09/13/7-spring-boot-logowanie-aplikacji-logback/), naszą konfigurację definiujemy w pliku `logback-spring.xml`. Na sam początek zacznijmy od deklaracji:
+Jak pisałem w poprzednim [WPISIE](http://codecouple.pl/2016/09/13/7-spring-boot-logowanie-aplikacji-logback/), naszą konfigurację definiujemy w pliku `logback-spring.xml`. Na sam początek zacznijmy od deklaracji:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true" scan="true" scanPeriod="30 seconds">

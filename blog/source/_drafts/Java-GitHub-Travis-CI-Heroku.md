@@ -8,11 +8,11 @@ categories:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/11/heroku.png)
 
-Powracamy z kontynuacją serii o **CI/CD**. Dziś zintegrujemy nasz proces budowania pochodzący z **Travis CI** z darmowym hostingiem oferowany przez usługę **Heroku**. **Heroku** jest platformą, która od wielu lat dostarcza **darmowy** (jak i płatny) hosting dla rozwiązań napisanych w wielu językach w tym Go, PHP, Python czy też **Javie**. Ponadto posiada bardzo dobrze przygotowane integracje z innymi serwisami w tym z **Travis CI**, zapraszamy po szczegóły!
+Powracamy z kontynuacją serii o **CI/CD**. Dziś zintegrujemy nasz proces budowania pochodzący z **Travis CI** z darmowym hostingiem oferowany przez usługę **Heroku**. **Heroku** jest platformą, która od wielu lat dostarcza **darmowy** (jak i płatny) hosting dla rozwiązań napisanych w wielu językach w tym Go, PHP, Python czy też **Javie**. Ponadto posiada bardzo dobrze przygotowane integracje z innymi serwisami w tym z **Travis CI**, zapraszamy po szczegóły!
 <!-- more -->
 ### Poprzedni wpis
 
-Dzisiejszy wpis jest kontynuacją serii o **CI/CD**. Aby lepiej zrozumieć idee tego wpisu najlepiej zapoznać się z poprzednim wpisem [Java Travis CI czyli darmowe continuous integration](https://codecouple.pl/2019/02/08/java-travis-ci-czyli-darmowe-continuous-integration/).
+Dzisiejszy wpis jest kontynuacją serii o **CI/CD**. Aby lepiej zrozumieć idee tego wpisu najlepiej zapoznać się z poprzednim wpisem [Java Travis CI czyli darmowe continuous integration](https://codecouple.pl/2019/02/08/java-travis-ci-czyli-darmowe-continuous-integration/).
 
 ### Konto na Heroku
 

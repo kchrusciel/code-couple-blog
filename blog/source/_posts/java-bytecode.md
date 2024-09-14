@@ -18,11 +18,11 @@ Schodzimy nisko, ale czy to coś złego? Według **IBM** developerWorks: „_Zna
 <!-- more -->
 ### Cykl życia
 
-Na początku zacznijmy od **przebiegu/cyklu** życia naszej aplikacji. Jako pierwszy mamy kod źródłowy, czyli kod napisany w jednym z języków, który ma zbudowany dla siebie kompilator. Następnie nasz kod źródłowy jest kompilowany do postaci **kodu bajtowego**.
+Na początku zacznijmy od **przebiegu/cyklu** życia naszej aplikacji. Jako pierwszy mamy kod źródłowy, czyli kod napisany w jednym z języków, który ma zbudowany dla siebie kompilator. Następnie nasz kod źródłowy jest kompilowany do postaci **kodu bajtowego**.
 
 kod źródłowy(java, scala, kotlin i inne języki JVM) - > kompilator (np. javac) - > kod bajtowy
 
-Zatrzymamy się na **kodzie bajtowy,** bo o tym jest ten wpis. Czyli **kompilator** dostarcza nam kod w postaci kodu bajtów. Nie jest to jeszcze kod natywny tylko **postać pośrednia**. Dzięki temu, że generowana jest **postać pośrednia** można w łatwy sposób napisać swój własny język. Musimy "jedynie" zaprojektować gramatykę i kompilator, który generuje kod bajtowy **Javy**. Dzięki powstaniu tej **postaci pośredniej** nie martwimy się tym co jest dalej, bo to już załatwia za nas **JVM**.
+Zatrzymamy się na **kodzie bajtowy,** bo o tym jest ten wpis. Czyli **kompilator** dostarcza nam kod w postaci kodu bajtów. Nie jest to jeszcze kod natywny tylko **postać pośrednia**. Dzięki temu, że generowana jest **postać pośrednia** można w łatwy sposób napisać swój własny język. Musimy "jedynie" zaprojektować gramatykę i kompilator, który generuje kod bajtowy **Javy**. Dzięki powstaniu tej **postaci pośredniej** nie martwimy się tym co jest dalej, bo to już załatwia za nas **JVM**.
 
 ### ByteCode
 

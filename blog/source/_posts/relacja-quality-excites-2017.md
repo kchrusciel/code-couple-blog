@@ -12,7 +12,7 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
 
-Jak w roku 2016 tak i w tym wybraliśmy się na szóstą edycję konferencji **Quality Excites**. Tym razem konferencja rozbita została na dwa dni. W pierwszym dniu odbyły się liczne **warsztaty**, natomiast dzień drugi poświęcony był **prelekcjom**. My wybraliśmy się na oba dni.
+Jak w roku 2016 tak i w tym wybraliśmy się na szóstą edycję konferencji **Quality Excites**. Tym razem konferencja rozbita została na dwa dni. W pierwszym dniu odbyły się liczne **warsztaty**, natomiast dzień drugi poświęcony był **prelekcjom**. My wybraliśmy się na oba dni.
 <!-- more -->
 ### Warsztaty
 
@@ -22,9 +22,9 @@ Zapisaliśmy się na warsztaty "**Jak wprowadzić i utrzymać kulturę DevOps w 
 
 ### Prelekcje
 
-Po godzinie ósmej stawiliśmy się w punkcie rejestracji na drugi dzień konferencji, potem szybka kawa, croissant i można zaczynać wykłady.
+Po godzinie ósmej stawiliśmy się w punkcie rejestracji na drugi dzień konferencji, potem szybka kawa, croissant i można zaczynać wykłady.
 
-Tradycyjne krótkie wprowadzenie przez **Daniela Deca**, w którym przedstawił swoje przemyślenia odnośnie minionego roku. Zaprezentował trzy punkty:
+Tradycyjne krótkie wprowadzenie przez **Daniela Deca**, w którym przedstawił swoje przemyślenia odnośnie minionego roku. Zaprezentował trzy punkty:
 
 *   **komunikacja** - aby rozmawiać, a nie atakować się
 *   **feedback** - aby dawać taki feedback jakiego sami oczekujemy
@@ -37,7 +37,7 @@ Następnie przedstawił jednego z dwóch głównych gości jakim był **Aslak He
 Jak napisaliśmy w zdaniu powyżej, prelekcję wprowadzającą prowadził gość specjalny **Aslak Hellesøy**, który pracuje nad znanym narzędziem jaki jest **Cucumber**. Najważniejsze wartości testów automatycznych to:
 
 *   **confidence** - pewność co do testów (brak losowości)
-*   **fast** - szybkość wykonywania
+*   **fast** - szybkość wykonywania
 *   **low cost** - niska cena utrzymania
 
 Opowiadał on jak zdekomponować złożone testy na mniejsze, dzięki wykorzystaniu różnych technik na przykład **portów i adapterów** lub **kontraktów**. Taka dekompozycja pozwala nam w łatwiejszy sposób zarządzać testami, a dzięki temu spełniliśmy trzy najważniejsze wartości dobrych testów automatycznych.
@@ -59,7 +59,7 @@ Dla dwóch pierwszych powstały narzędzie, które bez większej wiedzy można w
 
 Ważna jest świadomość, że **testy automatyczne bezpieczeństwa** nie zastąpią człowieka, jednakże lepsze są takie testy niż ich całkowity brak. Na koniec **Mateusz** pokazał nam również literaturę, którą warto przeczytać, żeby zgłębić wiedzę na ten temat.
 
-> "Najlepsza prezentacja w tym dniu" - Agnieszka
+> "Najlepsza prezentacja w tym dniu" - Agnieszka
 
 ### Metryki i raporty jakościowe, czyli tam i z powrotem
 
@@ -67,7 +67,7 @@ O metrykach związanych z releasami opowiadał jeden z założycieli grupy **PTa
 
 ### SQA w erze TestOps
 
-Na początku **Tomasz Janiszewski** i **Dawid Pacia** przedstawili proces wytwarzania oprogramowania:
+Na początku **Tomasz Janiszewski** i **Dawid Pacia** przedstawili proces wytwarzania oprogramowania:
 
 continous build -> continous validation -> continoud delivery -> continous monitoring
 
@@ -75,7 +75,7 @@ Skupili się na ostatnim etapie jakim jest monitoring. Narzędzie, które było 
 
 *   blisko związana z infrastrukturą
 *   współpracuje z DevOpsami
-*   otwiera nowe testerskie perspektywy
+*   otwiera nowe testerskie perspektywy
 *   daje wiedzę nad czym testerzy powinni się jeszcze skupić
 *   proponuje workflow testerom
 
@@ -107,7 +107,7 @@ Na koniec prelegenci przedstawili **TDD** jako jedna z rozwiązań na poprawę j
 
 ### Magic of chaos
 
-**Kamila Mrozek** opowiedziała nam o chaosie i jak możemy sobie z nim radzić. Zaczęła od stwierdzenia, że lubi, gdy wszystko wokół niej płonie. My też niemal każdego dnia natykamy się w swoim życiu zawodowym jak i prywatnym z małymi i większymi chaosami. Jak sobie z nimi radzić? Najlepiej zacząć od własnego chaosu, a dopiero potem zwalczać chaos na wyższych poziomach - w teamie, firmie. Pierwszą rzeczą, od której powinniśmy zacząć jest tak zwana **ToDoList**, czyli lista zadań do wykonania. Mamy wiele możliwości tworzenia takich list, np. papierowe notesy, czy aplikacje na telefon. Ważne jest tworzenie takich list z głową, bo okazuje się, że zbyt długie listy nas demotywują i nie pomaga nam to. Musimy ustalić jakie priorytety obowiązują i przydzielać je w momencie tworzenia zadań. Zamiast mówić "**nie mam czasu**", powinniśmy odpowiedzieć "**nie jest to moim priorytetem**". Nie bójmy się też zostawiać zadań, w momencie przyjścia innych o wyższym priorytecie. Ale nie zapomnijmy zapisać sobie miejsca, w którym skończyliśmy. Kamila wymieniła kilka narzędzi wspomagających pracę  z zadaniami:
+**Kamila Mrozek** opowiedziała nam o chaosie i jak możemy sobie z nim radzić. Zaczęła od stwierdzenia, że lubi, gdy wszystko wokół niej płonie. My też niemal każdego dnia natykamy się w swoim życiu zawodowym jak i prywatnym z małymi i większymi chaosami. Jak sobie z nimi radzić? Najlepiej zacząć od własnego chaosu, a dopiero potem zwalczać chaos na wyższych poziomach - w teamie, firmie. Pierwszą rzeczą, od której powinniśmy zacząć jest tak zwana **ToDoList**, czyli lista zadań do wykonania. Mamy wiele możliwości tworzenia takich list, np. papierowe notesy, czy aplikacje na telefon. Ważne jest tworzenie takich list z głową, bo okazuje się, że zbyt długie listy nas demotywują i nie pomaga nam to. Musimy ustalić jakie priorytety obowiązują i przydzielać je w momencie tworzenia zadań. Zamiast mówić "**nie mam czasu**", powinniśmy odpowiedzieć "**nie jest to moim priorytetem**". Nie bójmy się też zostawiać zadań, w momencie przyjścia innych o wyższym priorytecie. Ale nie zapomnijmy zapisać sobie miejsca, w którym skończyliśmy. Kamila wymieniła kilka narzędzi wspomagających pracę  z zadaniami:
 
 *   Any.Do
 *   Aana
@@ -149,7 +149,7 @@ Na koniec **Daniel** zaznaczył, że klient zawsze oczekuje jakości, a nie jest
 *   implementacja
 *   testowanie
 
-Ich dobre praktyki doprowadziły do tego, że inny teamy mogą korzystać z **CI as a Service**. Na koniec przedstawiony został model dojrzałości systemów **CI**, gdzie numer to stopień dojrzałości:
+Ich dobre praktyki doprowadziły do tego, że inny teamy mogą korzystać z **CI as a Service**. Na koniec przedstawiony został model dojrzałości systemów **CI**, gdzie numer to stopień dojrzałości:
 
 1.  Initial -> chaotic
 2.  Managed -> firefighting

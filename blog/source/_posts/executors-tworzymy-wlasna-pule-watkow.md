@@ -33,13 +33,13 @@ Executors.newFixedThreadPool(int numberOfThreads)
 
 ### Bierz ile chcesz
 
-Kolejną ciekawą pulą wątków jest `newCachedThreadPool`. Jest to **pula**, która nie ma **określonego rozmiaru.** Jeśli potrzebuje ona kolejnych wątków, po prostu je tworzy. Jeśli któryś z wątków zakończył swoją prace, będzie on użyty ponownie. Jeśli jakiś wątek jest "bezrobotny" powyżej **60 sekund**, jest zamykany i usuwany z puli. Dzięki temu mamy pewność, iż w odpowiedni sposób wykorzystujemy zasoby. **Pula** ta idealnie nadaje się do **krótkich zadań**, ponieważ nowe wątki nie są tworzone, a jedynie reużywane z istniejącej już puli:
+Kolejną ciekawą pulą wątków jest `newCachedThreadPool`. Jest to **pula**, która nie ma **określonego rozmiaru.** Jeśli potrzebuje ona kolejnych wątków, po prostu je tworzy. Jeśli któryś z wątków zakończył swoją prace, będzie on użyty ponownie. Jeśli jakiś wątek jest "bezrobotny" powyżej **60 sekund**, jest zamykany i usuwany z puli. Dzięki temu mamy pewność, iż w odpowiedni sposób wykorzystujemy zasoby. **Pula** ta idealnie nadaje się do **krótkich zadań**, ponieważ nowe wątki nie są tworzone, a jedynie reużywane z istniejącej już puli:
 
 Executors.newCachedThreadPool()
 
 ### Uruchom później
 
-Jeśli istnieje powód, dla którego chcemy odpalić nasze zadania z opóźnieniem, możemy zastosować metodę `newScheduledThreadPool`, która jako parametr przyjmuje ilość wątków, a w wyniku zwraca `ScheduledExecutorService` :
+Jeśli istnieje powód, dla którego chcemy odpalić nasze zadania z opóźnieniem, możemy zastosować metodę `newScheduledThreadPool`, która jako parametr przyjmuje ilość wątków, a w wyniku zwraca `ScheduledExecutorService` :
 
 ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10);
 ScheduledFuture<String> schedule = scheduledExecutorService.schedule(myTask, 10, TimeUnit.SECONDS);
@@ -51,7 +51,7 @@ Nowością od **Javy 8** jest metoda do tworzenia puli wątków `newWorkStealing
 
 Executors.newWorkStealingPool()
 
-Jest to **pula**, która korzysta z algorytmu **work-stealing**. Algorytm ten rozdziela pracę na mniejsze podzadania, które trafiają na kolejkę. Podzadania te wykonywane są w innych wątkach, które jak skończą swoją pracę, "kradną" pracę innych wątków z kolejki i ją wykonują. Jeśli zastanowimy się na sposobem działania tej **puli wątków** od razu na myśl przychodzi nam `ForkJoinPool`. Dobrze, sprawdźmy więc implementację:
+Jest to **pula**, która korzysta z algorytmu **work-stealing**. Algorytm ten rozdziela pracę na mniejsze podzadania, które trafiają na kolejkę. Podzadania te wykonywane są w innych wątkach, które jak skończą swoją pracę, "kradną" pracę innych wątków z kolejki i ją wykonują. Jeśli zastanowimy się na sposobem działania tej **puli wątków** od razu na myśl przychodzi nam `ForkJoinPool`. Dobrze, sprawdźmy więc implementację:
 
 /\*\*
  \* Creates a work-stealing thread pool using all
@@ -68,7 +68,7 @@ public static ExecutorService newWorkStealingPool() {
          null, true);
 }
 
-Rzeczywiście, pod spodem pula ta korzysta z `ForkJoinPool`, jednakże dostarcza nam o wiele bardziej przyjazne **API** do tworzenia **puli** takiego rodzaju. **Pulę** tę warto stosować wtedy, gdy mamy do wykonania pracę, którą można łatwo podzielić na mniejsze podzadania.
+Rzeczywiście, pod spodem pula ta korzysta z `ForkJoinPool`, jednakże dostarcza nam o wiele bardziej przyjazne **API** do tworzenia **puli** takiego rodzaju. **Pulę** tę warto stosować wtedy, gdy mamy do wykonania pracę, którą można łatwo podzielić na mniejsze podzadania.
 
 ### ThreadFactory
 

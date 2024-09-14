@@ -92,7 +92,7 @@ from subprocess import Popen, PIPE
 
 **Cudzysłów pojedynczy vs. podwójny**
 
-PEP8 nie rekomenduje pojedynczego ani podwójnego cudzysłowu. Obie wersje są poprawne. Nie należy mieszać tych wersji. Wybrać jedną i trzymać się jej konsekwentnie.
+PEP8 nie rekomenduje pojedynczego ani podwójnego cudzysłowu. Obie wersje są poprawne. Nie należy mieszać tych wersji. Wybrać jedną i trzymać się jej konsekwentnie.
 
 **Białe znaki w wyrażeniach i deklaracjach** Operatory binarne zawsze powinny być otoczone spacjami (taką samą ilością z obu stron).
 
@@ -112,7 +112,7 @@ Niepoprawnie:
 funkcja\_Krzysia( name, surname )
 if name == "Krzys" : print x , y ; x , y = y , x
 
-*   Nie stosuje się również białych znaków przed nawiasem z argumentami oraz indeksami:
+*   Nie stosuje się również białych znaków przed nawiasem z argumentami oraz indeksami:
 
 Poprawnie:
 
@@ -140,7 +140,7 @@ very\_long\_name\_of\_variable = 3
 
 **Komentarze**
 
-Gorsze są błędne komentarze niż ich brak. Stosujemy pełne zdania. Pierwsza litera jest wielką, chyba że pierwsze słowo to identyfikator, który zaczyna się małą literą. Komentarze powinny być pisane w języku angielskim. Unikać komentarzy w tych samych liniach, co wyrażenie, do którego się odnosi.
+Gorsze są błędne komentarze niż ich brak. Stosujemy pełne zdania. Pierwsza litera jest wielką, chyba że pierwsze słowo to identyfikator, który zaczyna się małą literą. Komentarze powinny być pisane w języku angielskim. Unikać komentarzy w tych samych liniach, co wyrażenie, do którego się odnosi.
 
 **Nazewnictwo**
 
@@ -148,13 +148,13 @@ Nie powinno się stosować liter "l" (małe "L"), "O" (duże "o'), "I" (duże "i
 
 **Moduły i pakiety** powinny mieć krótkie nazwy składające się tylko z małych znaków. W pakietach podkreślenia są zalecane, a w modułach mogą być stosowane jeśli zwiększa to czytelność.
 
-**Nazwy klas** powinny być zgodne z **CamelCase** (każdy kolejny wyraz w nazwie zaczyna się wielką literą).
+**Nazwy klas** powinny być zgodne z **CamelCase** (każdy kolejny wyraz w nazwie zaczyna się wielką literą).
 
 **Nazwy wyjątków**, które w rzeczywistości są klasami, zgodne są z **CamelCase**. Powinny zaczynać się od słowa "Error", jeśli wyjątek jest w rzeczywistości błędem.
 
 **Nazwy funkcji oraz zmiennych** powinny być pisane małymi literami z podkreśleniami pomiędzy kolejnymi wyrazami. Style mieszane są dozwolone tam, gdzie panuje inny styl przyjęty wcześniej (zachowanie kompatybilności wstecz).
 
-**Argumenty funkcji i metod** – zawsze używamy "self" jako pierwszy argument metod instancji oraz "cls" jako pierwszy argument metod klas. Jeśli nazwa zarezerwowana jest jako słowo kluczowe, należy dołączyć podkreślenie, żeby uniknąć konfliktów.
+**Argumenty funkcji i metod** – zawsze używamy "self" jako pierwszy argument metod instancji oraz "cls" jako pierwszy argument metod klas. Jeśli nazwa zarezerwowana jest jako słowo kluczowe, należy dołączyć podkreślenie, żeby uniknąć konfliktów.
 
 **Stałe** są zazwyczaj definiowane na poziomie modułu i pisane wielkimi literami z podkreśleniami oddzielającymi wyrazy.
 

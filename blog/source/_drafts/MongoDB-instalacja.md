@@ -16,12 +16,12 @@ pobieramy interesującą nas wersję Mongo. W naszym przypadku Community Server 
 
 Przechodzimy standardowy proces instalacji.
 
-Po zainstalowaniu bazy, dodajemy "tutaj\_partycja:\\Program Files\\MongoDB\\Server\\3.2\\bin" do zmiennej środowiskowej. Dzięki temu nie będziemy musieli za każdym razem podawać całej ścieżki do plików. Pierwsze uruchomienie zaczynamy od uruchomienia polecenia:
+Po zainstalowaniu bazy, dodajemy "tutaj\_partycja:\\Program Files\\MongoDB\\Server\\3.2\\bin" do zmiennej środowiskowej. Dzięki temu nie będziemy musieli za każdym razem podawać całej ścieżki do plików. Pierwsze uruchomienie zaczynamy od uruchomienia polecenia:
 
 `mongod --dbpath tutaj_partycja:\sciezka\do\twojej\bazy`
 
-Uruchomiliśmy w ten sposób demona, czyli server MongoDB. We fladze --dbpath ustawiliśmy ścieżkę gdzie znajdować będą się pliki naszej bazy. Możemy także uruchomić demona bez tej flagi, wtedy nasza baza znajdować się będzie w domyślnej lokalizacji "\\data\\db".
+Uruchomiliśmy w ten sposób demona, czyli server MongoDB. We fladze --dbpath ustawiliśmy ścieżkę gdzie znajdować będą się pliki naszej bazy. Możemy także uruchomić demona bez tej flagi, wtedy nasza baza znajdować się będzie w domyślnej lokalizacji "\\data\\db".
 
 Przydatna jest także flaga --smallfiles
 
-Po pomyślnym uruchomieniu servera, możemy podłączyć się do bazy wydając polecenie `mongo` Powinno pojawić nam się pole do wpisywania komend. Aby sprawdzić poprawność działa, wydajmy polecenie `help.` Dzięki temu mamy listę dostępnych opcji. Po połączeniu z bazą możemy wydać polecenie show databases use test show collections db.nazwa\_kolekcji.find().pretty()
+Po pomyślnym uruchomieniu servera, możemy podłączyć się do bazy wydając polecenie `mongo` Powinno pojawić nam się pole do wpisywania komend. Aby sprawdzić poprawność działa, wydajmy polecenie `help.` Dzięki temu mamy listę dostępnych opcji. Po połączeniu z bazą możemy wydać polecenie show databases use test show collections db.nazwa\_kolekcji.find().pretty()

@@ -6,7 +6,7 @@ categories:
   - - Java
 ---
 
-**JCStress** jest kolejnym narzędziem po [**Java Microbenchmark Harness**](https://openjdk.java.net/projects/code-tools/jmh/) stworzony przez [Alekseya Shipileva](https://shipilev.net/). JCStress pozwala nam na sprawdzenie naszego kody pod względem wielowątkowości. Todo
+**JCStress** jest kolejnym narzędziem po [**Java Microbenchmark Harness**](https://openjdk.java.net/projects/code-tools/jmh/) stworzony przez [Alekseya Shipileva](https://shipilev.net/). JCStress pozwala nam na sprawdzenie naszego kody pod względem wielowątkowości. Todo
 <!-- more -->
 ### JCStress
 
@@ -20,7 +20,7 @@ asasa
 
 ### Piszemy test
 
-Na początku musimy zastanowić się co chcemy **sprawdzić**, w tym wpisie chciałbym sprawdzić czy klasa `AtomicLong` z pakietu `java.util.concurrent` jest rzeczywiście **thread-safe** oraz **atomowa** pod względem operacji **inkrementacji**:
+Na początku musimy zastanowić się co chcemy **sprawdzić**, w tym wpisie chciałbym sprawdzić czy klasa `AtomicLong` z pakietu `java.util.concurrent` jest rzeczywiście **thread-safe** oraz **atomowa** pod względem operacji **inkrementacji**:
 
 AtomicLong atomicLong = new AtomicLong(5);
 atomicLong.incrementAndGet();
@@ -38,7 +38,7 @@ public class AtomicLongTest {
 
 #### @Outcome
 
-Po przygotowaniu pliku dla **testu**, pora na określenie **oczekiwanych** wartości (możemy to rozumieć jako **asercje**). Oczekiwane wartości określamy za pomocą adnotacji `@Outcome`:
+Po przygotowaniu pliku dla **testu**, pora na określenie **oczekiwanych** wartości (możemy to rozumieć jako **asercje**). Oczekiwane wartości określamy za pomocą adnotacji `@Outcome`:
 
 @JCStressTest
 @Outcome(id = "6", expect = Expect.FORBIDDEN, desc = "Tylko jeden aktor dokonal inkrementacji")
@@ -51,9 +51,9 @@ public class AtomicLongTest {
 
 **Dodatkowo** z wykorzystaniem adnotacji `@Outcome` możemy ustawić takie rzeczy jak:
 
-*   `id` - wartość pożądana lub nie
-*   `expect` - tutaj określamy czy dana wartość jest pożądana lub nie (`ACCEPTABLE`, `ACCEPTABLE_INTERESTING`, `FORBIDDEN`)
-*   `desc` - tekst wyświetlony w raporcie
+*   `id` - wartość pożądana lub nie
+*   `expect` - tutaj określamy czy dana wartość jest pożądana lub nie (`ACCEPTABLE`, `ACCEPTABLE_INTERESTING`, `FORBIDDEN`)
+*   `desc` - tekst wyświetlony w raporcie
 
 #### @State
 

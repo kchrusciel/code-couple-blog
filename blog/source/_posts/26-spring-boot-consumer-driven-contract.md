@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Z każdym kolejny mikroserwisem testowanie naszej aplikacji staje się **coraz bardziej trudne** (w przypadku gdy są one ze sobą powiązane). Oczywiście możemy zamokować zachowanie innych serwisów korzystając na przykład z biblioteki **WireMock**, jednakże po wdrożeniu naszej aplikacji na produkcję okazuje się, że aplikacja nie integruje się poprawnie. A no właśnie, okazało się, iż mój serwis odpytywał zły endpoint, ale jak to możliwe, skoro wszystkie testy były uzależniająco zielone?
+Z każdym kolejny mikroserwisem testowanie naszej aplikacji staje się **coraz bardziej trudne** (w przypadku gdy są one ze sobą powiązane). Oczywiście możemy zamokować zachowanie innych serwisów korzystając na przykład z biblioteki **WireMock**, jednakże po wdrożeniu naszej aplikacji na produkcję okazuje się, że aplikacja nie integruje się poprawnie. A no właśnie, okazało się, iż mój serwis odpytywał zły endpoint, ale jak to możliwe, skoro wszystkie testy były uzależniająco zielone?
 <!-- more -->
 ### Consumer Driven Contract
 
@@ -33,7 +33,7 @@ Testy przechodziły, ponieważ to ja sam, poprzez mockowanie określałem jak us
 
 ### Piszemy kontrakt
 
-Przygotujmy teraz **pierwszy kontrakt**, dodajemy nowy plik `shouldReturnUser.groovy` (ponieważ kontrakty piszemy w **Groovym**) w naszych źródłach testowych czyli `src\test\resources\contracts`. Następnie dodajemy zawartość **kontraktu**. Dla zapytania `GET` na adresie `/` powinien być zwrócony **JSON** czyli `contentType` oraz `{"id":1, "name": "CodeCouple.pl" }` z statusem `200 OK`:
+Przygotujmy teraz **pierwszy kontrakt**, dodajemy nowy plik `shouldReturnUser.groovy` (ponieważ kontrakty piszemy w **Groovym**) w naszych źródłach testowych czyli `src\test\resources\contracts`. Następnie dodajemy zawartość **kontraktu**. Dla zapytania `GET` na adresie `/` powinien być zwrócony **JSON** czyli `contentType` oraz `{"id":1, "name": "CodeCouple.pl" }` z statusem `200 OK`:
 
 Contract.make {
 
@@ -56,7 +56,7 @@ Contract.make {
 
 ### Budujemy stuba
 
-Napisaliśmy nasz pierwszy **kontrakt**, teraz musimy wygenerować **stuba**, który będzie zachowywał się jak w opisie **kontraktu**. Tak naprawdę nasz **stub**, to wygenerowany **jar**, który następnie możemy zdeployować na **Nexusie** lub w innym centralnym miejscu, do którego mają dostęp inne teamy. Domyślnie umieszczany jest on w lokalnym repozytorium **m2**. Jednakże, aby zbudować naszego **stuba** musimy dodać nowy **plugin** `spring-cloud-contract-maven-plugin` do procesu budowania:
+Napisaliśmy nasz pierwszy **kontrakt**, teraz musimy wygenerować **stuba**, który będzie zachowywał się jak w opisie **kontraktu**. Tak naprawdę nasz **stub**, to wygenerowany **jar**, który następnie możemy zdeployować na **Nexusie** lub w innym centralnym miejscu, do którego mają dostęp inne teamy. Domyślnie umieszczany jest on w lokalnym repozytorium **m2**. Jednakże, aby zbudować naszego **stuba** musimy dodać nowy **plugin** `spring-cloud-contract-maven-plugin` do procesu budowania:
 
 <plugin>
    <groupId>org.springframework.cloud</groupId>
@@ -70,7 +70,7 @@ Napisaliśmy nasz pierwszy **kontrakt**, teraz musimy wygenerować **stuba**, k
 
 ### Testy?
 
-Ważne jest ustawienie `extensions` na wartość `true`, co oznacza, że w naszym procesie budowania mogą być wykorzystane inne **artefakty** (więcej [https://maven.apache.org/pom.html#Extensions](https://maven.apache.org/pom.html#Extensions)). Należy także ustawić konfigurację dla naszych testów. Zaraz, zaraz, jakich **testów**? Otóż **plugin** ten, oprócz stworzenia **stuba**, tworzy także testy. Testy te, zweryfikują czy nasza aplikacja działa zgodnie z kontraktem. Jest to bardzo dobre podejście, ponieważ mamy pewność, że nie wypuśmy stuba, który z naszą aplikacją działałby niepoprawnie. Wiemy już, iż dostaniemy testy, teraz musimy wskazać klasę bazową (wygenerowane testy będą dziedziczyć po tej klasie) dla tych testów. W naszym przypadku będzie to klasa o nazwie `BaseClass`. Nasza klasa bazowa wygląda nastepująco:
+Ważne jest ustawienie `extensions` na wartość `true`, co oznacza, że w naszym procesie budowania mogą być wykorzystane inne **artefakty** (więcej [https://maven.apache.org/pom.html#Extensions](https://maven.apache.org/pom.html#Extensions)). Należy także ustawić konfigurację dla naszych testów. Zaraz, zaraz, jakich **testów**? Otóż **plugin** ten, oprócz stworzenia **stuba**, tworzy także testy. Testy te, zweryfikują czy nasza aplikacja działa zgodnie z kontraktem. Jest to bardzo dobre podejście, ponieważ mamy pewność, że nie wypuśmy stuba, który z naszą aplikacją działałby niepoprawnie. Wiemy już, iż dostaniemy testy, teraz musimy wskazać klasę bazową (wygenerowane testy będą dziedziczyć po tej klasie) dla tych testów. W naszym przypadku będzie to klasa o nazwie `BaseClass`. Nasza klasa bazowa wygląda nastepująco:
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = ProducerApplication.class)
@@ -148,7 +148,7 @@ Z drugiej strony, czyli już w naszym serwisie, który tworzymy, musi dodać zal
    <scope>test</scope>
 </dependency>
 
-Po dodaniu zależności możemy zacząć pisanie naszej logiki, która odpytywać będzie **Producer'a:**
+Po dodaniu zależności możemy zacząć pisanie naszej logiki, która odpytywać będzie **Producer'a:**
 
 @RestController
 class ConsumerController {

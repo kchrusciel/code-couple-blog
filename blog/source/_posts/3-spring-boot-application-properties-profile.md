@@ -29,9 +29,9 @@ application.properties
 application-development.properties
 application-production.properties
 
-Wyobraźmy sobie to jako klasy: **application.properties** jest to klasa bazowa, czyli są w niej właściwości, które chcemy, aby były propagowane w dół, czyli do naszych plików z konkretnymi profilami. Następnie pliki **development** oraz **production** są naszymi specyfikowanymi klasami, czyli są to pliki, które mają unikalne wartości.
+Wyobraźmy sobie to jako klasy: **application.properties** jest to klasa bazowa, czyli są w niej właściwości, które chcemy, aby były propagowane w dół, czyli do naszych plików z konkretnymi profilami. Następnie pliki **development** oraz **production** są naszymi specyfikowanymi klasami, czyli są to pliki, które mają unikalne wartości.
 
-Pliki te korzystają z właściwości, która odnosi się do bazy danych. Ustawiamy odpowiednie wartości: **application.properties**
+Pliki te korzystają z właściwości, która odnosi się do bazy danych. Ustawiamy odpowiednie wartości: **application.properties**
 
 my.app.name = CodeCouple
 

@@ -17,7 +17,7 @@ Aby zrealizować obietnicę "_Write Once Run Everywhere_" autorzy **Javy** musie
 <!-- more -->
 ### Tablica zmiennych lokalnych
 
-Tablica zmiennych lokalnych jak nazwa wskazuje służy do przechowywania **zmiennych lokalnych**. Są to zmienne widoczne w ramach jednej **metody** i jednego **wątku**. Rozmiar tej tablicy wyliczany jest w trakcie **kompilacji**, dlatego podczas tworzenia tej tablicy jej rozmiar znany jest z góry. Pozwala to na optymalizowanie naszego programu, ponieważ w przeciwnym wypadku tablica ta musiałaby być alokowana **dynamicznie**. Po stworzeniu tablicy zmiennych na pierwszym indeksie znajduje się referencja do aktualnej instancji (w przypadku metody statycznej nie mamy żadnej instancji). Na kolejnych indeksach znajdują się parametry metody jeśli takowe występują:
+Tablica zmiennych lokalnych jak nazwa wskazuje służy do przechowywania **zmiennych lokalnych**. Są to zmienne widoczne w ramach jednej **metody** i jednego **wątku**. Rozmiar tej tablicy wyliczany jest w trakcie **kompilacji**, dlatego podczas tworzenia tej tablicy jej rozmiar znany jest z góry. Pozwala to na optymalizowanie naszego programu, ponieważ w przeciwnym wypadku tablica ta musiałaby być alokowana **dynamicznie**. Po stworzeniu tablicy zmiennych na pierwszym indeksie znajduje się referencja do aktualnej instancji (w przypadku metody statycznej nie mamy żadnej instancji). Na kolejnych indeksach znajdują się parametry metody jeśli takowe występują:
 
 public class First {
     
@@ -56,7 +56,7 @@ Jak wiemy już jak przechowywane są **zmienne lokalne** to spróbujmy wykonać 
 
 ### Stos operandów
 
-Jak napisałem we wstępnie, **Java** wewnętrznie oparta jest na strukturze **stosu**. Wszystkie operacje wykonywane w ramach jednej metody polegają na "żonglowaniu" danymi na stosie. W **Javie** jest to tak zwany **stos operandów**. Sprawdźmy jak zachowuje się **stos operandów** dla operacji dodawania dwóch liczb:
+Jak napisałem we wstępnie, **Java** wewnętrznie oparta jest na strukturze **stosu**. Wszystkie operacje wykonywane w ramach jednej metody polegają na "żonglowaniu" danymi na stosie. W **Javie** jest to tak zwany **stos operandów**. Sprawdźmy jak zachowuje się **stos operandów** dla operacji dodawania dwóch liczb:
 
 public class Add {
 

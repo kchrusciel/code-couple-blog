@@ -14,9 +14,9 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Pamiętacie wpis o [najlepszych praktykach REST'owych](http://codecouple.pl/2017/07/07/rest-architecture-best-practises/)? Jedną z wyszczególnionych tam praktyk było dokumentowanie naszego **API**. Wymieniłem tam także kilka najpopularniejszych rozwiązań. Jedno z nich, czyli **Swagger** opisałem już na blogu w artykule [#10 Spring Boot - Swagger2 - dokumentujemy API](http://codecouple.pl/2017/01/07/9-spring-boot-swagger2-dokumentujemy-api/). Dziś czas na kolejne podejście do dokumentacji, tym razem od strony testów. **Test Driven Documentation** jest techniką, która polega na tworzeniu dokumentacji w oparciu o testy.
+Pamiętacie wpis o [najlepszych praktykach REST'owych](http://codecouple.pl/2017/07/07/rest-architecture-best-practises/)? Jedną z wyszczególnionych tam praktyk było dokumentowanie naszego **API**. Wymieniłem tam także kilka najpopularniejszych rozwiązań. Jedno z nich, czyli **Swagger** opisałem już na blogu w artykule [#10 Spring Boot - Swagger2 - dokumentujemy API](http://codecouple.pl/2017/01/07/9-spring-boot-swagger2-dokumentujemy-api/). Dziś czas na kolejne podejście do dokumentacji, tym razem od strony testów. **Test Driven Documentation** jest techniką, która polega na tworzeniu dokumentacji w oparciu o testy.
 <!-- more -->
-Jak napisałem we wstępie, **Spring Rest Docs** wykorzystuje podejście, w którym pisanie dokumentacji odbywa się poprzez wykorzystanie testów. W testach tworzone są **snippety,** które następnie łączone są w jeden plik korzystając ze składni [ASCIIDoc'a](http://asciidoctor.org/). Cała dokumentacja frameworku **Spring** napisana jest przy jej użyciu. **ASCIIDoc** przetwarza tekst na **HTML**. **Spring Rest Docs** wspiera:
+Jak napisałem we wstępie, **Spring Rest Docs** wykorzystuje podejście, w którym pisanie dokumentacji odbywa się poprzez wykorzystanie testów. W testach tworzone są **snippety,** które następnie łączone są w jeden plik korzystając ze składni [ASCIIDoc'a](http://asciidoctor.org/). Cała dokumentacja frameworku **Spring** napisana jest przy jej użyciu. **ASCIIDoc** przetwarza tekst na **HTML**. **Spring Rest Docs** wspiera:
 
 *   **Spring MVC Test** - wykorzystany w przykładzie
 *   **REST Assured**
@@ -65,7 +65,7 @@ Oraz musimy skonfigurować proces budowania dokumentacji:
 
 ### 2\. Domena
 
-Na szybko stwórzmy sobie encję **Todo**, która będzie dostępna pod endpointem `/todos`.
+Na szybko stwórzmy sobie encję **Todo**, która będzie dostępna pod endpointem `/todos`.
 
 @Data
 @AllArgsConstructor
@@ -94,9 +94,9 @@ class TodoController {
 
 }
 
-### 3. Dokumentacja
+### 3. Dokumentacja
 
-Możemy zacząć pisanie testów! Jeśli zdecydowaliśmy się korzystać ze **Spring MVC Test** musimy zdefiniować `@Rule` dla klasy `JUnitRestDocumentation`, która w konstruktorze przyjmuje folder, gdzie znajdą się wygenerowane **snippety** (snippety to elementy generowane przez **Spring Rest Docs**, które umieszczamy potem w naszej dokumentacji):
+Możemy zacząć pisanie testów! Jeśli zdecydowaliśmy się korzystać ze **Spring MVC Test** musimy zdefiniować `@Rule` dla klasy `JUnitRestDocumentation`, która w konstruktorze przyjmuje folder, gdzie znajdą się wygenerowane **snippety** (snippety to elementy generowane przez **Spring Rest Docs**, które umieszczamy potem w naszej dokumentacji):
 
 @Rule
 public JUnitRestDocumentation documentation = new JUnitRestDocumentation("target/generated-snippets");
@@ -146,7 +146,7 @@ public class TodoDocumentation {
 
 Ważna część dla nas zaczyna się od statycznej metody `document`. Tam umieszczamy testy odpowiedzialne za generowanie dokumentacji. Metoda `responseFields` sprawdza, czy w odpowiedzi otrzymaliśmy pola: id, title, description. Jeśli tak, to zostaną one udokumentowane wraz z opisem zawartym w `description`. Kolejna metoda `requestParameters` służy do testu i opisu parametrów zawartych w naszym **URI**. Oczywiście istnieje [dużo więcej metod](http://docs.spring.io/spring-restdocs/docs/1.2.1.RELEASE/reference/html5/).
 
-Aby stworzyć plik **HTML** z dokumentacją należy dodać wzorcowy plik **ASIIDOC'a**, w moim przypadku dodałem plik **manual.adoc** z treścią poniżej. Domyślną ścieżką na ten plik jest `src/main/asciidoc`. Można tę ścieżkę zmienić w pluginie, należy w sekcji `build` dodać wpis `<sourceDirectory>your/path/here</sourceDirectory>`
+Aby stworzyć plik **HTML** z dokumentacją należy dodać wzorcowy plik **ASIIDOC'a**, w moim przypadku dodałem plik **manual.adoc** z treścią poniżej. Domyślną ścieżką na ten plik jest `src/main/asciidoc`. Można tę ścieżkę zmienić w pluginie, należy w sekcji `build` dodać wpis `<sourceDirectory>your/path/here</sourceDirectory>`
 
 \= Todos API Reference
 CodeCouple.pl - Version 1.0.1;
@@ -194,10 +194,10 @@ Jeśli chcemy mieć zautomatyzowany proces budowania wystarczy dodać poniższy 
 
  `</``plugin``>`
 
-### 4. Wynik
+### 4. Wynik
 
 Wynikiem działania jest bardzo dobrze wyglądający HTML: [![](http://codecouple.pl/wp-content/uploads/2017/08/springRestDocs.png)](http://codecouple.pl/wp-content/uploads/2017/08/springRestDocs.png)
 
-### 5. Github
+### 5. Github
 
 Całość jak zawsze na [GitHubie](https://github.com/kchrusciel/Spring-Boot-Examples).

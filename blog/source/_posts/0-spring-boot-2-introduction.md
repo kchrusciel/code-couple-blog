@@ -18,16 +18,16 @@ Z początkiem roku już oficjalnie dołączył do nas **Spring Boot** w wersji *
 <!-- more -->
 ### Zaczynamy
 
-Od wersji 2.0 mamy możliwość wyboru, czy chcemy korzystać z **reaktywnego stosu** czy **stosu opartego o serwlety**. Reaktywny stos pozwala nam korzystać ze wszystkich benefitów związanych z paradygmatem programowania reaktywnego. Możemy tworzyć nieblokujące wywołania logiki naszej aplikacji. Pojawiło się także oficjalne wsparcie dla **Javy 9**, dlatego też **Java 7** nie jest już dłużej obsługiwana. W **Javie 9** została wprowadzona nowa klasa `java.util.concurrent.Flow`, która definiuje kontrakt zawarty w [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm).
+Od wersji 2.0 mamy możliwość wyboru, czy chcemy korzystać z **reaktywnego stosu** czy **stosu opartego o serwlety**. Reaktywny stos pozwala nam korzystać ze wszystkich benefitów związanych z paradygmatem programowania reaktywnego. Możemy tworzyć nieblokujące wywołania logiki naszej aplikacji. Pojawiło się także oficjalne wsparcie dla **Javy 9**, dlatego też **Java 7** nie jest już dłużej obsługiwana. W **Javie 9** została wprowadzona nowa klasa `java.util.concurrent.Flow`, która definiuje kontrakt zawarty w [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm).
 
 ### Flux i Mono
 
 ![](https://i0.wp.com/therealdanvega.com/wp-content/uploads/2018/02/reactive_stack.png)
 
-Jak napisałem we wstępie reaktywny stos opiera się na [Project Reactor](https://projectreactor.io/), który jest implementacją [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm), natomiast sama część webowa na **WebFlux**. Stosowanie **WebFlux** wiąże się ze znajomością dwóch nowych pojęć:
+Jak napisałem we wstępie reaktywny stos opiera się na [Project Reactor](https://projectreactor.io/), który jest implementacją [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm), natomiast sama część webowa na **WebFlux**. Stosowanie **WebFlux** wiąże się ze znajomością dwóch nowych pojęć:
 
-*   **Flux** - do zwracania strumienia z  0..n danymi
-*   **Mono** - do zwracania strumienia z  0..1 danymi
+*   **Flux** - do zwracania strumienia z  0..n danymi
+*   **Mono** - do zwracania strumienia z  0..1 danymi
 
 Od teraz możemy zmienić nasze kontrolery na bardziej "reactive" poprzez stosowanie pojęć wymienionych powyżej. Przykładowo:
 
@@ -55,7 +55,7 @@ Jeśli zdecydowaliśmy się na **stos reaktywny**, to domyślnym środowiskiem u
 
 ### Metryki
 
-Kolejną bardzo dużą zmianą w stosunku do poprzedniej wersji są metryki. Pierwszy zagadanieniem jest bezpieczeństwo. Dotychczas project **Actuator** używał swojego mechanizmu do zabezpieczania metryk, co doprowadzało do wielu problemów, ponieważ musieliśmy utrzymywać dwie konfiguracje. W nowej wersji konfigurację bezpieczeństwa metryk ustawiamy tak samo jak dla innych endpointów. Projekt [Micrometer](https://micrometer.io/) jest teraz fasadą dla metryk. Inżynierowie ze Spring'a uznali, iż nie chcą ingerować w to jaki system metryk chcemy wybrać, dlatego udostępniają abstrakcję w postaci **Micrometer**, która dostarcza wsparcie dla wielu systemów do metryk.
+Kolejną bardzo dużą zmianą w stosunku do poprzedniej wersji są metryki. Pierwszy zagadanieniem jest bezpieczeństwo. Dotychczas project **Actuator** używał swojego mechanizmu do zabezpieczania metryk, co doprowadzało do wielu problemów, ponieważ musieliśmy utrzymywać dwie konfiguracje. W nowej wersji konfigurację bezpieczeństwa metryk ustawiamy tak samo jak dla innych endpointów. Projekt [Micrometer](https://micrometer.io/) jest teraz fasadą dla metryk. Inżynierowie ze Spring'a uznali, iż nie chcą ingerować w to jaki system metryk chcemy wybrać, dlatego udostępniają abstrakcję w postaci **Micrometer**, która dostarcza wsparcie dla wielu systemów do metryk.
 
 ### Delta
 

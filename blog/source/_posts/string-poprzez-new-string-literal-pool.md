@@ -18,9 +18,9 @@ date: 2016-06-11 09:00:33
 author: 'Krzysztof Chruściel'
 ---
 
-**String**, chyba najpopularniejszy obiektowy typ danych wykorzystywany w **Javie**. Kluczowe słowo to **obiektowy.** Jak dobrze wiemy, obiekty tworzymy poprzez słówko **new**, natomiast jak typowo tworzymy obiekt typu **String,** to nie używamy tego słowa kluczowego.
+**String**, chyba najpopularniejszy obiektowy typ danych wykorzystywany w **Javie**. Kluczowe słowo to **obiektowy.** Jak dobrze wiemy, obiekty tworzymy poprzez słówko **new**, natomiast jak typowo tworzymy obiekt typu **String,** to nie używamy tego słowa kluczowego.
 <!-- more -->
-Pierwotnie **Java** miała być wykorzystywana do koncepcji zwanej aktualnie **IoT** (ang. **Internet Of Things**). Miała być stosowana na różnych urządzeniach, stąd pomysł o jej przenośności, czyli niezależenie od sprzętu dało się ją uruchomić wszędzie, gdzie był zainstalowany **JVM**. Urządzenia, na których miały działać programy miały bardzo dużo ograniczeń, jednym z nich była pamięć. Najbardziej "pamięciożernym" typem danych były **Stringi,** dlatego też autorzy wykorzystali wzorzec **Pyłek** (ang. **FlyWeight Pattern**, więcej o tym wzorcu już niedługo napisze **Agnieszka**!), który wykorzystywany jest wtedy, gdy często tworzone są obiekty, które mają takie same dane. Pozostawiając koncepcję **IoT** oraz **Pyłku** przejdźmy do przykładów.
+Pierwotnie **Java** miała być wykorzystywana do koncepcji zwanej aktualnie **IoT** (ang. **Internet Of Things**). Miała być stosowana na różnych urządzeniach, stąd pomysł o jej przenośności, czyli niezależenie od sprzętu dało się ją uruchomić wszędzie, gdzie był zainstalowany **JVM**. Urządzenia, na których miały działać programy miały bardzo dużo ograniczeń, jednym z nich była pamięć. Najbardziej "pamięciożernym" typem danych były **Stringi,** dlatego też autorzy wykorzystali wzorzec **Pyłek** (ang. **FlyWeight Pattern**, więcej o tym wzorcu już niedługo napisze **Agnieszka**!), który wykorzystywany jest wtedy, gdy często tworzone są obiekty, które mają takie same dane. Pozostawiając koncepcję **IoT** oraz **Pyłku** przejdźmy do przykładów.
 
 Zacznijmy od utworzenia łańcucha znaków, możemy to wykonać na dwa sposoby:
 
@@ -32,7 +32,7 @@ W momencie tworzenia obiektu typu **String,** zapisywana jest referencja w **Str
 String codeCouple = "codeCouple";
 String codeCoupleSecond = "codeCouple";
 
-Zostały utworzone trzy referencja, pierwsza w **String Literal Pool**, oraz dwie lokalne referencje. Dzięki temu możemy porównywać Stringi przy użyciu operatora "**\==**":
+Zostały utworzone trzy referencja, pierwsza w **String Literal Pool**, oraz dwie lokalne referencje. Dzięki temu możemy porównywać Stringi przy użyciu operatora "**\==**":
 
 String codeCouple = "codeCouple";
 String codeCoupleSecond = "codeCouple";
@@ -59,6 +59,6 @@ System.out.println(codeCouple.equals(codeCoupleSecond));
 
 result: true
 
-Gdy wiemy, że używamy **Stringów** bez użycia "**new**" wtedy lepiej używać operatora "**\==**" ponieważ tańsze jest sprawdzenie referencji niż iteracja po dwóch tablicach **char'ów**.
+Gdy wiemy, że używamy **Stringów** bez użycia "**new**" wtedy lepiej używać operatora "**\==**" ponieważ tańsze jest sprawdzenie referencji niż iteracja po dwóch tablicach **char'ów**.
 
 Gdy zależy nam na znikomej optymalizacji związanej z **call stackiem** możemy użyć operatora "**\==**" wtedy od razu czyli w notacji dużego **O** otrzymamy złożoność **O(1)** natomiast sam operator "**\==**" jest zaimplementowany w metodzie "**equals()**" dla tego też niema sensu korzystać z operatora porównania bo korzyści związane z mniejszą ilością skoków jest znikoma.

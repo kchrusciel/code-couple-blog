@@ -21,7 +21,7 @@ Podobnie jak w przypadku `CountDownLatch` posiadamy trzy serwisy zliczające sum
 
 ![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-13-at-19.03.39-1024x403.png)
 
-Problemem w tym przypadku jest taki, iż chcielibyśmy zliczyć sumę dopiero, gdy wszystkie serwisy zakończą swoją prace. Dodatkowo nie chcemy, aby po wykonaniu zliczania sumy na naszym serwisie była wykonywana jakakolwiek praca (na przykład następne obliczanie użytkowników). Może ona się wykonać dopiero, gdy rozpocznie się obliczanie średniej.
+Problemem w tym przypadku jest taki, iż chcielibyśmy zliczyć sumę dopiero, gdy wszystkie serwisy zakończą swoją prace. Dodatkowo nie chcemy, aby po wykonaniu zliczania sumy na naszym serwisie była wykonywana jakakolwiek praca (na przykład następne obliczanie użytkowników). Może ona się wykonać dopiero, gdy rozpocznie się obliczanie średniej.
 
 ### CyclicBarrier
 
@@ -33,27 +33,27 @@ Tym razem to nasze zadanie po wykonaniu swojej pracy czeka na "barierze" na inne
 
 cyclicBarrier.await();
 
-Dopiero, gdy wszystkie zadania zakończyły pracę uruchamiane jest zadanie wskazane w konstruktorze `CyclicBarrier`. Zobaczymy to na przykładzie:
+Dopiero, gdy wszystkie zadania zakończyły pracę uruchamiane jest zadanie wskazane w konstruktorze `CyclicBarrier`. Zobaczymy to na przykładzie:
 
 ![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.21.42-1024x531.png)
 
-Pierwsze zadanie się skończyło, wywoływana jest metoda `await()`, która czeka na pozostałe zadania:
+Pierwsze zadanie się skończyło, wywoływana jest metoda `await()`, która czeka na pozostałe zadania:
 
 ![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.45.15-1024x534.png)
 
-Drugie i trzecie zadanie również się zakończyły (po zakończeniu zostały wywołane metody `await()`), blokada na zadaniu `avgCounter` została zwolniona i uruchomiła się logika odpowiedzialna za zliczanie średniej:
+Drugie i trzecie zadanie również się zakończyły (po zakończeniu zostały wywołane metody `await()`), blokada na zadaniu `avgCounter` została zwolniona i uruchomiła się logika odpowiedzialna za zliczanie średniej:
 
 ![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.57.38-1024x425.png)
 
 ### Bezpieczeństwo
 
-Podobnie jak w przypadku `CountDownLatch` powinniśmy używać metody `await()` z timeout. Może zdarzyć się sytuacja, w której zadanie nigdy się nie zakończy, a wtedy zablokujemy pozostałe wątki. Druga wersja metody, która przyjmuje maksymalny czas oczekiwania `boolean await(long timeout, TimeUnit unit)`.
+Podobnie jak w przypadku `CountDownLatch` powinniśmy używać metody `await()` z timeout. Może zdarzyć się sytuacja, w której zadanie nigdy się nie zakończy, a wtedy zablokujemy pozostałe wątki. Druga wersja metody, która przyjmuje maksymalny czas oczekiwania `boolean await(long timeout, TimeUnit unit)`.
 
 ### Różnica z CountDownLatch
 
-Różnica pomiędzy tymi dwoma synchronizatorami jest taka, że w `CountDownLatch` to dodatkowy **wątek** (w naszym przykładzie `AvgCounter`) blokował się aż wszystkie **wątki** zakończą pracę.
+Różnica pomiędzy tymi dwoma synchronizatorami jest taka, że w `CountDownLatch` to dodatkowy **wątek** (w naszym przykładzie `AvgCounter`) blokował się aż wszystkie **wątki** zakończą pracę.
 
-W przypadku `CyclicBarrier` to **wątki**, które wykonały swoją pracę czekają (na "barierze") na pozostałe. Dopiero po zakończeniu wykonywania pracy przez wszystkie wątki uruchamiane jest nowe zadanie.
+W przypadku `CyclicBarrier` to **wątki**, które wykonały swoją pracę czekają (na "barierze") na pozostałe. Dopiero po zakończeniu wykonywania pracy przez wszystkie wątki uruchamiane jest nowe zadanie.
 
 ### Cykliczność
 

@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
 
-JUnity, JUnity, i jeszcze raz JUnity. Tak do jakiegoś czasu wyglądało moje testowanie. Na konferencjach coraz częściej pojawiał się skrót **BDD**, czyli **Behavior Driven Development** oraz kojarzące się ze Star Trekiem słowo **Spock**. Spock jest frameworkiem do testowania kodu w języku **Java** jak i **Groovy**, który został wydany w wersji **1.0** w roku **2015**. Znacznie różni się on od testów jednostkowych, które korzystają z biblioteki **JUnit**. Framework ten jest zbiorem wszystkich dobrych bibliotek stosowanych dotychczas razem!
+JUnity, JUnity, i jeszcze raz JUnity. Tak do jakiegoś czasu wyglądało moje testowanie. Na konferencjach coraz częściej pojawiał się skrót **BDD**, czyli **Behavior Driven Development** oraz kojarzące się ze Star Trekiem słowo **Spock**. Spock jest frameworkiem do testowania kodu w języku **Java** jak i **Groovy**, który został wydany w wersji **1.0** w roku **2015**. Znacznie różni się on od testów jednostkowych, które korzystają z biblioteki **JUnit**. Framework ten jest zbiorem wszystkich dobrych bibliotek stosowanych dotychczas razem!
 <!-- more -->
 ### Given When Then
 
@@ -48,11 +48,11 @@ def "'check' method should return 'Fizz' for number which is divided by three" (
         result == "Fizz"
 }
 
-Od razu w oczy rzuca się to, iż nazwa metody może być opisowa (mamy tę możliwość dzięki **Grooviemu**), dzięki temu nie musimy się zastanawiać jak najlepiej nazwać test. Nazwa metody może być opisana językiem naturalnym co dla nas jest bardziej czytelne niż camelCase. Sekcje **GWT** są także integralną częścią **Spocka**, przez co udało nam się wyeliminować nadmiarowe komentarze. Testy w **Spocku** są bardziej deskryptywne, musimy pamiętać o zasadzie **pareto 20/80** \- 20% kodu piszemy, 80% czytamy. Tutaj czytelność jest bardzo dobra!
+Od razu w oczy rzuca się to, iż nazwa metody może być opisowa (mamy tę możliwość dzięki **Grooviemu**), dzięki temu nie musimy się zastanawiać jak najlepiej nazwać test. Nazwa metody może być opisana językiem naturalnym co dla nas jest bardziej czytelne niż camelCase. Sekcje **GWT** są także integralną częścią **Spocka**, przez co udało nam się wyeliminować nadmiarowe komentarze. Testy w **Spocku** są bardziej deskryptywne, musimy pamiętać o zasadzie **pareto 20/80** \- 20% kodu piszemy, 80% czytamy. Tutaj czytelność jest bardzo dobra!
 
 ### Od czego zacząć?
 
-Aby móc zacząć testować w **Spocku** wystarczy dodać jedną zależność do **Mavena** lub **Gradle**, w zależności  od tego jakiego narzędzia do budowania używamy:
+Aby móc zacząć testować w **Spocku** wystarczy dodać jedną zależność do **Mavena** lub **Gradle**, w zależności  od tego jakiego narzędzia do budowania używamy:
 
 <dependency>
    <groupId>org.spockframework</groupId>
@@ -60,7 +60,7 @@ Aby móc zacząć testować w **Spocku** wystarczy dodać jedną zależność do
    <version>0.7-groovy-2.0</version>
 </dependency>
 
-Wszystkie testy w **Spocku**, piszemy w **Groovym**. Klasy testowe są **specyfikacją** w rozumieniu **Spocka**, ponieważ testujemy specyfikację, która opisuje featury związane z systemem. Wszystkie nasze klasy testowe muszą dziedziczyć po klasie `Specification` (w tej klasie znajdują się też różne użyteczne metody) :
+Wszystkie testy w **Spocku**, piszemy w **Groovym**. Klasy testowe są **specyfikacją** w rozumieniu **Spocka**, ponieważ testujemy specyfikację, która opisuje featury związane z systemem. Wszystkie nasze klasy testowe muszą dziedziczyć po klasie `Specification` (w tej klasie znajdują się też różne użyteczne metody) :
 
 import spock.lang.Specification
 
@@ -103,7 +103,7 @@ Podobnie jak w **JUnitach**, dostępne są metody do ustawienia elementów przed
 *   **Setup** - ustawiamy nasz test
 *   **Stimulus** - definiujemy akcje
 *   **Response** - sprawdzamy wynik
-*   **Cleanup** - sprzątamy po teście
+*   **Cleanup** - sprzątamy po teście
 
 Wewnątrz tych faz, korzystamy z **blocków**, które najlepiej przedstawia ten obrazek (oryginalny z dokumentacji):
 
@@ -111,7 +111,7 @@ Wewnątrz tych faz, korzystamy z **blocków**, które najlepiej przedstawia ten 
 
 ##### Setup
 
-W bloku setup ustawiamy wartości do naszego testu. Dodatkowo istnieje blok `given` zwiększający czytelność, który jest ekwiwalenty do bloku `setup`.
+W bloku setup ustawiamy wartości do naszego testu. Dodatkowo istnieje blok `given` zwiększający czytelność, który jest ekwiwalenty do bloku `setup`.
 
 ##### When i Then
 
@@ -155,14 +155,14 @@ Jak napisałem we wstępie, Spock jest połączeniem wielu bardzo dobrych biblio
 
 ### Testy parametryzowane
 
-W **JUnitach** 4 testy parametryzowane były w niezbyt przyjemny dla developerów sposób. Powstało kilka bibliotek ułatwiających parametryzację testów, jedną z nich jest propozycja [Pragmatists](https://github.com/Pragmatists/JUnitParams). W **Spocku** testy parametryzować można na dwa sposoby:
+W **JUnitach** 4 testy parametryzowane były w niezbyt przyjemny dla developerów sposób. Powstało kilka bibliotek ułatwiających parametryzację testów, jedną z nich jest propozycja [Pragmatists](https://github.com/Pragmatists/JUnitParams). W **Spocku** testy parametryzować można na dwa sposoby:
 
 *   **data tables**
 *   **data pipes**
 
 ### Data tables
 
-**Data tables** jest mechanizmem preferowanym przeze mnie jeśli chodzi o testy parametryzowane. Przygotowujemy tabelę, w której nagłówki to pola, które chcemy uzupełnić, natomiast pod nagłówkami umieszczamy wartości tych pól. Pola rozdzielamy pipem . Dla lepszej czytelności możemy także rozdzielić dane wejściowe od oczekiwanego wyniku podwójnym pipem .
+**Data tables** jest mechanizmem preferowanym przeze mnie jeśli chodzi o testy parametryzowane. Przygotowujemy tabelę, w której nagłówki to pola, które chcemy uzupełnić, natomiast pod nagłówkami umieszczamy wartości tych pól. Pola rozdzielamy pipem . Dla lepszej czytelności możemy także rozdzielić dane wejściowe od oczekiwanego wyniku podwójnym pipem .
 
 def "data table example" () {
     when: "The customer runs 'check' method"

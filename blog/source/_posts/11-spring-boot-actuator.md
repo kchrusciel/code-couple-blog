@@ -16,7 +16,7 @@ author: 'Krzysztof Chruściel'
 
 Jednym z głównych założeń **Spring Boot'a** jest to, aby był on production ready. Autorzy frameworku poprzez **production ready** rozumieli między innymi to, iż aplikacja dostanie metryki **out-of-the-box**. Aby dodać metryki do swojego projektu wystarczy dodać jedną pozycje w mavenowych zależnościach. Nazywa się ona **Actuator**.
 <!-- more -->
-Zacznijmy od dodania mavenowej zależności, dodajemy `spring-boot-starter-actuator`:
+Zacznijmy od dodania mavenowej zależności, dodajemy `spring-boot-starter-actuator`:
 
 <dependencies>
     <dependency>
@@ -25,18 +25,18 @@ Zacznijmy od dodania mavenowej zależności, dodajemy `spring-boot-starter-actu
     </dependency>
 </dependencies>
 
-Na samym wstępie warto wspomnieć, iż endpointy z pakietu A**ctuator** mogą być s**ensitive**. Oznacza to, iż są dostępne z lub bez potrzeby logowania do aplikacji. Dziś opiszę te, które są dostępne bez logowania, czyli są **insensitive**, takimi endpointami są:
+Na samym wstępie warto wspomnieć, iż endpointy z pakietu A**ctuator** mogą być s**ensitive**. Oznacza to, iż są dostępne z lub bez potrzeby logowania do aplikacji. Dziś opiszę te, które są dostępne bez logowania, czyli są **insensitive**, takimi endpointami są:
 
 *   /**info**,
 *   /**health**
 
 ### Info
 
-Pierwszym omawianym endpointem jest `/info`. Zwraca nam on informacje na temat naszej aplikacji:
+Pierwszym omawianym endpointem jest `/info`. Zwraca nam on informacje na temat naszej aplikacji:
 
 {}
 
-Otrzymaliśmy pusty wynik, ponieważ nie zdefiniowaliśmy w `application.properties` żadnych wpisów o aplikacji. Aby dodać jakieś informacje musimy poprzedzić je słowem `info`:
+Otrzymaliśmy pusty wynik, ponieważ nie zdefiniowaliśmy w `application.properties` żadnych wpisów o aplikacji. Aby dodać jakieś informacje musimy poprzedzić je słowem `info`:
 
 info.site.name=CodeCouple.pl
 info.site.authors=Krzysztof Chrusciel, Agnieszka Pieszczek
@@ -48,7 +48,7 @@ Wtedy w wyniku otrzymujemy:
  "name": "CodeCouple.pl"
  },
 
-Możemy także rozszerzyć informacje na temat naszej aplikacji. Możemy wyświetlić informację na temat build'a z pliku `META-INF/build-info.properties` oraz dane z **GIT'a** z pliku `git.properties`. Aby to osiągnąć musimy dodać kroki do budowania. Krok `build-info` doda nam automatycznie plik `build-info.properties`. Natomiast drugi plugin `git-commit-id-plugin` odpowiedzialny jest za stworzenie pliku `git.properties`.
+Możemy także rozszerzyć informacje na temat naszej aplikacji. Możemy wyświetlić informację na temat build'a z pliku `META-INF/build-info.properties` oraz dane z **GIT'a** z pliku `git.properties`. Aby to osiągnąć musimy dodać kroki do budowania. Krok `build-info` doda nam automatycznie plik `build-info.properties`. Natomiast drugi plugin `git-commit-id-plugin` odpowiedzialny jest za stworzenie pliku `git.properties`.
 
 <build>
    <plugins>
@@ -113,7 +113,7 @@ Nasze informacje:
    "article": "#11 Spring Boot – Insensitive Actuator"
 }
 
-Istnieje także możliwość przekazania informacji z **Mavena**. Wartość taką musimy umieścić pomiędzy znakami `@`:
+Istnieje także możliwość przekazania informacji z **Mavena**. Wartość taką musimy umieścić pomiędzy znakami `@`:
 
 info.app.encoding=@project.build.sourceEncoding@
 info.app.java.source=@java.version@
@@ -121,7 +121,7 @@ info.app.java.target=@java.version@
 
 ### Health
 
-Drugim omawianym endpointem `/health` jest **health checker**. Zwraca nam on informacje na temat statusu naszej aplikacji:
+Drugim omawianym endpointem `/health` jest **health checker**. Zwraca nam on informacje na temat statusu naszej aplikacji:
 
 {"status":"UP"}
 
@@ -170,4 +170,4 @@ public class CustomHealthContributor implements HealthIndicator {
 
 }
 
-To tylko dwa endpointy, a już możemy zawrzeć w nich tyle informacji! W następnym wpisie pokaże wam inne endpointy z pakietu **Actutor,** które dostępne są dopiero po zalogowaniu oraz ich różne ciekawe właściwości.
+To tylko dwa endpointy, a już możemy zawrzeć w nich tyle informacji! W następnym wpisie pokaże wam inne endpointy z pakietu **Actutor,** które dostępne są dopiero po zalogowaniu oraz ich różne ciekawe właściwości.

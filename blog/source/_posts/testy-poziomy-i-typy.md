@@ -31,7 +31,7 @@ _**Testy niefunkcjonalne**_ \- odpowiedzialne są za sprawdzanie "jak" działaj�
 
 _**Testy strukturalne**_ \- zwane są inaczej **testami białoskrzynkowymi** (_ang. white-box_) i ich zadaniem jest przetestowanie każdej możliwej ścieżki wykonania testowanego komponentu, podając odpowiednie dane na wejściu. Upewniamy się, że wszystkie elementy oprogramowania zostały pokryte przez testy.
 
-_**Testy ze względu na zmiany**_ \-  dotyczą ponownego wykonania testu po wprowadzanych zmianach w kodzie. Testy te dzielimy na:
+_**Testy ze względu na zmiany**_ \-  dotyczą ponownego wykonania testu po wprowadzanych zmianach w kodzie. Testy te dzielimy na:
 
 *   regresywne - testy po zaplanowanych zmianach kodu, upewniamy się, że po wprowadzonych zmianach nie pojawiły się nowe błędy.
 *   retesty - testy zmiany kodu po wykryciu i naprawie błędu

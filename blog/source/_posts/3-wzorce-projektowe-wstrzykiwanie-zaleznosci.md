@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
 
-Bardzo ciekawy wzorzec, który w środowisku **Javowym** wydaje się normalnością. **Wstrzykiwanie zależności** (ang. _Dependency Injection_) jest to wzorzec, którego stosowanie spowoduje, iż nasz kod stanie się mniej związany z innymi elementami, a tym samym będzie bardziej otwarty na rozszerzenia. Oczywiście w tematyce **DI** pojawić musi się również pojęcie **odwróconej kontroli** (ang. _Inversion of Control_). Zapraszamy!
+Bardzo ciekawy wzorzec, który w środowisku **Javowym** wydaje się normalnością. **Wstrzykiwanie zależności** (ang. _Dependency Injection_) jest to wzorzec, którego stosowanie spowoduje, iż nasz kod stanie się mniej związany z innymi elementami, a tym samym będzie bardziej otwarty na rozszerzenia. Oczywiście w tematyce **DI** pojawić musi się również pojęcie **odwróconej kontroli** (ang. _Inversion of Control_). Zapraszamy!
 <!-- more -->
 ### Inversion of Control
 
@@ -21,7 +21,7 @@ Pojęcie **odwróconej kontroli**, jest pojęciem najbardziej ogólnym. Przedsta
 
 ### Dependency Injection
 
-**Wstrzykiwanie zależności** jest jednym ze sposobów realizacji **IoC** (mogą być to także **eventy**, czy **programowanie aspektowe**). W podejściu tym, obiekt nie tworzy obiektów, które wykorzystywane są wewnątrz. Dzięki temu, nie wiążemy się z konkretną implementacją (najlepiej operować na interfejsach), a także nie musimy znać parametrów konstruowanego obiektu. Operując na interfejsach stajemy się niezależni od konkretnej implementacji, a nasz kod zaczyna realizować **Open/Closed principle**. W podejściu bez stosowania odwróconej kontroli nasz kod wygląda następująco:
+**Wstrzykiwanie zależności** jest jednym ze sposobów realizacji **IoC** (mogą być to także **eventy**, czy **programowanie aspektowe**). W podejściu tym, obiekt nie tworzy obiektów, które wykorzystywane są wewnątrz. Dzięki temu, nie wiążemy się z konkretną implementacją (najlepiej operować na interfejsach), a także nie musimy znać parametrów konstruowanego obiektu. Operując na interfejsach stajemy się niezależni od konkretnej implementacji, a nasz kod zaczyna realizować **Open/Closed principle**. W podejściu bez stosowania odwróconej kontroli nasz kod wygląda następująco:
 
 class Car {
     //Concrete class
@@ -49,8 +49,8 @@ class Car {
 
 }
 
-W drugim fragmencie kodu zastosowaliśmy **wstrzykiwanie przez konstruktor** (o rodzajach wstrzykiwania niebawem na blogu). Teraz wyobraźmy sobie, że testujemy nasz kod. W bardzo prosty sposób w klasie testowej możemy wstrzyknąć implementację interfejsu `Tire`, która będzie działać jak **zaślepka** rzeczywistej klasy. Ponadto, jeśli zdecydujemy się dodać nową implementację interfejsu `Tire` nasza główna klasa nie ulegnie zmianie co oznacza, że nie jesteśmy związani z konkretną implementacją, a o to nam chodziło. Także została zastosowana **odwrócona kontrola**, ponieważ to nie my tworzymy obiekt typu `Tire`.
+W drugim fragmencie kodu zastosowaliśmy **wstrzykiwanie przez konstruktor** (o rodzajach wstrzykiwania niebawem na blogu). Teraz wyobraźmy sobie, że testujemy nasz kod. W bardzo prosty sposób w klasie testowej możemy wstrzyknąć implementację interfejsu `Tire`, która będzie działać jak **zaślepka** rzeczywistej klasy. Ponadto, jeśli zdecydujemy się dodać nową implementację interfejsu `Tire` nasza główna klasa nie ulegnie zmianie co oznacza, że nie jesteśmy związani z konkretną implementacją, a o to nam chodziło. Także została zastosowana **odwrócona kontrola**, ponieważ to nie my tworzymy obiekt typu `Tire`.
 
 ### Spring
 
-Tak jak pisałem powyżej, **Inversion of Control** jest pojęciem ogólnym, **Dependency Injection** jest jednym ze sposobów realizacji **IoC**, natomiast samą implementację tego wzorca realizuje między innymi **Spring**. Oferuje on własny **kontener** do **wstrzykiwania zależności**, który odpowiedzialny jest za tworzenie i używanie **beanów**. W podejściu bez kontenera **IoC** sami w jakimś miejscu musimy użyć słówka `new`, czyli stworzyć instancję obiektu. Stosując **Spring'a**, wystarczy wskazać klasę **POJO** oraz **konfigurację** dla niej, a resztą zajmie się **kontener** (więcej o **Spring'u** w serii **Spring Basics**).
+Tak jak pisałem powyżej, **Inversion of Control** jest pojęciem ogólnym, **Dependency Injection** jest jednym ze sposobów realizacji **IoC**, natomiast samą implementację tego wzorca realizuje między innymi **Spring**. Oferuje on własny **kontener** do **wstrzykiwania zależności**, który odpowiedzialny jest za tworzenie i używanie **beanów**. W podejściu bez kontenera **IoC** sami w jakimś miejscu musimy użyć słówka `new`, czyli stworzyć instancję obiektu. Stosując **Spring'a**, wystarczy wskazać klasę **POJO** oraz **konfigurację** dla niej, a resztą zajmie się **kontener** (więcej o **Spring'u** w serii **Spring Basics**).

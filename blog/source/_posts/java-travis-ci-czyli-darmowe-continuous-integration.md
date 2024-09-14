@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travisci.png)
 
-W aktualnych czasach ciężko wyobrazić sobie proces wytwarzania oprogramowania bez **CI** (ciągła integracja). W środowisku **JVM** najpopularniejszymi narzędziami do ciągłej intergacji są **Jenkins** i **Bamboo**. Niestety przy **małych** projektach lub projektach typu **open source** nie chcemy wykupywać maszyn, aby uruchomić **proces CI**. Rozwiązaniem tego problemu jest **darmowe** narzędzie **Travis CI**, które jest cloud'owym **systemem ciągłej integracji**.
+W aktualnych czasach ciężko wyobrazić sobie proces wytwarzania oprogramowania bez **CI** (ciągła integracja). W środowisku **JVM** najpopularniejszymi narzędziami do ciągłej intergacji są **Jenkins** i **Bamboo**. Niestety przy **małych** projektach lub projektach typu **open source** nie chcemy wykupywać maszyn, aby uruchomić **proces CI**. Rozwiązaniem tego problemu jest **darmowe** narzędzie **Travis CI**, które jest cloud'owym **systemem ciągłej integracji**.
 <!-- more -->
 ### Github
 
@@ -67,7 +67,7 @@ Jeśli stworzyliśmy nowy projekt **Maven** musimy pamiętać o dodaniu **plugin
 
 ### Włączamy integracje
 
-Aby zacząć korzystać z **Travis CI** musimy założyć konto na [https://travis-ci.org/](https://travis-ci.org/):
+Aby zacząć korzystać z **Travis CI** musimy założyć konto na [https://travis-ci.org/](https://travis-ci.org/):
 
 ![](https://codecouple.pl/wp-content/uploads/2019/01/travis-ci-1024x383.png)
 
@@ -87,7 +87,7 @@ W głównym folderze naszego repozytorium umieszczamy plik `.travis.yml`. Jest t
 
 language: java
 
-**Commitujemy** i **pushujemy** wszystkie wprowadzone przez nas zmiany. Jeśli wszystko wykonaliśmy pomyślnie to pierwszy **build** (proces budowania) powinien odpalić się **automatycznie**:
+**Commitujemy** i **pushujemy** wszystkie wprowadzone przez nas zmiany. Jeśli wszystko wykonaliśmy pomyślnie to pierwszy **build** (proces budowania) powinien odpalić się **automatycznie**:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-build-status.png)
 
@@ -103,7 +103,7 @@ class Calculator {
 
 }
 
- **Commit**, **push** i obserwujemy **Travis CI**:
+ **Commit**, **push** i obserwujemy **Travis CI**:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-build-failed.png)
 
@@ -111,21 +111,21 @@ Jak widzicie, **Travis CI** zwrócił nam informację o niepoprawnym **zbudowani
 
 ### Badge
 
-Mechanizm **Badge** pozwala nam umieścić grafikę informującą o statusie naszego **procesu budowania**:
+Mechanizm **Badge** pozwala nam umieścić grafikę informującą o statusie naszego **procesu budowania**:
 
 ![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-badge.png)
 
- 
+ 
 
 Najczęstszym rozwiązaniem jest wstawienie poniższego wpisu do pliku `README.md` naszego **repozytorium**:
 
 \[!\[Build Status\](https://travis-ci.org/kchrusciel/travis-example.svg?branch=master)\](https://travis-ci.org/kchrusciel/travis-example)
 
-Gdzie w odpowiednie miejsca wstawiamy nazwę **repozytorium** oraz **brancha**.
+Gdzie w odpowiednie miejsca wstawiamy nazwę **repozytorium** oraz **brancha**.
 
 ### Więcej
 
-Będzie! **Travis CI** posiada bardzo dużo ciekawych **funkcjonalności**. Zapraszam do kolejnych wpisów po następne **usprawnienia** w naszym **procesie budowania** korzystając z darmowego **Travis CI**.
+Będzie! **Travis CI** posiada bardzo dużo ciekawych **funkcjonalności**. Zapraszam do kolejnych wpisów po następne **usprawnienia** w naszym **procesie budowania** korzystając z darmowego **Travis CI**.
 
 ### GitHub
 

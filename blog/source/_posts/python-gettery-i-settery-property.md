@@ -66,7 +66,7 @@ Agnieszka
 Krzysztof
 Krzysztof Agnieszka
 
-Otrzymaliśmy taki sam wynik, jednakże utraciliśmy **enkapsulacje** (w tym przypadku jej nie potrzebowaliśmy). W późniejszym czasie okazuje się jednak, że chcemy dodać logikę ustawiania, więc chcemy zapewnić także **enkapsulacje**. Kolejny przykład: zakładamy, że jeśli imię to "Agnieszka" - ustawiamy "beautiful", jeśli "Krzysztof" - "ugly", a w przypadku braku "Agnieszka" oraz "Krzysztof" ustawiamy pole na "CodeCouple":
+Otrzymaliśmy taki sam wynik, jednakże utraciliśmy **enkapsulacje** (w tym przypadku jej nie potrzebowaliśmy). W późniejszym czasie okazuje się jednak, że chcemy dodać logikę ustawiania, więc chcemy zapewnić także **enkapsulacje**. Kolejny przykład: zakładamy, że jeśli imię to "Agnieszka" - ustawiamy "beautiful", jeśli "Krzysztof" - "ugly", a w przypadku braku "Agnieszka" oraz "Krzysztof" ustawiamy pole na "CodeCouple":
 
     def \_\_init\_\_(self, name):
         self.set\_name(name)
@@ -129,4 +129,4 @@ beautiful
 ugly
 CodeCouple
 
-Jak widzicie wynik jest ten sam, ale zachowana jest enkapsulacja oraz wywołanie w pożądanym stylu. Aby osiągnąć ten efekty należy użyć dekoratora **@property,** który identyfikuje metodę jako getter. Aby dodać setter należy użyć **@name.setter**, gdzie name musi być takie samo jak nazwa pola. Dekorator **@property** ma poważną wadę: niepowiązane ze sobą klasy nie mają możliwości współdzielenia tej samej implementacji. Aby rozwiązać ten problem powstały deskryptory, ale o tym innym razem!
+Jak widzicie wynik jest ten sam, ale zachowana jest enkapsulacja oraz wywołanie w pożądanym stylu. Aby osiągnąć ten efekty należy użyć dekoratora **@property,** który identyfikuje metodę jako getter. Aby dodać setter należy użyć **@name.setter**, gdzie name musi być takie samo jak nazwa pola. Dekorator **@property** ma poważną wadę: niepowiązane ze sobą klasy nie mają możliwości współdzielenia tej samej implementacji. Aby rozwiązać ten problem powstały deskryptory, ale o tym innym razem!

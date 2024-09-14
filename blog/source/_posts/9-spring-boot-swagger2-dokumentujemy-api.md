@@ -18,7 +18,7 @@ Aktualnie modną architekturą wśród systemów informatycznych są **mikroserw
 <!-- more -->
 ### 1\. Maven dependencies
 
-Zacznijmy od dodania zależności **mavenowych**. Pierwsza odpowiada za funkcje core **Swagger** czyli całą funkcjonalność, natomiast druga za **GUI**.
+Zacznijmy od dodania zależności **mavenowych**. Pierwsza odpowiada za funkcje core **Swagger** czyli całą funkcjonalność, natomiast druga za **GUI**.
 
 ```
 <dependency>
@@ -80,7 +80,7 @@ public class SwaggerConfig {
     }
 }
 
-Adnotacja `@EnableSwagger2` uruchamia możliwości **Swaggera**. **Swagger** dostracza bardzo fajne buildery do ustawień. Najważniejszym beanem jest `Docket,` w który znajdują się główne ustawienia. Natomiast w klasie `ApiInfo` możemy ustawić informacje na temat **API**.
+Adnotacja `@EnableSwagger2` uruchamia możliwości **Swaggera**. **Swagger** dostracza bardzo fajne buildery do ustawień. Najważniejszym beanem jest `Docket,` w który znajdują się główne ustawienia. Natomiast w klasie `ApiInfo` możemy ustawić informacje na temat **API**.
 
 ### 3\. Obsługiwane endpointy
 
@@ -92,7 +92,7 @@ private Predicate<String> getSwaggerPaths() {
             regex("/test.\*"));
 }
 
-### 4. Globalne messages
+### 4. Globalne messages
 
 W polu `globalResponseMessage` ustawiamy globalne **messages** dla różnych kodów statusów. W tym przykładzie dla wszystkich metod typu `GET` i kodu `500` zwracaj wiadomość "_500 message_".
 
@@ -107,20 +107,20 @@ Wszystkie ustawienia zostały zawarte w naszej klasie `SwaggerConfig`. Od teraz 
 
 ### [![swaggerui](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUI.png)](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUI.png)
 
-### 5. Dokumentowanie API
+### 5. Dokumentowanie API
 
-Możemy teraz zacząć dokumentować nasze **API**. Zacznijmy od dodania pierwszego endpointa:
+Możemy teraz zacząć dokumentować nasze **API**. Zacznijmy od dodania pierwszego endpointa:
 
 @GetMapping(value = "/api/book/{id}", produces = MediaType.APPLICATION\_JSON\_VALUE)
 public @ResponseBody Book getBooksByTitle(@PathVariable(required = true) Long id) {
     return bookRepository.findOne(id);
 }
 
-Jak widzicie w przykładzie powyżej nie daliśmy żadnej specjalnej adnotacji natomiast **Swagger** skanuje **classpath** i odnajduje klasy adnotowane jako `@Controller` i automatycznie dodaje je do dokumentacji (chyba, że w ustawieniach zmieniliśmy `paths` i mają być skanowane na przykład tylko ścieżki, które w nazwie mają "test"). Domyślnie wyświetlany jest on jako nazwa metody `getBooksByTitle,` a adres to **\[nazwa\_metody\]Using\[typ\_meody\],** czyli `getBooksByTitleUsingGET`, `http://your_address/swagger-ui.html#!/book-controller/getBooksByTitleUsingGET`. Jeśli natomiast chcemy zmienić nazwę wyświetlaną w UI oraz adres to korzystamy z adnotacji `@ApiOperation,` gdzie `value` to nazwa w UI a `nickname` to adres URL.
+Jak widzicie w przykładzie powyżej nie daliśmy żadnej specjalnej adnotacji natomiast **Swagger** skanuje **classpath** i odnajduje klasy adnotowane jako `@Controller` i automatycznie dodaje je do dokumentacji (chyba, że w ustawieniach zmieniliśmy `paths` i mają być skanowane na przykład tylko ścieżki, które w nazwie mają "test"). Domyślnie wyświetlany jest on jako nazwa metody `getBooksByTitle,` a adres to **\[nazwa\_metody\]Using\[typ\_meody\],** czyli `getBooksByTitleUsingGET`, `http://your_address/swagger-ui.html#!/book-controller/getBooksByTitleUsingGET`. Jeśli natomiast chcemy zmienić nazwę wyświetlaną w UI oraz adres to korzystamy z adnotacji `@ApiOperation,` gdzie `value` to nazwa w UI a `nickname` to adres URL.
 
 @ApiOperation(value = "Add new book", nickname = "Add new book")
 
-### 6. Specyficzne odpowiedzi dla statusów HTTP
+### 6. Specyficzne odpowiedzi dla statusów HTTP
 
 Możemy także określić specyficzne odpowiedzi dla statusów HTTP:
 
@@ -146,6 +146,6 @@ public @ResponseBody Book getBooksByTitle(@PathVariable(required = true) Long id
 
 [![swaggeruiparameter](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUIParameter.png)](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUIParameter.png)
 
-### 8. Więcej
+### 8. Więcej
 
 **API Swaggera** jest bardzo rozbudowane i pozwala w bardzo prosty sposób na dokumentację **API**. Jeśli chcecie poczytać więcej zapraszam [TUTAJ](https://springfox.github.io/springfox/docs/current/).

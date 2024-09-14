@@ -26,7 +26,7 @@ W pom.xml potrzebujemy tylko i wyłącznie podstawowej zależności startera spr
     <version>1.4.2.RELEASE</version>
 </dependency>
 
-Nasza klasa główna musi mieć adnotację `@EnableScheduling`
+Nasza klasa główna musi mieć adnotację `@EnableScheduling`
 
 @SpringBootApplication
 @EnableScheduling
@@ -68,9 +68,9 @@ Poniżej parę przykładów:
 
 **2\. fixedDelay** Czas w milisekundach pomiędzy ostatnio zakończonym zadaniem a rozpoczęciem następnego. Poprzednie zadanie musi być zakończone. **3\. fixedDelayString** Tak samo jak fixedDelay, ale parametr jest typu String, a nie long. **4\. fixedRate** Czas w milisekundach pomiędzy wywołaniami zadań. Poprzednie zadanie nie musi być zakończone. **5\. fixedRateString** Tak samo jak fixedRate, ale parametr jest typu String, a nie long. **6\. initialDelay** Opóźnienie w milisekundach przed wykonaniem pierwszego zadania fixedRate() lub fixedDelay(). **7\. initialDelayString** Tak samo jak initialDelay, ale parametr jest typu String, a nie long. **8\. zone** Strefa czasowa, dla której zadanie będzie wykonywane.
 
-### **Zmiana parametru @Scheduled w trybie runtime:**
+### **Zmiana parametru @Scheduled w trybie runtime:**
 
-Wartość parametru adnotacji @Scheduled można ustawić w trakcie działania programu. Można wykorzystać do tego metodę `configureTasks` z interfejsu `SchedulingConfigurer`. Przyjmuje ona w parametrze obiekt klasy `ScheduledTaskRegistrar`, na którym możemy wywołać metody pozwalające nam zmienić interesujący nas parametr. Do powyższego przykładu dodałam klasę konfiguracyjną, w której po 20 sekundach od uruchomienia programu wartość `fixedRate` zmienia się z 5 sekund na 1. Zamiast wykorzystanej przeze mnie metody `addFixedRateTask` możemy użyć `addFixedDelayTask` lub `addTriggerTask`. Więcej szczegółów [TUTAJ](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/config/ScheduledTaskRegistrar.html).
+Wartość parametru adnotacji @Scheduled można ustawić w trakcie działania programu. Można wykorzystać do tego metodę `configureTasks` z interfejsu `SchedulingConfigurer`. Przyjmuje ona w parametrze obiekt klasy `ScheduledTaskRegistrar`, na którym możemy wywołać metody pozwalające nam zmienić interesujący nas parametr. Do powyższego przykładu dodałam klasę konfiguracyjną, w której po 20 sekundach od uruchomienia programu wartość `fixedRate` zmienia się z 5 sekund na 1. Zamiast wykorzystanej przeze mnie metody `addFixedRateTask` możemy użyć `addFixedDelayTask` lub `addTriggerTask`. Więcej szczegółów [TUTAJ](http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/scheduling/config/ScheduledTaskRegistrar.html).
 
 @Configuration
 @EnableScheduling

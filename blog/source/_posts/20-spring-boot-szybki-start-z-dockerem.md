@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Jest to wpis dla osób, które chciałyby w szybki sposób uruchomić swoją aplikację **Spring Boot'ową** na **Dockerze**. Uruchamianie aplikacji na **kontenerach** ma wiele zalet, jedną z nich jest wspólne środowisko dla wszystkich developerów. Dzięki temu unikniemy "u mnie działa". Jak uruchamiać aplikację na kontenerze? Odpowiedź we wpisie.
+Jest to wpis dla osób, które chciałyby w szybki sposób uruchomić swoją aplikację **Spring Boot'ową** na **Dockerze**. Uruchamianie aplikacji na **kontenerach** ma wiele zalet, jedną z nich jest wspólne środowisko dla wszystkich developerów. Dzięki temu unikniemy "u mnie działa". Jak uruchamiać aplikację na kontenerze? Odpowiedź we wpisie.
 <!-- more -->
 Na początek warto stworzyć sobie prostą aplikację z jednym endpointem. Przykładowa aplikacja na [GitHubie](https://github.com/kchrusciel/Spring-Boot-Examples/tree/master/spring-boot-dockerfile-example).
 
@@ -38,12 +38,12 @@ gdzie:
 
 W linii `FROM` wybrałem wersję `open-jdk:8-jre-alpine`, a nie `java`, ponieważ oficjalne repozytorium `java` jest deprecated:
 
-*   [https://hub.docker.com/\_/java/](https://hub.docker.com/_/java/) - repozytorium, które jest deprecated
-*   [https://hub.docker.com/\_/openjdk/](https://hub.docker.com/_/openjdk/) - repozytorium, z którego należy korzystać
+*   [https://hub.docker.com/\_/java/](https://hub.docker.com/_/java/) - repozytorium, które jest deprecated
+*   [https://hub.docker.com/\_/openjdk/](https://hub.docker.com/_/openjdk/) - repozytorium, z którego należy korzystać
 
 ### JDK vs JRE
 
-Jeśli zależy nam na optymalizacji naszych kontenerów powinniśmy zastanowić się, czy na pewno potrzebujemy całe **JDK**, czy samo **JRE** nie będzie wystarczające. W naszym przypadku **JRE** wystarczy.
+Jeśli zależy nam na optymalizacji naszych kontenerów powinniśmy zastanowić się, czy na pewno potrzebujemy całe **JDK**, czy samo **JRE** nie będzie wystarczające. W naszym przypadku **JRE** wystarczy.
 
 ### Debian vs Alpine
 
@@ -77,7 +77,7 @@ RUN mkdir /opt && curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie
 
 ### Tworzymy obraz
 
-Jeśli nie mamy jeszcze zainstalowanego **Dockera** można go pobrać tutaj [https://www.docker.com/](https://www.docker.com/) i zainstalować według instrukcji. Następnie uruchamiamy **Dockera**, i wpisujemy kilka poleceń:
+Jeśli nie mamy jeszcze zainstalowanego **Dockera** można go pobrać tutaj [https://www.docker.com/](https://www.docker.com/) i zainstalować według instrukcji. Następnie uruchamiamy **Dockera**, i wpisujemy kilka poleceń:
 
 docker build -f Dockerfile -t code-couple-docker:latest .
 
@@ -92,7 +92,7 @@ docker run -p 8081:8081 code-couple-docker
 
 gdzie:
 
-*   `-p` oznacza mapowanie portów, mapujemy port **8081** (zdefiniowany w `application.properties` naszej aplikacji) z naszego kontenera na port **8081** na naszej maszynie
+*   `-p` oznacza mapowanie portów, mapujemy port **8081** (zdefiniowany w `application.properties` naszej aplikacji) z naszego kontenera na port **8081** na naszej maszynie
 
 Teraz możemy korzystać z naszej aplikacji na porcie **8081**.
 

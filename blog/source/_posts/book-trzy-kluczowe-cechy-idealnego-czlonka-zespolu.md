@@ -11,11 +11,11 @@ date: 2018-09-28 12:01:12
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2018/09/book-patrick-trzy-klczuowe.png)W **nowej pracy** na start otrzymałem książkę pt. "_Trzy kluczowe cechy idealnego członka zespołu_" napisaną przez **Patricka Lencioni**. Znajduje się w niej historia, która opisuje proces **wybierania cech idealnego członka** w danym zespole oraz jak takich ludzi szukać. Zapraszam do krótkej recenzji!
+![](http://codecouple.pl/wp-content/uploads/2018/09/book-patrick-trzy-klczuowe.png)W **nowej pracy** na start otrzymałem książkę pt. "_Trzy kluczowe cechy idealnego członka zespołu_" napisaną przez **Patricka Lencioni**. Znajduje się w niej historia, która opisuje proces **wybierania cech idealnego członka** w danym zespole oraz jak takich ludzi szukać. Zapraszam do krótkej recenzji!
 <!-- more -->
 ### Autor
 
-Autorem książki jest **Patrick Lencioni**, który jest prezesem firmy **The Table Group**. Jest to firma zajmująca się wspieraniem liderów budujących "zdrowe" organizacje (odpowiednia osoba na odpowiednim miejscu). Ponadto jest on autorem wielu książek z tematyki biznesowej. Jedna z nich "_Pięć dysfunkcji pracy zespołowej_" została okrzyknięta **bestsellerem**. Tym razem na tapete bierzemy książkę z roku **2016**, która w oryginale brzmi "_The Ideal Team Player_".
+Autorem książki jest **Patrick Lencioni**, który jest prezesem firmy **The Table Group**. Jest to firma zajmująca się wspieraniem liderów budujących "zdrowe" organizacje (odpowiednia osoba na odpowiednim miejscu). Ponadto jest on autorem wielu książek z tematyki biznesowej. Jedna z nich "_Pięć dysfunkcji pracy zespołowej_" została okrzyknięta **bestsellerem**. Tym razem na tapete bierzemy książkę z roku **2016**, która w oryginale brzmi "_The Ideal Team Player_".
 
 ### Opowieść
 
@@ -31,7 +31,7 @@ Proces **rekrutacji** jest bardzo ciężkim wyzwaniem. Oprócz weryfikacji umiej
 
 ### Pokora
 
-**Pokora** jako cecha jest pierwszym elementem idealnego członka zespołu. Pokorny członek zespołu to osoba, która na prawdę jest pokorna tzn. nie posiada dużego ego, potrafi docenić pracę innych i traktuje sukces jako sukces zespołowy. Jako liderzy lub członkowie zespołu musimy pamiętać o tym, aby dobierać ludzi pokornych, a nie "asów". As rzeczywiście będzie "robił robotę", ale jego samolubne podejście może negatywnie wpływać na resztę firmy lub zespołu. Jeśli w zespole mamy osobę, która nie jest pokorna to prędzej czy później ktoś z członków zespołu będzie chciał po prostu uciec.
+**Pokora** jako cecha jest pierwszym elementem idealnego członka zespołu. Pokorny członek zespołu to osoba, która na prawdę jest pokorna tzn. nie posiada dużego ego, potrafi docenić pracę innych i traktuje sukces jako sukces zespołowy. Jako liderzy lub członkowie zespołu musimy pamiętać o tym, aby dobierać ludzi pokornych, a nie "asów". As rzeczywiście będzie "robił robotę", ale jego samolubne podejście może negatywnie wpływać na resztę firmy lub zespołu. Jeśli w zespole mamy osobę, która nie jest pokorna to prędzej czy później ktoś z członków zespołu będzie chciał po prostu uciec.
 
 ### Głód
 
@@ -39,7 +39,7 @@ Jest to cecha, która jest mi najbliższa. Uwielbiam pracować z głodnymi ludź
 
 ### Mądrość
 
-Autor przedstawia mądrość nie jako posiadanie ogromnej wiedzy technicznej a raczej jako posiadanie inteligencji emocjonalnej. Chodzi tutaj o umiejętności interpersonalne. Osoby mądre potrafią zrozumieć zachowanie zespołu i dostosowywać się do zaistniałych sytuacji. Szanują innych członków zespołów poprzez wysłuchanie drugiej osoby, ale także poprzez zadawanie odpowiednich pytań. Połączenie tych trzech cech: pokory, głodu i mądrości przedstawia idealnego członka zespołu.
+Autor przedstawia mądrość nie jako posiadanie ogromnej wiedzy technicznej a raczej jako posiadanie inteligencji emocjonalnej. Chodzi tutaj o umiejętności interpersonalne. Osoby mądre potrafią zrozumieć zachowanie zespołu i dostosowywać się do zaistniałych sytuacji. Szanują innych członków zespołów poprzez wysłuchanie drugiej osoby, ale także poprzez zadawanie odpowiednich pytań. Połączenie tych trzech cech: pokory, głodu i mądrości przedstawia idealnego członka zespołu.
 
 ### Czy warto?
 

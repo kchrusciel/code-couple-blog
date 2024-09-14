@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-Pakiet `java.util.concurrent` wprowadził wiele ciekawych i ułatwiających codzienną pracę rozwiązań. Jednym z nich jest klasa `CountDownLatch`, która jest tematem tego wpisu. Jest to implementacja, która może być wykorzystana do bezpiecznego wątkowo odliczania. Możecie się zastanawiać do czego może przydać się tak prosty mechanizm jak odliczanie, zapraszam więc do wpisu po wyjaśnienia.
+Pakiet `java.util.concurrent` wprowadził wiele ciekawych i ułatwiających codzienną pracę rozwiązań. Jednym z nich jest klasa `CountDownLatch`, która jest tematem tego wpisu. Jest to implementacja, która może być wykorzystana do bezpiecznego wątkowo odliczania. Możecie się zastanawiać do czego może przydać się tak prosty mechanizm jak odliczanie, zapraszam więc do wpisu po wyjaśnienia.
 <!-- more -->
 ### Problem
 
@@ -27,7 +27,7 @@ Jednym z rozwiązań tego problemu jest zastosowanie klasy `CountDownLatch`. Jes
 
 CountDownLatch cdl = new CountDownLatch(3);
 
-Teraz możemy "zablokować" nasz serwis zliczający średnią. Blokowanie (metoda `await()`) będzie polegało na tym, iż praca nie zostanie odpalona, dopóki wartość licznika `CountDownLatch` nie będzie równa zero.
+Teraz możemy "zablokować" nasz serwis zliczający średnią. Blokowanie (metoda `await()`) będzie polegało na tym, iż praca nie zostanie odpalona, dopóki wartość licznika `CountDownLatch` nie będzie równa zero.
 
 cdl.await();
 
@@ -43,7 +43,7 @@ Drugie i trzecie zadanie również się zakończyły (po zakończeniu zostały w
 
 ### Bezpieczeństwo
 
-Należy pamiętać, aby umieszczać metodę `countDown()` w bloku `finally`. Ponadto dla bezpieczeństwa powinniśmy korzystać z metody `await()`, która przyjmuje maksymalny czas oczekiwania `boolean await(long timeout, TimeUnit unit)`. Dzięki temu unikniemy **dead lock'a** w przypadku, gdy w jednym z zadań coś pójdzie nie tak i wartość licznika nie zostanie zmniejszona.
+Należy pamiętać, aby umieszczać metodę `countDown()` w bloku `finally`. Ponadto dla bezpieczeństwa powinniśmy korzystać z metody `await()`, która przyjmuje maksymalny czas oczekiwania `boolean await(long timeout, TimeUnit unit)`. Dzięki temu unikniemy **dead lock'a** w przypadku, gdy w jednym z zadań coś pójdzie nie tak i wartość licznika nie zostanie zmniejszona.
 
 ### Github
 

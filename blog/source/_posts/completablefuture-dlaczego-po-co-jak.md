@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-Klasa **CompletableFuture** jest z nami od dłuższego czasu, jednakże ostatnimi czasy stosowałem ją bardzo często. Podczas swojej pracy postanowiłem spisać między innymi na co warto zwrócić szczególną uwagę stosując **CompletableFuture**, jak działają poszczególne transformacje oraz jak obsłużyć sytuacje wyjątkow, zapraszam!
+Klasa **CompletableFuture** jest z nami od dłuższego czasu, jednakże ostatnimi czasy stosowałem ją bardzo często. Podczas swojej pracy postanowiłem spisać między innymi na co warto zwrócić szczególną uwagę stosując **CompletableFuture**, jak działają poszczególne transformacje oraz jak obsłużyć sytuacje wyjątkow, zapraszam!
 <!-- more -->
 ## CompletableFuture
 
@@ -34,7 +34,7 @@ CompletableFuture<String> taskWithException = CompletableFuture.supplyAsync(() -
     throw new IllegalArgumentException(); //zwraca wyjątek
 });
 
-W przeciwieństwie do rozwiązania `Future`, `CompletableFuture` pozwala nam składać transformacje w nieblokujący sposób.
+W przeciwieństwie do rozwiązania `Future`, `CompletableFuture` pozwala nam składać transformacje w nieblokujący sposób.
 
 Callable<String> blocking = () -> "toChange";
 String resultOfCall = blocking.call(); //blokujące
@@ -48,25 +48,25 @@ Jeśli nie określimy, aby nowa transformacja odbyła się asynchronicznie, odb�
 
 ### Tworzenie
 
-Klasa `CompletableFuture` dostarcza statyczne metody do tworzenia samej siebie:
+Klasa `CompletableFuture` dostarcza statyczne metody do tworzenia samej siebie:
 
-*   `supplyAsync(suppiler)` - zwraca `CompletableFuture`, który zostanie wywołany w `ForkJoinPool`
-*   `supplyAsync(suppiler, executors)` - zwraca `CompletableFuture`, który zostanie wywołany w podanej puli wątków executors
-*   `runAsync(runnable)` - zwraca `CompletableFuture`, który zostanie wywołany w `ForkJoinPool`
-*   `runAsync(runnable, executors)` - zwraca `CompletableFuture`, który zostanie wywołany w podanej puli wątków executors
-*   `completedFuture(value)` - zwraca `CompletableFuture`, który jest już zakończony i posiada wartość
-*   `allOf(CompletableFuture<?>…​ cfs)` - zwraca `CompletableFuture` **UWAGA!** typu `<Void>` po zakończeniu wszystkich przekazanych `CompletableFuture`
-*   `anyOf(CompletableFuture<?>…​ cfs)` - zwraca `CompletableFuture` **UWAGA!** typu `<Object>` po zakończeniu dowolnego przekazanego `CompletableFuture`
+*   `supplyAsync(suppiler)` - zwraca `CompletableFuture`, który zostanie wywołany w `ForkJoinPool`
+*   `supplyAsync(suppiler, executors)` - zwraca `CompletableFuture`, który zostanie wywołany w podanej puli wątków executors
+*   `runAsync(runnable)` - zwraca `CompletableFuture`, który zostanie wywołany w `ForkJoinPool`
+*   `runAsync(runnable, executors)` - zwraca `CompletableFuture`, który zostanie wywołany w podanej puli wątków executors
+*   `completedFuture(value)` - zwraca `CompletableFuture`, który jest już zakończony i posiada wartość
+*   `allOf(CompletableFuture<?>…​ cfs)` - zwraca `CompletableFuture` **UWAGA!** typu `<Void>` po zakończeniu wszystkich przekazanych `CompletableFuture`
+*   `anyOf(CompletableFuture<?>…​ cfs)` - zwraca `CompletableFuture` **UWAGA!** typu `<Object>` po zakończeniu dowolnego przekazanego `CompletableFuture`
 
-Ponadto `CompletableFuture` można tworzyć przez wykonywanie tranformacji.
+Ponadto `CompletableFuture` można tworzyć przez wykonywanie tranformacji.
 
 ### Metody
 
 **CompletableFuture** oferuje trzy podstawowe metody:
 
-*   `complete` - oznaczamy `CompletableFuture` jako skończony
-*   `completedFuture` - zwracam wartość od razu (na przykład z cache)
-*   `completeExceptionally` - opakowujemy wyjątek w `CompletableFuture`
+*   `complete` - oznaczamy `CompletableFuture` jako skończony
+*   `completedFuture` - zwracam wartość od razu (na przykład z cache)
+*   `completeExceptionally` - opakowujemy wyjątek w `CompletableFuture`
 
 String getStringFromWebService() {
     String stringFromCache = getStringFromCache();
@@ -109,32 +109,32 @@ CompletableFuture<String> getStringFromWebServiceAsync() {
     }
 }
 
-Oczywiście nie korzystamy z `CompletableFuture` w sposób jaki jest pokazany powyżej. Wykorzystujemy do tego celu tranformacje.
+Oczywiście nie korzystamy z `CompletableFuture` w sposób jaki jest pokazany powyżej. Wykorzystujemy do tego celu tranformacje.
 
 ### Transformacje
 
-Klasa `CompletableFuture` dostarcza około **50 metod**. Pomimo tak dużej ilości większość metod stworzonych jest według wzorców:
+Klasa `CompletableFuture` dostarcza około **50 metod**. Pomimo tak dużej ilości większość metod stworzonych jest według wzorców:
 
-*   **apply** metoda, która przyjmuje `Function`
-*   **accept** metoda, która przyjmuje `Consumer`
-*   **run** metoda, która przyjmuje `Runnable`
+*   **apply** metoda, która przyjmuje `Function`
+*   **accept** metoda, która przyjmuje `Consumer`
+*   **run** metoda, która przyjmuje `Runnable`
 
 Nowa pula wątków:
 
-*   **async** oznacza uruchomienie wykonywania w `ForkJoinPool`
-*   **async(Executors)** oznacza uruchomienie wykonywania na innej puli wątków
+*   **async** oznacza uruchomienie wykonywania w `ForkJoinPool`
+*   **async(Executors)** oznacza uruchomienie wykonywania na innej puli wątków
 
 Więcej wzorców:
 
-*   **then** - służy do łączenia tranformacji - na przykład `thenApply` lub `thenAccept`
-*   **either** - wybierz pierwszy wynik - na przykład z dwóch `CompletableFuture`
-*   **both** - wykonaj tranformację jeśli skończą się oba wcześniejsze `CompletableFuture`
-*   **combine** - złącz pierwszy wynik z drugim, aby powstał kolejny wynik, działa jak operator `zip`
-*   **compose** - działa jak operator `flatMap`
+*   **then** - służy do łączenia tranformacji - na przykład `thenApply` lub `thenAccept`
+*   **either** - wybierz pierwszy wynik - na przykład z dwóch `CompletableFuture`
+*   **both** - wykonaj tranformację jeśli skończą się oba wcześniejsze `CompletableFuture`
+*   **combine** - złącz pierwszy wynik z drugim, aby powstał kolejny wynik, działa jak operator `zip`
+*   **compose** - działa jak operator `flatMap`
 
 ### thenApply i thenApplyAsync
 
-Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Function`, czyli przyjmują i zwracają wartość. Wersja **async** przyjmuje własną pulę wątków.
+Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Function`, czyli przyjmują i zwracają wartość. Wersja **async** przyjmuje własną pulę wątków.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
@@ -144,7 +144,7 @@ task.thenApplyAsync((String someString) -> "Value returned", executors);
 
 ### thenAccept i thenAcceptAsync
 
-Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Consumer`, czyli przyjmują wartość, natomiast nic nie zwracają. Wersja **async** przyjmuje własną pulę wątków.
+Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Consumer`, czyli przyjmują wartość, natomiast nic nie zwracają. Wersja **async** przyjmuje własną pulę wątków.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
@@ -154,7 +154,7 @@ task.thenAcceptAsync((String someString) -> System.out.println("Value consumed")
 
 ### thenRun i thenRunAsync
 
-Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Runnable`, czyli nie przyjmują wartość oraz nie zwracają wartości. Wersja **async** przyjmuje własną pulę wątków.
+Są to metody, które służą do dodania kolejnych tranformacji. Transformacje te są typu `Runnable`, czyli nie przyjmują wartość oraz nie zwracają wartości. Wersja **async** przyjmuje własną pulę wątków.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
@@ -175,7 +175,7 @@ task.thenRunAsync(()->{
 
 ### either
 
-Transformacja zawarta w `*Either` wykonywana jest na pierwszym zakończonym wyniku. Metoda ta dostępna jest dla wszystkich wzorców: `acceptEither`, `applyToEither` oraz `runAfterEither`.
+Transformacja zawarta w `*Either` wykonywana jest na pierwszym zakończonym wyniku. Metoda ta dostępna jest dla wszystkich wzorców: `acceptEither`, `applyToEither` oraz `runAfterEither`.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 CompletableFuture<String> otherTask = CompletableFuture.supplyAsync(() -> "some other task");
@@ -187,7 +187,7 @@ task.acceptEither(otherTask, x -> {
 
 ### both
 
-Transformacja zawarta w `*Both` wykonywana jest na wynikach dwóch wcześniejszych `CompletableFuture`. Metoda ta dostępna jest dla wzorców: `thenAcceptBoth` oraz `runAfterBoth`.
+Transformacja zawarta w `*Both` wykonywana jest na wynikach dwóch wcześniejszych `CompletableFuture`. Metoda ta dostępna jest dla wzorców: `thenAcceptBoth` oraz `runAfterBoth`.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 CompletableFuture<String> otherTask = CompletableFuture.supplyAsync(() -> "some other task");
@@ -196,7 +196,7 @@ task.thenAcceptBoth(otherTask, (x, y) -> System.out.println(x + " " + y));
 
 ### combine
 
-Transformacja zawarta w `thenCombine` podobnie jak `*Both` wykonywana jest na wynikach dwóch wcześniejszych `CompletableFuture`. Różnicą w stosunku do `*Both` jest to, iż zwracana jest wartość, ponieważ drugim paramterem jest `BiFunction`.
+Transformacja zawarta w `thenCombine` podobnie jak `*Both` wykonywana jest na wynikach dwóch wcześniejszych `CompletableFuture`. Różnicą w stosunku do `*Both` jest to, iż zwracana jest wartość, ponieważ drugim paramterem jest `BiFunction`.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 CompletableFuture<String> otherTask = CompletableFuture.supplyAsync(() -> "some other task");
@@ -205,7 +205,7 @@ CompletableFuture<String> combine = task.thenCombine(otherTask, (x, y) -> x + " 
 
 ### compose
 
-Transformacja zawarta w `thenCompose` działa na zasadzie operatora `flatMap`. Potrafi ona "spłaszczyć" wywołanie innego `CompletableFuture`. Dzięki tej tranformacji unikamy **Callback Hell**.
+Transformacja zawarta w `thenCompose` działa na zasadzie operatora `flatMap`. Potrafi ona "spłaszczyć" wywołanie innego `CompletableFuture`. Dzięki tej tranformacji unikamy **Callback Hell**.
 
 ...
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
@@ -220,29 +220,29 @@ CompletableFuture<String> doOtherTask(String string) {
 
 ### Pobranie wartości
 
-Pobranie wartości odbywa się w sposób blokujący, tak samo jak w `Future` przy wykorzystaniu metody `get`.
+Pobranie wartości odbywa się w sposób blokujący, tak samo jak w `Future` przy wykorzystaniu metody `get`.
 
-*   `get()` - blokujące wywołanie, które rzuca checked exceptions takie jak `ExecutionException` oraz `InterruptedException`
-*   `get(timeout, timeunit)` - blokujące wywołanie, które rzuca checked exceptions takie jak `ExecutionException`, `InterruptedException` oraz `TimeoutException`, jeśli zostanie przekroczony czas zadeklarowany w metodzie
-*   `getNow(valueIfAbset)` - blokujące wywołanie, które rzuca unchecked exceptions takie jak `CompletionException` oraz `CancellationException`. Zwraca wartość domyślną jeśli dany `CompletableFuture` jeszcze się nie zakończył
-*   `join()` - działa jak `get()`, jednakże rzuca unchecked exception `CompletionException`
+*   `get()` - blokujące wywołanie, które rzuca checked exceptions takie jak `ExecutionException` oraz `InterruptedException`
+*   `get(timeout, timeunit)` - blokujące wywołanie, które rzuca checked exceptions takie jak `ExecutionException`, `InterruptedException` oraz `TimeoutException`, jeśli zostanie przekroczony czas zadeklarowany w metodzie
+*   `getNow(valueIfAbset)` - blokujące wywołanie, które rzuca unchecked exceptions takie jak `CompletionException` oraz `CancellationException`. Zwraca wartość domyślną jeśli dany `CompletableFuture` jeszcze się nie zakończył
+*   `join()` - działa jak `get()`, jednakże rzuca unchecked exception `CompletionException`
 
 ### Przerwanie pracy
 
-Jeśli chcemy przerwać działanie `CompletableFuture` możemy zakończyć pulę wątków. Innym rozwiązaniem, bardziej związanym z `CompletableFuture` jest wywołanie metody `cancel`. Przerywa ona działanie aktualnego `CompletableFuture`, który w następstwie zwróci `CancellationException`. Jeśli istnieją inne zależne tranformacje kończą się one z wyjątkiem `CompletionException` spowodowanym poprzednim `CancellationException`.
+Jeśli chcemy przerwać działanie `CompletableFuture` możemy zakończyć pulę wątków. Innym rozwiązaniem, bardziej związanym z `CompletableFuture` jest wywołanie metody `cancel`. Przerywa ona działanie aktualnego `CompletableFuture`, który w następstwie zwróci `CancellationException`. Jeśli istnieją inne zależne tranformacje kończą się one z wyjątkiem `CompletionException` spowodowanym poprzednim `CancellationException`.
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 task.cancel(true);
 
 ### Wyjątki
 
-Jeśli podczas wykonywania transformacji wystąpi wyjątek, podobnie jak w kodzie imperatywnym jest on propagowany do "samej góry" wywołania. Obsługa wyjątków odbywa się poprzez tranformację `exceptionally`:
+Jeśli podczas wykonywania transformacji wystąpi wyjątek, podobnie jak w kodzie imperatywnym jest on propagowany do "samej góry" wywołania. Obsługa wyjątków odbywa się poprzez tranformację `exceptionally`:
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
 task.exceptionally((throwable -> "default value"));
 
-Wyjątki możemy także obsłużyć przy pomocy metody `handle`:
+Wyjątki możemy także obsłużyć przy pomocy metody `handle`:
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
@@ -253,7 +253,7 @@ task.handle((x, throwable) -> {
     return x + "some value";
 });
 
-Jeśli w przeciwieństwie do metody `handle` nie chcemy zwracać żadnej wartości możemy wykorzystać `whenComplete`:
+Jeśli w przeciwieństwie do metody `handle` nie chcemy zwracać żadnej wartości możemy wykorzystać `whenComplete`:
 
 CompletableFuture<String> task = CompletableFuture.supplyAsync(() -> "some task");
 
@@ -268,10 +268,10 @@ task.whenComplete((x, throwable) -> {
 
 Istnieje też kilka metod pomocniczych:
 
-*   `obtrudeException(exception)` - ustawia wyjątek dla `CompletableFuture` niezależnie od tego, czy się zakończył, czy nie
-*   `obtrudeValue(value)` - ustawia wartość dla `CompletableFuture` niezależnie od tego, czy się zakończył, czy nie
-*   `toCompletableFuture()` - zwraca `CompletableFuture`
-*   `getNumberOfDependents()` - oblicza liczbę niezakończonych jeszcze tranformacji na `CompletableFuture`
-*   `isCancelled()` - sprawdza, czy `CompletableFuture` został przerwany
-*   `isCompletedExceptionally()` - sprawdza, czy `CompletableFuture` został przerwany przez wyjątek
-*   `isDone()` - sprawdza, czy `CompletableFuture` został zakończony
+*   `obtrudeException(exception)` - ustawia wyjątek dla `CompletableFuture` niezależnie od tego, czy się zakończył, czy nie
+*   `obtrudeValue(value)` - ustawia wartość dla `CompletableFuture` niezależnie od tego, czy się zakończył, czy nie
+*   `toCompletableFuture()` - zwraca `CompletableFuture`
+*   `getNumberOfDependents()` - oblicza liczbę niezakończonych jeszcze tranformacji na `CompletableFuture`
+*   `isCancelled()` - sprawdza, czy `CompletableFuture` został przerwany
+*   `isCompletedExceptionally()` - sprawdza, czy `CompletableFuture` został przerwany przez wyjątek
+*   `isDone()` - sprawdza, czy `CompletableFuture` został zakończony

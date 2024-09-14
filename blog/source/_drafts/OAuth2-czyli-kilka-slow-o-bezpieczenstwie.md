@@ -19,14 +19,14 @@ Zanim przejdziemy do omawiania konkretnych przepływów musimy poznać cztery ro
 *   **resource owner** - właściciel zasobu (użytkownik portalu GitHub)
 *   **client** - byt, który chce dostać dostęp do zasobu (aplikacja)
 *   **resource server** - serwer zasobów (nasza aplikacja lub GitHub)
-*   **authorization server** - serwer autoryzacji, który zajmuje się tokenami (na przykład GitHub)
+*   **authorization server** - serwer autoryzacji, który zajmuje się tokenami (na przykład GitHub)
 
 ### Ustawienia aplikacji
 
-Aby komunikować się z serwerem autoryzacji, musimy stworzyć aplikację kliencką ([jak to zrobić na GitHub'ie](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)). Podczas tworzenia aplikacji, należy uwzględnić kilka danych:
+Aby komunikować się z serwerem autoryzacji, musimy stworzyć aplikację kliencką ([jak to zrobić na GitHub'ie](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/)). Podczas tworzenia aplikacji, należy uwzględnić kilka danych:
 
 *   **client id** - unikalny identyfikator (w przypadku GitHub'a losowy ciąg)
-*   **client secret** - hasło aplikacji klienckiej (w przypadku GitHub'a losowy ciąg)
+*   **client secret** - hasło aplikacji klienckiej (w przypadku GitHub'a losowy ciąg)
 *   **scopes** - opcjonalna opcja, możemy określi do jakich zasobów przydzielamy dostęp (zależne od dostawy)
 *   **redirect/callback URI** - na jaki adres mamy być przekierowani po logowaniu
 
@@ -37,7 +37,7 @@ Dokumentacja standardu **OAuth2** definiuje cztery typy przepływów:
 *   **Authorization Code** - używany jest kod autoryzacji, dzięki temu **client secret** nie jest wykorzystywany wprost
 *   **Implicit** - brak gwarancji iż **client secret** nie wycieknie
 *   **Resource Owner Password Credentials** \- login i hasło właściciela zasobu
-*   **Client Credentials** \- wykorzystująca client id oraz client secret (nie powinniśmy stosować tego produkcyjne)
+*   **Client Credentials** \- wykorzystująca client id oraz client secret (nie powinniśmy stosować tego produkcyjne)
 
 ### Authorization Code
 

@@ -12,7 +12,7 @@ date: 2016-06-14 09:00:06
 author: 'Krzysztof Chruściel'
 ---
 
-Dzisiejszy wpis **Spring Boot'owy** dotyczy konfiguracji właściwości aplikacji (ang. **application properties**). **Spring Boot** idealnie nadaje się do **PoC** (ang. **Proof Of Concept**) dzięki temu, że wykorzystuje podejście **deklaratywne,** czyli określamy co chcemy osiągnąć, a nie jak.
+Dzisiejszy wpis **Spring Boot'owy** dotyczy konfiguracji właściwości aplikacji (ang. **application properties**). **Spring Boot** idealnie nadaje się do **PoC** (ang. **Proof Of Concept**) dzięki temu, że wykorzystuje podejście **deklaratywne,** czyli określamy co chcemy osiągnąć, a nie jak.
 <!-- more -->
 **Właściwości** są bardzo wydajnym mechanizmem dostarczanym przez **Spring Boot'a**. Same właściwości można ustawiać na kilka sposobów:
 

@@ -115,7 +115,7 @@ Kolejny endpoint `/mappings` zawiera informacje o udostępnionych endpointach i 
 
 ### Shutdown
 
-Bardzo fajny, ale zarazem niebezpieczny wyłącznik. Po wywołaniu tego **endpointu** możemy wyłączyć naszą aplikację (uwaga, żeby nie poszło to na produkcję ;)). Ten adres jako jedyny jest domyślnie wyłączony. Aby go włączyć korzystamy z `application.properties`:
+Bardzo fajny, ale zarazem niebezpieczny wyłącznik. Po wywołaniu tego **endpointu** możemy wyłączyć naszą aplikację (uwaga, żeby nie poszło to na produkcję ;)). Ten adres jako jedyny jest domyślnie wyłączony. Aby go włączyć korzystamy z `application.properties`:
 
 endpoints.shutdown.enabled\=true
 

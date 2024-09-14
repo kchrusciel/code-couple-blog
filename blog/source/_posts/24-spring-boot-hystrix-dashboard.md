@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Kolejny wpis na temat **Hystrix'a**, czyli biblioteki realizującej wzorzec **CircuitBreaker**. [W poprzednim wpisie](http://codecouple.pl/2017/11/24/23-spring-boot-hystrix/) opisałem jak zaimplementować funkcjonalność **Hystrix'a** w naszej aplikacji. Dziś przedstawię wam projekt **Hystrix Dashboard**, na którym prezentowane są wyniki z naszych metod opakowanych w **commandy Hystrix'owe**.
+Kolejny wpis na temat **Hystrix'a**, czyli biblioteki realizującej wzorzec **CircuitBreaker**. [W poprzednim wpisie](http://codecouple.pl/2017/11/24/23-spring-boot-hystrix/) opisałem jak zaimplementować funkcjonalność **Hystrix'a** w naszej aplikacji. Dziś przedstawię wam projekt **Hystrix Dashboard**, na którym prezentowane są wyniki z naszych metod opakowanych w **commandy Hystrix'owe**.
 <!-- more -->
 Działanie **Hystrix Dashboard** pokażę wam na przykładzie aplikacji [napisanej w poprzednim wpisie](http://codecouple.pl/2017/11/24/23-spring-boot-hystrix/).
 
@@ -29,7 +29,7 @@ Musimy dodać kolejną zależność **Mavenową**:
 
 ### Dashboard
 
-Po uruchomieniu naszej aplikacji pod adresem `http://localhost:8080/hystrix.stream` mamy dostępny strumień danych generowany przez **Hystrixa**. Pod adresem `http://localhost:8080/hystrix` znajduje się pole, w którym musimy wskazać źródło, dla którego ma być stworzony **dashboard**.
+Po uruchomieniu naszej aplikacji pod adresem `http://localhost:8080/hystrix.stream` mamy dostępny strumień danych generowany przez **Hystrixa**. Pod adresem `http://localhost:8080/hystrix` znajduje się pole, w którym musimy wskazać źródło, dla którego ma być stworzony **dashboard**.
 
 ![](http://codecouple.pl/wp-content/uploads/2017/12/hystrix.png)
 

@@ -30,7 +30,7 @@ Mamy od razu dostarczone biblioteki do logowania. Jeśli nie korzystamy ze `spri
 
 ## Wypisanie logów
 
-Do logowania w naszej aplikacji wykorzystamy `SLF4J`. Jest on fasadą, czyli możemy przygotować sobie nasze wpisy, a następnie podpiąć interesujący nas framework jak **LogBack** lub `Log4J2`. Najprościej, aby wypisać coś do logu użyjemy `LoggerFactory`:
+Do logowania w naszej aplikacji wykorzystamy `SLF4J`. Jest on fasadą, czyli możemy przygotować sobie nasze wpisy, a następnie podpiąć interesujący nas framework jak **LogBack** lub `Log4J2`. Najprościej, aby wypisać coś do logu użyjemy `LoggerFactory`:
 
 @Controller
 @RequestMapping("/logger")
@@ -63,9 +63,9 @@ logging.pattern.file\= \# Appender pattern for output to the file. Only supporte
 logging.pattern.level\= \# Appender pattern for log level (default %5p). Only supported with the default logback setup.
 logging.register-shutdown-hook\=false \# Register a shutdown hook for the logging system when it is initialized. 
 
-Jeśli chcemy zmodyfikować standardowe ustawienia **LogBack'a** musimy dodać plik `logback.xml` do naszego folderu `resources`. Według dokumentacji, lepszym rozwiązaniem jest dodanie pliku `logback-spring.xml.` Dzięki temu mamy pewność, że zostanie wybrany nasz plik. Możemy także zmienić lokalizację pliku z ustawieniami wykorzystując `logging.config=classpath:config/log/logback-spring.xml`. Lokalizację pliku, gdzie będą zapisywane logi ustawimy poprzez `logging.file=logs/codecouple.log`.
+Jeśli chcemy zmodyfikować standardowe ustawienia **LogBack'a** musimy dodać plik `logback.xml` do naszego folderu `resources`. Według dokumentacji, lepszym rozwiązaniem jest dodanie pliku `logback-spring.xml.` Dzięki temu mamy pewność, że zostanie wybrany nasz plik. Możemy także zmienić lokalizację pliku z ustawieniami wykorzystując `logging.config=classpath:config/log/logback-spring.xml`. Lokalizację pliku, gdzie będą zapisywane logi ustawimy poprzez `logging.file=logs/codecouple.log`.
 
-**UWAGA!**, jeśli ustawimy obie wartości, czyli `logging.file=codecouple.log` oraz `logging.path=my/folder/logs,` zostaną one zignorowane. Jeśli potrzebujemy ustawić specyficzną ścieżkę pliku, należy wpisać to w taki sposób `logging.file=my/folder/logs/codecouple.log`. To kiedy ustawiamy dwie wartość? Jeśli chcemy z nich skorzystać w `logback-spring.xml`.
+**UWAGA!**, jeśli ustawimy obie wartości, czyli `logging.file=codecouple.log` oraz `logging.path=my/folder/logs,` zostaną one zignorowane. Jeśli potrzebujemy ustawić specyficzną ścieżkę pliku, należy wpisać to w taki sposób `logging.file=my/folder/logs/codecouple.log`. To kiedy ustawiamy dwie wartość? Jeśli chcemy z nich skorzystać w `logback-spring.xml`.
 
 Logi z poziomu `DEBUG` nie będą się wyświetlały, ponieważ w domyślnej konfiguracji przygotowanej przez `Spring'a` ten poziom jest wyłączony (ma to sens w przypadku środowiska produkcyjnego, w pierwotnej konfiguracji `LogBack` w pliku `base.xml` logowanie poziomu `DEBUG` jest włączone.). Jeśli jednak pracujemy na środowisku developerskim wystarczy ustawić `logging.level.*=DEBUG` gdzie \* oznacza nazwę pakietu, w którym chcemy to ustawić, np `logging.level.org.springframework.web=DEBUG` lub `logging.level.pl.codecouple.controllers=DEBUG`.
 
@@ -85,7 +85,7 @@ Dzięki temu nie musimy ustawiać `loggin.level.*` w `application.properies` tyl
 *   `${LOG_FILE}` - jeśli `logging.file` jest ustawiona.
 *   `${LOG_PATH}` - jeśli `logging.path` jest ustawiona.
 
-Plik `base.xml,` w którym znajduje się standardowa konfiguracja LogBack'a, zawiera także odwołanie do pliku `console.appender.xml,   ` który przechowuje informacje o konfiguracji logów dla konsoli oraz do pliku `file-appender.xml,` który przechowuje informacje o konfiguracji logów dla pliku. Możemy przykładowo w naszym pliku `logback-spring.xml` ustawić, że chcemy tylko logowanie do pliku z wyłączeniem konsoli:
+Plik `base.xml,` w którym znajduje się standardowa konfiguracja LogBack'a, zawiera także odwołanie do pliku `console.appender.xml,   ` który przechowuje informacje o konfiguracji logów dla konsoli oraz do pliku `file-appender.xml,` który przechowuje informacje o konfiguracji logów dla pliku. Możemy przykładowo w naszym pliku `logback-spring.xml` ustawić, że chcemy tylko logowanie do pliku z wyłączeniem konsoli:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
@@ -99,7 +99,7 @@ Plik `base.xml,` w którym znajduje się standardowa konfiguracja LogBack'a, za
 
 ## Logi a profile
 
-Bardzo fajnym dodatkiem w Spring Boot'cie jest możliwość konfiguracji logów zależnych od profilu. Tak jak pisałem wcześniej chcielibyśmy, aby na środowisku deweloperksim (nasz profil `dev`) były logowane wszystkie poziomy razem z `DEBUG` oraz aby były tylko wypisywane na konsoli. Natomiast dla naszego środowiska produkcyjnego (nasz profil `prod`) chcemy zapisywać logi tylko do pliku od poziomu `ERROR`:
+Bardzo fajnym dodatkiem w Spring Boot'cie jest możliwość konfiguracji logów zależnych od profilu. Tak jak pisałem wcześniej chcielibyśmy, aby na środowisku deweloperksim (nasz profil `dev`) były logowane wszystkie poziomy razem z `DEBUG` oraz aby były tylko wypisywane na konsoli. Natomiast dla naszego środowiska produkcyjnego (nasz profil `prod`) chcemy zapisywać logi tylko do pliku od poziomu `ERROR`:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>

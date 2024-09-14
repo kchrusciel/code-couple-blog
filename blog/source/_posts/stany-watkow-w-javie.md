@@ -55,7 +55,7 @@ void shouldReturnRunnableState() throws InterruptedException {
 
 ### BLOCKED
 
-Wątek w stanie `BLOCKED` może znaleźć się wtedy, kiedy dostęp do sekcji krytycznej jest aktualnie zajęty (znajduje się blokada na monitorze). Innymi słowy, kiedy wątek będzie próbował się dostać do synchronizowanej metody, a wewnątrz znajduje się już inny wątek, to stan zmieniany jest na `BLOCKED`:
+Wątek w stanie `BLOCKED` może znaleźć się wtedy, kiedy dostęp do sekcji krytycznej jest aktualnie zajęty (znajduje się blokada na monitorze). Innymi słowy, kiedy wątek będzie próbował się dostać do synchronizowanej metody, a wewnątrz znajduje się już inny wątek, to stan zmieniany jest na `BLOCKED`:
 
 @Test
 void shouldReturnBlockedState() throws InterruptedException {

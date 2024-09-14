@@ -34,11 +34,11 @@ Zaczniemy od stworzenia klasy. Wykorzystamy do tego klasę `JiteClass`, która w
 
 JiteClass someClass = new JiteClass("SomeClass");
 
-W naszym przypadku tworzymy klasę `SomeClass`, która dziedziczy po klasie `Object`. Następnie musimy dodać domyślny konstruktor. Normalnie robi to za nas kompilator, ale w tym przypadku to my musimy stworzyć go wprost:
+W naszym przypadku tworzymy klasę `SomeClass`, która dziedziczy po klasie `Object`. Następnie musimy dodać domyślny konstruktor. Normalnie robi to za nas kompilator, ale w tym przypadku to my musimy stworzyć go wprost:
 
 someClass.defineDefaultConstructor();
 
-Po dodaniu **konstruktora** pora stworzyć nową instancję tej klasy. Aby to zrobić musimy najpierw stworzyć własny `ClassLoader`:
+Po dodaniu **konstruktora** pora stworzyć nową instancję tej klasy. Aby to zrobić musimy najpierw stworzyć własny `ClassLoader`:
 
 class CustomClassLoader extends ClassLoader {
     

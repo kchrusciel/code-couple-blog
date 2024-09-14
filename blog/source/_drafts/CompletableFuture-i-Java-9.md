@@ -12,7 +12,7 @@ categories:
 <!-- more -->
 ### Problem ze zwracanym CompletableFuture
 
-Wyobraźmy sobie sytuację w, której w naszym API wystawiamy metodę która zwraca `CompletableFuture`:
+Wyobraźmy sobie sytuację w, której w naszym API wystawiamy metodę która zwraca `CompletableFuture`:
 
 \[snipped\]
 
@@ -24,7 +24,7 @@ Rozwiązaniem tego problemu jest metoda `copy()`.
 
 ### copy()
 
-Metoda `copy()` zwraca kopię `CompletableFuture`. Aby unikąć sytuacji w której klient naszego API kończy `CompletableFuture`, który my zwróciliśmy:
+Metoda `copy()` zwraca kopię `CompletableFuture`. Aby unikąć sytuacji w której klient naszego API kończy `CompletableFuture`, który my zwróciliśmy:
 
 \[snipped\]
 
@@ -34,7 +34,7 @@ Jeśli chcieliśmy określić ramy czasowe dla naszego asynchronicznego zadania 
 
 \[snipped\]
 
-Niestety, metoda ta jest blokująca. Oczywiście możemy obejść ten problem tworzą nowy `CompletableFuture` odpowiedzialny za timeout:
+Niestety, metoda ta jest blokująca. Oczywiście możemy obejść ten problem tworzą nowy `CompletableFuture` odpowiedzialny za timeout:
 
 \[snipped\]
 
@@ -43,7 +43,7 @@ W nowej wersji **Javy** dostajemy natywne wsparcie dla tego rozwiązania:
 *   `orTimeout`
 *   `completeOnTimeout`
 
-Metody te "pod spodem" korzystają z `ScheduledThreadExecutor` i oznaczają `CompletableFuture`  jako "completed exceptionally"
+Metody te "pod spodem" korzystają z `ScheduledThreadExecutor` i oznaczają `CompletableFuture`  jako "completed exceptionally"
 
 ### orTimeout
 
@@ -59,7 +59,7 @@ aaa
 
 ### defaultExecutor
 
-Metoda ta zwraca domyślną pulę wątków na której wykonywany będzie `CompletableFuture`. Jak pisałem w poprzednich artykułach domyślną pulą dla `CompletableFuture` jest **ForkJoinPool**:
+Metoda ta zwraca domyślną pulę wątków na której wykonywany będzie `CompletableFuture`. Jak pisałem w poprzednich artykułach domyślną pulą dla `CompletableFuture` jest **ForkJoinPool**:
 
 \[snipped\]
 
@@ -69,4 +69,4 @@ aaa
 
 ### Więcej
 
-W tym wpisie opisałem najważniejsze zmiany w kontekście CompletableFuture. Oprócz powyżyszych rozwiązań pojawiło się także kilka inny usprawnień. Po więcej zapraszam -> \[link\].
+W tym wpisie opisałem najważniejsze zmiany w kontekście CompletableFuture. Oprócz powyżyszych rozwiązań pojawiło się także kilka inny usprawnień. Po więcej zapraszam -> \[link\].

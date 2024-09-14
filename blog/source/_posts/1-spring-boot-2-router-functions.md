@@ -14,11 +14,11 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
 
-[Poprzedni wpis](http://codecouple.pl/2018/07/13/0-spring-boot-2-introduction/) był jedynie wprowadzeniem do **Spring Boot'a 2.0**. Pojawiło się tam pojęcie **WebFlux**. Jest to element, który w sposób reaktywny pozwala współpracować z warstwą **webową**. Ponadto, funkcjonalość ta dostarcza nam nowy sposób tworzenia endpointów poprzez użycie **Router Functions**. Zapraszam do wpisu!
+[Poprzedni wpis](http://codecouple.pl/2018/07/13/0-spring-boot-2-introduction/) był jedynie wprowadzeniem do **Spring Boot'a 2.0**. Pojawiło się tam pojęcie **WebFlux**. Jest to element, który w sposób reaktywny pozwala współpracować z warstwą **webową**. Ponadto, funkcjonalość ta dostarcza nam nowy sposób tworzenia endpointów poprzez użycie **Router Functions**. Zapraszam do wpisu!
 <!-- more -->
 ### Router Functions
 
-Jak pisałem we wstępie, w nowym **Spring Boot'cie** możemy tworzyć naszą część serwerową na dwa sposoby (aktualnie nie można ich mieszać w jednej aplikacji):
+Jak pisałem we wstępie, w nowym **Spring Boot'cie** możemy tworzyć naszą część serwerową na dwa sposoby (aktualnie nie można ich mieszać w jednej aplikacji):
 
 *   **"Po staremu"** - korzystając z adnotacji `@Controller` i innych związanych z **Web'em**
 *   **"Po nowemu"** - korzystając z programowania funkcyjnego przy użyciu **Router Functions**
@@ -47,16 +47,16 @@ public RouterFunction<ServerResponse> routes(ReactiveHandler handler) {
             .andRoute(POST("/code-couple"), handler::post);
 }
 
-Wszystkie przydatne metody, których możemy używać przy tworzeniu `route` znajdują się w klasie `RequestPredicate`:
+Wszystkie przydatne metody, których możemy używać przy tworzeniu `route` znajdują się w klasie `RequestPredicate`:
 
 *   `RequestPredicate.method(HttpMethod)` - jaka metoda z **Http** nas interesuje
 *   `RequestPredicate.path(String)` - ścieżka endpointu
 *   `RequestPredicate.contentType` - typ treści
-*   `RequestPredicate.GET(String)` - jest połączeniem `RequestPredicate.method(HttpMethod)` i `RequestPredicate.path(String)`
+*   `RequestPredicate.GET(String)` - jest połączeniem `RequestPredicate.method(HttpMethod)` i `RequestPredicate.path(String)`
 *   warunki logiczne - do łączenia predykatów
 *   `RequestPredicate.*` - więcej
 
-Po utworzeniu interesujących nas **Router Functions** pora na stworzenie `HandlerFunction,` czyli w naszym przypadku klasy `ReactiveHandler`:
+Po utworzeniu interesujących nas **Router Functions** pora na stworzenie `HandlerFunction,` czyli w naszym przypadku klasy `ReactiveHandler`:
 
 @Component
 class ReactiveHandler {
@@ -76,7 +76,7 @@ class ReactiveHandler {
 
 }
 
-Każda metoda w `HandlerFunction` przyjmuje `ServerRequest`, natomiast zwraca `Mono<ServerResponse>`. Klasa `ServerRequest` dostarcza informacje o aktualnym żądaniu. Możemy z niej uzyskać takie informacje jak nagłówki czy parametry żądania. W odpowiedzi musimy natomiast zwrócić `ServerResponse`, który dostarcza przyjazne **API** do tworzenia odpowiedzi:
+Każda metoda w `HandlerFunction` przyjmuje `ServerRequest`, natomiast zwraca `Mono<ServerResponse>`. Klasa `ServerRequest` dostarcza informacje o aktualnym żądaniu. Możemy z niej uzyskać takie informacje jak nagłówki czy parametry żądania. W odpowiedzi musimy natomiast zwrócić `ServerResponse`, który dostarcza przyjazne **API** do tworzenia odpowiedzi:
 
 Mono<ServerResponse> get(ServerRequest request) {
     String path = request.path();
@@ -85,7 +85,7 @@ Mono<ServerResponse> get(ServerRequest request) {
 
 ### Podsumowanie
 
-Bardzo lubiłem wykorzystywać mapowanie "po staremu", jednakże ostatnio coraz częściej korzystam z **Router Functions**. Jak dla mnie krótkie mapowania sprawdzają się dużo lepiej z **Router Functions** niż z klasycznym `@RequestMapping.` Jaka jest wasza opinia na ten temat? Mieliście już przyjemność pracować z **Router Functions**?
+Bardzo lubiłem wykorzystywać mapowanie "po staremu", jednakże ostatnio coraz częściej korzystam z **Router Functions**. Jak dla mnie krótkie mapowania sprawdzają się dużo lepiej z **Router Functions** niż z klasycznym `@RequestMapping.` Jaka jest wasza opinia na ten temat? Mieliście już przyjemność pracować z **Router Functions**?
 
 ### GitHub
 

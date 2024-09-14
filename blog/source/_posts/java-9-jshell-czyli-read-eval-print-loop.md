@@ -14,11 +14,11 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-**Java 9** jest już z nami oficjalnie od pewnego czasu, pewnie u niektórych osób działa już na produkcji. Najnowsza wersja nie przyniosła aż tak dużych zmian jak **Java 8**. Oprócz modularności czy zmian związanych ze składnią tak zwanych _syntactic sugar_, pojawił się mechanizm, który występuje w wielu innych językach, a mianowicie **REPL** (ang. _Read-Eval-Print Loop_). W **Javie 9** nazywa się **JShell** i jest najczęściej wykorzystywany do prototypowania oraz nauki języka.
+**Java 9** jest już z nami oficjalnie od pewnego czasu, pewnie u niektórych osób działa już na produkcji. Najnowsza wersja nie przyniosła aż tak dużych zmian jak **Java 8**. Oprócz modularności czy zmian związanych ze składnią tak zwanych _syntactic sugar_, pojawił się mechanizm, który występuje w wielu innych językach, a mianowicie **REPL** (ang. _Read-Eval-Print Loop_). W **Javie 9** nazywa się **JShell** i jest najczęściej wykorzystywany do prototypowania oraz nauki języka.
 <!-- more -->
 ### Czy wogóle warto?
 
-Zanim zaczniesz czytać ten artykuł chciałbym przekonać Cię, że warto to narzędzie poznać. Istnieje kilka dziedzin, w których **JShell** może nam pomóc:
+Zanim zaczniesz czytać ten artykuł chciałbym przekonać Cię, że warto to narzędzie poznać. Istnieje kilka dziedzin, w których **JShell** może nam pomóc:
 
 *   **nauka** - bardzo dobre narzędzie do nauki programowania dla juniorów
 *   **sprawdzanie corner case'ów** - jeśli zdarzyło wam się przygotowywać do certyfikacji z **Javy**, bardzo często pojawiają się tam językowe "smaczki", które w łatwy sposób możemy wykonać w powłoce
@@ -34,7 +34,7 @@ java version "9"
 Java(TM) SE Runtime Environment (build 9+178)
 Java HotSpot(TM) 64-Bit Server VM (build 9+178, mixed mode)
 
-Jeśli jesteśmy już pewni, iż mamy na środowisku **Jave 9**, uruchamiamy **JShell'a**:
+Jeśli jesteśmy już pewni, iż mamy na środowisku **Jave 9**, uruchamiamy **JShell'a**:
 
 $ jshell
  Welcome to JShell -- Version 9
@@ -49,7 +49,7 @@ jshell>
 jshell> 2+2
 $1 ==> 4
 
-Wynik naszej operacji został przypisany do zmiennej `$1`, która od teraz dostępna jest przez cały czas działania powłoki. Możemy wykorzystać tą wartość na wiele sposobów:
+Wynik naszej operacji został przypisany do zmiennej `$1`, która od teraz dostępna jest przez cały czas działania powłoki. Możemy wykorzystać tą wartość na wiele sposobów:
 
 jshell> $1
 $1 ==> 4
@@ -85,7 +85,7 @@ jshell> class Code {
 **Powłoka** dostarcza nam także funkcjonalności ułatwiające pracę z nią. Dodatkowe funkcjonalności możemy uruchomić poprzez wywołania **komend**. **Komendy** w powłoce poprzedzone są znakiem `/`. Lista przydatnych **komend**:
 
 *   **/list** - lista wywołanych poleceń
-*   **/imports** - zaimportowane biblioteki (dostajemy kilka domyślnie)
+*   **/imports** - zaimportowane biblioteki (dostajemy kilka domyślnie)
 *   **/methods** - dostępne metody
 *   **/vars** - dostępne zmienne
 *   **/types** - dostępne typy
@@ -105,7 +105,7 @@ jshell> /edit toUpperCase
 
 ### Podpowiadanie składni
 
-Jeśli zaczęliśmy już tęsknić za **IDE** z powodu braku podpowiadania składni, wystarczy wcisnąć `TAB`:
+Jeśli zaczęliśmy już tęsknić za **IDE** z powodu braku podpowiadania składni, wystarczy wcisnąć `TAB`:
 
 jshell> Sys
 System

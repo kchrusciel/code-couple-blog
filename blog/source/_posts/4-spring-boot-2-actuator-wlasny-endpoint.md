@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
 
-W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/05/03/3-spring-boot-2-actuator/) poznaliśmy narzędzie **actuator**. Jest to **narzędzie**, które dostarcza **metryki** oraz dodatkowe **informacje** na temat aplikacji. _Out-of-the-box_ **actuator** daje nam między innymi możliwość sprawdzenia **metryk** wirtualnej maszyny **Javy** czy **statusu** naszej aplikacji. Jednakże, czasem potrzebujemy dodać **własny** adres dostarczający dodatkowe **informacje** o naszej aplikacji. W tym wpisie opowiemy sobie jak dodać **własny** endpoint.
+W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/05/03/3-spring-boot-2-actuator/) poznaliśmy narzędzie **actuator**. Jest to **narzędzie**, które dostarcza **metryki** oraz dodatkowe **informacje** na temat aplikacji. _Out-of-the-box_ **actuator** daje nam między innymi możliwość sprawdzenia **metryk** wirtualnej maszyny **Javy** czy **statusu** naszej aplikacji. Jednakże, czasem potrzebujemy dodać **własny** adres dostarczający dodatkowe **informacje** o naszej aplikacji. W tym wpisie opowiemy sobie jak dodać **własny** endpoint.
 <!-- more -->
 ### Spring Boot 2
 
@@ -28,7 +28,7 @@ public class IntegrationsEndpoint {
 
 }
 
-W parametrze `id` określamy pod jakim adresem dostępny będzie nowy **endpoint**. W naszym przypadku jest to adres `/actuator/integrations`. Dodatkowo każdy dodany przez nas **endpoint** jest domyślnie włączony, możemy to zmienić poprzez użycie klucza `enableByDefault` `@Endpoint(id = "integrations", enableByDefault = false)`.
+W parametrze `id` określamy pod jakim adresem dostępny będzie nowy **endpoint**. W naszym przypadku jest to adres `/actuator/integrations`. Dodatkowo każdy dodany przez nas **endpoint** jest domyślnie włączony, możemy to zmienić poprzez użycie klucza `enableByDefault` `@Endpoint(id = "integrations", enableByDefault = false)`.
 
 ### CRUD
 
@@ -85,7 +85,7 @@ W powyższej klasie pojawiła się także adnotacja `@Selector`, która mapuje *
 
 ### Extension
 
-Czasami oprócz podstawowej funkcjonalności **endpointów**, chcielibyśmy mieć przykładowo wpływ na zwracane **nagłówki** lub kody **statusów**. Jest to możliwe dzięki adnotacji `@EndpointWebExtension(endpoint = IntegrationsEndpoint.class)`. Adnotacja pod kluczem `endpoint` przyjmuje nazwę klasy **adresu**, któremu chcemy dodać dodatkową **funkcjonalność**:
+Czasami oprócz podstawowej funkcjonalności **endpointów**, chcielibyśmy mieć przykładowo wpływ na zwracane **nagłówki** lub kody **statusów**. Jest to możliwe dzięki adnotacji `@EndpointWebExtension(endpoint = IntegrationsEndpoint.class)`. Adnotacja pod kluczem `endpoint` przyjmuje nazwę klasy **adresu**, któremu chcemy dodać dodatkową **funkcjonalność**:
 
 @Component
 @EndpointWebExtension(endpoint = IntegrationsEndpoint.class)

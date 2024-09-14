@@ -18,7 +18,7 @@ author: 'Krzysztof Chruściel'
 <!-- more -->
 ### ForkJoinPool
 
-Jeśli kiedyś zdarzyło wam się wywołać metodę `.parallel()` na strumieniu, uruchamiana była ona na puli `ForkJoinPool`. Jest to pula, która od Javy 8 wykorzystywana jest jako domyślna pula wątków. Realizuje ona zadania, które da się podzielić. Jak napisałem we wstępie pula ta wykorzystuje dwa algorytmy **dziel i zwyciężaj** oraz **Work-Stealing**.
+Jeśli kiedyś zdarzyło wam się wywołać metodę `.parallel()` na strumieniu, uruchamiana była ona na puli `ForkJoinPool`. Jest to pula, która od Javy 8 wykorzystywana jest jako domyślna pula wątków. Realizuje ona zadania, które da się podzielić. Jak napisałem we wstępie pula ta wykorzystuje dwa algorytmy **dziel i zwyciężaj** oraz **Work-Stealing**.
 
 ### Dziel i zwyciężaj
 
@@ -30,7 +30,7 @@ W kontekście tej puli, każdy podział nazwywany jest **Fork'iem** (niebieska s
 
 ### Work-Stealing
 
-Jeśli mamy podzielone zadania, trafiają one na kolejkę. Teraz obsługą tych zadań zajmuje się algorytm **Work-Stealing**, który przydziela zadania wątkom aktualnie bezrobotnym. Kradną więc one pracę innym wątkom: ![](https://www.java-success.com/wp-content/uploads/2016/03/Screen-Shot-2016-03-03-at-10.57.51-PM.png)
+Jeśli mamy podzielone zadania, trafiają one na kolejkę. Teraz obsługą tych zadań zajmuje się algorytm **Work-Stealing**, który przydziela zadania wątkom aktualnie bezrobotnym. Kradną więc one pracę innym wątkom: ![](https://www.java-success.com/wp-content/uploads/2016/03/Screen-Shot-2016-03-03-at-10.57.51-PM.png)
 
 ### Wielkość
 
@@ -76,7 +76,7 @@ class Task extends RecursiveAction {
 
 }
 
-Musimy także zaimplentować metodę `compute`, która odpowiedzialna jest za wykonanie logiki. Dla metody tej można określić pewien wzorzec :
+Musimy także zaimplentować metodę `compute`, która odpowiedzialna jest za wykonanie logiki. Dla metody tej można określić pewien wzorzec :
 
 Result solve(Problem problem) {
     if (problem is small) {
@@ -89,7 +89,7 @@ Result solve(Problem problem) {
     }
 }
 
-Korzystając z `ForkJoinPool` zaimplementujemy teraz logikę odpowiedzialną za zsumowanie liczb w tablicy:
+Korzystając z `ForkJoinPool` zaimplementujemy teraz logikę odpowiedzialną za zsumowanie liczb w tablicy:
 
 class Sum extends RecursiveTask<Long> {
 

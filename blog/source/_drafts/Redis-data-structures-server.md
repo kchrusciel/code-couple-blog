@@ -8,11 +8,11 @@ categories:
 
 ![](https://www.javatpoint.com/redis/images/redis-tutorial.png)
 
-**NoSQL** jest akronimem słów "_Non SQL_" lub też "_Not only SQL_". Jest to ruch w którym odchodzi się od klasycznych **relacyjnych baz danych** do struktur lub modeli, które są bardziej dostosowane do typu danych wykorzystywanych przez nas. Istnieje kilka modeli baz **NoSQL** między innymi, **grafy**, **dokumenty** czy pary **klucz-wartość**. **Redis** jest bazą, która przechowuje dane jako ostatni z wymienionych sposób czyli jako pary **klucz-wartość**.
+**NoSQL** jest akronimem słów "_Non SQL_" lub też "_Not only SQL_". Jest to ruch w którym odchodzi się od klasycznych **relacyjnych baz danych** do struktur lub modeli, które są bardziej dostosowane do typu danych wykorzystywanych przez nas. Istnieje kilka modeli baz **NoSQL** między innymi, **grafy**, **dokumenty** czy pary **klucz-wartość**. **Redis** jest bazą, która przechowuje dane jako ostatni z wymienionych sposób czyli jako pary **klucz-wartość**.
 <!-- more -->
 ### Czym jest Redis?
 
-**Redis** jest jedną z dostępnych baz, która przechowuje informacji w postaci pary **klucz-wartość** (_ang. key-value storage_). Nie jest to "zwykła" baza, jest to  "_data structures_ _server_" który pozwala przechowywać wartości jako różne struktury a nie tylko jako prosty **String**_._ Ponadto jest to **open source'owy** projekt, który może być wykorzystywany jako **baza danych**, **cache** lub **message broker**. **Redis** przechowuje dane w pamięci **RAM** i posiada kilka wbudowanych **typów/struktur danych** (opisy w dalszej części):
+**Redis** jest jedną z dostępnych baz, która przechowuje informacji w postaci pary **klucz-wartość** (_ang. key-value storage_). Nie jest to "zwykła" baza, jest to  "_data structures_ _server_" który pozwala przechowywać wartości jako różne struktury a nie tylko jako prosty **String**_._ Ponadto jest to **open source'owy** projekt, który może być wykorzystywany jako **baza danych**, **cache** lub **message broker**. **Redis** przechowuje dane w pamięci **RAM** i posiada kilka wbudowanych **typów/struktur danych** (opisy w dalszej części):
 
 *   **String**
 *   **List**
@@ -24,13 +24,13 @@ categories:
 
 ### Instalacja
 
-**Redis'a** możemy zainstalować na kilka sposobów. Wykorzystując zwykłą instalację [https://redis.io/download](https://redis.io/download). Lub korzystając z **Docker'a** ściągając  już gotowy obrazu znajdującego się [https://hub.docker.com/\_/redis/](https://hub.docker.com/_/redis/).
+**Redis'a** możemy zainstalować na kilka sposobów. Wykorzystując zwykłą instalację [https://redis.io/download](https://redis.io/download). Lub korzystając z **Docker'a** ściągając  już gotowy obrazu znajdującego się [https://hub.docker.com/\_/redis/](https://hub.docker.com/_/redis/).
 
-Po instalacji, instancja serwera znajduje się na domyślnym porcie 6379.
+Po instalacji, instancja serwera znajduje się na domyślnym porcie 6379.
 
 ### Redis - CLI
 
-Po instalacji najprościej jest zacząć pracować z **Redisem**, korzystając z **CLI**. Jeśli nie chcemy instalować **Redisa**, możemy skorzystać z [https://try.redis.io/](https://try.redis.io/) i pobawić się trochę konsolą.
+Po instalacji najprościej jest zacząć pracować z **Redisem**, korzystając z **CLI**. Jeśli nie chcemy instalować **Redisa**, możemy skorzystać z [https://try.redis.io/](https://try.redis.io/) i pobawić się trochę konsolą.
 
 ### Klucze
 

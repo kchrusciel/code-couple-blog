@@ -20,7 +20,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/neo4j_logo-facebook-300x156.png)
 
-W poprzednim wpisie pokazałam [jak zainstalować Neo4j](http://codecouple.pl/2017/02/10/neo4j-instalacja/). Teraz możemy spróbować napisać prostą aplikację z użyciem **Spring Boot'a**, która wykorzystuje bazę grafową **Neo4j**.  Dzięki wykorzystaniu **Spring Data** otrzymujemy całą abstrakcję związaną z warstwą persystencji. Ponadto operacje **CRUD'owe** wywoływane są w taki sam sposób jak dla innych, znanych nam typów baz.
+W poprzednim wpisie pokazałam [jak zainstalować Neo4j](http://codecouple.pl/2017/02/10/neo4j-instalacja/). Teraz możemy spróbować napisać prostą aplikację z użyciem **Spring Boot'a**, która wykorzystuje bazę grafową **Neo4j**.  Dzięki wykorzystaniu **Spring Data** otrzymujemy całą abstrakcję związaną z warstwą persystencji. Ponadto operacje **CRUD'owe** wywoływane są w taki sam sposób jak dla innych, znanych nam typów baz.
 <!-- more -->
 ### Maven
 
@@ -94,7 +94,7 @@ public class Blog {
     }
 }
 
-Drugi węzeł `Subscriber` posiada dodatkowo zbiór oznaczający relacje z węzłem `Blog`. Metoda `subscribe()`, pozwala nam utworzyć (dodać do zbioru) relacje pomiędzy węzłami `Blog` oraz `Subscriber`.
+Drugi węzeł `Subscriber` posiada dodatkowo zbiór oznaczający relacje z węzłem `Blog`. Metoda `subscribe()`, pozwala nam utworzyć (dodać do zbioru) relacje pomiędzy węzłami `Blog` oraz `Subscriber`.
 
 @NodeEntity
 @Data

@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Podczas tworzenia modułu rejestracji w mojej aplikacji postanowiłam stworzyć proces potwierdzania tej czynności mailem. Przykład przedstawię w oparciu o `spring-boot-starter-mail` oraz `spring-boot-starter-thymeleaf` do tworzenia template'ow.
+Podczas tworzenia modułu rejestracji w mojej aplikacji postanowiłam stworzyć proces potwierdzania tej czynności mailem. Przykład przedstawię w oparciu o `spring-boot-starter-mail` oraz `spring-boot-starter-thymeleaf` do tworzenia template'ow.
 <!-- more -->
 Zacznijmy od dodania zależności do naszego `pom.xml`. `Spring-boot-starter-mail` będzie potrzebny do samego wysyłania maili, a `spring-boot-starter-thymeleaf` do tworzenia szablonów **HTML** w wysyłanych w mailach.
 
@@ -28,7 +28,7 @@ Zacznijmy od dodania zależności do naszego `pom.xml`. `Spring-boot-starter-mai
     <artifactId>spring-boot-starter-mail</artifactId>
 </dependency>
 
-Teraz przejdźmy do `application.properties`. Musimy ustawić hosta oraz port jak poniżej. Nazwa i hasło do maila **Outlook'owego** potrzebne są, abyśmy mogli korzystać z serwera `SMTP`. `SMTP.AUTH` pozwala na autentykację użytkownika korzystając z polecenia `AUTH`. Ostatnie dwie właściwości dotyczą `TLS`, dzięki czemu ustanawiamy szyfrowanie `TLS` w połączeniu sieciowym. Zapewnia nam to poufność danych.
+Teraz przejdźmy do `application.properties`. Musimy ustawić hosta oraz port jak poniżej. Nazwa i hasło do maila **Outlook'owego** potrzebne są, abyśmy mogli korzystać z serwera `SMTP`. `SMTP.AUTH` pozwala na autentykację użytkownika korzystając z polecenia `AUTH`. Ostatnie dwie właściwości dotyczą `TLS`, dzięki czemu ustanawiamy szyfrowanie `TLS` w połączeniu sieciowym. Zapewnia nam to poufność danych.
 
 spring.mail.host=smtp-mail.outlook.com
 spring.mail.port=587
@@ -42,7 +42,7 @@ Jeśli chcemy korzystać z konta **Gmail** zmienia nam się host i oczywiście m
 
 spring.mail.host=smtp.gmail.com
 
-Skoro mamy wszystkie potrzebne nam ustawienia przejdźmy do aplikacji. Zacznijmy od stworzenia interfejsu z metodą `sendEmail()`. Jako parametry będziemy przyjmować adres, na który chcemy wysłać maila, tytuł maila oraz jego treść.
+Skoro mamy wszystkie potrzebne nam ustawienia przejdźmy do aplikacji. Zacznijmy od stworzenia interfejsu z metodą `sendEmail()`. Jako parametry będziemy przyjmować adres, na który chcemy wysłać maila, tytuł maila oraz jego treść.
 
 package pl.codecouple.mail;
 
@@ -50,7 +50,7 @@ public interface EmailSender {
     void sendEmail(String to, String subject, String content);
 }
 
-Teraz kolej na implementację tej metody. Klasę oznaczmy jako `@Service` i wstrzyknijmy jej interfejs `JavaMailSender`. Następnie tworzymy obiekt typu `MimeMessage` poprzez metodę `javaMailSender.createMimeMessage()`. Przypisujemy do `MimeMessageHelper` wszystkie potrzebne właściwości. W przykładzie uwzględniłam tylko kilka najważniejszych tj. mail odbiorcy oraz nadawcy, tytuł oraz treść wiadomości. Jeśli chcemy wysłać czysty tekst wystarczy, że użyjemy metody `helper.setText(content)`. Jeśli jednak chcemy wysłać ładny szablon html musimy dodać drugi parametr typu Boolean - `helper.setText(content, true)`. Na koniec wysyłamy maila metodą `javaMailSender.send(mail)`.
+Teraz kolej na implementację tej metody. Klasę oznaczmy jako `@Service` i wstrzyknijmy jej interfejs `JavaMailSender`. Następnie tworzymy obiekt typu `MimeMessage` poprzez metodę `javaMailSender.createMimeMessage()`. Przypisujemy do `MimeMessageHelper` wszystkie potrzebne właściwości. W przykładzie uwzględniłam tylko kilka najważniejszych tj. mail odbiorcy oraz nadawcy, tytuł oraz treść wiadomości. Jeśli chcemy wysłać czysty tekst wystarczy, że użyjemy metody `helper.setText(content)`. Jeśli jednak chcemy wysłać ładny szablon html musimy dodać drugi parametr typu Boolean - `helper.setText(content, true)`. Na koniec wysyłamy maila metodą `javaMailSender.send(mail)`.
 
 package pl.codecouple.mail;
 
@@ -122,7 +122,7 @@ Mamy już zaimplementowane wysyłanie maili, pozostało utworzyć szablon **HTML
 </body>
 </html>
 
-Ostatni krok to kontroler, który będzie nam uruchamiał wysyłanie maili. Wstrzykujemy w nim nasz interfejs `EmailSender` oraz klasę `TemplateEngine` z **Thymeleaf'a**. W obiekcie `Context` ustawiamy zmienne, które będą wrzucane do naszego szablonu **HTML** w miejsca `<p th:text="${header}">, <h1 th:text="${title}">` oraz `<h3 th:text="${description}">`. W metodzie `templateEngine.process("template", context)` podajemy nazwę szablonu oraz nasze zmienne.
+Ostatni krok to kontroler, który będzie nam uruchamiał wysyłanie maili. Wstrzykujemy w nim nasz interfejs `EmailSender` oraz klasę `TemplateEngine` z **Thymeleaf'a**. W obiekcie `Context` ustawiamy zmienne, które będą wrzucane do naszego szablonu **HTML** w miejsca `<p th:text="${header}">, <h1 th:text="${title}">` oraz `<h3 th:text="${description}">`. W metodzie `templateEngine.process("template", context)` podajemy nazwę szablonu oraz nasze zmienne.
 
 @Controller
 public class EmailController {
@@ -150,6 +150,6 @@ public class EmailController {
     }
 }
 
-Po uruchomieniu programu na wskazany przez nas adres otrzymujemy następującego maila.
+Po uruchomieniu programu na wskazany przez nas adres otrzymujemy następującego maila.
 
 ![SpringBoot mail](http://codecouple.pl/wp-content/uploads/2016/09/aaa.png)

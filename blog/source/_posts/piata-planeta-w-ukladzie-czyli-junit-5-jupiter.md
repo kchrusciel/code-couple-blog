@@ -29,7 +29,7 @@ Autorzy biblioteki dołożyli wszelkich starań, aby proces migracji odbył się
 
 ### Uruchamianie
 
-Jeśli macie problem z uruchomieniem testów w **IntelliJ** to polecam sprawdzić, [którą wersję artefaktu należy użyć](http://junit.org/junit5/docs/current/user-guide/#running-tests-ide-intellij-idea). U mnie wystąpił wyjątek:
+Jeśli macie problem z uruchomieniem testów w **IntelliJ** to polecam sprawdzić, [którą wersję artefaktu należy użyć](http://junit.org/junit5/docs/current/user-guide/#running-tests-ide-intellij-idea). U mnie wystąpił wyjątek:
 
 Exception in thread "main" java.lang.NoSuchMethodError: org.junit.platform.commons.util.ReflectionUtils.getDefaultClassLoader()Ljava/lang/ClassLoader;
 at org.junit.platform.launcher.core.ServiceLoaderTestEngineRegistry.loadTestEngines(ServiceLoaderTestEngineRegistry.java:30)
@@ -90,7 +90,7 @@ void someTest(TestInfo testInfo){
 
 ### Wiele asercji
 
-Wiele asercji w jednym teście jest teraz możliwe dzięki `assertAll.` pierwszy parametr jest nagłówkiem dla testów, następnie przekazujemy lambdy z naszą logiką:
+Wiele asercji w jednym teście jest teraz możliwe dzięki `assertAll.` pierwszy parametr jest nagłówkiem dla testów, następnie przekazujemy lambdy z naszą logiką:
 
 @Test
 void someTest(){
@@ -101,7 +101,7 @@ void someTest(){
 
 ### Wyjątki
 
-Oprócz problemu z nazwami, obsługa wyjątków w testach była problematyczna. Zdarzało się, iż występował inny wyjątek niż oczekiwano, przez co test nie wykonywał się dalej. `ExpectedException` rozwiązywał ten problem, jednakże oczekiwany wyjątek definiowaliśmy w sekcji given, a powinno to być w sekcji then. W wersji 5 otrzymujemy nowy mechanizm do testowania wyjątków -  `assertThrows`.
+Oprócz problemu z nazwami, obsługa wyjątków w testach była problematyczna. Zdarzało się, iż występował inny wyjątek niż oczekiwano, przez co test nie wykonywał się dalej. `ExpectedException` rozwiązywał ten problem, jednakże oczekiwany wyjątek definiowaliśmy w sekcji given, a powinno to być w sekcji then. W wersji 5 otrzymujemy nowy mechanizm do testowania wyjątków -  `assertThrows`.
 
 @Test
 void someTest(){
@@ -174,14 +174,14 @@ class FirstTest {
 
 ### @ParameterizedTest
 
-Największą bolączką **JUnitów** w wersji 4 były testy parametryczne, które były deklarowane w niezbyt intuicyjny sposób. Od teraz zostało to uproszczone, dzięki zastosowaniu adnotacji `@ParametrizedTest` oraz `@ValueSource`. Pierwsza adnotacja oznacza test jako parametryczny, natomiast w drugiej definiujemy parametry do testu. Dane do testu mogą być przekazane na wiele sposobów:
+Największą bolączką **JUnitów** w wersji 4 były testy parametryczne, które były deklarowane w niezbyt intuicyjny sposób. Od teraz zostało to uproszczone, dzięki zastosowaniu adnotacji `@ParametrizedTest` oraz `@ValueSource`. Pierwsza adnotacja oznacza test jako parametryczny, natomiast w drugiej definiujemy parametry do testu. Dane do testu mogą być przekazane na wiele sposobów:
 
 *   `@ValueSource` - wartości wprost
 *   `@EnumSource` - wskazujemy klasę enumeratora
 *   `@MethodSource` - podajemy nazwę metody
 *   `@CsvSource` - dane w formacie CSV
 *   `@CsvFileSource` - ścieżka do pliku CSV
-*   `@ArgumentsSource` - specjalnie przygotowany provider, który implementuje `ArgumentsProvider`
+*   `@ArgumentsSource` - specjalnie przygotowany provider, który implementuje `ArgumentsProvider`
 
 @ParameterizedTest
 @ValueSource(strings = { "Code", "Couple" })

@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Gdy prace nad naszą aplikacją w **Spring Boot'cie** rozpoczynają się lub dobiegają końca fajnie byłoby zmienić logo, które pojawia się po uruchomieniu aplikacji. W samym logo można wyświetlić więcej informacji na temat aplikacji. Znajdować mogą się tam miedzy innymi informacje o aktualnej wersji aplikacji oraz **Spring Boot'a**, zapraszamy!
+Gdy prace nad naszą aplikacją w **Spring Boot'cie** rozpoczynają się lub dobiegają końca fajnie byłoby zmienić logo, które pojawia się po uruchomieniu aplikacji. W samym logo można wyświetlić więcej informacji na temat aplikacji. Znajdować mogą się tam miedzy innymi informacje o aktualnej wersji aplikacji oraz **Spring Boot'a**, zapraszamy!
 <!-- more -->
 ### Domyślne logo
 
@@ -24,7 +24,7 @@ Po uruchomieniu aplikacji **Spring Boot'owej** ukazuje nam się następujące lo
 
 ### Wyłączenie logo
 
-W **IntelliJ Idea** można wyłączyć wyświetlania log'a aplikacji we frameworku **Spring Boot**. Opcje tą znajdziemy tylko w płatnej wersji oprogramowania. W ustawienia uruchomienia aplikacji znajduje się check _Hide Banner_, który należy zaznaczyć:
+W **IntelliJ Idea** można wyłączyć wyświetlania log'a aplikacji we frameworku **Spring Boot**. Opcje tą znajdziemy tylko w płatnej wersji oprogramowania. W ustawienia uruchomienia aplikacji znajduje się check _Hide Banner_, który należy zaznaczyć:
 
 [![springBootHideBanner](http://codecouple.pl/wp-content/uploads/2016/05/springBootHideBanner.png)](http://codecouple.pl/wp-content/uploads/2016/05/springBootHideBanner.png)
 
@@ -44,7 +44,7 @@ Jeśli chcemy, aby nasze logo było bardziej _fancy_ możemy wykorzystać [gener
 
 [![logoSpringBootCC](http://codecouple.pl/wp-content/uploads/2016/05/logoSpringBootCC.png)](http://codecouple.pl/wp-content/uploads/2016/05/logoSpringBootCC.png)
 
-Kolejne informacje jakie możemy umieścić w logo są zawarte [TUTAJ](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html) wykorzystując właściwości projektu:
+Kolejne informacje jakie możemy umieścić w logo są zawarte [TUTAJ](http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html) wykorzystując właściwości projektu:
 
 Application: ${application.title}
 Version: ${application.version}

@@ -16,7 +16,7 @@ Wyobraźmy sobie sytuację, w której tylko określona liczba wątków może wyk
 
 \[img\]
 
-Możemy sami próbować kontrolować sekcję krtyczną poprzez **countery**, natomiast musi pamiętać wtedy o **thread-safety**. Rozwiązaniem tego problemu może być `java.util.concurrent.Sempahor`.
+Możemy sami próbować kontrolować sekcję krtyczną poprzez **countery**, natomiast musi pamiętać wtedy o **thread-safety**. Rozwiązaniem tego problemu może być `java.util.concurrent.Sempahor`.
 
 ### Semaphor
 
@@ -24,11 +24,11 @@ Możemy sami próbować kontrolować sekcję krtyczną poprzez **countery**, nat
 
 public Semaphore(int permits)
 
-Ponadto możemy ustawić właściwość określaną `fairness`. Oznacza to, iż wątki najdłużej oczekujące na wejście do sekcji krytycznej będą wpuszczane na zasadzie kolejki **FIFO** (First-In-First-Out):
+Ponadto możemy ustawić właściwość określaną `fairness`. Oznacza to, iż wątki najdłużej oczekujące na wejście do sekcji krytycznej będą wpuszczane na zasadzie kolejki **FIFO** (First-In-First-Out):
 
 public Semaphore(int permits, boolean fair)
 
-Jeśli nasz wątek chce nabyć (ang. _acquire_) dostęp do sekcji krytycznej musi wywołać metodę o tej samej nazwie:
+Jeśli nasz wątek chce nabyć (ang. _acquire_) dostęp do sekcji krytycznej musi wywołać metodę o tej samej nazwie:
 
 semaphore.acquire();
 

@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-Jestem zdania, że nie ma co na siłę dorzucać wielowątkowości do każdej tworzonej aplikacji, jednakże czasem dostajemy zadanie, w którym musimy zrównoleglić wykonywanie zadań. "Dobra" wielowątkowość może poprawić wydajność i czas przetwarzania naszej aplikacji, jednakże taki przywilej niesie ze sobą także różne utrudnienia takie jak choćby debugowanie. Czy możemy to jakoś uprościć?
+Jestem zdania, że nie ma co na siłę dorzucać wielowątkowości do każdej tworzonej aplikacji, jednakże czasem dostajemy zadanie, w którym musimy zrównoleglić wykonywanie zadań. "Dobra" wielowątkowość może poprawić wydajność i czas przetwarzania naszej aplikacji, jednakże taki przywilej niesie ze sobą także różne utrudnienia takie jak choćby debugowanie. Czy możemy to jakoś uprościć?
 <!-- more -->
 ### ExecutorService
 
@@ -36,7 +36,7 @@ Niestety, przeglądanie takiego zrzutu wątków nic nam nie mówi. Rozwiązaniem
 
 ### ThreadFactory
 
-`ThreadFactory` jak sama nazwa mówi jest fabryką pomocniczą do tworzenia wątków. Jeśli przyjrzymy się metodzie `Executors.newFixedThreadPool`, okazuje się, że istnieje ona także w wersji, która przyjmuje `ThreadFactory`. Samo tworzenie `ThreadFactory` jest bardzo uciążliwe w kodzie, jednakże biblioteka **Guava** dostarcza bardzo fajny builder `ThreadFactoryBuilder`. Wykorzystajmy teraz tego **builder'a**:
+`ThreadFactory` jak sama nazwa mówi jest fabryką pomocniczą do tworzenia wątków. Jeśli przyjrzymy się metodzie `Executors.newFixedThreadPool`, okazuje się, że istnieje ona także w wersji, która przyjmuje `ThreadFactory`. Samo tworzenie `ThreadFactory` jest bardzo uciążliwe w kodzie, jednakże biblioteka **Guava** dostarcza bardzo fajny builder `ThreadFactoryBuilder`. Wykorzystajmy teraz tego **builder'a**:
 
 ThreadFactory factory = new ThreadFactoryBuilder()
         .setNameFormat("task-name-%d")
@@ -45,7 +45,7 @@ ThreadFactory factory = new ThreadFactoryBuilder()
 
 ExecutorService executorService = Executors.newFixedThreadPool(numberOfThread, factory);
 
-W `ThreadFactory` ustawiliśmy format dla nazwy wątku, który domyślnie wygląda tak: `pool-n-thread-m`, gdzie `n` to numer **puli,** a `m` to numer **wątku**. Ponadto, ustawiliśmy naszemu **factory** flagę **Deamon** na wartość **true**. Wątek, który jest **demoniczny** zarządza innymi wątkami w tym samym procesie.
+W `ThreadFactory` ustawiliśmy format dla nazwy wątku, który domyślnie wygląda tak: `pool-n-thread-m`, gdzie `n` to numer **puli,** a `m` to numer **wątku**. Ponadto, ustawiliśmy naszemu **factory** flagę **Deamon** na wartość **true**. Wątek, który jest **demoniczny** zarządza innymi wątkami w tym samym procesie.
 
 /\*\*
  \* Sets daemon or not for new threads created with this ThreadFactory.
@@ -60,7 +60,7 @@ public ThreadFactoryBuilder setDaemon(boolean daemon) {
 
 > Flaga daemon wyznacza moment wyłączenia **JVM'a** - gdy kończy się ostatni wątek **non-daemon**
 
-Teraz jeśli zrobimy **zrzut wątków** (z już ustawionymi nazwami zadań w `setNameFormat(String)`) to zyskujemy na czytelności:
+Teraz jeśli zrobimy **zrzut wątków** (z już ustawionymi nazwami zadań w `setNameFormat(String)`) to zyskujemy na czytelności:
 
 importing-logs-2
 some-operation-3

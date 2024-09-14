@@ -64,7 +64,7 @@ Dodatkowo możemy przekazać:
 *   summary.diff -
 *   details.diff -
 *   shutdown - wyłącza NMT
-*   scale - w jakich jednostkach  chcemy otrzymywać wyniki
+*   scale - w jakich jednostkach  chcemy otrzymywać wyniki
 
 asas asas
 
@@ -187,7 +187,7 @@ Class (reserved=1082389KB, committed=38545KB)
 
 W kolejnym bloku znajdują się informacje na temat **wątków** (tutaj bardzo dobrze widać, że jeden wątek to około jednego MB pamięci):
 
-*   reserved - zarezerwowany obszar pamięci dla wątków
+*   reserved - zarezerwowany obszar pamięci dla wątków
 *   committed - wykorzystany obszar pamięci
 *   thread - liczba wątków
 *   stack - zarezerwowany obszar dla stosów per wątek

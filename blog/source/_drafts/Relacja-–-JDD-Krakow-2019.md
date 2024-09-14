@@ -48,7 +48,7 @@ asas
 
 ### Zmiana pracy. Na co się przygotować i na co zmienić?
 
-Druga prezentacja Tomka Borka dotyczyła procesu rekrutacji. Podczas prelekcji Tomek przedstawiał "obie strony barykady", czyli porady dla rekruterów jak i rekrutowanych. Jeśli chodzi o rekrutowanych to powinni Prezentacja dostępna jest pod adresem [http://www.lafk.pl/Prezki/ZmianaPracy.html](http://www.lafk.pl/Prezki/ZmianaPracy.html).
+Druga prezentacja Tomka Borka dotyczyła procesu rekrutacji. Podczas prelekcji Tomek przedstawiał "obie strony barykady", czyli porady dla rekruterów jak i rekrutowanych. Jeśli chodzi o rekrutowanych to powinni Prezentacja dostępna jest pod adresem [http://www.lafk.pl/Prezki/ZmianaPracy.html](http://www.lafk.pl/Prezki/ZmianaPracy.html).
 
 ### Fruits of the Loom – Lightweight Concurrency For the Java Platform
 

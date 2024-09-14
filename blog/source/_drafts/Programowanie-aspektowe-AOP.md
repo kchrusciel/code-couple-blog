@@ -26,13 +26,13 @@ Wraz z tym paradygmatem związanych jest kilka pojęć:
 
 *   **Aspect** - jest to dodana przez nas funkcjonalność, która będzie wywoływana w ramach dołączenia aspektu (tutaj dodajemy naszą logikę, na przykład logowanie)
 *   **JoinPoint** - jest to tak zwany punkt łączenia, czyli miejscu w który nasz aspekt zostanie dołączony/wywołany (przykładowo przed lub po metodzie)
-*   **Advice** - tłumaczone jako porady, czyli osobne klasy, które używane są w zdefiniowanych wcześniej punktach złączeń
+*   **Advice** - tłumaczone jako porady, czyli osobne klasy, które używane są w zdefiniowanych wcześniej punktach złączeń
 
 ### Typy Advices
 
-Typ definiuje kiedy ma zostać wywołany konkretny `Advice`. Istnieje kilka typów `Advice`:
+Typ definiuje kiedy ma zostać wywołany konkretny `Advice`. Istnieje kilka typów `Advice`:
 
-*   **Before** - wywołanie przed wykonaniem - `@Before`
+*   **Before** - wywołanie przed wykonaniem - `@Before`
 *   **After** - wywołanie po wykonaniu - `@After`
 *   **After returning** - wywołanie po zwróceniu wartości - `@AfterReturning`
 *   **After throwing** - wywołanie po rzuconym wyjątku - `@AfterThrowing`

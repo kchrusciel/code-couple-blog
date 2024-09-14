@@ -12,11 +12,11 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
 
-Stolica przywitała nas bardzo dobrą pogodą. 1-ego lipca w **Warszawie** odbyła się 11-sta edycja **Confitury**. Jest to największa darmowa konferencja w Polsce o podłożu **JVM**. Występują na niej osoby obecne na polskiej scenie Javy. Jak w poprzednich latach nie mogło i nas zabraknąć, zapraszamy na relację!
+Stolica przywitała nas bardzo dobrą pogodą. 1-ego lipca w **Warszawie** odbyła się 11-sta edycja **Confitury**. Jest to największa darmowa konferencja w Polsce o podłożu **JVM**. Występują na niej osoby obecne na polskiej scenie Javy. Jak w poprzednich latach nie mogło i nas zabraknąć, zapraszamy na relację!
 <!-- more -->
 ### Keep IT clean: mid-sized building blocks and hexagonal architecture in real life
 
-**Jakub Nabdralik** z **AllegroTech** przedstawił nam prezentację na temat architektury **hexagonalnej**. **Public** jest słowem kluczowym, które jest najczęściej używane jeśli chodzi o specyfikatory dostępu. Niestety jest to bardzo błędne zrozumienie tematu enkapsulacji! Prelegent przedstawił nam swój sposób na realizację architektury hexagonalnej. Wszystkie klasy w obrębie jednego pakietu, który jest logiczną całością, powinny mieć dostęp pakietowy (package-private). Jedynym punktem wejścia do pakietu powinna być fasada, która jest publiczna. Publiczne mogą być, lecz nie muszą DTO'sy i wyjątki. Dzięki takiemu podejściu wystarczy przetestować naszą fasadę i w zasadzie mamy pokryty testami cały moduł.
+**Jakub Nabdralik** z **AllegroTech** przedstawił nam prezentację na temat architektury **hexagonalnej**. **Public** jest słowem kluczowym, które jest najczęściej używane jeśli chodzi o specyfikatory dostępu. Niestety jest to bardzo błędne zrozumienie tematu enkapsulacji! Prelegent przedstawił nam swój sposób na realizację architektury hexagonalnej. Wszystkie klasy w obrębie jednego pakietu, który jest logiczną całością, powinny mieć dostęp pakietowy (package-private). Jedynym punktem wejścia do pakietu powinna być fasada, która jest publiczna. Publiczne mogą być, lecz nie muszą DTO'sy i wyjątki. Dzięki takiemu podejściu wystarczy przetestować naszą fasadę i w zasadzie mamy pokryty testami cały moduł.
 
 > Moim zdaniem najlepsza prezentacja dnia - Krzysztof
 
@@ -26,13 +26,13 @@ Dobrą architekturę na przykładzie startup'u **DevSkiller** prezentował **Kub
 
 ### DDD: Q&A - czyli co gryzie świadomego programistę/programistkę
 
-Nasz Polski ewangelizator **DDD** **Sławek Sobótka** przedstawił najczęściej zadawane pytania, które padają podczas jego szkoleń, jako prezentację. Trudna prelekcja dla osób, które na co dzień nie korzystają z konceptów **DDD**, a tym samym mają problem z definicjami jak bounded context czy agregat. Pytania zadawane przez ludzi to między innymi:
+Nasz Polski ewangelizator **DDD** **Sławek Sobótka** przedstawił najczęściej zadawane pytania, które padają podczas jego szkoleń, jako prezentację. Trudna prelekcja dla osób, które na co dzień nie korzystają z konceptów **DDD**, a tym samym mają problem z definicjami jak bounded context czy agregat. Pytania zadawane przez ludzi to między innymi:
 
 *   jak wyznaczyć granice obiektów?
 *   jak projektować API modułów?
 *   jak wyznaczać granice modułów?
 
-Sławek wyjaśniał krok po kroku jakie powinny być odpowiedzi na te pytania.
+Sławek wyjaśniał krok po kroku jakie powinny być odpowiedzi na te pytania.
 
 ### 3 kroki do TDD
 
@@ -44,7 +44,7 @@ O nazewnictwie, czyli drugiej najtrudniejszej rzeczy w IT zaraz po inwalidacji c
 
 ### Ship every change to production! How it’s done at LinkedIn, in Mockito, and how you can do it with shipkit.org
 
-**Mockito Guy**, czyli **Szczepan Fabera** wraz z głównymi programistami produktu prezentowali **Shipkit**. Shipkit jest produktem, który ma na celu ułatwienie procesu **Continuous Delivery**. Oprócz tego główny prelegent opowiadał o procesie pracy w **LinkedIn**. Tam code review jest obowiązkowe, co moim zdaniem jest bardzo fajnym podejściem i świadczy o tym, że osoby z zarządu mają pojęcie na temat dobrych praktyk. Co do samej części prezentacji produktu wypadła ona słabo, natomiast już sam proces, o którym opowiadał Szczepan był bardzo ciekawy.
+**Mockito Guy**, czyli **Szczepan Fabera** wraz z głównymi programistami produktu prezentowali **Shipkit**. Shipkit jest produktem, który ma na celu ułatwienie procesu **Continuous Delivery**. Oprócz tego główny prelegent opowiadał o procesie pracy w **LinkedIn**. Tam code review jest obowiązkowe, co moim zdaniem jest bardzo fajnym podejściem i świadczy o tym, że osoby z zarządu mają pojęcie na temat dobrych praktyk. Co do samej części prezentacji produktu wypadła ona słabo, natomiast już sam proces, o którym opowiadał Szczepan był bardzo ciekawy.
 
 ### Plantacje programistów - kolonializm XXI wieku
 

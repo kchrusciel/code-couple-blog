@@ -36,4 +36,4 @@ Zobaczmy jak po zmianach wygląda moje **konto**:
 
 ![](https://codecouple.pl/wp-content/uploads/2020/09/github-with-profile-1024x411.png)
 
-Pojawił się napis "_Hi there_". Teraz można umieścić tam dowolne **informacje**. Jeśli chcecie zobaczyć jak wygląda to na **żywo** to zapraszam na [https://github.com/kchrusciel](https://github.com/kchrusciel).
+Pojawił się napis "_Hi there_". Teraz można umieścić tam dowolne **informacje**. Jeśli chcecie zobaczyć jak wygląda to na **żywo** to zapraszam na [https://github.com/kchrusciel](https://github.com/kchrusciel).

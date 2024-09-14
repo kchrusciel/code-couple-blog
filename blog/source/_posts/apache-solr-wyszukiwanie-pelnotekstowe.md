@@ -12,9 +12,9 @@ author: 'Krzysztof Chruściel'
 
 ![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)
 
-**Apache Solr** to serwer wyszukiwania pełnotekstowego (ang. _full-text search_) napisany w **Javie.** Oparty jest on na **Apache Lucene** i może bardzo szybko usprawnić wyszukiwarkę w naszej aplikacji. Możemy uzyskiwać wyniki w formatach takich jak **JSON**, **Python**, **XML** czy **PHP**. Bardzo popularne rozwiązanie, posiada funkcje facetów, jest skalowalne i potrafi wiele więcej.
+**Apache Solr** to serwer wyszukiwania pełnotekstowego (ang. _full-text search_) napisany w **Javie.** Oparty jest on na **Apache Lucene** i może bardzo szybko usprawnić wyszukiwarkę w naszej aplikacji. Możemy uzyskiwać wyniki w formatach takich jak **JSON**, **Python**, **XML** czy **PHP**. Bardzo popularne rozwiązanie, posiada funkcje facetów, jest skalowalne i potrafi wiele więcej.
 <!-- more -->
-## 1\. Pobranie aplikacji
+## 1\. Pobranie aplikacji
 
 Proces instalacji przedstawiony jest na platformie **Windows**. Naszą przygodę z **Apache Solr** zacznijmy od pobrania aplikacji. Link poniżej:
 
@@ -22,7 +22,7 @@ Proces instalacji przedstawiony jest na platformie **Windows**. Naszą przygodę
 
 ## 2\. Uruchomienie aplikacji
 
-**Apache Solr** napisany jest w **Javie,** także uruchamiany jest na **JVM**. Po pobraniu i rozpakowaniu źródeł możemy uruchomić aplikację. Pliki do uruchomienia znajdują się w folderze _/bin_. Aby uruchomić **Solr** najlepiej odpalić sobie **CMD** w folderze _/bin_ i wydać jedno z poleceń poniżej.
+**Apache Solr** napisany jest w **Javie,** także uruchamiany jest na **JVM**. Po pobraniu i rozpakowaniu źródeł możemy uruchomić aplikację. Pliki do uruchomienia znajdują się w folderze _/bin_. Aby uruchomić **Solr** najlepiej odpalić sobie **CMD** w folderze _/bin_ i wydać jedno z poleceń poniżej.
 
 Domyślny sposób uruchomienia aplikacji:
 
@@ -46,19 +46,19 @@ solr start -e nazwa\_przykładu
 
 Uruchomienie aplikacji w trybie cloud z przykładowymi nodami:
 
-solr start -e cloud
+solr start -e cloud
 
 Uruchomienie aplikacji z przykładowymi danymi ukazującymi różne możliwości **Solr'a**:
 
-solr start -e techproducts
+solr start -e techproducts
 
 Data import handler:
 
-solr start -e dih
+solr start -e dih
 
 Przykład schema-less:
 
-solr start -e schemaless
+solr start -e schemaless
 
 Uruchomienie aplikacji w trybie cloud:
 
@@ -72,7 +72,7 @@ Dobra, starczy tych opcji uruchomienia i wypadałoby w końcu uruchomić aplikac
 
 Na potrzeby pisania artykułu wykorzystuję bazę z przykładami **techproducts**:
 
-solr start -e techproducts
+solr start -e techproducts
 
 Polecenie to uruchomi plik **solr.cmd**. Od teraz możemy korzystać z serwera **Apache Solr**.
 
@@ -80,7 +80,7 @@ Polecenie to uruchomi plik **solr.cmd**. Od teraz możemy korzystać z serwera *
 
 Aby sprawdzić czy aplikacja na pewno się uruchomiła wystarczy w przeglądarce wpisać [http://localhost:8983/solr/](http://localhost:8983/solr/).
 
-Pierwsze kroki skierujmy w stronę sprawdzenia możliwości **Solr'a**. Wystarczy wpisać adres [http://localhost:8983/solr/techproducts/browse](http://localhost:8983/solr/techproducts/browse) i otrzymujemy **out-of-the-box** przeglądarkę produktów opartą na **Velocity,** na której prezentowane są różne funkcje **Solr'a**. Między innymi **facets**, **highlithing**, **searching**, czy **autocomplete**. Co więcej, każda z opcji podpisana jest nagłówkiem.
+Pierwsze kroki skierujmy w stronę sprawdzenia możliwości **Solr'a**. Wystarczy wpisać adres [http://localhost:8983/solr/techproducts/browse](http://localhost:8983/solr/techproducts/browse) i otrzymujemy **out-of-the-box** przeglądarkę produktów opartą na **Velocity,** na której prezentowane są różne funkcje **Solr'a**. Między innymi **facets**, **highlithing**, **searching**, czy **autocomplete**. Co więcej, każda z opcji podpisana jest nagłówkiem.
 
 **Highlithing** - pozwala podkreślić w określony przez nas sposób (może to być na przykład znacznik <b>) szukanej frazy.
 
@@ -90,9 +90,9 @@ Pierwsze kroki skierujmy w stronę sprawdzenia możliwości **Solr'a**. Wystarcz
 
 [![solrbrowser](http://codecouple.pl/wp-content/uploads/2016/12/solrBrowser-1024x624.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrBrowser.png)
 
-## 4\. Panel administracyjny
+## 4\. Panel administracyjny
 
-Aby uruchomić panel administracyjny aplikacji wystarczy w przeglądarce wpisać [http://localhost:8983/solr/](http://localhost:8983/solr/). [![SolrAdminPanel](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel-1024x424.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel.png)
+Aby uruchomić panel administracyjny aplikacji wystarczy w przeglądarce wpisać [http://localhost:8983/solr/](http://localhost:8983/solr/). [![SolrAdminPanel](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel-1024x424.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel.png)
 
 Teraz wybierzmy stworzony przez nas przykładowy Core o nazwie **techproducts**.
 
@@ -104,7 +104,7 @@ Po wybraniu odpowiedniego Core'a wybieramy opcję **query,** gdzie możemy zacz�
 
 [![solrcorequerychoose](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreQueryChoose.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreQueryChoose.png)
 
-Pojawiło  nam się dość mocno rozbudowane okno do tworzenia zapytań. Jest ono bardzo fajnym ułatwieniem, ponieważ nie musimy ręcznie tworzyć zapytań tylko wypisujemy odpowiednie pola i dzięki temu mamy od razu stworzony URL z zapytaniem. Utworzony URL komunikuje się z naszym serwerem i dzięki temu w naszym panelu administracyjnym mamy od razu wynik.
+Pojawiło  nam się dość mocno rozbudowane okno do tworzenia zapytań. Jest ono bardzo fajnym ułatwieniem, ponieważ nie musimy ręcznie tworzyć zapytań tylko wypisujemy odpowiednie pola i dzięki temu mamy od razu stworzony URL z zapytaniem. Utworzony URL komunikuje się z naszym serwerem i dzięki temu w naszym panelu administracyjnym mamy od razu wynik.
 
 Po lewej stronie mamy wynik naszego zapytania. Po kliknięciu w górną belkę z całym naszym zapytaniem aplikacja przeniesie nas do przeglądarki, gdzie będziemy mieli wynik w formacie określonym poprzez pole `wt`. Wynik składa się minimum z dwóch części. Pierwsza z nich `responseHeader` zawiera informacje na temat zapytania, natomiast w drugiej części `response` zawarte są wyniki.
 
@@ -112,7 +112,7 @@ Po lewej stronie mamy wynik naszego zapytania. Po kliknięciu w górną belkę z
 
 Po lewej stronie natomiast mamy wiele input boxów:
 
-`Request-Handler (qt)` - adres, na który chcemy wysyłać nasze zapytania. Domyślnie jest to `/select`. Więcej adresów znajdziemy w pliku `solrconfig.xml` w sekcjach `<requestHandler name=....`
+`Request-Handler (qt)` - adres, na który chcemy wysyłać nasze zapytania. Domyślnie jest to `/select`. Więcej adresów znajdziemy w pliku `solrconfig.xml` w sekcjach `<requestHandler name=....`
 
 /select
 
@@ -136,7 +136,7 @@ popularity:\[0 TO 7\]
 
 Możemy sortować poprzez podanie kilku wartości, które rozdzielone są przecinkami:
 
-name desc, price asc
+name desc, price asc
 
 `fl` - lista pól, nie musimy podawać tego w query - możemy tutaj określić listę pól
 
@@ -153,7 +153,7 @@ weight, name
 *   CSV,
 *   Ruby.
 
-## 6\. Zamknięcie aplikacji
+## 6\. Zamknięcie aplikacji
 
 Aby zastopować serwer używamy polecenia `stop`.
 
@@ -165,11 +165,11 @@ Jeśli chcemy zastopować wszystkie instancje:
 
 solr stop -all
 
-## 7. Więcej informacji
+## 7. Więcej informacji
 
 Jeśli chcielibyście poszerzyć swoją wiedzę zachęcam do poczytania:
 
 *   [http://lucene.apache.org/solr/resources.html](http://lucene.apache.org/solr/resources.html)
 *   [https://wiki.apache.org/solr/](https://wiki.apache.org/solr/)
 
-Oraz do obejrzenia: Warsaw JUG \[embed\]https://www.youtube.com/watch?v=-X3TzwfWDDA\[/embed\] Toruń JUG \[embed\]https://www.youtube.com/watch?v=\_9AnMQNxQuE\[/embed\] W kolejnym wpisie pokażę jak stworzyć własną kolekcję i zabierzemy się za integrację ze **Springiem**!
+Oraz do obejrzenia: Warsaw JUG \[embed\]https://www.youtube.com/watch?v=-X3TzwfWDDA\[/embed\] Toruń JUG \[embed\]https://www.youtube.com/watch?v=\_9AnMQNxQuE\[/embed\] W kolejnym wpisie pokażę jak stworzyć własną kolekcję i zabierzemy się za integrację ze **Springiem**!

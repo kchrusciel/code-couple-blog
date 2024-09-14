@@ -16,11 +16,11 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-Tak na prawdę ten artykuł niekoniecznie musi być związany ze **Spring Bootem**, jednakże posłuży mi on jako realizacja tego zagadnienia. Projektując **API REST'owe** powinniśmy zwracać uwagę na wiele elementów. Odpowiedni dobór nazw dla endpointów czy korzystanie z kodów odpowiedzi **HTTP** świadczy o dobrze zaprojektowanym **API**. Ważnym element jest także korzystanie z metod **HTTP** do obsługi zasobów.
+Tak na prawdę ten artykuł niekoniecznie musi być związany ze **Spring Bootem**, jednakże posłuży mi on jako realizacja tego zagadnienia. Projektując **API REST'owe** powinniśmy zwracać uwagę na wiele elementów. Odpowiedni dobór nazw dla endpointów czy korzystanie z kodów odpowiedzi **HTTP** świadczy o dobrze zaprojektowanym **API**. Ważnym element jest także korzystanie z metod **HTTP** do obsługi zasobów.
 <!-- more -->
 ### 1\. POST
 
-Metoda **POST** służy do dodawania **nowych** elementów. Nowych, czyli takich, których **ID** jest jeszcze nieznane. Po utworzeniu obiektu należy zwrócić kod **201 "Created"**.
+Metoda **POST** służy do dodawania **nowych** elementów. Nowych, czyli takich, których **ID** jest jeszcze nieznane. Po utworzeniu obiektu należy zwrócić kod **201 "Created"**.
 
 Metoda **POST**:
 
@@ -45,9 +45,9 @@ public void shouldAddNewTodo() throws Exception {
             .andExpect(status().reason("Todo created!"));
 }
 
-### 2. PUT
+### 2. PUT
 
-Metoda **PUT** jest bardzo podobna do metody **POST**, ponieważ także wysyłamy cały obiekt. Istotną różnicą jest to, że metody **PUT** używamy wtedy, kiedy **ID** danego obiektu pochodzi od klienta. Czyli **PUT** powinien służyć do aktualizowania zasobu. **Bardzo ważne jest to, że w przypadku tego mechanizmu podmieniany jest cały obiekt!** Po aktualizacji należy zwróć kod **204 "No content"**.
+Metoda **PUT** jest bardzo podobna do metody **POST**, ponieważ także wysyłamy cały obiekt. Istotną różnicą jest to, że metody **PUT** używamy wtedy, kiedy **ID** danego obiektu pochodzi od klienta. Czyli **PUT** powinien służyć do aktualizowania zasobu. **Bardzo ważne jest to, że w przypadku tego mechanizmu podmieniany jest cały obiekt!** Po aktualizacji należy zwróć kod **204 "No content"**.
 
 Metoda **PUT**:
 
@@ -91,9 +91,9 @@ public void shouldUpdateTodo() throws Exception {
     result.andExpect(status().isNoContent());
 }
 
-### 3. PATCH
+### 3. PATCH
 
-O metodzie **PUT** pisałem, że powinna być wykorzystywana do aktualizacji całego obiektu, ale co w przypadku, gdy chcę zaktualizować tylko część zasobu? Do częściowej aktualizacji służy metoda **PATCH**. Po wykonaniu operacji należy zwróć kod **204 "No content"**.
+O metodzie **PUT** pisałem, że powinna być wykorzystywana do aktualizacji całego obiektu, ale co w przypadku, gdy chcę zaktualizować tylko część zasobu? Do częściowej aktualizacji służy metoda **PATCH**. Po wykonaniu operacji należy zwróć kod **204 "No content"**.
 
 Metoda **PATCH**:
 
@@ -150,6 +150,6 @@ public void shouldPartialUpdateTodo() throws Exception {
             .andExpect(status().reason("Todo partial updated!"));
 }
 
-### 4. Którą wybrać?
+### 4. Którą wybrać?
 
 Zgodnie z powyższymi akapitami, jeśli dodajemy całkiem nowy zasób to korzystamy z **POST**. Jeśli chcemy zaktualizować cały element korzystamy z **PUT**, natomiast **PATCH** wykorzystujemy do częściowej aktualizacji. Całość na [GitHubie](https://github.com/kchrusciel/Spring-Boot-Examples/tree/master/spring-boot-update-example).

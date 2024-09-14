@@ -16,7 +16,7 @@ Wpis trochę oddalony w czasie od poprzedniego dnia konferencji, ale udało się
 <!-- more -->
 #### **Value types - The Next Big Thing for Java**
 
-**Henning Schwentner** przedstawił nam koncepcję **value types** w Javie**.** Na wstępie rozróżnił obiekt od **value type**. Java jest językiem zorientowanym **obiektowo**. Więc zaczęliśmy od wyjaśnienia czym w ogóle jest obiekt? Ma on swój identyfikator, istnieje w czasie, może zmieniać swój stan, a na końcu zostaje usunięty przez **GC**. Z kolei value type nie ma identyfikatora, jest abstrakcją i jest niezmienny w czasie (**immutable**). Mając dwie zmienne, które mają tą samą wartość, metoda _equals_ zwróci nam true, ale są to dwa różne obiekty, ponieważ mają różne referencje, dlatego operator "==" zwróci nam false. Prelegent opowiedział jeszcze pare zdań na temat tego, gdzie rzeczywiście przechowywany jest obiekt, czym jest **heap**, **stack**, **compilation time** oraz **run time**. Z pomocą słuchaczy wymienionych zostało 8 podstawowych typów wartości w Javie. Do Javy 9 nie było dostępnych typów technicznych (unsignes, complex) oraz domenowych typów wartości jak np. kod pocztowy, IBAN, wartość pieniędzy. Gdy potrzebujemy takich typów możemy stworzyć własne  klasy **value-based**, które posiadają tylko i wyłącznie pola finalne, metodę equals, dzięki której obiekty porównywane są na podstawie wartości, a nie tożsamości. Obiekty tak tworzone mogą przypominać wartości, ale jednak dalej są obiektami i posiadają różne referencje. Java 10 przyniesie nam **value types**, dzięki czemu będziemy mogli zaoszczędzić trochę pamięci. Prelegent pokazał przyszłe rozwiązanie w kodzie.
+**Henning Schwentner** przedstawił nam koncepcję **value types** w Javie**.** Na wstępie rozróżnił obiekt od **value type**. Java jest językiem zorientowanym **obiektowo**. Więc zaczęliśmy od wyjaśnienia czym w ogóle jest obiekt? Ma on swój identyfikator, istnieje w czasie, może zmieniać swój stan, a na końcu zostaje usunięty przez **GC**. Z kolei value type nie ma identyfikatora, jest abstrakcją i jest niezmienny w czasie (**immutable**). Mając dwie zmienne, które mają tą samą wartość, metoda _equals_ zwróci nam true, ale są to dwa różne obiekty, ponieważ mają różne referencje, dlatego operator "==" zwróci nam false. Prelegent opowiedział jeszcze pare zdań na temat tego, gdzie rzeczywiście przechowywany jest obiekt, czym jest **heap**, **stack**, **compilation time** oraz **run time**. Z pomocą słuchaczy wymienionych zostało 8 podstawowych typów wartości w Javie. Do Javy 9 nie było dostępnych typów technicznych (unsignes, complex) oraz domenowych typów wartości jak np. kod pocztowy, IBAN, wartość pieniędzy. Gdy potrzebujemy takich typów możemy stworzyć własne  klasy **value-based**, które posiadają tylko i wyłącznie pola finalne, metodę equals, dzięki której obiekty porównywane są na podstawie wartości, a nie tożsamości. Obiekty tak tworzone mogą przypominać wartości, ale jednak dalej są obiektami i posiadają różne referencje. Java 10 przyniesie nam **value types**, dzięki czemu będziemy mogli zaoszczędzić trochę pamięci. Prelegent pokazał przyszłe rozwiązanie w kodzie.
 
 Poniżej link do prezentacji z tegorocznej konferencji JFocus: https://www.youtube.com/watch?v=6kerOQaA9Jg **When Vert.x & RxJava meet - Knot.x: highly-efficient and scalable integration platform for modern websites**
 
@@ -32,23 +32,23 @@ W **Knot.x'ie** panuje podejście imperatywne, czyli configuration first.
 
 #### **JIT vs. AOT: Unity And Conflict of Dynamic and Static Compilers for Java**
 
-Pierwszy slajd - Freddy (JIT) vs. Jason (AOT). **Nikita Lipsky** zaczął od tego, że kiedyś wszystkie kompilatory były statyczne, dopóki nie pojawiła się **Java**. Tak na prawdę dynamiczna kompilacja była znana wcześniej, ale dopiero z pojawieniem się Javy stało się to **mainstreamowe**. Mamy dwa sposoby wykonywania bytecodu:
+Pierwszy slajd - Freddy (JIT) vs. Jason (AOT). **Nikita Lipsky** zaczął od tego, że kiedyś wszystkie kompilatory były statyczne, dopóki nie pojawiła się **Java**. Tak na prawdę dynamiczna kompilacja była znana wcześniej, ale dopiero z pojawieniem się Javy stało się to **mainstreamowe**. Mamy dwa sposoby wykonywania bytecodu:
 
 *   interpretacja (wolna, ale przenośna)
-*   kompilacja do kodu maszynowego (szybsza, ale odpalana na konkretnym urządzeniu)
+*   kompilacja do kodu maszynowego (szybsza, ale odpalana na konkretnym urządzeniu)
 
 Kolejną rzeczą jest sam moment kompilacji:
 
 *   w czasie uruchamiania programu (dynamiczna kompilacja - JIT)
 *   przed uruchomieniem (statyczna kompilacja - AOT)
 
-Prelegent obalał mity dotyczące AOT oraz opowiadał o jej zaletach. Pokazał też wyniki testów wydajnościowych jednego i drugiego rozwiązania. Przedstawił też w jakich przypadkach lepszy jest JIT, a w jakich AOT.
+Prelegent obalał mity dotyczące AOT oraz opowiadał o jej zaletach. Pokazał też wyniki testów wydajnościowych jednego i drugiego rozwiązania. Przedstawił też w jakich przypadkach lepszy jest JIT, a w jakich AOT.
 
 Poniżej link do prezentacji z tegorocznej konferencji Riga Dev Days: https://www.youtube.com/watch?v=nzKqdxL8EXY
 
 #### **Java9 and REPL. Forget debugging, welcome joy and productivity**
 
-**Jakub Marchwicki** opowiedział nam o jednej z nowości w **Javie 9**. Na początku dowiedzieliśmy się czym jest **JShell**. Prelegent zaznaczył, że jest to narzędzie świetne dla osób zaczynających zabawę z Javą, bo w szybki sposób bez budowania i uruchamiania całych programów jesteśmy w stanie sprawdzić działanie wpisanych przez nas linii kodu. Jest to też dobry sposób na testowanie nowo poznanych bibliotek. Nie potrzebujemy do tego żadnego **IDE**, wystarczy linia poleceń. Slajdów było tylko kilka, Kuba skupił się na pokazaniu możliwości **REPL** w praktyce. Zaczęliśmy od prostych działań matematycznych, następnie stworzyliśmy interfejs i metody. Prelegent pokazał też użycie streamów i optionali z Javy 8. Następnie stworzyliśmy prostą aplikacje webową, a na koniec wykorzystaliśmy **Mavena** do zbudowania aplikacji. Fajne jest to, że możemy zapisać kod, który wykonujemy w **JShell**, a następnie uruchomić w dowolnym **IDE**. Prelegent na koniec zaznaczył, że warto korzystać z **REPL**, bo dzięki temu jesteśmy w stanie zupełnie inaczej spojrzeć na swój kod.
+**Jakub Marchwicki** opowiedział nam o jednej z nowości w **Javie 9**. Na początku dowiedzieliśmy się czym jest **JShell**. Prelegent zaznaczył, że jest to narzędzie świetne dla osób zaczynających zabawę z Javą, bo w szybki sposób bez budowania i uruchamiania całych programów jesteśmy w stanie sprawdzić działanie wpisanych przez nas linii kodu. Jest to też dobry sposób na testowanie nowo poznanych bibliotek. Nie potrzebujemy do tego żadnego **IDE**, wystarczy linia poleceń. Slajdów było tylko kilka, Kuba skupił się na pokazaniu możliwości **REPL** w praktyce. Zaczęliśmy od prostych działań matematycznych, następnie stworzyliśmy interfejs i metody. Prelegent pokazał też użycie streamów i optionali z Javy 8. Następnie stworzyliśmy prostą aplikacje webową, a na koniec wykorzystaliśmy **Mavena** do zbudowania aplikacji. Fajne jest to, że możemy zapisać kod, który wykonujemy w **JShell**, a następnie uruchomić w dowolnym **IDE**. Prelegent na koniec zaznaczył, że warto korzystać z **REPL**, bo dzięki temu jesteśmy w stanie zupełnie inaczej spojrzeć na swój kod.
 
 #### **TestContainers – integration testing without the hassle**
 
@@ -75,7 +75,7 @@ Rozwiązaniem może być **Docker**. Dzięki jego wykorzystaniu możemy tworzyć
 
 #### Zakończenie
 
-Nadszedł czas na uroczyste zakończenie konferencji. Organizatorzy podziękowali wszystkim prelegentom i uczestnikom. Słuchacze z kolei mieli okazję podziękować organizatorom gromkimi brawami. Przedstawione zostały wyniki konkursu oraz zapowiedziana została już przyszłoroczna edycja, która będzie szczególna, bo już 10-ta. Zachęceni zostaliśmy do wzięcia udziału w tegorocznej edycji **GeeCONa** w Pradze, a na sam koniec przedstawiony został gość specjalny - **Rod Johnson**, który wygłosił ostatnią prelekcję.
+Nadszedł czas na uroczyste zakończenie konferencji. Organizatorzy podziękowali wszystkim prelegentom i uczestnikom. Słuchacze z kolei mieli okazję podziękować organizatorom gromkimi brawami. Przedstawione zostały wyniki konkursu oraz zapowiedziana została już przyszłoroczna edycja, która będzie szczególna, bo już 10-ta. Zachęceni zostaliśmy do wzięcia udziału w tegorocznej edycji **GeeCONa** w Pradze, a na sam koniec przedstawiony został gość specjalny - **Rod Johnson**, który wygłosił ostatnią prelekcję.
 
 #### **Simplification and Automation in Java: Yesterday, Today and Tomorrow**
 

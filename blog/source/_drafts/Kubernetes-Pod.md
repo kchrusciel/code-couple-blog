@@ -16,7 +16,7 @@ W naszym przykładzie
 
 ### Pod
 
-czy jest pod?
+czy jest pod?
 
 \[obrazek\]
 

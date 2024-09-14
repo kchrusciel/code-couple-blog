@@ -13,11 +13,11 @@ author: 'Krzysztof Chruściel'
 
 ![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-[W poprzednim wpisie](https://codecouple.pl/2019/01/18/class-loader-w-javie/) pozyskaliśmy informację na temat wbudowanych w **JVM** **Class Loader'ów**. Dowiedzieliśmy się także, że część z nich napisana jest w **Javie**. Informacja ta sprawia, iż sami możemy napisać własny **Class Loader**. Tworzenie własnych **Class Loader'ów** jest tematem dzisiejszego wpisu, zapraszamy!
+[W poprzednim wpisie](https://codecouple.pl/2019/01/18/class-loader-w-javie/) pozyskaliśmy informację na temat wbudowanych w **JVM** **Class Loader'ów**. Dowiedzieliśmy się także, że część z nich napisana jest w **Javie**. Informacja ta sprawia, iż sami możemy napisać własny **Class Loader**. Tworzenie własnych **Class Loader'ów** jest tematem dzisiejszego wpisu, zapraszamy!
 <!-- more -->
 ### ClassLoader
 
-Domyślne **Class Loader'y** w większości przypadku są wystarczające. Czasami jednak zachodzi potrzeba napisania własnego. **Java** dostarcza bardzo przyjemny mechanizm do tworzenia własnych **Class Loader'ów**.  Sprowadza się to do stworzenia nowej klasy, która dziedziczy po abstrakcyjnej klasie `ClassLoader`. Należy także pamiętać o nadpisaniu metody `findClass`:
+Domyślne **Class Loader'y** w większości przypadku są wystarczające. Czasami jednak zachodzi potrzeba napisania własnego. **Java** dostarcza bardzo przyjemny mechanizm do tworzenia własnych **Class Loader'ów**.  Sprowadza się to do stworzenia nowej klasy, która dziedziczy po abstrakcyjnej klasie `ClassLoader`. Należy także pamiętać o nadpisaniu metody `findClass`:
 
 public class OwnClassLoader extends ClassLoader {
 
@@ -44,13 +44,13 @@ Metoda ta odpowiedzialna jest za załadowanie klasy na podstawie nazwy:
 
 protected Class<?> loadClass(String name, boolean resolve)
 
-Na początku metoda ta sprawdza czy klasa nie została już załadowana korzystając z metody `findLoadedClass`. Jeśli klasa była już załadowana to zostaje zwrócona. Jeśli nie, to próbujemy ją załadować korzystając z **Class Loader'a** rodzica. Jeśli się udało to zwracamy tą klasę, jeśli nie to sami próbujemy ją załadować korzystając z metody `findClass`.
+Na początku metoda ta sprawdza czy klasa nie została już załadowana korzystając z metody `findLoadedClass`. Jeśli klasa była już załadowana to zostaje zwrócona. Jeśli nie, to próbujemy ją załadować korzystając z **Class Loader'a** rodzica. Jeśli się udało to zwracamy tą klasę, jeśli nie to sami próbujemy ją załadować korzystając z metody `findClass`.
 
 W metodzie `loadClass` pojawiła się także flaga `resolve`. Jest to flaga decydująca o tym czy po znalezieniu klasy powinny zostać wykonane "dodatkowe operacje". Czasami interesuje nas tylko to czy ta klasa istnieje, wtedy przekazujemy `false`. Więcej o tych "dodatkowych operacjach" w kolejnym artykule.
 
 #### findClass
 
-Aby odnaleźć klasę po jej pełnej nazwie musimy użyć metody `findClass`. Jest to metoda, która w domyślnej implementacji rzuca wyjątek `ClassNotFoundException`. Oznacza to, że jest to metoda, którą należy nadpisać:
+Aby odnaleźć klasę po jej pełnej nazwie musimy użyć metody `findClass`. Jest to metoda, która w domyślnej implementacji rzuca wyjątek `ClassNotFoundException`. Oznacza to, że jest to metoda, którą należy nadpisać:
 
 protected Class<?> findClass(String name) throws ClassNotFoundException {
     throw new ClassNotFoundException(name);
@@ -60,7 +60,7 @@ To my w implementacji tej metody decydujemy skąd pochodzić będzie źródło d
 
 #### defineClass
 
-Finalna metoda `defineClass` służy do konwersji tablicy bajtów na instancję klasy. W przypadku, gdy nasza ładowana klasa ma niepoprawny format to dostaniemy błąd `ClassFormatError`:
+Finalna metoda `defineClass` służy do konwersji tablicy bajtów na instancję klasy. W przypadku, gdy nasza ładowana klasa ma niepoprawny format to dostaniemy błąd `ClassFormatError`:
 
 protected final Class<?> defineClass(String name, byte\[\] b, int off, int len)
 

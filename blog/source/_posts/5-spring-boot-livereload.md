@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 Wracamy po wakacyjnej przerwie! Dziś bardzo praktyczny wpis. Każdy kto zajmuje się **frontend'em** w **Spring Boot'cie** wykorzystując na przykład **Thymeleaf** musi za każdym razem budować projekt. Jednakże można przyśpieszyć tą operację.
 <!-- more -->
-Funkcja **LiveReload** działa pod przeglądarkami **Chrome**, **Firefox** oraz **Safari**. Musimy pobrać odpowiedni dodatek do przeglądarki. Link **[TUTAJ](http://livereload.com/extensions/)**.
+Funkcja **LiveReload** działa pod przeglądarkami **Chrome**, **Firefox** oraz **Safari**. Musimy pobrać odpowiedni dodatek do przeglądarki. Link **[TUTAJ](http://livereload.com/extensions/)**.
 
 Aby móc korzystać z **LiveReload** w **Spring** **Boot'cie** musimy zacząć od dodania zależności:
 
@@ -28,7 +28,7 @@ Następnie w naszym **IDE** musimy ustawić automatyczne budowanie projektu (prz
 
 [![setupAutomaticallyMake](http://codecouple.pl/wp-content/uploads/2016/08/setupAutomaticallyMake.png)](http://codecouple.pl/wp-content/uploads/2016/08/setupAutomaticallyMake.png)
 
-Musimy także aktywować wpis w rejestrach **IDE** `compiler.automake.allow.when.app.running`.  Aby dostać się do ustawień rejestrów **IntelliJ** można użyć skrótu `Shift+CTRL+A` i wpisać `registry`:
+Musimy także aktywować wpis w rejestrach **IDE** `compiler.automake.allow.when.app.running`.  Aby dostać się do ustawień rejestrów **IntelliJ** można użyć skrótu `Shift+CTRL+A` i wpisać `registry`:
 
 [![compilerRegistry](http://codecouple.pl/wp-content/uploads/2016/08/compilerRegistry.png)](http://codecouple.pl/wp-content/uploads/2016/08/compilerRegistry.png)
 

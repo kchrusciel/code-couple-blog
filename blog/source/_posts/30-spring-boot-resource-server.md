@@ -73,15 +73,15 @@ Spróbujmy udać się pod adres `/not-for-all`, w odpowiedzi dostaniemy:
     <error>unauthorized</error>
 </oauth>
 
-Od teraz każdy nasz **request** do usługi `/not-for-all` wymaga tokenu typu **Bearer**. Token ten możemy zdobyć od naszego dostawcy, czyli **GitHub'a**. Należy udać się pod adres:
+Od teraz każdy nasz **request** do usługi `/not-for-all` wymaga tokenu typu **Bearer**. Token ten możemy zdobyć od naszego dostawcy, czyli **GitHub'a**. Należy udać się pod adres:
 
 https://github.com/login/oauth/authorize?client\_id=your-client\_id&response\_type=code&state=yz1Bhx
 
 Ustawiając dane:
 
-*   **client\_id** - wygenerowane w serwisie unikalne ID
-*   **response\_type** - typ odpowiedzi, w naszym przypadku oczekujemy typu **code**
-*   **state** - unikalny ciąg znaków dla bezpieczeństwa
+*   **client\_id** - wygenerowane w serwisie unikalne ID
+*   **response\_type** - typ odpowiedzi, w naszym przypadku oczekujemy typu **code**
+*   **state** - unikalny ciąg znaków dla bezpieczeństwa
 
 Następnie zostaniemy przekierowani na adres strony, który ustawiliśmy w **GitHub'ie** (czyli **callback** URL) wraz z wartością `code`:
 
@@ -93,16 +93,16 @@ https://github.com/login/oauth/access\_token?code=69b25b069e9e5ae21000&client\_i
 
 Ustawiając dane:
 
-*   **client\_id** - wygenerowane w serwisie unikalne ID
-*   **client\_secret** - wygenerowany w serwisie kod `secret`
-*   **code** - wygenerowany kod w poprzednim kroku
-*   **state** - unikalny ciąg znaków dla bezpieczeństwa (ten sam co wcześniej)
+*   **client\_id** - wygenerowane w serwisie unikalne ID
+*   **client\_secret** - wygenerowany w serwisie kod `secret`
+*   **code** - wygenerowany kod w poprzednim kroku
+*   **state** - unikalny ciąg znaków dla bezpieczeństwa (ten sam co wcześniej)
 
 W odpowiedzi otrzymujemy **Bearer** token:
 
 access\_token=6f80ecc3602ea730982545a6707b35ff83061000&scope=&token\_type=bearer
 
-Możemy teraz użyć ten token korzystając po raz kolejny z klienta **HTTP**. Ustawiamy nagłówek `Authorization` wraz z wartością `Bearer 6f80ecc3602ea730982545a6707b35ff83061000`, w odpowiedzi powinien pokazać się napis "_Code Couple!_".
+Możemy teraz użyć ten token korzystając po raz kolejny z klienta **HTTP**. Ustawiamy nagłówek `Authorization` wraz z wartością `Bearer 6f80ecc3602ea730982545a6707b35ff83061000`, w odpowiedzi powinien pokazać się napis "_Code Couple!_".
 
 ### Wcześniejsza aplikacja
 

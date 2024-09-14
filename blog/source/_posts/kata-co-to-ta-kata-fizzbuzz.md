@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 
 [![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)
 
-Godzina 5.00, za oknami ciemno, pora na codzienne ćwiczenia. Zgodnie z definicją: "Kata - wysoce sformalizowany rodzaj ćwiczeń stosowanych w wielu tradycyjnych sztukach i sportach walki...", "Są to sekwencje technik ataku i obrony, połączone z określonym poruszaniem, przyjęciem ściśle określonej pozycji i sposobu oddychania. Niektóre techniki w kata mają charakter wyłącznie symboliczny."
+Godzina 5.00, za oknami ciemno, pora na codzienne ćwiczenia. Zgodnie z definicją: "Kata - wysoce sformalizowany rodzaj ćwiczeń stosowanych w wielu tradycyjnych sztukach i sportach walki...", "Są to sekwencje technik ataku i obrony, połączone z określonym poruszaniem, przyjęciem ściśle określonej pozycji i sposobu oddychania. Niektóre techniki w kata mają charakter wyłącznie symboliczny."
 <!-- more -->
 **Kata** w kontekście **IT** to codzienne krótkie ćwiczenia (najlepiej do 30 minut), w których wykonujemy powtarzalne czynności. W ciągu tych ćwiczeń rozwiązujemy dowolne zadanie jak na przykład opisane poniżej **FizzBuzz**. Podczas treningu używamy skrótów, składni języka, gita czy specyficznych **frameworków**. Takie codzienne powtarzanie czynności pozwala nam być zawsze w "formie". **Kata** są także dobrym rozwiązaniem do nauki nowej technologii. Cykliczne powtarzanie utrwala w naszej głowie mechanizmy specyficzne dla danej technologii.
 

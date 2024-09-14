@@ -17,7 +17,7 @@ Dalej pozostajemy w tematach związanych z pakietem `java.util.concurrent`. Dzis
 <!-- more -->
 ### Problem
 
-W naszej aplikacji chcielibyśmy wymieniać dane w sposób asynchroniczny pomiędzy dwoma wątkami. Kolejnym założeniem jest to, iż oba wątki wymienią się danymi dopiero po zakończeniu swojej asynchronicznej pracy.
+W naszej aplikacji chcielibyśmy wymieniać dane w sposób asynchroniczny pomiędzy dwoma wątkami. Kolejnym założeniem jest to, iż oba wątki wymienią się danymi dopiero po zakończeniu swojej asynchronicznej pracy.
 
 ### Exchanger
 
@@ -47,8 +47,8 @@ void shouldExchangeValuesBetweenThreads() throws InterruptedException {
     firstJob.start();
     secondJob.start();
 
-    firstJob.join();
-    secondJob.join();
+    firstJob.join();
+    secondJob.join();
 
     // Then
     assertThat(firstJob.getExchangedValue()).isEqualTo("second");

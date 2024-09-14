@@ -80,7 +80,7 @@ Pierwszy z zasobów będzie dostępny dla wszystkich, natomiast drugi wymaga log
 
 ### Properties
 
-Jak napisałem we wstępie, w modelu **Single Sign-On** stosujemy jeden serwis odpowiedzialny za uwierzytelnianie. Dotychczas wskazaliśmy, które zasoby mają być chronione oraz to, że będziemy korzystać z **SSO**. Teraz musimy wskazać serwis uwierzytelniający. Możemy utworzyć własny serwis, jednakże w tym wpisie wykorzystamy **GitHub'a**. Aby skorzystać z API **GitHub'a** należy w pliku `application.properites` dodać wpisy:
+Jak napisałem we wstępie, w modelu **Single Sign-On** stosujemy jeden serwis odpowiedzialny za uwierzytelnianie. Dotychczas wskazaliśmy, które zasoby mają być chronione oraz to, że będziemy korzystać z **SSO**. Teraz musimy wskazać serwis uwierzytelniający. Możemy utworzyć własny serwis, jednakże w tym wpisie wykorzystamy **GitHub'a**. Aby skorzystać z API **GitHub'a** należy w pliku `application.properites` dodać wpisy:
 
 #Client id from GitHub
 security.oauth2.client.client-id=generated-id
@@ -104,9 +104,9 @@ Pod wpisami `security.oauth2.client.client-id` oraz `security.oauth2.client.clie
 
 ### Flow
 
-Po wejściu na "chroniony" adres, czyli w naszym przypadku `/not-for-all` sprawdzane jest to, czy jesteśmy zalogowani. Jeśli nie, następuje przekierowanie na stronę `/login`. Następnie sprawdzane jest, jaki sposób uwierzytelniania wybraliśmy. Wybraliśmy **SSO**, więc następuje przekierowanie na adres `security.oauth2.client.user-authorization-uri` wraz z przygotowanymi parametrami:
+Po wejściu na "chroniony" adres, czyli w naszym przypadku `/not-for-all` sprawdzane jest to, czy jesteśmy zalogowani. Jeśli nie, następuje przekierowanie na stronę `/login`. Następnie sprawdzane jest, jaki sposób uwierzytelniania wybraliśmy. Wybraliśmy **SSO**, więc następuje przekierowanie na adres `security.oauth2.client.user-authorization-uri` wraz z przygotowanymi parametrami:
 
-*   **client\_id** - wygenerowane w serwisie unikalne ID (to które ustawiliśmy w `security.oauth2.client.client-id`)
+*   **client\_id** - wygenerowane w serwisie unikalne ID (to które ustawiliśmy w `security.oauth2.client.client-id`)
 *   **redirect\_uri** - adres, na który zostanie przekierowany użytkownik po poprawnym zalogowaniu
 *   **response\_type** - typ odpowiedzi, w naszym przypadku oczekujemy typu **code**
 *   **state** - unikalny ciąg znaków dla bezpieczeństwa
@@ -115,19 +115,19 @@ Przykładowy adres:
 
 https://github.com/login/oauth/authorize?client\_id=generated-id&redirect\_uri=http://localhost:9191/login&response\_type=code&state=yz1Bhx
 
-Jeśli użytkownik wpisał poprawne dane, jesteśmy z powrotem przekierowywani na naszą stronę, tym razem z wygenerowanym parametrem `code` (tym samym, który ustawialiśmy w `response_type`):
+Jeśli użytkownik wpisał poprawne dane, jesteśmy z powrotem przekierowywani na naszą stronę, tym razem z wygenerowanym parametrem `code` (tym samym, który ustawialiśmy w `response_type`):
 
 http://localhost:9191/login?code=404e60f9ab4208bde000&state=yz1Bhx
 
-Teraz wysyłany jest **POST** na adres z `security.oauth2.client.access-token-uri`, aby zdobyć token. W tym żądaniu zawarte są takie informacje jak:
+Teraz wysyłany jest **POST** na adres z `security.oauth2.client.access-token-uri`, aby zdobyć token. W tym żądaniu zawarte są takie informacje jak:
 
-*   **client\_id** - wygenerowane w serwisie unikalne ID (to które ustawiliśmy w `security.oauth2.client.client-id`)
+*   **client\_id** - wygenerowane w serwisie unikalne ID (to które ustawiliśmy w `security.oauth2.client.client-id`)
 *   **client\_secret** - wygenerowany w serwisie kod secret (ten który ustawiliśmy w `security.oauth2.client.client-secret`)
 *   **code** - wygenerowany kod w poprzednim kroku
 *   **grant\_type** - typ uprawnień, w naszym przypadku authorization\_code
-*   **redirect\_uri** - adres, na który zostanie przekierowany użytkownik po poprawnym zalogowaniu
+*   **redirect\_uri** - adres, na który zostanie przekierowany użytkownik po poprawnym zalogowaniu
 
-W odpowiedzi otrzymujemy `access_token` typu `Bearer`. Od teraz wszystkie nasze requesty będą podpisane tym tokenem. Następnie wracamy do naszego flow i w odpowiedzi w nagłówku `Location` otrzymujemy `Location: http://localhost:9191/not-for-all` i jesteśmy przekierowywani na nasz "chroniony" zasób.
+W odpowiedzi otrzymujemy `access_token` typu `Bearer`. Od teraz wszystkie nasze requesty będą podpisane tym tokenem. Następnie wracamy do naszego flow i w odpowiedzi w nagłówku `Location` otrzymujemy `Location: http://localhost:9191/not-for-all` i jesteśmy przekierowywani na nasz "chroniony" zasób.
 
 ### Uruchamiamy
 

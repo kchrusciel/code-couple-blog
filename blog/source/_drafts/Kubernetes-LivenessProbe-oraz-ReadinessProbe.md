@@ -38,7 +38,7 @@ public class ReadinessEndpoint {
 
 }
 
-Następnie dodamy dodatkową logikę dla endpointu `/actuator/readiness`. Logika ta będzie symulować długo trwającą operację (na przykład oczekiwanie na inny serwis lub bazę danych):
+Następnie dodamy dodatkową logikę dla endpointu `/actuator/readiness`. Logika ta będzie symulować długo trwającą operację (na przykład oczekiwanie na inny serwis lub bazę danych):
 
 @Component
 @EndpointWebExtension(endpoint = ReadinessEndpoint.class)
@@ -71,13 +71,13 @@ public class ReadinessEndpointExtension {
     }
 }
 
-Po trzydziestu sekundach nasz endpoint `/actuator/readiness` zwróci status `200` z wiadomością:
+Po trzydziestu sekundach nasz endpoint `/actuator/readiness` zwróci status `200` z wiadomością:
 
 {
   "status":"ready"
 }
 
-Wcześniej będziemy otrzymać kod `418` czyli [I'm a teapot](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418) z odpowiednim statusem. Tutaj ważne jest to aby zwrócić kod statusu różny od przedziału między `200` a `399` dla operacji nie powodzenia:
+Wcześniej będziemy otrzymać kod `418` czyli [I'm a teapot](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418) z odpowiednim statusem. Tutaj ważne jest to aby zwrócić kod statusu różny od przedziału między `200` a `399` dla operacji nie powodzenia:
 
 {
   "status":"notReady"
@@ -93,7 +93,7 @@ todo
 
 ### LivenessProbe
 
-W momencie uruchomienia **pod'a** jest on już **dostępny** dla całego klastra **kubernetes**. Jednakże bardzo często aplikcja znajdująca się wewnątrza **pod'a** nie uruchamiają się **automatycznie**, potrzebują trochę czasu (czas na uruchomienie się aplikacji typu **Spring Boot 2**). Aby **odroczyć** proces dostępność naszego **pod'a** możemy do tego wykorzystać **LivenessProbe.** **LivenessProbe** sprawdza czy nasz **pod** już "żyje", to znaczy czy nasza aplikacja wewnątrz **pod'a** się uruchomiła:
+W momencie uruchomienia **pod'a** jest on już **dostępny** dla całego klastra **kubernetes**. Jednakże bardzo często aplikcja znajdująca się wewnątrza **pod'a** nie uruchamiają się **automatycznie**, potrzebują trochę czasu (czas na uruchomienie się aplikacji typu **Spring Boot 2**). Aby **odroczyć** proces dostępność naszego **pod'a** możemy do tego wykorzystać **LivenessProbe.** **LivenessProbe** sprawdza czy nasz **pod** już "żyje", to znaczy czy nasza aplikacja wewnątrz **pod'a** się uruchomiła:
 
 apiVersion: v1
 kind: Pod
@@ -112,23 +112,23 @@ spec:
 
 Gdzie:
 
-*   `httpGet` - wykorzystujemy metodę **GET** aby pobrać wartość
-*   `path` - ścieżka endpointu
-*   `port` - port pod którym dostępny jest endpoint
-*   `periodSeconds` - w jakim interewale czasowym powinno odbywać się sprawdzanie
-*   `initialDelaySeconds` - po jakim czasie **kubernetes** powinien sprawdzać "żywotność" **pod'a**
+*   `httpGet` - wykorzystujemy metodę **GET** aby pobrać wartość
+*   `path` - ścieżka endpointu
+*   `port` - port pod którym dostępny jest endpoint
+*   `periodSeconds` - w jakim interewale czasowym powinno odbywać się sprawdzanie
+*   `initialDelaySeconds` - po jakim czasie **kubernetes** powinien sprawdzać "żywotność" **pod'a**
 
-**LivenessProbe** może wykonywać sprawdzania typu:
+**LivenessProbe** może wykonywać sprawdzania typu:
 
 *   **command** - wywołanie komendy
 *   **HTTP GET** - wywołanie żądania GET
-*   **TCP Socket** - wykorzystanie gniazda typu Socket
+*   **TCP Socket** - wykorzystanie gniazda typu Socket
 
-W naszym przypadku **LivenessProbe** będzie sprawdzać informację z adresu `/actuator/health`, który zwraca status **UP**, jeśli aplikacja wstała. Wrzućmy naszego **pod'a** na kluster:
+W naszym przypadku **LivenessProbe** będzie sprawdzać informację z adresu `/actuator/health`, który zwraca status **UP**, jeśli aplikacja wstała. Wrzućmy naszego **pod'a** na kluster:
 
 kubectl apply -f liveness-pod.yaml
 
-Oraz sprawdźmy jego **status**:
+Oraz sprawdźmy jego **status**:
 
 Ready:          True
 Restart Count:  0
@@ -149,11 +149,11 @@ Events:
   Normal  Created    16s   kubelet, minikube  Created container liveness
   Normal  Started    16s   kubelet, minikube  Started container liveness
 
-Jak widzimy, nasz pod jest gotowy do pracy, dopiero wtedy gdy **LivenessProbe** czyli nasz adres /actuator/health zwrócił status 200. Jednakże, to dalej nie rozwiązuje nam problemu symulacji długiego połączenia. Do tego celu wykorzystamy **ReadinessProbe**.
+Jak widzimy, nasz pod jest gotowy do pracy, dopiero wtedy gdy **LivenessProbe** czyli nasz adres /actuator/health zwrócił status 200. Jednakże, to dalej nie rozwiązuje nam problemu symulacji długiego połączenia. Do tego celu wykorzystamy **ReadinessProbe**.
 
 ### ReadinessProbe
 
-Bardzo często zdarza się tak, iż mimo uruchomienia naszej aplikacji nie jest jeszcze ona gotowana do pracy. W tle mogą nawiązywać się połączenia do bazy danych lub nasza aplikacja czeka na sygnał od innej. Aby nasz pod był dostępny dopiero gdy będzie gotowy możemy do tego celu wykorzystać **ReadinessProbe**:
+Bardzo często zdarza się tak, iż mimo uruchomienia naszej aplikacji nie jest jeszcze ona gotowana do pracy. W tle mogą nawiązywać się połączenia do bazy danych lub nasza aplikacja czeka na sygnał od innej. Aby nasz pod był dostępny dopiero gdy będzie gotowy możemy do tego celu wykorzystać **ReadinessProbe**:
 
 apiVersion: v1
 kind: Pod
@@ -184,13 +184,13 @@ Gdzie:
 *   `periodSeconds` - w jakim interewale czasowym powinno odbywać się sprawdzanie
 *   `initialDelaySeconds` - po jakim czasie **kubernetes** powinien sprawdzać gotowość **pod'a**
 
-Podobnie jak **LivenessProbe**, **ReadinessProbe** może wykonywać próby typu:
+Podobnie jak **LivenessProbe**, **ReadinessProbe** może wykonywać próby typu:
 
 *   **command** - wywołanie komendy
 *   **HTTP GET** - wywołanie żądania GET
-*   **TCP Socket** - wykorzystanie gniazda typu Socket
+*   **TCP Socket** - wykorzystanie gniazda typu Socket
 
-W naszym przypadku **ReadinessProbe** będzie sprawdzać informację z adresu `/actuator/ready`, który zwraca status **UP**, jeśli aplikacja będzie gotowa. Wrzućmy naszego **pod'a** na kluster:
+W naszym przypadku **ReadinessProbe** będzie sprawdzać informację z adresu `/actuator/ready`, który zwraca status **UP**, jeśli aplikacja będzie gotowa. Wrzućmy naszego **pod'a** na kluster:
 
 kubectl apply -f readiness-pod.yaml
 

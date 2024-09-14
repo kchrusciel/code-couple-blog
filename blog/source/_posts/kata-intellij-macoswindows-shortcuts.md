@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)
 
-Zmiana systemu operacyjnego może okazać się początkowo bolesnym doświadczeniem. Ostatnimy czasy zmieniłem system operacyjny z Windows na macOS, a to wiąże się to ze zmianą nawyków (w tym skrótów). Od zawsze uważam, iż znajomość skrótów narzędzi, z których korzystamy na co dzień jest pozycją obowiązkową. Aby móc nadal w efektywny sposób wykorzystywać IDE przygotowałem kata ze skrótami.
+Zmiana systemu operacyjnego może okazać się początkowo bolesnym doświadczeniem. Ostatnimy czasy zmieniłem system operacyjny z Windows na macOS, a to wiąże się to ze zmianą nawyków (w tym skrótów). Od zawsze uważam, iż znajomość skrótów narzędzi, z których korzystamy na co dzień jest pozycją obowiązkową. Aby móc nadal w efektywny sposób wykorzystywać IDE przygotowałem kata ze skrótami.
 <!-- more -->
 ### Kata
 
@@ -79,7 +79,7 @@ private String dojoSurround(int value) {
 *   Back to previous file cursor position
 *   Go to **settings**
 *   Change **theme**
-*   Go to project **settings** and change the project name
+*   Go to project **settings** and change the project name
 *   Enter the presentation mode
 *   Exit presentation mode
 *   Open **project** view

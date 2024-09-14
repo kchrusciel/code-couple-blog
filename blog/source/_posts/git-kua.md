@@ -14,7 +14,7 @@ author: 'Krzysztof Chruściel'
 <!-- more -->
 Inspiracją do tego wpisu jest gość, który mocno udziela się w community JVM, **Jakub Nabrdalik**. Jest on autorem zbioru aliasów do **Gita** pod wdzięczną nazwą "_Git Kurwa_". Jest to zbiór aliasów dla ludzi, którzy podczas pracy z **Gitem** używają słów "_Git, kurwa!_".
 
-Aby dodać aliasy musimy odnaleźć plik `.gitconfig`, który na Windowsie standardowo znajduje się w `C:\Users\<nazwa_profilu>`. Następnie należy wkleić wpisy z pliku `config`, który znajduje się na GitHubie [https://github.com/jakubnabrdalik/gitkurwa](https://github.com/jakubnabrdalik/gitkurwa) do naszego pliku `.gitconfig` i jazda, możemy już korzystać z naszych aliasów.
+Aby dodać aliasy musimy odnaleźć plik `.gitconfig`, który na Windowsie standardowo znajduje się w `C:\Users\<nazwa_profilu>`. Następnie należy wkleić wpisy z pliku `config`, który znajduje się na GitHubie [https://github.com/jakubnabrdalik/gitkurwa](https://github.com/jakubnabrdalik/gitkurwa) do naszego pliku `.gitconfig` i jazda, możemy już korzystać z naszych aliasów.
 
 ### Podstawowe komendy - wersja "normalna"
 
@@ -94,4 +94,4 @@ git igenbazdmeg
 git kurvaanyad 
 ```
 
-A tak na poważnie, to polecam przejrzeć [TEN PLIK](https://github.com/jakubnabrdalik/gitkurwa/blob/master/config) i wybrać ciekawe aliasy. Najlepsza opcja to dodać wszystkie i przeklikać na dużym repo, znacznie ułatwiają i przyśpieszają pracę!
+A tak na poważnie, to polecam przejrzeć [TEN PLIK](https://github.com/jakubnabrdalik/gitkurwa/blob/master/config) i wybrać ciekawe aliasy. Najlepsza opcja to dodać wszystkie i przeklikać na dużym repo, znacznie ułatwiają i przyśpieszają pracę!

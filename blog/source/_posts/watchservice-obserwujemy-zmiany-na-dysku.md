@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
 
-`WatchService` jest mechanizmem wprowadzonym w **Javie 7**. Pozwala on na obserwowanie interesującego nas folderu. Jeśli przykładowo w obserwowanym folderze pojawi się nowy plik, otrzymamy zdarzenie informujące o tej zmianie. Jest to bardziej wydaje rozwiązanie niż każdorazowe odpytywanie systemu o to czy pojawiły się nowe pliki.
+`WatchService` jest mechanizmem wprowadzonym w **Javie 7**. Pozwala on na obserwowanie interesującego nas folderu. Jeśli przykładowo w obserwowanym folderze pojawi się nowy plik, otrzymamy zdarzenie informujące o tej zmianie. Jest to bardziej wydaje rozwiązanie niż każdorazowe odpytywanie systemu o to czy pojawiły się nowe pliki.
 <!-- more -->
 ### Tworzenie
 
@@ -25,7 +25,7 @@ Po utworzeniu usługi do nasłuchiwania pora na wskazanie miejsca, które chcemy
 
 ### Rejestrowanie
 
-Każda klasa implementująca interfejs `java.nio.file.Watchable` otrzymała metodę `WatchKey register(WatchService watcher, WatchEvent.Kind<?>... events)`. Metoda ta pozwala zarejestrować stworzony przez nas `WatchService`. Podczas rejestracji musimy określić na jakie zdarzenia chcemy nasłuchiwać:
+Każda klasa implementująca interfejs `java.nio.file.Watchable` otrzymała metodę `WatchKey register(WatchService watcher, WatchEvent.Kind<?>... events)`. Metoda ta pozwala zarejestrować stworzony przez nas `WatchService`. Podczas rejestracji musimy określić na jakie zdarzenia chcemy nasłuchiwać:
 
 *   `ENTRY_CREATE` - nowy plik został stworzony
 *   `ENTRY_DELETE` - plik został usunięty
@@ -39,7 +39,7 @@ folder.register(watchService,
 
 ### WatchKey
 
-W odpowiedzi na zarejestrowanie `WatchService` otrzymaliśmy `WatchKey`. Klasa ta posiada metodę `pollEvents()`, która zwraca listę zdarzeń `WatchEvent`. Sam `WatchKey` może znajdować się w trzech stanach:
+W odpowiedzi na zarejestrowanie `WatchService` otrzymaliśmy `WatchKey`. Klasa ta posiada metodę `pollEvents()`, która zwraca listę zdarzeń `WatchEvent`. Sam `WatchKey` może znajdować się w trzech stanach:
 
 *   `ready` - gotowy do nasłuchiwania (jest w takim stanie zaraz po utworzeniu)
 *   `signaled` - znajduje się w tym stanie po zakolejkowaniu zdarzeń (już więcej nie nasłuchuje!)
@@ -50,11 +50,11 @@ W odpowiedzi na zarejestrowanie `WatchService` otrzymaliśmy `WatchKey`. Klasa 
 
 ### WatchEvent
 
-Jest to zdarzenie, które wydarzyło się w zarejestrowanym folderze. `WatchEvent` dostarcza trzy metody:
+Jest to zdarzenie, które wydarzyło się w zarejestrowanym folderze. `WatchEvent` dostarcza trzy metody:
 
 *   `count` - ilość wystąpień danego zdarzenia
 *   `context` - nazwa pliku, dla którego zdarzenie wystąpiło
-*   `kind` - typ zdarzenia (uwaga, może być to typ `OVERFLOW` nawet jeśli się na niego nie rejestrowaliśmy)
+*   `kind` - typ zdarzenia (uwaga, może być to typ `OVERFLOW` nawet jeśli się na niego nie rejestrowaliśmy)
 
 watchKey.pollEvents()
         .forEach(x -> System.out.format(

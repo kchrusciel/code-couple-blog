@@ -16,11 +16,11 @@ author: 'Krzysztof Chruściel'
 <!-- more -->
 ### DocGist
 
-Nam sam początek polecam wam **[ten edytor online](http://gist.asciidoctor.org)**, w którym można pobawić się na żywo z **AsciiDoc'iem**. Jest to fajne miejsce do sprawdzenia możliwości tego narzędzia.
+Nam sam początek polecam wam **[ten edytor online](http://gist.asciidoctor.org)**, w którym można pobawić się na żywo z **AsciiDoc'iem**. Jest to fajne miejsce do sprawdzenia możliwości tego narzędzia.
 
 ### Live preview via Chrome
 
-Możemy zacząć teraz tworzenie naszej dokumentacji. Utwórzmy plik z rozszerzeniem `adoc`. i dodajmy do niego treść:
+Możemy zacząć teraz tworzenie naszej dokumentacji. Utwórzmy plik z rozszerzeniem `adoc`. i dodajmy do niego treść:
 
 \= To jest tytuł dokumentacji
 
@@ -28,21 +28,21 @@ Witajcie na CodeCouple.pl!
 
 == To jest pierwszy nagłówek
 
-Teraz aby podejrzeć zmiany najlepiej jest zainstalować sobie plugin do przeglądarki. Ja korzystam z **Chrome** także polecam wam [ten dodatek](https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia). Od teraz wystarczy odpalić plik w przeglądarce (via Drag and Drop) i powinniście widzieć efekt:
+Teraz aby podejrzeć zmiany najlepiej jest zainstalować sobie plugin do przeglądarki. Ja korzystam z **Chrome** także polecam wam [ten dodatek](https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia). Od teraz wystarczy odpalić plik w przeglądarce (via Drag and Drop) i powinniście widzieć efekt:
 
 [![](http://codecouple.pl/wp-content/uploads/2017/09/asciiDoc1.png)](http://codecouple.pl/wp-content/uploads/2017/09/asciiDoc1.png)
 
-**Uwaga!** Aktualnie plugin ma błąd związany z datą: [https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32](https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32)
+**Uwaga!** Aktualnie plugin ma błąd związany z datą: [https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32](https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32)
 
 ### Budowanie
 
-Naszą dokumentację można zbudować na kilka sposób. Najpopularniejszym sposobem jest zainstalowanie **Rubiego** i pobranie paczki z **AsciiDoc'iem**. Opis [tutaj](http://asciidoctor.org/docs/install-toolchain/).
+Naszą dokumentację można zbudować na kilka sposób. Najpopularniejszym sposobem jest zainstalowanie **Rubiego** i pobranie paczki z **AsciiDoc'iem**. Opis [tutaj](http://asciidoctor.org/docs/install-toolchain/).
 
-W moim projekcie, korzystam z **Mavena**, dzięki temu mogłem wykorzystać specjalny plugin do budowania dokumentacji.
+W moim projekcie, korzystam z **Mavena**, dzięki temu mogłem wykorzystać specjalny plugin do budowania dokumentacji.
 
 Korzystając z tego rozwiązania nie ma potrzeby instalowania **Rubiego**, ponieważ korzysta on z implemetancji **JRuby**.
 
-W `pom.xml` umieszczamy następujące linijki:
+W `pom.xml` umieszczamy następujące linijki:
 
 <build>
     <plugins>
@@ -76,7 +76,7 @@ Domyślną lokalizacją, w której powinniśmy przechowywać pliki `adoc` jest `
     <outputDirectory>src/docs/html</outputDirectory>
 </configuration>
 
-Resztę przydatnych konfiguracji znajdziecie tutaj: [https://github.com/asciidoctor/asciidoctor-maven-plugin](https://github.com/asciidoctor/asciidoctor-maven-plugin).
+Resztę przydatnych konfiguracji znajdziecie tutaj: [https://github.com/asciidoctor/asciidoctor-maven-plugin](https://github.com/asciidoctor/asciidoctor-maven-plugin).
 
 ### Składnia
 

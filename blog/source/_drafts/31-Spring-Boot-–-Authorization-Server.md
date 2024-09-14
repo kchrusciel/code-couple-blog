@@ -35,7 +35,7 @@ public class AuthorizationServerApplication {
 
 Pod dodaniu tej adnotacji będziemy mogli korzystać z dwóch dodatkowych endpointów:
 
-*   **oauth/token**  - wykorzystywany do pobrania tokenu na podstawie przekazanych parametrów
+*   **oauth/token**  - wykorzystywany do pobrania tokenu na podstawie przekazanych parametrów
 *   **oauth/authorize** - wykorzystywany do autoryzacji
 
 Dodatkowo należy ustawić id, hasło, typ logowania oraz poziom uprawnień:

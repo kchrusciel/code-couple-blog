@@ -20,7 +20,7 @@ Postanowiłam zacząć serię wpisów o wzorcach projektowych. Dążymy przecie�
 <!-- more -->
 W rozwiązaniu tego wzorca tworzymy tylko unikatowe obiekty. W momencie tworzenia nowego obiektu, sprawdzane jest czy egzemplarz o takich samych parametrach istnieje już w pamięci. Jeśli tak, to pobieramy go, a jeśli nie, tworzymy nowy. Obiekty te są **immutable** (niezmienne), czyli przygotowujemy klasę tak aby nie dało się jej zmodyfikować. Natomiast gdy zajdzie potrzeba zmiany danych wtedy tworzona jest nową instancja. Dzięki wykorzystaniu **pyłku** zmniejszamy ilość wykorzystywanej pamięci. Przykładem zastosowania tego wzorca jest obsługa obiektów typu String w **JRE**.
 
-  Spróbujmy teraz zaimplementować **flyweight.** Stwórzmy klasę _Relation._
+  Spróbujmy teraz zaimplementować **flyweight.** Stwórzmy klasę _Relation._
 
 final public class Relation {
     final private String description;
@@ -51,7 +51,7 @@ public class FlyweightFactory {
     }
 }
 
-  Na koniec wywołujemy w pętli tworzenie obiektów w naszej fabryce pyłków.
+  Na koniec wywołujemy w pętli tworzenie obiektów w naszej fabryce pyłków.
 
 public class Test {
     public static void main(String\[\] args) throws InterruptedException {
@@ -62,7 +62,7 @@ public class Test {
     }
 }
 
- 
+ 
 
 A poniżej wynik naszej aplikacji. Widzimy, że pomimo 100 wywołań tworzenia obiektu, obiekt tworzy się tylko raz. W pozostałych 99 przypadkach pobierany jest utworzony już obiekt.
 

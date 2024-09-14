@@ -14,7 +14,7 @@ W dzisiejszym wpisie pokażę Wam jak szybko można stworzyć własny **walidato
 <!-- more -->
 ### Problem
 
-Klient zgłosił nam **błąd**. Okazało się, że w naszej aplikacji tworzącej samochody możemy wysłać samochód z **dowolną** liczbą drzwi. Musimy dodać nową walidację sprawdzającą wartość tego pola. Chcemy przyjmować tylko i wyłącznie wartości **3 lub 5**. Próba wysłania innej wartości powinna skutkować **błędem**. Problem ten możemy rozwiązać poprzez stworzenie własnego **walidatora**, który będzie oznaczony za pomocą **adnotacji**. Dzięki temu będzie mógł być wykorzystywany w wielu miejscach.
+Klient zgłosił nam **błąd**. Okazało się, że w naszej aplikacji tworzącej samochody możemy wysłać samochód z **dowolną** liczbą drzwi. Musimy dodać nową walidację sprawdzającą wartość tego pola. Chcemy przyjmować tylko i wyłącznie wartości **3 lub 5**. Próba wysłania innej wartości powinna skutkować **błędem**. Problem ten możemy rozwiązać poprzez stworzenie własnego **walidatora**, który będzie oznaczony za pomocą **adnotacji**. Dzięki temu będzie mógł być wykorzystywany w wielu miejscach.
 
 ### Adnotacja
 
@@ -30,7 +30,7 @@ public @interface ExpectedNumbers {
     Class<? extends Payload>\[\] payload() default {};
 }
 
-Musimy wskazać, którą implementację **walidatora** będziemy wykorzystywać. W naszym przypadku będzie to nasza klasa, którą stworzymy poniżej. Wybieramy jeszcze miejsce, na którym chcemy umieszczać adnotację **walidatora**. Możemy wskazać tablicę z kilkoma wartościami. W naszym przykładzie wykorzystamy element typu `ElementType.FIELD`. Ostatnia adnotacja to **retencja**, czyli wskazanie jak długo nasza **adnotacja** będzie dostępna w programie. W samej **adnotacji** dodajemy:
+Musimy wskazać, którą implementację **walidatora** będziemy wykorzystywać. W naszym przypadku będzie to nasza klasa, którą stworzymy poniżej. Wybieramy jeszcze miejsce, na którym chcemy umieszczać adnotację **walidatora**. Możemy wskazać tablicę z kilkoma wartościami. W naszym przykładzie wykorzystamy element typu `ElementType.FIELD`. Ostatnia adnotacja to **retencja**, czyli wskazanie jak długo nasza **adnotacja** będzie dostępna w programie. W samej **adnotacji** dodajemy:
 
 *   `expectedNumbers` - **tablica** przechowująca respektowane wartości
 *   `message` - **wiadomość**, którą wyświetlimy w przypadku błędu, możemy od razu podać wartość domyślną (wartość po `default`)
@@ -56,7 +56,7 @@ public class ExpectedNumbersValidator implements ConstraintValidator<ExpectedNum
   }
 }
 
-Stwórzmy **klasę**, która będzie **implementowała** interfejs `ConstraintValidator`. W typie generycznym wskazujemy **nazwę** adnotacji, która będzie wykorzystywała tą implementację oraz **typ** sprawdzanej wartości. Należy zaimplementować dwie metody:
+Stwórzmy **klasę**, która będzie **implementowała** interfejs `ConstraintValidator`. W typie generycznym wskazujemy **nazwę** adnotacji, która będzie wykorzystywała tą implementację oraz **typ** sprawdzanej wartości. Należy zaimplementować dwie metody:
 
 *   `initialize` - służy do przypisania wartości parametrów adnotacji
 *   `isValid` - tutaj umieszczamy logikę **walidacji**, zwracamy wartość `boolean`
@@ -93,7 +93,7 @@ public class CarController {
   }
 }
 
-W kontrolerze dodajemy tylko adnotację `@Valid`, żeby uruchomić walidację na przekazanym **DTO**. W przypadku podania niepoprawnych wartości otrzymamy: ![](https://codecouple.pl/wp-content/uploads/2019/02/Screenshot-2019-02-27-at-12.50.26-266x300.png)
+W kontrolerze dodajemy tylko adnotację `@Valid`, żeby uruchomić walidację na przekazanym **DTO**. W przypadku podania niepoprawnych wartości otrzymamy: ![](https://codecouple.pl/wp-content/uploads/2019/02/Screenshot-2019-02-27-at-12.50.26-266x300.png)
 
 ### GitHub
 

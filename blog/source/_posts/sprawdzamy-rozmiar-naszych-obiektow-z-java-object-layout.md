@@ -10,7 +10,7 @@ date: 2019-01-04 12:01:52
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)Jeśli ktoś podobnie jak ja zastanawia się "_ciekawe ile ten obiekt zajmuje miejsca w pamięci?_" to mam dla was dobrą wiadomość! **Java Object Layout** (JOL) jest mini-programem, który potrafi policzyć jaki będzie rozmiar **obiektu** przechowywanego w **pamięci**. Oczywiście dobrze wiemy, iż w aktualnych czasach pamięć jest "tania", jednakże jeśli chcielibyśmy się przekonać, który obiekt zajmuje mniej miejsca w pamięci to zapraszam do artykułu.
+![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)Jeśli ktoś podobnie jak ja zastanawia się "_ciekawe ile ten obiekt zajmuje miejsca w pamięci?_" to mam dla was dobrą wiadomość! **Java Object Layout** (JOL) jest mini-programem, który potrafi policzyć jaki będzie rozmiar **obiektu** przechowywanego w **pamięci**. Oczywiście dobrze wiemy, iż w aktualnych czasach pamięć jest "tania", jednakże jeśli chcielibyśmy się przekonać, który obiekt zajmuje mniej miejsca w pamięci to zapraszam do artykułu.
 <!-- more -->
 ### SerialNumber
 
@@ -28,7 +28,7 @@ class SerialNumber {
 
 ### Typy prymitywne
 
-Autorzy **Javy** założyli, iż ich platforma będzie przenaszalna. Aby to osiągnąć musieli rozwiązać wiele problemów. Jednym z nich były różne rozmiary typów. Dlatego też wirtualna maszyna Javy posiada z góry określone rozmiary dla typów prymitywnych:
+Autorzy **Javy** założyli, iż ich platforma będzie przenaszalna. Aby to osiągnąć musieli rozwiązać wiele problemów. Jednym z nich były różne rozmiary typów. Dlatego też wirtualna maszyna Javy posiada z góry określone rozmiary dla typów prymitywnych:
 
 *   `byte` - **1** bajt
 *   `short` - **2** bajty
@@ -43,10 +43,10 @@ Więc jak dotychczas nasz obiekt `SerialNumber` powinien zajmować **4** bajty.
 
 ### Typy obiektowe
 
-**Typy prymitywne** w **Javie** muszą znajdować się wewnątrz obiektu. Każdy obiekt zbudowany jest z typów prymitywnych lub z kolejnych typów obiektowych (które, "na samym dole" składają się z typów prymitywnych). Każdy typ obiektowy oprócz wartości pól przechowuje informacje o samym sobie (metadane). Metadane te składają się z:
+**Typy prymitywne** w **Javie** muszą znajdować się wewnątrz obiektu. Każdy obiekt zbudowany jest z typów prymitywnych lub z kolejnych typów obiektowych (które, "na samym dole" składają się z typów prymitywnych). Każdy typ obiektowy oprócz wartości pól przechowuje informacje o samym sobie (metadane). Metadane te składają się z:
 
 *   `class` - wskaźnik do typu klasy w naszym przypadku - **4** bajty
-*   `flagi` - przechowują informacje o stanie obiektu. Między innymi **shape** obiektu, czyli czy jest to klasa czy tablica oraz hash code - **4** bajty
+*   `flagi` - przechowują informacje o stanie obiektu. Między innymi **shape** obiektu, czyli czy jest to klasa czy tablica oraz hash code - **4** bajty
 *   `lock` - monitor, który będzie wykorzystywany do **mutex'ów** - **4** bajty
 *   `size` - rozmiar tablicy (wartość ta obecna jest tylko dla typów tablicowych) - **4** bajty
 
@@ -98,7 +98,7 @@ Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
 
 *   **0 - 4 bajtów** to **flagi** naszej klasy
 *   **4 - 8 bajtów** to miejsce na **monitor**
-*   **8 - 12 bajtów** to **wskaźnik** na typ obiektu, w tym przypadku jest to `pl.codecouple.SerialNumber`
+*   **8 - 12 bajtów** to **wskaźnik** na typ obiektu, w tym przypadku jest to `pl.codecouple.SerialNumber`
 *   **12 - 16 bajtów** nasza wartość `int`
 
 Czyli zgodnie z założeniami nasz obiekt zajmuje **16 bajtów** pamięci.
@@ -132,7 +132,7 @@ pl.codecouple.SerialNumber object internals:
 Instance size: 24 bytes
 Space losses: 0 bytes internal + 4 bytes external = 4 bytes total
 
-Nasza klasa powinna zajmować **20** bajtów, natomiast zajmuje ich aż **24**. Jest to tak zwane wyrównanie do **8 bajtów**. **Java** "pod spodem" wyrównuje obiekty do wielokrotności **8 bajtów**. Czyli w naszym przypadku najbliższą wielokrotnością **8** przy **20** jest liczba **24** (dopełnianie to wynika z działania aktualnego JVM'a, "_Objects are 8 bytes aligned_"). Informacja o tym dopełnieniu znajduje się również na powyższym zrzucie rozmiaru.
+Nasza klasa powinna zajmować **20** bajtów, natomiast zajmuje ich aż **24**. Jest to tak zwane wyrównanie do **8 bajtów**. **Java** "pod spodem" wyrównuje obiekty do wielokrotności **8 bajtów**. Czyli w naszym przypadku najbliższą wielokrotnością **8** przy **20** jest liczba **24** (dopełnianie to wynika z działania aktualnego JVM'a, "_Objects are 8 bytes aligned_"). Informacja o tym dopełnieniu znajduje się również na powyższym zrzucie rozmiaru.
 
 ### Rozmiar referencji
 
@@ -174,7 +174,7 @@ pl.codecouple.SerialNumber object internals:
 Instance size: 24 bytes
 Space losses: 0 bytes internal + 0 bytes external = 0 bytes total
 
-Gdy pierwszy raz pracowałem z **JOL** to wynik ten wydał mi się zbyt mały. Ponieważ, założyłem iż mój obiekt wewnętrzny będzie zajmował **16 bajtów** (**12** nagłówki + **4** dla `int`). Natomiast klasa `ClassLayout` zwraca rozmiar tylko aktualnej klasy wraz z referencją do obiektów zagnieżdzonych bez zliczania ich wewnętrznej reprezentacji. W tym przypadku wynik jest poprawny, ponieważ referencja zajmuje **4** bajty.
+Gdy pierwszy raz pracowałem z **JOL** to wynik ten wydał mi się zbyt mały. Ponieważ, założyłem iż mój obiekt wewnętrzny będzie zajmował **16 bajtów** (**12** nagłówki + **4** dla `int`). Natomiast klasa `ClassLayout` zwraca rozmiar tylko aktualnej klasy wraz z referencją do obiektów zagnieżdzonych bez zliczania ich wewnętrznej reprezentacji. W tym przypadku wynik jest poprawny, ponieważ referencja zajmuje **4** bajty.
 
 ### Graph Layout
 

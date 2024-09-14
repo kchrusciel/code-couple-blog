@@ -16,7 +16,7 @@ author: 'Krzysztof Chruściel'
 
 ![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
 
-**API Gateway** to wzorzec integracyjny. W wzorcu tym, tylko jeden serwis (może być oczywiście replikowany) udostępniony jest publicznie. Klientami naszego API mogą być aplikacje mobilne, strony web lub inne urządzenia. Musimy zapewnić im możliwość korzystania z naszego **API** w sposób **zunifikowany**. Aby to osiągnąć udostępniamy jeden publiczny serwis zwany **API Gateway,** który odpytywany przez różnych klientów zajmuje się kierowaniem ruchu na podstawie **filtrów** i określonych **routingów**.
+**API Gateway** to wzorzec integracyjny. W wzorcu tym, tylko jeden serwis (może być oczywiście replikowany) udostępniony jest publicznie. Klientami naszego API mogą być aplikacje mobilne, strony web lub inne urządzenia. Musimy zapewnić im możliwość korzystania z naszego **API** w sposób **zunifikowany**. Aby to osiągnąć udostępniamy jeden publiczny serwis zwany **API Gateway,** który odpytywany przez różnych klientów zajmuje się kierowaniem ruchu na podstawie **filtrów** i określonych **routingów**.
 <!-- more -->
 Zastosowanie wzorca **API Gateway** ma wiele zalet, które mogą rozwiązać sporo problemów w środowisku rozproszonym:
 
@@ -51,15 +51,15 @@ spring.application.name=first-service
 #Default zone
 eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/
 
-Więcej o wzorcu Service Discovery z wykorzystaniem biblioteki **Eurek'a** [można przeczytać tutaj](https://codecouple.pl/2017/09/29/19-spring-boot-microservice-registration-and-discovery-eureka/).
+Więcej o wzorcu Service Discovery z wykorzystaniem biblioteki **Eurek'a** [można przeczytać tutaj](https://codecouple.pl/2017/09/29/19-spring-boot-microservice-registration-and-discovery-eureka/).
 
 ### Second service
 
-Drugi serwis wygląda jak tak samo jak pierwszy, ale zwraca napis `CodeCouple second service!`. Musimy pamiętać także o zmianie nazwy `spring.application.name` w `application.properties`.
+Drugi serwis wygląda jak tak samo jak pierwszy, ale zwraca napis `CodeCouple second service!`. Musimy pamiętać także o zmianie nazwy `spring.application.name` w `application.properties`.
 
 ### Gateway
 
-Dodajemy serwis odpowiedzialny za routing. Aby zrealizować wzorzec **API Gateway** wykorzystamy bibliotekę **Zuul** ze stajni **Netflixa**:
+Dodajemy serwis odpowiedzialny za routing. Aby zrealizować wzorzec **API Gateway** wykorzystamy bibliotekę **Zuul** ze stajni **Netflixa**:
 
 <dependency>
    <groupId>org.springframework.cloud</groupId>
@@ -100,7 +100,7 @@ Property `zuul.prefix` określa **prefix** pod jakim będziemy "odpytywać" **zu
 
 ### Testujemy
 
-Aby przetestować **API Gateway** w działaniu należy udać się pod adres `http://localhost:8080/api/first/codecouple`. Powinien pojawić się napis `CodeCouple first service!` teraz zmieniamy adres na `http://localhost:8080/api/second/codecouple` i dostajemy `CodeCouple second service!`. Udało nam się zrealizować **routing**!
+Aby przetestować **API Gateway** w działaniu należy udać się pod adres `http://localhost:8080/api/first/codecouple`. Powinien pojawić się napis `CodeCouple first service!` teraz zmieniamy adres na `http://localhost:8080/api/second/codecouple` i dostajemy `CodeCouple second service!`. Udało nam się zrealizować **routing**!
 
 ### Filtry
 
