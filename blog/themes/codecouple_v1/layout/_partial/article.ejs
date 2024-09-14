@@ -8,8 +8,9 @@
             <% } %>
         </h1>
         <div class="article-header-meta">
-            <%= post.author %>
-            <%= date(post.date, 'DD-MM-yyyy') %>
+            <b>Autor:</b> <%= post.author %> |
+            <b>Data utworzenia:</b> <%= date(post.date, 'DD-MM-yyyy') %> |
+            <b>Kategoria:</b> <%- list_categories(post.categories, {show_count: false, amount: 1, style: false}) %>
         </div>
     </header>
     <div class="article-body">
