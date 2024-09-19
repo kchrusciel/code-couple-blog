@@ -8,9 +8,9 @@
             <% } %>
         </h1>
         <div class="article-header-meta">
-            <b>Autor:</b> <%= post.author %> |
-            <b>Data utworzenia:</b> <%= date(post.date, 'DD-MM-yyyy') %> |
-            <b>Kategoria:</b> <%- list_categories(post.categories, {show_count: false, amount: 1, style: false}) %>
+            <div><i class="fa-solid fa-circle-user"></i> <%= post.author %></div>
+            <div><i class="fa-regular fa-calendar-days"></i> <%= date(post.date, 'DD-MM-yyyy') %></div>
+            <div><i class="fa-regular fa-folder-open"></i> <%- list_categories(post.categories, {show_count: false, amount: 1, style: false}) %></div>
         </div>
     </header>
     <div class="article-body">
