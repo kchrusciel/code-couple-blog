@@ -5,9 +5,7 @@ tags:
   - spring boot
   - spring boot 2
 id: '3857'
-categories:
-  - - Java
-  - - Spring Boot
+category: Spring Boot 2
 date: 2019-05-10 12:01:22
 author: 'Krzysztof Chruściel'
 ---
@@ -20,6 +18,7 @@ W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/0
 
 **Spring Boot 2** zmodyfikował nieznacznie sposób dodawania nowych **endpointów**. W poprzedniej wersji należało zaimplementować odpowiedni **interfejs**. W najnowszej wersji do dodania **nowego** adresu wykorzystywana jest adnotacja `@Endpoint`:
 
+```java
 @Component
 @Endpoint(id = "integrations")
 public class IntegrationsEndpoint {
@@ -27,6 +26,7 @@ public class IntegrationsEndpoint {
    //logic
 
 }
+```
 
 W parametrze `id` określamy pod jakim adresem dostępny będzie nowy **endpoint**. W naszym przypadku jest to adres `/actuator/integrations`. Dodatkowo każdy dodany przez nas **endpoint** jest domyślnie włączony, możemy to zmienić poprzez użycie klucza `enableByDefault` `@Endpoint(id = "integrations", enableByDefault = false)`.
 
@@ -40,6 +40,7 @@ Po **dodaniu** nowego adresu, pora na dodanie **funkcjonalności**. W **Spring B
 
 Spróbujmy zaimplementować **klasę**, która pozwala **dodawać**, **usuwać** oraz **odczytywać** wykorzystane **integracje** w naszej aplikacji:
 
+```java
 @Component
 @WebEndpoint(id = "integrations", enableByDefault = false)
 public class IntegrationsEndpoint {
@@ -80,6 +81,7 @@ class Integration {
     this.integration = integration;
   }
 }
+```
 
 W powyższej klasie pojawiła się także adnotacja `@Selector`, która mapuje **klucz** przekazanej wartości.
 
@@ -87,6 +89,7 @@ W powyższej klasie pojawiła się także adnotacja `@Selector`, która mapuje *
 
 Czasami oprócz podstawowej funkcjonalności **endpointów**, chcielibyśmy mieć przykładowo wpływ na zwracane **nagłówki** lub kody **statusów**. Jest to możliwe dzięki adnotacji `@EndpointWebExtension(endpoint = IntegrationsEndpoint.class)`. Adnotacja pod kluczem `endpoint` przyjmuje nazwę klasy **adresu**, któremu chcemy dodać dodatkową **funkcjonalność**:
 
+```java
 @Component
 @EndpointWebExtension(endpoint = IntegrationsEndpoint.class)
 public class IntegrationsEndpointExtension {
@@ -110,6 +113,7 @@ public class IntegrationsEndpointExtension {
               HttpStatus.I\_AM\_A\_TEAPOT.value());
    }
 }
+```
 
 ### Github
 
