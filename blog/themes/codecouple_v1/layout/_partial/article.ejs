@@ -17,9 +17,12 @@
         <% if(index) { %>
             <%- post.excerpt %>
             <br>
-            <a href="<%- url_for(post.path) %>" class="read-more">Czytaj więcej</a>
+            <a href="<%- url_for(post.path) %>" class="read-more">Czytaj więcej <i class="fa fa-chevron-right"></i></a>
         <% } else {%>
             <%- post.content %>
         <% } %>
     </div>
+    <% if (!index){ %>
+      <%- partial('nav') %>
+    <% } %>
 </article>
