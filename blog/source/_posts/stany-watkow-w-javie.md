@@ -5,8 +5,7 @@ tags:
   - java
   - threads
 id: '3345'
-categories:
-  - - Java
+category: Java
 date: 2018-12-07 12:01:46
 author: 'Krzysztof Chruściel'
 ---
@@ -19,8 +18,10 @@ Stany wątków są częstym pytaniem na rozmowie kwalifikacyjnej z działu wielo
 
 Aby pobrać stan wątku wykorzystujemy wbudowaną metodę `getState()`, która znajduje się w klasie `Thread`:
 
+```java
 final Thread newThread = new Thread();
 newThread.getState();
+```
 
 Jak napisałem we wstępie, wątek może znajdować się w jednym z sześciu stanów:
 
@@ -30,6 +31,7 @@ Jak napisałem we wstępie, wątek może znajdować się w jednym z sześciu sta
 
 Wątek w stanie `NEW` znajduje się zaraz po utworzeniu. Posiada on ten stan dopóki nie uruchomimy metody `start()`:
 
+```java
 @Test
 void shouldReturnNewState() {
     // Given
@@ -37,11 +39,13 @@ void shouldReturnNewState() {
     // Then
     assertThat(newThread.getState()).isEqualTo(Thread.State.NEW);
 }
+```
 
 ### RUNNABLE
 
 Po wywołaniu metody `start()` na wątku, zmienia on swój stan z `NEW` na `RUNNABLE`:
 
+```java
 @Test
 void shouldReturnRunnableState() throws InterruptedException {
     // Given
@@ -52,11 +56,13 @@ void shouldReturnRunnableState() throws InterruptedException {
     runnableThread.start();
     runnableThread.join();
 }
+```
 
 ### BLOCKED
 
 Wątek w stanie `BLOCKED` może znaleźć się wtedy, kiedy dostęp do sekcji krytycznej jest aktualnie zajęty (znajduje się blokada na monitorze). Innymi słowy, kiedy wątek będzie próbował się dostać do synchronizowanej metody, a wewnątrz znajduje się już inny wątek, to stan zmieniany jest na `BLOCKED`:
 
+```java
 @Test
 void shouldReturnBlockedState() throws InterruptedException {
     // Given
@@ -71,11 +77,13 @@ void shouldReturnBlockedState() throws InterruptedException {
     Thread.sleep(10);
     assertThat(blockedThread.getState()).isEqualTo(Thread.State.BLOCKED);
 }
+```
 
 ### WAITING
 
 Zmiana wątku na stan `WAITING` odbywa się wtedy, gdy wątek czeka na inne wątki. Nie jest to czekanie jak w sekcji krytycznej, tylko czekanie wywołane przykładowo metodą `wait()` czy `join()`:
 
+```java
 @Test
 void shouldReturnWaitingState() throws InterruptedException {
     // Given
@@ -96,11 +104,13 @@ void shouldReturnWaitingState() throws InterruptedException {
     Thread.sleep(10);
     assertThat(wrapperThread.getState()).isEqualTo(Thread.State.WAITING);
 }
+```
 
 ### TIMED\_WAITING
 
 Każdemu z nas przydarzyło się przenieść wątek w stan uśpienia. Posiada on wtedy stan `TIMED_WAITING`. Ten stan pojawia się również, gdy używamy metod do czekania na inne wątki (jak `wait()` czy `join()`), które w parametrach przyjmują wartości czasowe:
 
+```java
 @Test
 void shouldReturnTimedWaitingState() throws InterruptedException {
     // Given
@@ -119,11 +129,13 @@ void shouldReturnTimedWaitingState() throws InterruptedException {
     Thread.sleep(10);
     assertThat(timedWaitingThread.getState()).isEqualTo(Thread.State.TIMED\_WAITING);
 }
+```
 
 ### TERMINATED
 
 Po zakończeniu swojej pracy (czyli po zakończeniu metody `run()`) wątek przechodzi w stan `TERMINATED`:
 
+```java
 @Test
 void shouldReturnTerminatedState() throws InterruptedException {
     // Given
@@ -136,6 +148,7 @@ void shouldReturnTerminatedState() throws InterruptedException {
     // Then
     assertThat(terminatedThread.getState()).isEqualTo(Thread.State.TERMINATED);
 }
+```
 
 ### Github
 
