@@ -15,7 +15,7 @@ Jaki piękny, **clickbaitowy** tytuł udało mi się wymyślić tym razem. W nie
 <!-- more -->
 ### Moje konto na Github
 
-Bardzo często nasze konta na platformie **Github** traktowane są jako "wizytówka" **programisty**. Cytując klasyka "talk is cheap, show me the code" właśnie na **Githubie** możemy znaleźć kod napisany przez innych a tym samym podpatrzeć czy też ocenić inne rozwiązania. Co do ocen bardzo często profil na **Githubie** brany jest pod uwagę podczas rekrutacji, więc moim zdaniem warto w niego zainwestować. Zobaczmy jak wygląda aktualnie mój **profil**:
+Bardzo często nasze konta na platformie **Github** traktowane są jako "wizytówka" **programisty**. Cytując klasyka "talk is cheap, show me the code" właśnie na **Githubie** możemy znaleźć kod napisany przez innych a tym samym podpatrzeć czy też ocenić inne rozwiązania. Co do oceny, profil na **Githubie** często brany jest pod uwagę podczas rekrutacji, więc moim zdaniem warto w niego zainwestować. Zobaczmy jak wygląda aktualnie mój **profil**:
 
 ![](https://codecouple.pl/wp-content/uploads/2020/09/github-without-profile-1024x418.png)
 
