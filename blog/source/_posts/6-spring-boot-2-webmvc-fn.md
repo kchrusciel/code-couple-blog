@@ -11,18 +11,18 @@ author: 'Krzysztof Chruściel'
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
-Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalność **WebMvc.fn**. Jest to implementacja **funkcyjnego** podejścia do definiownia **endpointów** podobnie jak jest to realizowane przy wykorzystaniu **Spring WebFlux** o czym można było przeczytać w jednym z naszych artykułów [#1 Spring Boot 2 – Router functions](https://codecouple.pl/2018/07/20/1-spring-boot-2-router-functions/). Dziś sprawdzimy jak to **funkcyjne** podejście sprawdzi się w klasycznym stosie **MVC**.
+Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalność: **WebMvc.fn**. Jest to implementacja **funkcyjnego** podejścia do definiowania **endpointów**, podobnie jak ma to miejsce przy wykorzystaniu **Spring WebFlux**. O tym, jak to rozwiązanie działa w WebFlux, można było przeczytać w jednym z naszych artykułów: [#1 Spring Boot 2 – Router functions](https://codecouple.pl/2018/07/20/1-spring-boot-2-router-functions/). Dziś sprawdzimy, jak to **funkcyjne** podejście sprawdza się w klasycznym stosie **MVC**.
 <!-- more -->
 ### WebMvc.fn
 
-Jak pisałem we wstępie, w nowym **Spring Boot’cie** **2** możemy tworzyć naszą część serwerową na dwa sposoby (można je mieszać w jednej aplikacji):
+Jak pisałem we wstępie, w nowym **Spring Boot 2** możemy tworzyć naszą część serwerową na dwa sposoby (można je mieszać w jednej aplikacji):
 
-*   **"Po staremu"** – korzystając z adnotacji `@Controller` i innych związanych z **Web’em**
-*   **"Po nowemu"** – korzystając z podejścia funkcyjnego przy użyciu **WebMvc.fn**
+* **Podejście klasyczne** – korzystając z adnotacji `@Controller` i innych związanych z **Webem**.
+* **Podejście funkcyjne** – korzystając z **WebMvc.fn**.
 
 ### Zależności
 
-Z racji iż wspracie dla **funkcyjnego podejścia** pojawiło się dla stosu **MVC** wystarczy, że w naszym projekcie dorzucimy standardowy moduł **Web**:
+Ponieważ wsparcie dla **funkcyjnego podejścia** pojawiło się w kontekście stosu **MVC**, wystarczy, że w naszym projekcie dodamy standardowy moduł **Web**:
 
 ```xml
 <dependency>
@@ -33,7 +33,7 @@ Z racji iż wspracie dla **funkcyjnego podejścia** pojawiło się dla stosu **M
 
 ### Router Function
 
-Podobnie jak przy **Spring WebFlux** tworzymy konfigurację z wykorzystaniem klasy `RouterFunction`:
+Podobnie jak w przypadku **Spring WebFlux**, tworzymy konfigurację z wykorzystaniem klasy `RouterFunction`:
 
 ```java
 package pl.codecouple.webmvc.fn.configuration;
@@ -76,17 +76,17 @@ class RouterConfig {
 }
 ```
 
-W wyniku naszej **lambdy** otrzymujemy obiekt typu `ServerRequest`, z którego możemy odczytać bardzo wiele informacji:
+W wyniku naszej **lambdy** otrzymujemy obiekt typu `ServerRequest`, z którego możemy odczytać wiele informacji:
 
-*   `cookies()` - otrzymujemy **ciasteczka**
-*   `headers()` - otrzymujemy **nagłówki**
-*   `sessions()` - otrzymujemy **sesje**
-*   `pathVariable(name)` - otrzymujemy **zmienną** ze ścieżki
-*   `servletRequest()` - otrzymujemy obiekt typu `HttpServletRequest`, z którego możemy wyciągnać wszystkie informacje
+* `cookies()` - dostęp do **ciasteczek**.
+* `headers()` - dostęp do **nagłówków**.
+* `sessions()` - dostęp do **sesji**.
+* `pathVariable(name)` - dostęp do **zmiennej** ze ścieżki.
+* `servletRequest()` - dostęp do obiektu typu `HttpServletRequest`, z którego można pobrać wszystkie informacje.
 
 ### Handler
 
-Jeśli chcemy oddzielić nasz routing od logiki to możemy przygotować klasę ze wszystkimi handlerami. Metody **HTTP** przyjmują obiekt typu `HandlerFunction<ServerResponse>`:
+Jeśli chcemy oddzielić konfigurację routingu od logiki, możemy przygotować klasę zawierającą wszystkie handlery. Metody **HTTP** przyjmują obiekt typu `HandlerFunction<ServerResponse>`:
 
 ```java
 @Bean
@@ -130,4 +130,4 @@ public class DataHandler {
 
 ### Github
 
-Całość jak zawsze na [Githubie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-webmvcfn-example).
+Całość jak zawsze na [GitHubie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-webmvcfn-example).
