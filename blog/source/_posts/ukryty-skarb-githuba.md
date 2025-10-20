@@ -9,7 +9,7 @@ date: 2020-10-02 12:01:15
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/git-logo.png)
 
 Jaki piękny, **clickbaitowy** tytuł udało mi się wymyślić tym razem. W niedalekiej przyszłości planujemy przenieść z się platformy **Wordpress** na jeden z generatorów statycznych stron jak **Hexo** czy **Hugo**. Podczas "zabawy" z generatorami (które przechowują najczęściej wygenerowane strony w **repozytorium** zdalnym) udało mi się natrafić na ukryty skarb **Github'a**.
 <!-- more -->
