@@ -14,18 +14,18 @@ author: 'Krzysztof Chruściel'
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
-Kolejna nowa funkcjonalność/usprawnienie, która udostępniona będzie w wersji **2.2.0** frameworku **Spring Boot 2** dotyczyć będzie szybszego startowania aplikacji. Autorzy Spring'a dostarczyli nowy wpis, który można umieścić w pliku `application.properties`. **Wpis** ten sprawi, iż nasza aplikacja będzie uruchamiać się szybciej. Zapraszam do lektury, aby dowiedzieć się co to za nowy wpis!
+Kolejna nowa funkcjonalność/usprawnienie, która udostępniona została w wersji **2.2.0** frameworku **Spring Boot 2**, dotyczy szybszego startowania aplikacji. Autorzy Springa udostępnili nowy wpis, który można umieścić w pliku `application.properties`. **Wpis** ten sprawia, że nasza aplikacja uruchamia się szybciej. Zapraszam do lektury, aby dowiedzieć się, co to za nowa właściwość!
 <!-- more -->
 ### Lazy Initialization
 
-**Spring Boot** słynie z tego, iż dostarcza całą game autokonfiguracji związanych z różnymi integracjami. Powoduje to, iż na **classpathie** znajdują się ogromne ilości klas, które muszą być **zweryfikowane** i **zainicjalizowane**. Proces ładowania tych klas może bardzo wydłużyć uruchamianie aplikacji.
+**Spring Boot** słynie z dostarczania całej gamy autokonfiguracji związanych z różnymi integracjami. Powoduje to, że na **classpathie** znajdują się ogromne ilości klas, które muszą być **zweryfikowane** i **zainicjalizowane**. Proces ładowania tych klas może znacząco wydłużyć czas uruchamiania aplikacji.
 
-**Beany** w **Spring'u** domyślnie są ładowane w momencie startu aplikacji (są oznaczone jako _eager_). Jednakże, nie wszystkie beany od razu są nam potrzebne. Aby **przyśpieszyć** proces możemy odroczyć ładowanie (i tworzenie) **beanów** do momentów kiedy rzeczywiście będą nam potrzebne. Jest to tak zwane **leniwe** ładowanie (które realizowane jest w **Spring'u** za pomocą adnotacji `@Lazy`).
+**Beany** w **Springu** domyślnie są ładowane w momencie startu aplikacji (są określane jako _eager_). Jednakże, nie wszystkie beany są nam potrzebne od razu. Aby **przyspieszyć** proces, możemy odroczyć ładowanie (i tworzenie) **beanów** do momentu, gdy rzeczywiście zostaną wykorzystane. Jest to tak zwane **leniwe** ładowanie (które w **Springu** jest realizowane za pomocą adnotacji `@Lazy`).
 
-W **Spring Boot 2** w wersji **2.2.0** pojawił się nowy **wpis**, który można dodać do pliku `application.properties`:
+W **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa **właściwość**, którą można dodać do pliku `application.properties`:
 
-```
+```properties
 spring.main.lazy-initialization=true
 ```
 
-Sprawia on, że wszystkie **beany** stają się **leniwie**, co może znacznie **przyśpieszyć** ładowanie aplikacji. Należy jednak pamiętać o tym, że jeśli nasza logika biznesowa uruchamiana była w konstruktorze **beana**, to zostanie ona wykonana dopiero w trakcie jego pierwszego wykorzystania!
+Sprawia ona, że wszystkie **beany** domyślnie stają się **leniwe**, co może znacznie **przyspieszyć** ładowanie aplikacji. Należy jednak pamiętać o tym, że jeśli nasza logika biznesowa była uruchamiana w konstruktorze **beana**, to zostanie ona wykonana dopiero w trakcie jego pierwszego wykorzystania!
