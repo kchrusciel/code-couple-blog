@@ -1,12 +1,13 @@
 .article
   background: color-white
+  margin-top: 10px;
 
   .article-header
     @extend $base-style
     h1
       color: color-blue
     padding-bottom: 10px
-    margin: 40px 0 20px
+    margin: 60px 0 20px
     border-bottom: 1px solid color-grey
     .article-header-meta
         display: flex
@@ -19,10 +20,12 @@
             padding-right: 5px
         .category-link
             color: color-font
+            text-decoration-line: underline
             &:hover
                 color: color-blue
 
   .article-body
+    border-bottom: 1px solid color-grey
     @extend $base-style
     h3, h4
       color: color-blue
@@ -42,8 +45,7 @@
       float: right
       text-align: right
       padding: 6px 12px
-      border: 1px solid #E8E8E8
-      border-radius: 4px
+      border: 1px solid color-grey
       &:hover
         background-color: color-blue-hover
         border-color: color-blue-hover
@@ -51,13 +53,16 @@
 
   #article-nav
     @extend $base-style
-    display: flex;
-    justify-content: space-between;
+    display: flex
+    justify-content: space-between
     .article-nav-link-wrap
       padding: 6px 12px
-      border: 1px solid #E8E8E8
-      border-radius: 4px
+      border-bottom: 1px solid color-grey
+      border-left: 1px solid color-grey
+      border-right: 1px solid color-grey
       &:hover
         background-color: color-blue-hover
         border-color: color-blue-hover
         color color-white
+      &:only-child
+        margin-left: auto
