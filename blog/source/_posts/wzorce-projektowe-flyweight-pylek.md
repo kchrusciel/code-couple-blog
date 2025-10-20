@@ -7,11 +7,11 @@ tags:
   - wzorce projektowe
 id: '685'
 categories:
-  - - Clean Code
-  - - Java
-  - - Wzorce projektowe
+  - Clean Code
+  - Java
+  - Wzorce projektowe
 date: 2016-06-26 11:57:17
-author: 'Krzysztof Chruściel'
+author: 'Agnieszka Chruściel'
 ---
 
 ![designPatternArt](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
@@ -22,6 +22,7 @@ W rozwiązaniu tego wzorca tworzymy tylko unikatowe obiekty. W momencie tworzeni
 
   Spróbujmy teraz zaimplementować **flyweight.** Stwórzmy klasę _Relation._
 
+```java
 final public class Relation {
     final private String description;
 
@@ -34,9 +35,11 @@ final public class Relation {
     }
 
 }
+```
 
 Następnie tworzymy klasę _FlyweightFactory,_ w której będzie cała logika omawianego wzorca. W metodzie _createRelation_ sprawdzamy, czy obiekt o podanym opisie już istnieje. Jeśli nie, to tworzymy ten obiekt i wyświetlamy komunikat użytkownikowi. W przeciwnym wypadku pobieramy obiekt z tym parametrem (w naszym przypadku z HashMapy).
 
+```java
 public class FlyweightFactory {
     private Map<String, Relation> relations = Collections.synchronizedMap(new HashMap());
 
@@ -50,21 +53,24 @@ public class FlyweightFactory {
         return relation;
     }
 }
+```
 
-  Na koniec wywołujemy w pętli tworzenie obiektów w naszej fabryce pyłków.
+Na koniec wywołujemy w pętli tworzenie obiektów w naszej fabryce pyłków.
 
+```java
 public class Test {
-    public static void main(String\[\] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         FlyweightFactory flyweightFactory = new FlyweightFactory();
         for(int i = 0; i < 100; i++) {
             flyweightFactory.createRelation("Aga+Krzys");
         }
     }
 }
-
- 
+```
 
 A poniżej wynik naszej aplikacji. Widzimy, że pomimo 100 wywołań tworzenia obiektu, obiekt tworzy się tylko raz. W pozostałych 99 przypadkach pobierany jest utworzony już obiekt.
 
+```shell
 Creating new relation: Aga+Krzys
 Process finished with exit code 0
+```
