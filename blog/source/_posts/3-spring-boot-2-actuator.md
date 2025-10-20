@@ -15,25 +15,28 @@ author: 'Krzysztof Chruściel'
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
-Autorzy rozwiązania **Spring Boot** bardzo mocno stawiają na fakt, iż aplikacja napisana z wykorzystaniem ich frameworku powinna być _production-ready_. Zgodnie z **12 factor manifesto**, apikacja sama w sobie powinna dostarczać informacji na temat swojej **telemetrii**. Projekt **actuator** jest mechanizmem zbliżającym nas do pojęcia  _production-ready_. Dostarcza on podstawowe metryki oraz informacje na temat aplikacji.
+Autorzy rozwiązania **Spring Boot** bardzo mocno stawiają na to, że aplikacja napisana z wykorzystaniem ich frameworku powinna być _**production-ready**_. Zgodnie z **12 factor manifesto**, aplikacja sama w sobie powinna dostarczać informacji na temat swojej **telemetrii**. Projekt **Actuator** jest mechanizmem, który przybliża nas do tego celu, dostarczając podstawowe metryki oraz informacje o stanie aplikacji.
 <!-- more -->
 ### Zależności
 
-Standardowo zaczniemy od dodania nowej **zależności** do naszego projektu, tym razem będzie to `spring-boot-starter-actuator`:
+Standardowo zaczniemy od dodania nowej **zależności** do naszego projektu. Tym razem będzie to `spring-boot-starter-actuator`:
 
+```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-actuator</artifactId>
 </dependency>
+```
 
-### Domyślnie
+### Domyślna Konfiguracja
 
-Dodanie powyższej **zależności** do naszego projektu sprawiło, iż pojawią się nowe **funkcjonalności**. Wszystkie dodatkowe informacje o aplikacji dostępne pod adresem `/actuator`. Domyślnie **włączonymi** adresami są `/info` oraz `/health`.
+Dodanie powyższej **zależności** wprowadza do projektu nowe **funkcjonalności**. Wszystkie dodatkowe informacje o aplikacji są dostępne pod adresem `/actuator`. Domyślnie **włączonymi** adresami (endpointami) są `/info` oraz `/health`.
 
-### Health
+### Health (Stan)
 
-Adres `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
+Endpoint `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
 
+```json
 {
    "status": "UP" // jeśli aplikacja działa poprawnie
 }
@@ -41,20 +44,24 @@ Adres `/health` zwraca informacje na temat statusu **aplikacji** w postaci:
 {
    "status": "DOWN" // jeśli aplikacja działa niepoprawnie
 }
+```
 
-### Info
+### Info (Informacje)
 
-Adres `/info` zwraca ustawione przez nas **informacje** o aplikacji (domyślnie zwraca pusty **JSON**).  Aby ustawić wartości pod adresem `/info` wystarczy w pliku `application.properties` dodać wpis:
+Endpoint `/info` zwraca **informacje** o aplikacji skonfigurowane przez nas (domyślnie zwraca pusty **JSON**). Aby ustawić wartości dla tego endpointu, wystarczy w pliku `application.properties` dodać wpis:
 
-#Zawartość adresu /info
+```properties
+# Zawartość endpointu /info
 info.app.name=Code Couple Application
 info.app.description=This is my first code couple application
 info.app.version=1.0.0
-#Wszystko co jest po kluczu info
+# Wszystko co jest po kluczu info zostanie dodane
 info.dowolny.klucz=wartosc
+```
 
-Wszystko co dostępne jest po kluczu `info` dodawane jest do adresu `/info`. W wyniku wywołania adresu `/actuator/info` otrzymamy:
+Wszystkie właściwości pod kluczem `info` są dodawane do endpointu `/info`. W wyniku wywołania adresu `/actuator/info` otrzymamy:
 
+```json
 {
   "app": {
     "name": "Code Couple Application",
@@ -65,51 +72,55 @@ Wszystko co dostępne jest po kluczu `info` dodawane jest do adresu `/info`. W w
     "klucz": "wartosc"
  }
 }
+```
 
-Jest to bardzo przydatny **adres**, jeśli chcemy poinformować innych o aktualnej **wersji** lub gdy przygotowujemy **dashboard** zbierający **informacje** o aplikacjach.
+Jest to bardzo przydatny **endpoint**, jeśli chcemy poinformować innych o aktualnej **wersji** aplikacji lub gdy przygotowujemy **dashboard** zbierający **informacje** o różnych aplikacjach.
 
-### Actuator
+### Pozostałe Endpointy Actuatora
 
-Jednakże, projekt **actuator** to nie tylko `/info` oraz `/health`. **Projekt** ten oferuje bardzo dużą ilość **metryk** i **informacji** na temat aplikacji. Dostępne **adresy** to (poniżej zostało wypisane tylko kilka **najważniejszych**):
+Projekt **Actuator** to nie tylko `/info` oraz `/health`. Oferuje on dużą ilość **metryk** i **informacji** na temat aplikacji. Dostępne **endpointy** to (poniżej znajduje się lista tylko kilku **najważniejszych**):
 
-*   `/beans` – zwraca wszystkie dostępne **Bean’y** w naszej aplikacji
-*   `/conditions` – zwraca wszystkie **autokonfiguracje**
-*   `/flyway` - zwraca informacje na temat **migracji** bazy z wykorzystaniem technologii **Flyway**
-*   `/liquibase` - zwraca informacje na temat **migracji** bazy z wykorzystaniem technologii **Liquibase**
-*   `/env` – zwraca wszystkie **zmienne środowiskowe**
-*   `/heapdump` – zwraca zrzut **pamięci** naszej **JVM'owej** aplikacji
-*   `/threaddump` – zwraca zrzut **wątków** naszej **JVM'owej** aplikacji
-*   `/scheduledtasks` – zwraca informacje o **zadaniach** wykonywanych w tle w naszej aplikacji
-*   `/sessions` – zwraca informacje o **sesjach** HTTP z wykorzystaniem technologii **Spring Session**
-*   `/metrics` – zwraca **metryki** aplikacji
-*   `/prometheus` - zwraca **metryki** aplikacji dostosowane do aplikacji **Prometheus**
-*   `/shutdown` – wyłącza aplikację poprzez żądanie **POST** (domyślnie jest **wyłączony**)
+* `/beans` – zwraca wszystkie dostępne **Bean’y** w naszej aplikacji.
+* `/conditions` – zwraca wszystkie **autokonfiguracje**.
+* `/flyway` - zwraca informacje o **migracjach** bazy danych z wykorzystaniem technologii **Flyway**.
+* `/liquibase` - zwraca informacje o **migracjach** bazy danych z wykorzystaniem technologii **Liquibase**.
+* `/env` – zwraca wszystkie **zmienne środowiskowe**.
+* `/heapdump` – zwraca zrzut **pamięci** naszej aplikacji **JVM**.
+* `/threaddump` – zwraca zrzut **wątków** naszej aplikacji **JVM**.
+* `/scheduledtasks` – zwraca informacje o **zadaniach** wykonywanych w tle.
+* `/sessions` – zwraca informacje o **sesjach** HTTP z wykorzystaniem **Spring Session**.
+* `/metrics` – zwraca **metryki** aplikacji.
+* `/prometheus` - zwraca **metryki** aplikacji dostosowane do aplikacji **Prometheus**.
+* `/shutdown` – wyłącza aplikację poprzez żądanie **POST** (domyślnie jest **wyłączony**).
 
-### Dostępność
+### Dostępność Endpointów
 
-Jak pisałem w poprzednim akapicie, domyślnie **włączonymi** adresami są `/health` oraz `/info`. Jeśli chcemy **włączyć** wszystkie lub kilka szczególnych adresów to musimy użyć wpisu `management.endpoints.web.exposure.include`:
+Jak wspomniano wcześniej, domyślnie **włączonymi** adresami są `/health` oraz `/info`. Jeśli chcemy **włączyć** wszystkie lub kilka wybranych adresów, musimy użyć właściwości `management.endpoints.web.exposure.include`:
 
-#Włącza wszystkie adresy
+```properties
+# Włącza wszystkie adresy
 management.endpoints.web.exposure.include=\*
-
-#Włącza tylko wybrane adresy
+# Włącza tylko wybrane adresy
 management.endpoints.web.exposure.include=info, metrics
-#Wyłącza adres shutdown
+# Wyłącza adres shutdown
 management.endpoints.web.exposure.exclude=shutdown
+```
 
-**Dodatkowo** poprzez plik `application.properties` możemy ustawić:
+**Dodatkowo**, poprzez plik `application.properties` możemy ustawić:
 
-#Zmiana ścieżki bazowej /actuator
+```properties
+# Zmiana ścieżki bazowej /actuator
 management.endpoints.web.base-path=/
-#Włącza wszystkie usługi
+# Włącza wszystkie usługi domyślnie
 management.endpoints.enabled-by-default=true
-#Wyłączenie adresu metrics
+# Wyłączenie endpointu metrics
 management.endpoint.metrics.enabled=false
-#Akceptowane nagłówki
+# Akceptowane nagłówki CORS
 management.endpoints.web.cors.allowed-headers=\*
+```
 
 Całą listę dostępnych **właściwości** znajdziecie pod [https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
 
 ### Github
 
-Całość jak zawsze na [Github'ie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-actuator-example).
+Całość jak zawsze na [Githubie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-actuator-example).
