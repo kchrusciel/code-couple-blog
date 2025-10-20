@@ -12,22 +12,24 @@ author: 'Krzysztof Chruściel'
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
-W dzisiejszym wpisie wykorzystamy **funkcjonalność**, która pojawiła się wraz z wydaniem **Javy 9**. Jest to funkcjonalność o nazwie **Multi-Release Jar**. Pozwala ona na dostarczenie jednego **artefaktu** z plikami w różnych wersjach. Zapraszam do wpisu po więcej szczegółów.
+W dzisiejszym wpisie wykorzystamy **funkcjonalność**, która pojawiła się wraz z wydaniem **Javy 9**. Jest to funkcja o nazwie **Multi-Release Jar**. Pozwala ona na dostarczenie jednego **artefaktu** zawierającego pliki w różnych wersjach dla poszczególnych edycji Javy. Zapraszam po więcej szczegółów.
 <!-- more -->
 ### Problem
 
-Bardzo często **migracja** do nowej wersji **Javy** wiąże się z **utrzymywaniem** starej wersji dla klientów, którzy się jeszcze nie **zmigrowali**. Jest to związane także z wydawaniem różnych wersji co komplikuje proces **CI** i **CD**. **Java** w teorii zapewnia kompatybilność wsteczną, ale nie zawsze działa to tak jakbyśmy zakładali. Wydawanie aplikacji w kilku wersjach prowadzi również do **problemów** na środowiskach **developerski** oraz **spowalnia** proces wytwarzania **oprogramowania**. Przykładowo mamy **dwójkę** klientów, jeden z nich korzysta z **Javy 8**, a drugi z **Javy 9**. W **Javie 9** pojawił się **feature X**, który może bardzo przyśpieszyć działanie kodu. Niestety poprzez jedną bazę kodu, nie dostosowujemy aplikacji, aby korzystała z nowego feature, ponieważ prowadziłoby to do wydania ekstra wersji dla klienta z **Java 8**. Nasz **development** jest ograniczony.
+Bardzo często **migracja** do nowej wersji **Javy** wiąże się z koniecznością **utrzymywania** starej wersji dla klientów, którzy jeszcze się nie **zmigrowali**. Związane jest to również z wydawaniem różnych wersji aplikacji, co komplikuje procesy **CI** i **CD**. **Java** w teorii zapewnia kompatybilność wsteczną, ale nie zawsze działa to tak, jakbyśmy tego oczekiwali. Wydawanie aplikacji w kilku wersjach prowadzi również do **problemów** na środowiskach **developerskich** oraz **spowalnia** proces wytwarzania **oprogramowania**.
+
+Przykładowo, mamy **dwóch** klientów: jeden korzysta z **Javy 8**, a drugi z **Javy 9**. W **Javie 9** pojawił się **feature X**, który mógłby znacząco przyspieszyć działanie kodu. Niestety, ze względu na utrzymywanie jednej bazy kodu, nie dostosowujemy aplikacji do korzystania z nowego feature, ponieważ wymusiłoby to wydanie dodatkowej wersji dla klienta z **Javą 8**. Nasz **development** jest tym samym ograniczony.
 
 ### Rozwiązanie - Multi-Release Jar
 
 Rozwiązaniem powyższego problemu jest wykorzystanie funkcjonalności **Multi-Release Jar**. Pozwala ona dostarczyć jeden **artefakt**, który posiada przygotowane pliki dla różnych wersji **Javy**.
 
-### Dwa pliki
+### Dwa pliki z implementacją
 
 W naszym przykładzie przygotujemy **dwa** pliki. Każdy z nich będzie wypisywał tekst z przekazanej listy **jednoelementowej**. Listy te będą tworzone na dwa sposoby:
 
-*   z wykorzystaniem "**starego API**" czyli `Arrays.asList`
-*   z wykorzystaniem **API** dostępnego od Javy 9 czyli `List.of`
+* z wykorzystaniem "**starego API**", czyli `Arrays.asList` (dla Javy 8)
+* z wykorzystaniem **API** dostępnego od Javy 9, czyli `List.of` (dla Javy 9)
 
 ```java
 public class Runner {
@@ -47,7 +49,7 @@ public class Runner {
 }
 ```
 
-Tutaj należy zwrócić uwagę jakich zmian **dokonaliśmy**. Zgodnie z **dokumentacją** możemy zmieniać tylko **logikę** wewnątrz **metody**. Wszystkie nagłówki i wygląd metod musi być taki sam. Nie możemy dokładać kolejnych **publicznych** metod.
+Tutaj należy zwrócić uwagę na **dokonane zmiany**. Zgodnie z **dokumentacją**, możemy zmieniać tylko **logikę** wewnątrz **metody**. Wszystkie nagłówki i sygnatury metod muszą być takie same. Nie możemy dokładać kolejnych **publicznych** metod.
 
 ### Struktura folderów
 
@@ -68,14 +70,14 @@ src/
 
 ### Kompilacja
 
-Tak jak pisałem we wstępie funkcjonalność ta pojawiła się wraz z **Javą 9**. Po instalacji Javy i ustawieniu folderu `/bin` w zmiennych środowiskowych powinniśmy mieć dostęp do kompilatora **Javy**. Dostępny jest on pod poleceniem `javac`. Od wersji **Javy 9** pojawiło się kilka nowych **przełączników** w tym narzędziu. Dla nas najistotniejszy jest przełącznik `--release`:
+Jak pisałem we wstępie, funkcjonalność ta pojawiła się wraz z **Javą 9**. Po instalacji Javy i ustawieniu folderu `/bin` w zmiennych środowiskowych powinniśmy mieć dostęp do kompilatora **Javy** (`javac`). Od wersji **Javy 9** pojawiło się kilka nowych **przełączników** w tym narzędziu. Dla nas najistotniejszy jest przełącznik `--release`:
 
 ```shell
 javac --release <release>
 Compile for a specific VM version. Supported targets: 6, 7, 8, 9
 ```
 
-**Skompilujmy** więc nasze źródła dla **dwóch** wersji korzystając z tego przełącznika (przełącznik `-d` służy do wskazania **folderu**, gdzie mają znaleźć się **skompilowane** źródła. Można do tego wykorzystać też **Maven'a**):
+**Skompilujmy** więc nasze źródła dla **dwóch** wersji, korzystając z tego przełącznika (przełącznik `-d` służy do wskazania **folderu** docelowego dla **skompilowanych** źródeł. Można do tego wykorzystać też **Maven'a**):
 
 ```shell
 javac --release 8 -d classes src\main\java\pl\codecouple\Runner.java
@@ -87,24 +89,24 @@ Oraz źródła dla **Javy 9** z użyciem `List.of`:
 javac --release 9 -d classes-9 src\main\java9\pl\codecouple\Runner.java
 ```
 
-### Budujemy multi-release jar
+### Budowanie Multi-Release Jar
 
-Udało nam się skompilować **kod źródłowy** w dwóch wersjach, teraz pora na przygotowanie **paczki** zawierającej obie **wersje**. Zrobimy to wykorzystując polecenie `jar`, które podobnie jak `javac` pochodzi z folderu `/bin`. Użyjemy także dodatkowego przełącznika `--release`, w którym wskazujemy **folder** ze **skompilowanymi** plikami w odpowiedniej wersji:
+Udało nam się skompilować **kod źródłowy** w dwóch wersjach, teraz pora na przygotowanie **paczki** zawierającej obie **wersje**. Zrobimy to, wykorzystując polecenie `jar`, które, podobnie jak `javac`, pochodzi z folderu `/bin`. Użyjemy także dodatkowego przełącznika `--release`, w którym wskazujemy **folder** ze **skompilowanymi** plikami dla odpowiedniej wersji:
 
 ```shell
 jar --release VERSION Places all following files in a versioned directory
 of the jar (i.e. META-INF/versions/VERSION/)
 ```
 
-Wszystkie te pliki zostaną umieszczone w folderze `META-INF/version/WERSJA/`:
+Wszystkie te pliki zostaną umieszczone w folderze `META-INF/versions/WERSJA/`:
 
 ```shell
 jar --create --file multi-release.jar --main-class pl.codecouple.Runner -C classes . --release 9 -C classes-9 .
 ```
 
-### Zawartość
+### Zawartość archiwum
 
-Jak pisałem powyżej po wydaniu **polecenia** powinien pojawić się nowy plik `multi-release.jar`. **Zawartość** tego pliku prezentuje się następująco:
+Jak pisałem powyżej, po wydaniu **polecenia** powinien pojawić się nowy plik `multi-release.jar`. **Zawartość** tego pliku prezentuje się następująco:
 
 ```
 pl/
@@ -119,13 +121,13 @@ META-INF/
     MANIFEST.MF
 ```
 
-Wewnątrz folderu `versions/9` znalazł się **skompilowany** przez nas plik w wersji **Javy 9**. Ponadto w pliku `MANIFEST.MF`, który jest plikiem zawierającym dodatkowe informacje o **archiwum** pojawił się wpis:
+Wewnątrz folderu `versions/9` znalazł się **skompilowany** przez nas plik w wersji **Javy 9**. Ponadto w pliku `MANIFEST.MF`, który zawiera dodatkowe informacje o **archiwum**, pojawił się wpis:
 
 ```
 Multi-Release: true
 ```
 
-Jest to **wpis**, który świadczy o tym, iż to archiwum występuje w wersji **Multi-Release**. Jeśli chcielibyśmy **przetestować** nasz kod w działaniu wystarczy przygotować **środowisko** z dwiema wersjami **Javy** (polecam [SDKMAN](https://sdkman.io/)):
+Jest to **wpis**, który świadczy o tym, że to archiwum jest w wersji **Multi-Release**. Jeśli chcielibyśmy **przetestować** nasz kod w działaniu, wystarczy przygotować **środowisko** z dwiema wersjami **Javy** (polecam [SDKMAN](https://sdkman.io/)):
 
 ```shell
 java -version
@@ -145,4 +147,4 @@ java -jar multi-release.jar
 [Java 8]
 ```
 
-Jak widzicie powyżej, funkcjonalność **Multi-Release Jar** pozwoliła nam stworzyć jeden **artefakt** działający na obu wersjach **Javy**.
+Jak widać powyżej, funkcjonalność **Multi-Release Jar** pozwoliła nam stworzyć jeden **artefakt** działający na obu wersjach **Javy**.
