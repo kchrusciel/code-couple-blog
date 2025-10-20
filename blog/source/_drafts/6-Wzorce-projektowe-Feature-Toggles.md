@@ -7,7 +7,7 @@ categories:
   - - Wzorce projektowe
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 "_Cześć, nazywam się Łukasz Szydło i od 2010 nie stworzyłem brancha_" - takimi słowami (parafrazując) rozpoczął swoją prezentacje pt. "_WJUG #181 - Continuous Delivery: architektura i praktyka_" **Łukasz Szydło**. Jest to wystąpienie w którym **Łukasz** próbuje przekonać na do stosowania wzroca **Feature Toggles**. Jest to wzorzec, dzięki któremy uda nam się uniknąć między innymi **merge hell'i**, ale czy jest to jedyny benefit? Zapraszam do artykułu!
 <!-- more -->

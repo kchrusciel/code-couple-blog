@@ -11,7 +11,7 @@ date: 2018-06-08 12:01:20
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 W Javie istnieje kilka sposobów tworzenia bezpiecznych wątkowo **Map**. Przez to, iż istnieje kilka sposobów, może to prowadzić do zakłopotania, który z nich wybrać. W dzisiejszym wpisie omówimy sobie trzy najpopularniejsze sposoby tworzenia synchronizowanych map, czyli `Hashtable`, `SynchronizedMap` oraz `ConcurrentHashMap`, zapraszam!
 <!-- more -->

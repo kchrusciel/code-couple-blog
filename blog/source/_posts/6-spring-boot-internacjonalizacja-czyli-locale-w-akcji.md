@@ -12,7 +12,7 @@ date: 2016-09-06 12:00:11
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Dzięki wykorzystaniu [internacjonalizacji](https://en.wikipedia.org/wiki/Internationalization_and_localization) tworzenie aplikacji w różnych językach (nie programowania ;) ) stało się bardzo proste. Możemy przygotować jeden plik **wzorcowy,** a następnie przekazać go do odpowiednich tłumaczy, którzy przygotują nam przetłumaczone teksty w narzuconym przez nas **formacie**. Skrótem używanym naprzemiennie z internacjonalizacją jest **i18n.** Jest to ilość znaków pomiędzy "i" oraz "n" w słowie "_internationalization_".
 <!-- more -->
@@ -45,7 +45,7 @@ Jeśli chcemy utworzyć specyfikowany plik, dodajemy do niego **postfix** oznacz
 messages\_pl.properties # polski
 messages\_de.properties # niemiecki
 
-[![resourcesMessages](http://codecouple.pl/wp-content/uploads/2016/08/resourcesMessages.png)](http://codecouple.pl/wp-content/uploads/2016/08/resourcesMessages.png) Pliki domyślnie są wyszukiwane na **classpath'ie**:
+[![resourcesMessages](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/resourcesMessages.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/resourcesMessages.png) Pliki domyślnie są wyszukiwane na **classpath'ie**:
 
 Static resources can be moved to /public (or /static or /resources or /META-INF/resources)
 in the classpath root. Same for messages.properties (Spring Boot detects this automatically 

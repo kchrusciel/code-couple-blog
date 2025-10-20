@@ -6,7 +6,7 @@ categories:
   - - Java
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Kolejnym **synchronizatorem**, który zagości u nas na blogu jest `java.util.concurrent.Sempahor`. Podczas wykorzystywania **Sempahor'u** możemy określić ile aktualnie zadań może być wykonywywać dany blok kodu.
 <!-- more -->

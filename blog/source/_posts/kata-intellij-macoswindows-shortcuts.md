@@ -11,7 +11,7 @@ date: 2018-10-26 20:34:19
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/katas.png)
 
 Zmiana systemu operacyjnego może okazać się początkowo bolesnym doświadczeniem. Ostatnimy czasy zmieniłem system operacyjny z Windows na macOS, a to wiąże się to ze zmianą nawyków (w tym skrótów). Od zawsze uważam, iż znajomość skrótów narzędzi, z których korzystamy na co dzień jest pozycją obowiązkową. Aby móc nadal w efektywny sposób wykorzystywać IDE przygotowałem kata ze skrótami.
 <!-- more -->

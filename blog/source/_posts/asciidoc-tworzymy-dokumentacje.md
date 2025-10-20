@@ -12,7 +12,7 @@ date: 2017-09-08 12:05:40
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/09/documentation.png)](http://codecouple.pl/wp-content/uploads/2017/09/documentation.png)Artykuł ten powiązany jest z [poprzednim wpisem](http://codecouple.pl/2017/08/25/18-spring-boot-tddocumentation-spring-rest-docs/) na temat **Spring Rest Docs,** czyli automatycznego generowania dokumentacji na podstawie testów. Dzięki **Spring Rest Docs** generowane były snippety, czyli fragmenty dokumentacji, które następnie umieszczało się w pliku zbiorczym z rozszerzeniem `adoc`. Na końcu należało te fragmenty ładnie opakować korzystając ze składni **AsciiDoc'a**.
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/documentation.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/documentation.png)Artykuł ten powiązany jest z [poprzednim wpisem](http://codecouple.pl/2017/08/25/18-spring-boot-tddocumentation-spring-rest-docs/) na temat **Spring Rest Docs,** czyli automatycznego generowania dokumentacji na podstawie testów. Dzięki **Spring Rest Docs** generowane były snippety, czyli fragmenty dokumentacji, które następnie umieszczało się w pliku zbiorczym z rozszerzeniem `adoc`. Na końcu należało te fragmenty ładnie opakować korzystając ze składni **AsciiDoc'a**.
 <!-- more -->
 ### DocGist
 
@@ -30,7 +30,7 @@ Witajcie na CodeCouple.pl!
 
 Teraz aby podejrzeć zmiany najlepiej jest zainstalować sobie plugin do przeglądarki. Ja korzystam z **Chrome** także polecam wam [ten dodatek](https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia). Od teraz wystarczy odpalić plik w przeglądarce (via Drag and Drop) i powinniście widzieć efekt:
 
-[![](http://codecouple.pl/wp-content/uploads/2017/09/asciiDoc1.png)](http://codecouple.pl/wp-content/uploads/2017/09/asciiDoc1.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/asciiDoc1.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/asciiDoc1.png)
 
 **Uwaga!** Aktualnie plugin ma błąd związany z datą: [https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32](https://github.com/asciidoctor/asciidoctor-chrome-extension/issues/32)
 
@@ -147,7 +147,7 @@ Teraz puszczamy `mvn clean install`.
 
 ### Wynik
 
-[![](http://codecouple.pl/wp-content/uploads/2017/09/asciidoc2.png)](http://codecouple.pl/wp-content/uploads/2017/09/asciidoc2.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/asciidoc2.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/09/asciidoc2.png)
 
 Bardzo dużą zaletą takiej dokumentacji jest to, że w repozytorium trzymamy tylko plik tekstowy a nie binarny. Dzięki temu mamy informację o zmianach. Kolejna zaleta to wsparcie dla **Mavena**. Można nawet przekazywać parametry z **Mavena**, co może być przydatne przy wstawianiu numeru wersji dokumentu. W dokumentacji oraz na internecie bardzo często można spotkać dwa pojęcia, **AsciiDoc** oraz **AsciiDoctor**. **AsciiDoc** jest składnią dla tworzenia dokumentacji, natomiast **AsciiDoctor** jest zbiorem narzędzi do budowania dokumentacji.
 

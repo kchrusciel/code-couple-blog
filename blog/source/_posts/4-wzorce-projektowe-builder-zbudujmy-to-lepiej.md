@@ -14,7 +14,7 @@ date: 2018-01-12 12:04:39
 author: 'Krzysztof Chruściel'
 ---
 
-![designPatternArt](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+![designPatternArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 **Builder**, czyli nasz polski **budowniczy** należy do wzorców kreacyjnych. Dzięki niemu możemy tworzyć złożone obiekty dzieląc jeden duży proces na kilka mniejszych etapów. Każdy z tych etapów może być implementowany na wiele różnych sposobów. Daje nam to możliwość tworzenia różnych reprezentacji tego samego obiektu.
 <!-- more -->
@@ -22,7 +22,7 @@ author: 'Krzysztof Chruściel'
 
 Zacznijmy od diagramu z klasami, na przykładzie których przedstawię Wam wzorzec:
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/Untitled-Diagram.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/Untitled-Diagram.png)
 
 ### Produkt
 

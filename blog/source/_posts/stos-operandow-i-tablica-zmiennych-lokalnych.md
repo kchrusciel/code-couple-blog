@@ -11,7 +11,7 @@ date: 2019-01-11 12:01:13
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Aby zrealizować obietnicę "_Write Once Run Everywhere_" autorzy **Javy** musieli rozwiązać kilka problemów. Jednym z nich była zmienna liczba **rejestrów** procesora. Rozwiązaniem tego problemu było zastosowanie **stosu** jako struktury danych do wykonywania operacji na **operandach**. Aby przekonać się jak to działa "pod spodem" zapraszam do wpisu!
 <!-- more -->
@@ -27,7 +27,7 @@ public class First {
     
 }
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/local_variable_table_second-1024x363.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/local_variable_table_second-1024x363.png)
 
 Gdzie:
 
@@ -50,7 +50,7 @@ public class First {
 
 Tablica poniżej reprezentuje informacje przechowywane w **tablicy zmiennych lokalnych**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/local_variable_table-1024x516.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/local_variable_table-1024x516.png)
 
 Jak wiemy już jak przechowywane są **zmienne lokalne** to spróbujmy wykonać na nich jakieś operacje. Do tego potrzebna będzie nam znajomość **stosu operandów**.
 
@@ -72,29 +72,29 @@ public class Add {
 
 Na samym dole **stosu** zostało załadowane pole `this`. Pole to zostało załadowane z **tablicy zmiennych lokalnych** widocznych pod `LocalVariableTable`. Ładowanie to odbyło się poprzez instrukcję `aload_0`, gdzie `a` reprezentuje typ obiektowy (`this` to referencja do obiektu), a 0 to numer indeksu w **tablicy zmiennych lokalnych**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/method_b_operand_stack-1024x659.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/method_b_operand_stack-1024x659.png)
 
 Następnie na górę stosu wrzucamy **stałą**. Dzieje się to przy udziale metody `bipush 120` gdzie `bi` reprezentuje typ `byte` a `120` **stałą**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/method_b_operand_stack_1-1024x659.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/method_b_operand_stack_1-1024x659.png)
 
 Gdy na stosie znajdują się już dwa elementy pora na wywołanie metody **wirtualnej**. Metoda `invokevirtual` pobiera obie wartości ze stosu, pierwsza przekazywana jest jako parametr a druga to wskaźnik na "kim" ta metoda ma być wywołana:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/method_b_operand_stack_2-1024x659.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/method_b_operand_stack_2-1024x659.png)
 
 Po wykonaniu metod wynik jej odkładany jest na górze **stosu**. Aby metoda zakończyła swoje działanie **stos operandów** musi być pusty. Nasza metoda nigdzie nie używa wyniku wywołania metody `methodC(120)`, więc możemy usunąć ramkę ze stosu korzystając z metody `pop`:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/method_b_operand_stack_3-1024x659.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/method_b_operand_stack_3-1024x659.png)
 
 Dla wirtualnej maszyny **Javy** koniec metody oznaczany jest poprzez wywołanie metody `return`. Zauważmy, iż kompilator sam dodał instrukcję `return` do naszej metody:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/method_b_operand_stack_4-1024x659.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/method_b_operand_stack_4-1024x659.png)
 
 ### Ramka
 
 Na stosie operandów odkładane są ramki, których rozmiar wynosi **cztery bajty**. Ale jak to cztery bajty? Oznacza to, że jeśli mamy **zmienne lokalne** typu `byte`, `short`, `char` czy `boolean` to **dopełniane** są one do **czterech bajtów**. Jeśli ktoś z was zastanawiał się nad optymalizacją zmiennych lokalnych to teraz ma odpowiedź, że nie warto ;). Poniżej znajduje się tabela prezentująca jak **JVM** reprezentuje poszczególne typy:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/jvm_bytecode_table-1024x574.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/jvm_bytecode_table-1024x574.png)
 
 ### Long i double
 
@@ -102,4 +102,4 @@ Skoro wiemy, iż ramka posiada rozmiar **czterech bajtów** to w jaki sposób pr
 
 100L + 100
 
-Otóż w tym przypadku na stosie znajdowały by się tylko trzy ramki. A metoda `ladd` ściąga cztery:![](https://codecouple.pl/wp-content/uploads/2019/01/operand_stack_long_int-1024x315.png)
+Otóż w tym przypadku na stosie znajdowały by się tylko trzy ramki. A metoda `ladd` ściąga cztery:![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/operand_stack_long_int-1024x315.png)

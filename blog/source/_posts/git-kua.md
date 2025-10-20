@@ -10,7 +10,7 @@ date: 2017-05-19 16:00:18
 author: 'Krzysztof Chruściel'
 ---
 
-[![git-logo](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)](http://codecouple.pl/wp-content/uploads/2017/04/git-logo.png)Zaczyna się bardzo niekulturalnie, ale uwierzcie, z pożytkiem! Jak [wspominałem w ostatnim wpisie](http://codecouple.pl/2017/04/28/niekompletny-gitflow/), u mnie w pracy "na tapecie" jest teraz tematyka wdrożenia **GitFlow** jako modelu pracy z **Gitem**. Jest to dobra okazja, aby dodać kilka wpisów pokazujących jak poprawić swoją efektywność w pracy z **Gitem**.
+[![git-logo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/git-logo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/git-logo.png)Zaczyna się bardzo niekulturalnie, ale uwierzcie, z pożytkiem! Jak [wspominałem w ostatnim wpisie](http://codecouple.pl/2017/04/28/niekompletny-gitflow/), u mnie w pracy "na tapecie" jest teraz tematyka wdrożenia **GitFlow** jako modelu pracy z **Gitem**. Jest to dobra okazja, aby dodać kilka wpisów pokazujących jak poprawić swoją efektywność w pracy z **Gitem**.
 <!-- more -->
 Inspiracją do tego wpisu jest gość, który mocno udziela się w community JVM, **Jakub Nabrdalik**. Jest on autorem zbioru aliasów do **Gita** pod wdzięczną nazwą "_Git Kurwa_". Jest to zbiór aliasów dla ludzi, którzy podczas pracy z **Gitem** używają słów "_Git, kurwa!_".
 

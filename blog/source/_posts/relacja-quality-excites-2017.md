@@ -10,7 +10,7 @@ date: 2017-06-30 15:31:52
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 Jak w roku 2016 tak i w tym wybraliśmy się na szóstą edycję konferencji **Quality Excites**. Tym razem konferencja rozbita została na dwa dni. W pierwszym dniu odbyły się liczne **warsztaty**, natomiast dzień drugi poświęcony był **prelekcjom**. My wybraliśmy się na oba dni.
 <!-- more -->

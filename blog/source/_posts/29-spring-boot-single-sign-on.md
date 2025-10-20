@@ -14,7 +14,7 @@ date: 2018-02-16 12:01:40
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Podczas tworzenia aplikacji prędzej czy później pojawi się temat bezpieczeństwa. Musimy zastanowić się w jaki sposób chcemy chronić nasze zasoby oraz jaki typ uwierzytelniania wybierzemy. W dobie mikroserwisów nie jest to już takie proste jak w monolicie. Dziś wpis dotyczący podejścia **Single Sign-On**, zapraszamy!
 <!-- more -->

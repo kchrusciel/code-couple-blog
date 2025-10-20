@@ -15,13 +15,13 @@ date: 2017-01-27 13:03:01
 author: 'Krzysztof Chruściel'
 ---
 
-[![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)
+[![SolrLogo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/11/Solr_Logo_on_white-300x152.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/11/Solr_Logo_on_white-300x152.png)
 
 Zgodnie z wcześniejszymi zapowiedziami pokaże wam dziś jak stworzyć podpowiadanie wyszukiwanych fraz podobnie jak działa to w wyszukiwarce **Google**. Wykorzystam do tego mechanizmy **Facety,** które są elementem **Apache Solr'a** i z których można z powodzeniem korzystać w **Spring Boot'cie**.
 <!-- more -->
 Dla wszystkich, którzy dalej mają wątpliwości krótki **GIF** jak działa **autocomplete**:
 
-[![solr-autocomplete](http://codecouple.pl/wp-content/uploads/2017/01/solr-autocomplete.gif)](http://codecouple.pl/wp-content/uploads/2017/01/solr-autocomplete.gif)
+[![solr-autocomplete](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/solr-autocomplete.gif)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/solr-autocomplete.gif)
 
 W tym wpisie będę korzystał z już wcześniej zaimportowanych danych w **Apache Solr**. Dlatego też odsyłam do poprzednich wpisów jeśli nie masz jeszcze danych na serwerze:
 

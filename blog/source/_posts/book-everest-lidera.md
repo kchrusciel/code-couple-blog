@@ -11,7 +11,7 @@ date: 2018-06-22 12:01:32
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2018/06/DSC_0074.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/06/DSC_0074.png)
 
 Agnieszka zawsze dba o to, aby nigdy nie zabrakło nam kolejnych pozycji do czytania (nasz budżet na tym cierpi). Najnowszym zakupem jest książka "_Everest Lidera - O wartościach, silnym zespole i skutecznym przywództwie_" **Anny Sarnackiej-Smith**. Mimo, że nie jestem **liderem**, książka ta pozwoliła mi poznać tajniki bycia dobrym przywódcą. Ale czy ta książka przeznaczona jest tylko dla **liderów**? Zapraszam do recenzji!
 <!-- more -->

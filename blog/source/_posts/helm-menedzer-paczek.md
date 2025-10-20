@@ -12,7 +12,7 @@ date: 2019-04-12 12:01:59
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/03/helm.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/helm.png)
 
 Kolejnym narzędziem (po [minikube](https://codecouple.pl/2019/04/05/minikube-lokalny-klaster-kubernetes/)) ułatwiającym pracę z klastrem **Kubernetes** jest **Helm**. Jest to menedżer paczek, który ułatwia wgrywanie aplikacji na nasz klaster. Dostarcza on także możliwość parametryzowania zasobów wgrywanych na **klaster**. Dzięki temu możemy przygotowywać różne wersje naszych paczek.
 <!-- more -->
@@ -20,7 +20,7 @@ Kolejnym narzędziem (po [minikube](https://codecouple.pl/2019/04/05/minikube-lo
 
 Jak pisałem we wstępnie **Helm** służy do zarządzania paczkami. Paczki te wgrywane są na klaster **Kubernetes**. Możliwe jest to dzięki części serwerowej nazywanej **Tiller'em**. Wykorzystanie plików `yaml` pozwala parametryzować zasoby wgrywane na klaster:
 
-![](https://codecouple.pl/wp-content/uploads/2019/03/helm-1-1024x439.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/helm-1-1024x439.png)
 
 ### Instalacja
 
@@ -117,7 +117,7 @@ helm repo list
 
 Ludzie z firmy **Bitnami** przygotowali **Hub**, na którym możemy przeglądać dostępne **Helm'owe Chart'y** [https://hub.kubeapps.com/](https://hub.kubeapps.com/):
 
-![](https://codecouple.pl/wp-content/uploads/2019/03/helm-hub-1024x494.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/helm-hub-1024x494.png)
 
 ### Wrzucamy Chart
 

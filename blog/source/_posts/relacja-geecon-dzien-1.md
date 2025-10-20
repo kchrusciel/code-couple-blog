@@ -10,7 +10,7 @@ date: 2017-05-28 22:08:08
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)W tym roku miałam przyjemność uczestniczyć w **GeeCONie** - konferencji skupiającej miłośników **Javy** i **JVM**. Odbyła się ona w Multikinie w **Krakowie** i trwała 3 dni (**17-19.05**). Zapraszam na relację z pierwszego dnia!
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)W tym roku miałam przyjemność uczestniczyć w **GeeCONie** - konferencji skupiającej miłośników **Javy** i **JVM**. Odbyła się ona w Multikinie w **Krakowie** i trwała 3 dni (**17-19.05**). Zapraszam na relację z pierwszego dnia!
 <!-- more -->
 Zacznę od spraw technicznych: bardzo fajna lokalizacja, z dala od ścisłego centrum, dlatego z parkingiem nie było żadnego problemu. Udało się zająć miejsce pod samym Multikinem, ale obok było też kilka innych sporych parkingów. Kolejnym zaskoczeniem była wyjątkowo szybka i sprawna rejestracja, która trwała zaledwie **2-3** **minuty**. Kolejek prawie nie było pomimo tego, że ludzie cały czas przychodzili. Rozdawanie koszulek i kufli niezależnie od rejestracji na pewno miało wpływ na czas rejestracji. Konferencja odbywała się jednocześnie w **4 różnych salach**. Pierwszy raz miałam okazję uczestniczyć w wykładach prowadzonych w salach kinowych, ale trzeba przyznać, że jest to dobry pomysł - obraz i dźwięk świetny w każdym miejscu, dalsze rzędy były nawet lepsze niż pierwsze.
 

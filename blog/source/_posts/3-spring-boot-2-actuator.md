@@ -13,7 +13,7 @@ date: 2019-05-03 12:01:14
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Autorzy rozwiązania **Spring Boot** bardzo mocno stawiają na fakt, iż aplikacja napisana z wykorzystaniem ich frameworku powinna być _production-ready_. Zgodnie z **12 factor manifesto**, apikacja sama w sobie powinna dostarczać informacji na temat swojej **telemetrii**. Projekt **actuator** jest mechanizmem zbliżającym nas do pojęcia  _production-ready_. Dostarcza on podstawowe metryki oraz informacje na temat aplikacji.
 <!-- more -->

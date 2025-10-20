@@ -10,7 +10,7 @@ date: 2018-10-15 10:59:32
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2018/08/jdd.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/08/jdd.png)
 
 8 oraz 9 października bieżącego roku odbyła się jedna z największych konferencji IT w Polsce. **JDD** jest cykliczną imprezą, która zbiera największych entuzjastów języka Java w Polsce. Na konferencji występuje wiele gwiazd polskiej jak i zagranicznej sceny. Zapraszamy do relacji z tegorocznej edycji.
 <!-- more -->

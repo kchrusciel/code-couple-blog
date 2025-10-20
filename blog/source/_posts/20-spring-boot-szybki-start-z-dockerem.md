@@ -12,7 +12,7 @@ date: 2017-10-13 12:15:52
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Jest to wpis dla osób, które chciałyby w szybki sposób uruchomić swoją aplikację **Spring Boot'ową** na **Dockerze**. Uruchamianie aplikacji na **kontenerach** ma wiele zalet, jedną z nich jest wspólne środowisko dla wszystkich developerów. Dzięki temu unikniemy "u mnie działa". Jak uruchamiać aplikację na kontenerze? Odpowiedź we wpisie.
 <!-- more -->

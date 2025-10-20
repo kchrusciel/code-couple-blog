@@ -10,7 +10,7 @@ date: 2017-12-15 12:14:55
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Kolejny wpis z serii **Java Performance** dotyczy stosowania struktur danych takich jak **tablice** oraz **listy**. Tablice oraz listy są jednymi z najbardziej popularnych struktur danych stosowanych przez programistów **Javy.** Jednakże nie zawsze dobieramy je jako **optymalne** rozwiązanie dla danego problemu. W tym wpisie postaram się pokazać wam, jak wybierać pomiędzy listą, a tablicą.
 <!-- more -->

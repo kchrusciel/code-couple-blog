@@ -11,7 +11,7 @@ date: 2017-03-31 14:25:55
 author: 'Krzysztof Chruściel'
 ---
 
-[![designPatternArt](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+[![designPatternArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 Ile to już wody upłynęło od czasu wydania książki z wzorcami projektowymi "**Gang of Four**" na temat wzorców projektowych. Planuję napisać kilka artykułów na temat **programowania reaktywnego,** a jakby nie patrzeć **wzorzec obserwator** ma z tym paradygmatem programowania wiele wspólnego.
 <!-- more -->
@@ -23,7 +23,7 @@ Ile to już wody upłynęło od czasu wydania książki z wzorcami projektowymi 
 
 Tak prezentuję się hierarchia klas z konkretną implementacją:
 
-[![observerClassDiagram](http://codecouple.pl/wp-content/uploads/2017/03/observerClassDiagram.png)](http://codecouple.pl/wp-content/uploads/2017/03/observerClassDiagram.png) Najważniejsze dwa interfejsy to **Observer** oraz **Subject**.
+[![observerClassDiagram](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/observerClassDiagram.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/observerClassDiagram.png) Najważniejsze dwa interfejsy to **Observer** oraz **Subject**.
 
 ### 3. Observer
 
@@ -145,7 +145,7 @@ Hi Krzysztof, you have 3 new articles to read
 
 ### 6. Reaktywny obserwator
 
-[![reactiveObserver](http://codecouple.pl/wp-content/uploads/2017/03/reactiveObserver.png)](http://codecouple.pl/wp-content/uploads/2017/03/reactiveObserver.png) **Observable** obserwuje jakieś zdarzenie i informuje o tym eventem. **Observer** chce obserwować ten event więc subskrybuje się do **Observable**.
+[![reactiveObserver](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/reactiveObserver.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/reactiveObserver.png) **Observable** obserwuje jakieś zdarzenie i informuje o tym eventem. **Observer** chce obserwować ten event więc subskrybuje się do **Observable**.
 
 public interface Observer<T> {
     void onCompleted();

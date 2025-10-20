@@ -13,7 +13,7 @@ date: 2018-03-02 12:01:02
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 W poprzednim [wpisie przygotowaliśmy](http://codecouple.pl/2018/02/16/29-spring-boot-single-sign-on/) rozwiązanie korzystające z **Single Sign-On**. Teraz korzystając z tego mechanizmu chcielibyśmy zabezpieczyć inne moduły naszej aplikacji. Aby to osiągnąć, nasze moduły muszą stać się **serwerami zasobów** (ang. _Resource Server_). Jak to zrobić wykorzystując **Spring Boot'a?** Zapraszamy do wpisu!
 <!-- more -->

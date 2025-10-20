@@ -11,7 +11,7 @@ date: 2017-12-29 12:02:32
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 Bardzo ciekawy wzorzec, który w środowisku **Javowym** wydaje się normalnością. **Wstrzykiwanie zależności** (ang. _Dependency Injection_) jest to wzorzec, którego stosowanie spowoduje, iż nasz kod stanie się mniej związany z innymi elementami, a tym samym będzie bardziej otwarty na rozszerzenia. Oczywiście w tematyce **DI** pojawić musi się również pojęcie **odwróconej kontroli** (ang. _Inversion of Control_). Zapraszamy!
 <!-- more -->

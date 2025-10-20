@@ -12,7 +12,7 @@ categories:
   - - Spring Boot
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/04/k8s-1024x221.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/04/k8s-1024x221.png)
 
 **Proces** uruchomienia naszej aplikacji może być procesem bardzo **złożonym**. Zaczynając od tego, iż **uruchomienie** aplikacji może zająć trochę czasu a kończąc na **nazwiązywaniu** połączenia z innymi serwisami. **Pod** w momencie **uruchomienia** jest od razu **dostępny** dla całego klastra **kubernetes**. Jednakże, czy to oznacza, że jesteśmy **gotowi** aby przyjąć cały ruch? Jak sprawić aby kubernetes kierował ruch dopiero wtedy gdy będziemy **gotowi**? Po odpowiedzi na te pytania zapraszam do **wpisu**!
 <!-- more -->

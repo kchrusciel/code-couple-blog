@@ -11,7 +11,7 @@ date: 2017-10-27 12:01:26
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/rabbitmq.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/rabbitmq.png)
 
 **RabbitMQ** jest otwartoźródłowym **message brokerem**. Może być on wykorzystany do tworzenia **microserwisów**, które realizowane są w architekturze **message-driven**. Serwer brokera napisany jest w **Erlangu**, natomiast API dla klientów dostępne jest w wielu językach programowania w tym **Javie**. W tym wpisie przedstawię wam podstawy **RabbitMQ**.
 <!-- more -->
@@ -29,7 +29,7 @@ gdzie:
 
 Teraz po uruchomieniu przeglądarki na porcie **15672** powinien ukazać się nam panel logowania, dane domyślne to `guest`/`guest` (można je zmienić przekazując zmienne środowiskowe `RABBITMQ_DEFAULT_USER` oraz `RABBITMQ_DEFAULT_PASS`).
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/rabbitMQLoginPanel.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/rabbitMQLoginPanel.png)
 
 Zanim pójdziemy dalej ważne jest kilka pojęć związanych z **RabbitMQ**:
 
@@ -56,23 +56,23 @@ Flow przepływu informacji wygląda tak: producer -> message -> exchange -> bind
 
 Aby utworzyć **kolejkę** poprzez panel administracyjny należy wybrać zakładkę **Queues**. Następnie musimy wybrać nazwę naszej kolejki oraz kilka opcji dla niej. Po utworzeniu będzie ona widoczna pod zakładką **All queues**. Aby uniknąć utraty wiadomości lub kolejek w przypadku awarii serwera **RabbitMQ**, należy ustawić parametr **Durability** na **Durable**.
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/panelCreateQueue.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/panelCreateQueue.png)
 
 ### Tworzenie exchange
 
 Aby utworzyć **exchange** poprzez panel administracyjny należy wybrać zakładkę **Exchanges**. Następnie musimy wybrać nazwę naszego **exchange** oraz kilka opcji dla niego. Po utworzeniu będzie on widoczny pod zakładką **All exchanges**. Typ **exchange** należy wybrać zgodnie z przeznaczenie (opis wyżej).
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/panelCreateExchange.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/panelCreateExchange.png)
 
 ### Tworzenie binding
 
 Jeśli chcemy korzystać z kolejki nie w sposób bezpośredni tylko przy użyciu **exchange** musimy dodać **binding**. Aby dodać **binding** poprzez panel administracyjny należy wybrać zakładkę **Exchanges,** a następnie wybrać interesujący nas **exchange**. W zakładce **Bindings** wybieramy, która kolejka ma być połączona z wybranym **exchange**. Możemy także ustawić **routing key**.
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/panelCreateBinding.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/panelCreateBinding.png)
 
 ### Test działania
 
-Aby przetestować działanie naszej kolejki, należy wybrać zakładkę **Exchanges,** a następnie wybrać interesujący nas **exchange**. W zakładce **Publish message** ustawiamy payload, czyli treść naszej wiadomości i klikamy **Publish message**. Po wybraniu naszej kolejki powinna pokazać się nowa wiadomość. ![](http://codecouple.pl/wp-content/uploads/2017/10/panelQueueOverview.png)
+Aby przetestować działanie naszej kolejki, należy wybrać zakładkę **Exchanges,** a następnie wybrać interesujący nas **exchange**. W zakładce **Publish message** ustawiamy payload, czyli treść naszej wiadomości i klikamy **Publish message**. Po wybraniu naszej kolejki powinna pokazać się nowa wiadomość. ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/panelQueueOverview.png)
 
 ### Więcej
 

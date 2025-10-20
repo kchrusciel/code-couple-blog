@@ -17,7 +17,7 @@ Jaki piękny, **clickbaitowy** tytuł udało mi się wymyślić tym razem. W nie
 
 Bardzo często nasze konta na platformie **Github** traktowane są jako "wizytówka" **programisty**. Cytując klasyka "talk is cheap, show me the code" właśnie na **Githubie** możemy znaleźć kod napisany przez innych a tym samym podpatrzeć czy też ocenić inne rozwiązania. Co do oceny, profil na **Githubie** często brany jest pod uwagę podczas rekrutacji, więc moim zdaniem warto w niego zainwestować. Zobaczmy jak wygląda aktualnie mój **profil**:
 
-![](https://codecouple.pl/wp-content/uploads/2020/09/github-without-profile-1024x418.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/09/github-without-profile-1024x418.png)
 
 Wygląda w porządku, ale można by go troche "podrasować" umieszczając **więcej** informacji na mój temat. Jak możemy to zrobić z wykorzystaniem **Githuba**? O tym poniżej.
 
@@ -25,7 +25,7 @@ Wygląda w porządku, ale można by go troche "podrasować" umieszczając **wię
 
 Podczas tworzenia nowego **repozytorium** wystarczy jako nazwę podać nazwę naszego **konta**:
 
-![Github](https://codecouple.pl/wp-content/uploads/2020/09/Screen-Shot-2020-09-30-at-16.07.56-1024x622.png)
+![Github](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/09/Screen-Shot-2020-09-30-at-16.07.56-1024x622.png)
 
 **Uwaga**! To repozytorium musi być **publiczne**. Następnie wystarczy umieścić plik **README.md** z interesującymi informacjami o nas.
 
@@ -33,6 +33,6 @@ Podczas tworzenia nowego **repozytorium** wystarczy jako nazwę podać nazwę na
 
 Zobaczmy jak po zmianach wygląda moje **konto**:
 
-![](https://codecouple.pl/wp-content/uploads/2020/09/github-with-profile-1024x411.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/09/github-with-profile-1024x411.png)
 
 Pojawił się napis "_Hi there_". Teraz można umieścić tam dowolne **informacje**. Jeśli chcecie zobaczyć jak wygląda to na **żywo** to zapraszam na [https://github.com/kchrusciel](https://github.com/kchrusciel).

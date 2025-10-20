@@ -6,7 +6,7 @@ categories:
   - - Python
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 **Java 10** jest już z nami od jakiegoś czasu, jednakże chciałbym jeszcze na chwilę wrócić do **Javy 9** (zanim wyjdzie 11 :D). **Java 9** w kontekście **CompletableFuture** wprowadziła dwie metody, które
 <!-- more -->

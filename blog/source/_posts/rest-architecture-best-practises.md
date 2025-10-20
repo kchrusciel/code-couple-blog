@@ -10,7 +10,7 @@ date: 2017-07-07 12:43:37
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/restLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/restLogo.png)
 
 Wszyscy (albo prawie wszyscy) robimy usługi **REST'owe** dla naszych **mikroserwisów**.  Jest wiele elementów które powinna spełnia architektura **REST**. W tym wpisie przedstawię wam ogólne zasady dotyczące prawidłowego projektowania **API**.
 <!-- more -->

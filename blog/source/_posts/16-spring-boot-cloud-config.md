@@ -11,7 +11,7 @@ date: 2017-06-23 14:57:46
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 **Spring Cloud** we współpracy z **Netflixem** w bardzo pozytywny sposób ułatwiają pracę w architekturze **mikroserwisów**. Dostarczają oni wiele mechanizmów które pozwalają spełnić założenia jakie stawia poprawne tworzenie **mikroserwisów**. Pierwszym narzędziem **Cloudowym** który przedstawię jest **Cloud Config**.
 <!-- more -->

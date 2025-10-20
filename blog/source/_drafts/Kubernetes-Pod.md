@@ -6,7 +6,7 @@ categories:
   - - Java
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/04/k8s-1024x221.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/04/k8s-1024x221.png)
 
 asasas
 <!-- more -->

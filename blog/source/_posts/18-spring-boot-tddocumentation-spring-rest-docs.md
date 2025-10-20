@@ -12,7 +12,7 @@ date: 2017-08-25 12:05:21
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Pamiętacie wpis o [najlepszych praktykach REST'owych](http://codecouple.pl/2017/07/07/rest-architecture-best-practises/)? Jedną z wyszczególnionych tam praktyk było dokumentowanie naszego **API**. Wymieniłem tam także kilka najpopularniejszych rozwiązań. Jedno z nich, czyli **Swagger** opisałem już na blogu w artykule [#10 Spring Boot - Swagger2 - dokumentujemy API](http://codecouple.pl/2017/01/07/9-spring-boot-swagger2-dokumentujemy-api/). Dziś czas na kolejne podejście do dokumentacji, tym razem od strony testów. **Test Driven Documentation** jest techniką, która polega na tworzeniu dokumentacji w oparciu o testy.
 <!-- more -->
@@ -196,7 +196,7 @@ Jeśli chcemy mieć zautomatyzowany proces budowania wystarczy dodać poniższy 
 
 ### 4. Wynik
 
-Wynikiem działania jest bardzo dobrze wyglądający HTML: [![](http://codecouple.pl/wp-content/uploads/2017/08/springRestDocs.png)](http://codecouple.pl/wp-content/uploads/2017/08/springRestDocs.png)
+Wynikiem działania jest bardzo dobrze wyglądający HTML: [![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/springRestDocs.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/springRestDocs.png)
 
 ### 5. Github
 

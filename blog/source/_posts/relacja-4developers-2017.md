@@ -11,7 +11,7 @@ date: 2017-11-17 12:01:56
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/10/4dev_Lodz_750x100-1.gif) **4Developers,** edycja **Łódzka** już za nami. Pora na relację, w której znajdziecie opisy prelekcji oraz konferencji jako całości. Odbyła się ona 9 listopada w **BioNanoparku**. Organizatorzy przywitali nas bardzo dobrze przygotowanym procesem rejestracji, w którym otrzymaliśmy starter packi. Szybka kawka i ruszamy z pierwszą prelekcją!
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/10/4dev_Lodz_750x100-1.gif) **4Developers,** edycja **Łódzka** już za nami. Pora na relację, w której znajdziecie opisy prelekcji oraz konferencji jako całości. Odbyła się ona 9 listopada w **BioNanoparku**. Organizatorzy przywitali nas bardzo dobrze przygotowanym procesem rejestracji, w którym otrzymaliśmy starter packi. Szybka kawka i ruszamy z pierwszą prelekcją!
 <!-- more -->
 ### O annotacjach – czas powstrzymać demony
 

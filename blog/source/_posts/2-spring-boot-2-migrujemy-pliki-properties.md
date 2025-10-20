@@ -11,7 +11,7 @@ date: 2018-07-27 12:01:51
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Podczas migracji moich aplikacji do **Spring Boot'a** w wersji **2.0** okazało się, że kilka wykorzystywanych przeze mnie **wpisów** w pliku **properties** jest nieaktualnych. Dzięki wykorzystaniu **IDE**, udało mi się w łatwy sposób wykryć, które **wpisy** są nieaktualne, a co jeśli moje **IDE** nie wspierałoby takiego sprawdzania? Zapraszam do wpisu!
 <!-- more -->

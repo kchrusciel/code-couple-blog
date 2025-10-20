@@ -6,7 +6,7 @@ categories:
   - - Java
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2020/03/hipek-300x199.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/03/hipek-300x199.png)
 
 Z racji, iż minęło już trochę czasu odkąd zacząłem pracować w jednej ze szkół programowania w roli **mentora**, chciałbym podzielić się z wami moimi przemyśleniami na temat tej pracy w tej roli. W artykule odpowiem na pytania czy warto zostać **trenerem**, jakie są tego benefity i z _"czym się to je"_. Pamiętajcie, że są to **moje** obserwacje i spostrzeżenia zebrane z perspektywy **trenera**.
 <!-- more -->

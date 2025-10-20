@@ -12,7 +12,7 @@ date: 2016-03-09 07:00:06
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 **Null pointer exception** jest chyba najbardziej rozpoznawalnym i najczęściej występującym wyjątkiem w **Javie**. Wyjątek ten może doprowadzać do wielu niepożądanych zachowań (w tym przerwanie działania aplikacji). **Java 8** dostarcza nam nową klasę **Optional** z pakietu `java.util.*`, która pozwala nam w lepszy sposób zabezpieczyć się przed tego typu **wyjątkiem**.
 <!-- more -->

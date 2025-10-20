@@ -14,7 +14,7 @@ date: 2018-03-16 12:01:35
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 **API Gateway** to wzorzec integracyjny. W wzorcu tym, tylko jeden serwis (może być oczywiście replikowany) udostępniony jest publicznie. Klientami naszego API mogą być aplikacje mobilne, strony web lub inne urządzenia. Musimy zapewnić im możliwość korzystania z naszego **API** w sposób **zunifikowany**. Aby to osiągnąć udostępniamy jeden publiczny serwis zwany **API Gateway,** który odpytywany przez różnych klientów zajmuje się kierowaniem ruchu na podstawie **filtrów** i określonych **routingów**.
 <!-- more -->

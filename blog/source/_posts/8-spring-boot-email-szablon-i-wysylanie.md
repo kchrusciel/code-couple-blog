@@ -13,7 +13,7 @@ date: 2016-09-30 11:03:41
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Podczas tworzenia modułu rejestracji w mojej aplikacji postanowiłam stworzyć proces potwierdzania tej czynności mailem. Przykład przedstawię w oparciu o `spring-boot-starter-mail` oraz `spring-boot-starter-thymeleaf` do tworzenia template'ow.
 <!-- more -->
@@ -152,4 +152,4 @@ public class EmailController {
 
 Po uruchomieniu programu na wskazany przez nas adres otrzymujemy następującego maila.
 
-![SpringBoot mail](http://codecouple.pl/wp-content/uploads/2016/09/aaa.png)
+![SpringBoot mail](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/09/aaa.png)

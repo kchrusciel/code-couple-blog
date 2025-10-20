@@ -12,7 +12,7 @@ date: 2016-02-17 22:07:05
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)
 
 Zaczynając zabawę z testowaniem oprogramowania, należałoby wiedzieć jakie w ogóle mamy podziały testów i w jakich sytuacjach stosować każde z nich. Zaznaczmy, że poziomy i typy testów to dwa zupełnie różne, niezależne od siebie podziały. Każdy typ testu może być wykonany na każdym poziomie testowania. Przykładem są testy modułowe oraz systemowe, które dotyczyć mogą zarówno funkcjonalnych, jak i niefunkcjonalnych cech systemu. Niektóre połączenia poziomów i typów występują rzadziej, a inne częściej.
 <!-- more -->

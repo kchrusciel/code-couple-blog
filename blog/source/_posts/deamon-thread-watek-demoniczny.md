@@ -11,7 +11,7 @@ date: 2018-12-21 12:01:23
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Chociaż tytuł wpisu brzmi bardzo **złowieszczo** to nie zapowiada on niczego złego. Pojęcie wątków **demonicznych** pojawiło się już we [wpisie związanym z ThreadFactory](http://codecouple.pl/2018/03/31/threadfactory-czyli-pool-n-thread-m/), natomiast dziś chciałbym przedstawić wam jak tworzyć takie wątki. Ponadto odpowiemy sobie na pytanie kiedy warto stosować ten typ zadań.
 <!-- more -->

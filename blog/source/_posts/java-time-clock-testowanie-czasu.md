@@ -11,7 +11,7 @@ date: 2018-11-02 12:12:28
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)
 
 Proces testowania przez wielu z nas traktowany jest podobnie jak sztuka. Dobre testy powinny spełniać wiele czynników by mogły być nazwane "dobrymi". Jednym z nich jest brak zależność od czasu. Nasze testy powinny być tak szybkie jak to tylko możliwe oraz nie powinny zależeć od czynników zewnętrznych (mówimy o **testach jednostkowych**). Aby pozbyć się zależności czasowych **Java 8** dostarczyła nam nową klasę `java.time.Clock`.
 <!-- more -->

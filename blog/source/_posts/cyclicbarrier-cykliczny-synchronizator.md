@@ -11,7 +11,7 @@ date: 2018-11-23 12:01:40
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Ostatnio poznanym sychronizatorem pracy był `CountDownLatch`. Był to bezpieczny wątkowo mechanizm odliczania, który pozwala uruchomić zadanie, gdy licznik wynosi zero. Podobnym sposobem synchronizacji pracy jest `CyclicBarier`. Różni się on nieznacznie od `CountDownLatch`, ale po szczegóły zapraszam do wpisu.
 <!-- more -->
@@ -19,7 +19,7 @@ Ostatnio poznanym sychronizatorem pracy był `CountDownLatch`. Był to bezpieczn
 
 Podobnie jak w przypadku `CountDownLatch` posiadamy trzy serwisy zliczające sumę użytkowników. Po zliczeniu tej sumy chcielibyśmy policzyć jej średnią:
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-13-at-19.03.39-1024x403.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/Screen-Shot-2018-11-13-at-19.03.39-1024x403.png)
 
 Problemem w tym przypadku jest taki, iż chcielibyśmy zliczyć sumę dopiero, gdy wszystkie serwisy zakończą swoją prace. Dodatkowo nie chcemy, aby po wykonaniu zliczania sumy na naszym serwisie była wykonywana jakakolwiek praca (na przykład następne obliczanie użytkowników). Może ona się wykonać dopiero, gdy rozpocznie się obliczanie średniej.
 
@@ -35,15 +35,15 @@ cyclicBarrier.await();
 
 Dopiero, gdy wszystkie zadania zakończyły pracę uruchamiane jest zadanie wskazane w konstruktorze `CyclicBarrier`. Zobaczymy to na przykładzie:
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.21.42-1024x531.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/Screen-Shot-2018-11-14-at-09.21.42-1024x531.png)
 
 Pierwsze zadanie się skończyło, wywoływana jest metoda `await()`, która czeka na pozostałe zadania:
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.45.15-1024x534.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/Screen-Shot-2018-11-14-at-09.45.15-1024x534.png)
 
 Drugie i trzecie zadanie również się zakończyły (po zakończeniu zostały wywołane metody `await()`), blokada na zadaniu `avgCounter` została zwolniona i uruchomiła się logika odpowiedzialna za zliczanie średniej:
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-09.57.38-1024x425.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/Screen-Shot-2018-11-14-at-09.57.38-1024x425.png)
 
 ### Bezpieczeństwo
 

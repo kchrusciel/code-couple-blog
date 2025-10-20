@@ -10,7 +10,7 @@ date: 2019-02-01 12:01:18
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Kolejny artykuł z serii o **Class Loaderach**. W dwóch poprzednich poznaliśmy [podstawowe Class Loadery wbudowane](https://codecouple.pl/2019/01/18/class-loader-w-javie/) w **JVM** oraz to, w jaki [sposób możemy stworzyć własny Class Loader](https://codecouple.pl/2019/01/25/wlasny-class-loader/). Dziś na tapetę weźmiemy to, co dzieje się pod spodem **Class Loadera**. Zapraszamy!
 <!-- more -->
@@ -18,7 +18,7 @@ Kolejny artykuł z serii o **Class Loaderach**. W dwóch poprzednich poznaliśmy
 
 Proces ładowania klas poprzez **Class Loader** podzielony jest na poniższe fazy:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/class_loader_phases-559x1024.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/class_loader_phases-559x1024.png)
 
 ### Loading
 

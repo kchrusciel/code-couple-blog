@@ -11,7 +11,7 @@ date: 2020-09-25 12:00:00
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Piętnastego sierpnia została wydana nowa wersja **Javy**, okraszona numerem **15**. Wraz z pojawieniem się kolejnej **wersji** dostaniemy **pakiet** kilku nowych usprawnień i funkcjonalności. Jedną z nich (w trybie **preview**) są "zapieczętowane" klasy czy **JEP 360 Sealed Classes**. Zapraszam do wpisu, aby dowiedzieć się jakie problemy próbuje rozwiązać **JEP 360**.
 <!-- more -->

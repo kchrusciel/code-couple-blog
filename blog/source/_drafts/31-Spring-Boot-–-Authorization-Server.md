@@ -6,7 +6,7 @@ categories:
   - - Python
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Kontynuacja tematyki związanej z zabezpieczeniem aplikacji korzystając z **OAuth2**. Dziś chcemy wam przedstawić w jaki sposób stworzyć serwer uwierzytelniania. W [poprzednich wpisach opisane](http://codecouple.pl/2018/02/16/29-spring-boot-single-sign-on/) było jak zabezpieczyć zasoby korzystając z **GitHub'a**, jednakże co zrobić jeśli nie chcemy korzystać z **API** stworzonego przez kogoś? Należy stworzyć własny serwer uwierzytelniania. Zapraszamy!
 <!-- more -->

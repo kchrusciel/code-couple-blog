@@ -11,7 +11,7 @@ date: 2018-08-24 12:01:43
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 `WatchService` jest mechanizmem wprowadzonym w **Javie 7**. Pozwala on na obserwowanie interesującego nas folderu. Jeśli przykładowo w obserwowanym folderze pojawi się nowy plik, otrzymamy zdarzenie informujące o tej zmianie. Jest to bardziej wydaje rozwiązanie niż każdorazowe odpytywanie systemu o to czy pojawiły się nowe pliki.
 <!-- more -->

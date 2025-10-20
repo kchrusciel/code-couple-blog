@@ -11,7 +11,7 @@ date: 2017-11-24 12:11:34
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 **FailFast** to podejście, w którym w jak najszybszym czasie dostajemy informację o tym, że coś działa niepoprawnie. Jednym z rozwiązań realizujących tą technikę jest biblioteka **Hystrix** ze stajni **Netflix'a**. Swoje rozwiązanie realizują oni jako **CircuitBreaker**, czyli bezpiecznik, który jeśli dzieje się coś niepożądanego zostaje włączony.
 <!-- more -->

@@ -11,7 +11,7 @@ date: 2018-03-31 10:07:24
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Jestem zdania, że nie ma co na siłę dorzucać wielowątkowości do każdej tworzonej aplikacji, jednakże czasem dostajemy zadanie, w którym musimy zrównoleglić wykonywanie zadań. "Dobra" wielowątkowość może poprawić wydajność i czas przetwarzania naszej aplikacji, jednakże taki przywilej niesie ze sobą także różne utrudnienia takie jak choćby debugowanie. Czy możemy to jakoś uprościć?
 <!-- more -->

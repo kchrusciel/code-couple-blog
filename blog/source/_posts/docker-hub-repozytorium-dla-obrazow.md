@@ -22,7 +22,7 @@ Na początek zakładamy konto na [https://hub.docker.com/](https://hub.docker.co
 
 ### Tworzymy repozytorium
 
-Jeśli stworzyliśmy konto, możemy przystąpić do utworzenia naszego repozytorium (wpisujemy dane według własnych potrzeb, jeśli ma być to repo publiczne dobry opis jest wskazany): ![](http://codecouple.pl/wp-content/uploads/2017/12/createRepo.png) Po utworzeniu, będzie ono dostępne: ![](http://codecouple.pl/wp-content/uploads/2017/12/createdRepo.png)
+Jeśli stworzyliśmy konto, możemy przystąpić do utworzenia naszego repozytorium (wpisujemy dane według własnych potrzeb, jeśli ma być to repo publiczne dobry opis jest wskazany): ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/createRepo.png) Po utworzeniu, będzie ono dostępne: ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/createdRepo.png)
 
 ### Wrzucamy obraz na DockerHub
 
@@ -38,7 +38,7 @@ Teraz, jeśli jesteśmy zalogowani i mamy zbudowany obraz z odpowiednią nazwą,
 
 docker push kchrusciel/code-couple-email-producer
 
-Gdy nasz obraz znajduje się teraz w repozytorium można wykorzystywać go do budowania innych obrazów oraz dzielenia się wynikami naszej pracy: ![](http://codecouple.pl/wp-content/uploads/2017/12/pushedRepo.png)
+Gdy nasz obraz znajduje się teraz w repozytorium można wykorzystywać go do budowania innych obrazów oraz dzielenia się wynikami naszej pracy: ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/pushedRepo.png)
 
 docker pull kchrusciel/code-couple-email-producer
 

@@ -8,7 +8,7 @@ date: 2019-03-22 12:02:08
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/spring-by-pivotal.png)
 
 W poprzednim wpisie opisałem czym jest **Spring** i jaki [problem rozwiązuje](https://codecouple.pl/2018/02/02/0-spring-basic-o-co-chodzi-z-tym-springiem/). Tym razem chciałem wam przedstawić jak zacząć swoją przygodę ze **Springiem**. Jako pierwszy temat zaczniemy od sposobów tworzenia konfiguracji **beanów**. **Konfiguracje** można tworzyć na dwa sposoby, **jawnie** korzystając z adnotacji `@Bean` oraz **automatycznie** korzystając z adnotacji `@Component`.
 <!-- more -->
@@ -26,7 +26,7 @@ Aby zacząć korzystanie z frameworku **Spring** (i wszystkich dobrodziejstw **I
 
 W **Spring’u** obiekty stworzone i zarządzane przez kontener **IoC** nazywane są **Bean’ami** (są to zazwyczaj zwykłe **obiekty** z dodatkowymi możliwościami). Każdy **Bean** opisany jest poprzez `BeanDefinition`. Jest to zbiór cech i zachowań reprezentowanych przez **Bean’a**. **Bean** ma swój unikalny identyfikator, który pozwala w jednoznaczny sposób go zidentyfikować. Domyślnym **identyfikatorem** jest nazwa klasy wraz z pakietem. Od teraz wszystkie operacje wykonywane przez **Spring’a** odbywają się z wykorzystaniem **Bean’ów**. Jednakże, aby stworzyć **Bean’a** musimy dostarczyć kontenerowi **IoC** jego **konfigurację**.
 
-![](https://codecouple.pl/wp-content/uploads/2018/02/spring_ioc-1024x634.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/spring_ioc-1024x634.png)
 
 ### Konfiguracja
 

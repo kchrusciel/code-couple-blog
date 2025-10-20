@@ -15,7 +15,7 @@ date: 2017-11-03 12:05:54
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 W tym wpisie przedstawię wam jak zintegrować bezpośrednio naszą aplikację z **RabbitMQ**. Stosowanie kolejek w naszym ekosystemie ma wiele zalet. Dzięki zrównolegleniu pracy możemy w łatwy sposób skalować naszą aplikację. Jednocześnie wysyłając zadania na kolejkę powodujemy, iż nasz system staje się bardziej odporny, ponieważ zadania w pierwszej kolejności trafiają na kolejkę i zostaną z niej pobrane dopiero wtedy, gdy dostępni będą konsumenci tych wiadomości.
 <!-- more -->

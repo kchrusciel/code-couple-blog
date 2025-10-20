@@ -8,7 +8,7 @@ date: 2019-04-05 12:01:58
 author: 'Krzysztof Chruściel'
 ---
 
- ![](https://codecouple.pl/wp-content/uploads/2019/03/minikube-logo-1024x290.jpg)
+ ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/minikube-logo-1024x290.jpg)
 
 Dosłownie kilka dni temu wydana została wersja **1.0.0** narzędzia **minikube**! Jest to **narzędzie**, które pozwala uruchomić klaster **Kubernetes** na naszej **lokalnej** maszynie. Sprawia to, iż nie **musimy** płacić dostawcy za **klaster** w przypadku testów wszystkich możliwości **Kubernetes'a**. Aby poznać to potężne narzędzie zapraszam do wpisu.
 <!-- more -->
@@ -16,7 +16,7 @@ Dosłownie kilka dni temu wydana została wersja **1.0.0** narzędzia **minikube
 
 Jak pisałem we wstępie **minikube** jest narzędziem, które pozwala na uruchomienie klastra **Kubernetes** na naszej lokalnej maszynie. Wykorzystuje ono do tego **wirtualną maszynę** zarządzaną przez **hypervisor'a**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/03/minikube-1024x433.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/minikube-1024x433.png)
 
 Ponadto **minikube** dostarcza takie funkcjonalności jak **dashboard**, **DNS** czy zarządzanie **Secret'ami**.
 
@@ -53,7 +53,7 @@ minikube dashboard
 
 Po wpisaniu powyższego polecenia w naszej przeglądarce powinien pokazać się **dashboard**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/03/Screen-Shot-2019-03-30-at-18.58.35-1024x611.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/03/Screen-Shot-2019-03-30-at-18.58.35-1024x611.png)
 
 ### SSH
 

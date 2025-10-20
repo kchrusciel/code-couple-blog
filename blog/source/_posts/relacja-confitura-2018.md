@@ -10,7 +10,7 @@ date: 2018-07-06 12:01:34
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 Jak zwykle końcówkę czerwca spędziliśmy w stolicy biorąc udział w **Confiturze**. Jest to największa darmowa konferencja Javova w Polsce, na której występują najbardziej znane osoby ze środowiska **JVM**. W tym roku odbyła się ona w nowy miejscu jakim jest budynek **Expo XXI**. Zapraszamy na relację!
 <!-- more -->

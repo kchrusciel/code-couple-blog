@@ -12,7 +12,7 @@ date: 2018-05-06 15:35:33
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 **ForkJoinPool** jest specyficzną pulą, która została dodana w **Javie 7**, jednakże na dobre zaczęto jej używać w **Javie 8**. Pula ta służy do realizacji zadań, które da się podzielić. Do podziału problemów stosuje ona **algorytm dziel i zwyciężaj**, a te podzielone zadania przydzielane są dzięki wykorzystaniu algorytmu **Work-Stealing**. Jest to bardzo ciekawa pula, ponieważ jest współdzielona przez cały proces uruchomiony na **JVM**.
 <!-- more -->
@@ -24,7 +24,7 @@ Jeśli kiedyś zdarzyło wam się wywołać metodę `.parallel()` na strumieniu,
 
 `ForkJoinPool` korzysta z algorytmu dziel i zwyciężaj. Jest to bardzo proste podejście, w którym dzielimy pracę na mniejsze podzadania:
 
-![](http://codecouple.pl/wp-content/uploads/2018/04/divide-1024x652.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/04/divide-1024x652.png)
 
 W kontekście tej puli, każdy podział nazwywany jest **Fork'iem** (niebieska strzałka), natomiast zwrócenie wyniku z podzadania **Join'em** (zielona strzałka).
 

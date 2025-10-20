@@ -11,7 +11,7 @@ date: 2018-04-13 12:01:58
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Podczas tworzenia **zadań asynchronicznych** możemy wskazać własną **pulę wątków**. Takie rozwiązanie jest lepsze niż operowanie na domyślnej **puli wątków**, ponieważ pozwala nam kontrolować jej parametry. **Java** dostarcza przyjazny mechanizm `Executors`, który umożliwia tworzenie **puli wątków**.
 <!-- more -->

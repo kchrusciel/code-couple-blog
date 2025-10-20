@@ -7,7 +7,7 @@ categories:
   - - Java
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)W dzisiejszym artykule opisze wam jak stworzyć własny **annotation processor**. Niewiele osób zna ten **mechanizm**, ale bardzo wielu z nas z niego korzysta (jeśli używacie **Lomboka**). Może on być przydatnym narzędziem do **tworzenia** plików w trakcie kompilacji jak i do dodania dodatkowej **walidacji**.
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)W dzisiejszym artykule opisze wam jak stworzyć własny **annotation processor**. Niewiele osób zna ten **mechanizm**, ale bardzo wielu z nas z niego korzysta (jeśli używacie **Lomboka**). Może on być przydatnym narzędziem do **tworzenia** plików w trakcie kompilacji jak i do dodania dodatkowej **walidacji**.
 <!-- more -->
 ### Annotation Processor
 
@@ -128,7 +128,7 @@ Annotation processory możemy z powodzeniem wykorzystywać w IDE. Jeśli chodzi 
 3.  Otwieramy Java Compiler -> Annotation Processing -> Factory Path i zaznaczamy "Enable project specific settings". Dodajemy JAR z processorem
 4.  Clean i build na projekcie
 
-**Eclipse** od razu będzie podkreślał nam błędy w kodzie jeśli zwrócimy error message: ![](http://codecouple.pl/wp-content/uploads/2018/09/eclipseAnnotationProcessor.png)
+**Eclipse** od razu będzie podkreślał nam błędy w kodzie jeśli zwrócimy error message: ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/09/eclipseAnnotationProcessor.png)
 
 ### Annotation Processor a IntelliJ
 

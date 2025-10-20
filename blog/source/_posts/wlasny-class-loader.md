@@ -10,7 +10,7 @@ date: 2019-01-25 12:01:57
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 [W poprzednim wpisie](https://codecouple.pl/2019/01/18/class-loader-w-javie/) pozyskaliśmy informację na temat wbudowanych w **JVM** **ClassLoaderów**. Dowiedzieliśmy się także, że część z nich napisana jest w **Javie**. Informacja ta sprawia, że sami możemy napisać własny **ClassLoader**. Tworzenie własnych **ClassLoaderów** jest tematem dzisiejszego wpisu. Zapraszamy!
 <!-- more -->

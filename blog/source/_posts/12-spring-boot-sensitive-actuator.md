@@ -12,7 +12,7 @@ date: 2017-03-24 14:12:39
 author: 'Krzysztof Chruściel'
 ---
 
-[![springBootArt](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![springBootArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 [W poprzednim wpisie](http://codecouple.pl/2017/02/24/11-spring-boot-actuator/) opisałem **endpointy**, które były **insensitive**. Oznacza to, iż nie wymagały logowania. Dziś przedstawię wam pozostałą część. Pakiet **Spring Boot Acutator** oferuje całą gamę ciekawych rozwiązań. Zapraszam do czytania.
 <!-- more -->

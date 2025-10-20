@@ -11,7 +11,7 @@ date: 2017-04-07 15:30:53
 author: 'Krzysztof Chruściel'
 ---
 
-[![springBootArt](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)Gdy potrzebujemy zrobić jakąś funkcjonalność opcjonalną lub nie chcemy hardkodować danych w aplikacji powinniśmy użyć własny plików **properties**. **Spring Boot** dostarcza bardzo sprytny mechanizm do obsługi nowy **properties** wraz z podpowiedziami.
+[![springBootArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)Gdy potrzebujemy zrobić jakąś funkcjonalność opcjonalną lub nie chcemy hardkodować danych w aplikacji powinniśmy użyć własny plików **properties**. **Spring Boot** dostarcza bardzo sprytny mechanizm do obsługi nowy **properties** wraz z podpowiedziami.
 <!-- more -->
 Zaczynamy standardowo, jednakże nie jest to pozycja obowiązkowa. Jeśli chcemy mieć podpowiedzi do naszych **properties** musimy dodać zależność:
 
@@ -95,7 +95,7 @@ Teraz możemy w prosty sposób używać naszych **properties**:
 *   `custom.property` - pola w klasie,
 *   `custom.connection.port` - pola dla obiektów zagnieżdżonych.
 
-[![customPropetiesPopup](http://codecouple.pl/wp-content/uploads/2017/03/customPropetiesPopup.png)](http://codecouple.pl/wp-content/uploads/2017/03/customPropetiesPopup.png)
+[![customPropetiesPopup](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/customPropetiesPopup.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/customPropetiesPopup.png)
 
 Adnotacja `@Validated` dodaje walidacje do naszych **properties**. Wykorzystujemy do tego **hibernetowe** constrainty:
 

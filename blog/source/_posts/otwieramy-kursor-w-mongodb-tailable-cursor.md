@@ -15,7 +15,7 @@ date: 2018-08-03 12:01:09
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Motywem przewodnim **Spring Boot'a** w wersji **2.0** jest **reaktywność**. Wraz z tymi zmianami pojawiła się także możliwość reaktywnej współpracy z bazami **NoSQL**. W dzisiejszym wpisie zaprezentuję wam jak stworzyć niezamykający się **kursor** na bazie **MongoDB**. Aby to osiągnąć wykorzystamy kursor **tailable**.
 <!-- more -->

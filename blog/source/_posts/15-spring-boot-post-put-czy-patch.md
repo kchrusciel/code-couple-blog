@@ -14,7 +14,7 @@ date: 2017-06-09 16:00:01
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Tak na prawdę ten artykuł niekoniecznie musi być związany ze **Spring Bootem**, jednakże posłuży mi on jako realizacja tego zagadnienia. Projektując **API REST'owe** powinniśmy zwracać uwagę na wiele elementów. Odpowiedni dobór nazw dla endpointów czy korzystanie z kodów odpowiedzi **HTTP** świadczy o dobrze zaprojektowanym **API**. Ważnym element jest także korzystanie z metod **HTTP** do obsługi zasobów.
 <!-- more -->

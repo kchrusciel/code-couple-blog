@@ -12,7 +12,7 @@ date: 2017-09-22 12:05:57
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)
 
 **10-tego** września miało miejsce oficjalne wydanie **JUnitów** w wersji **5**. Autorzy wprowadzili rozwiązania, które sprawdziły się w innych bibliotekach łącząc to w jedną całość. Zmieniło się także podejście do architektury biblioteki. Czy warto już zacząć migrować się do najnowszej wersji?
 <!-- more -->

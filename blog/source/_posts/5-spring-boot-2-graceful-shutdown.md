@@ -11,7 +11,7 @@ date: 2019-05-27 12:31:08
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 **Graceful Shutdown** jest mechanizmem, który pozwala na **zamknięcie** aplikacji w "_poprawny_" sposób. Ale co tak naprawdę oznacza, że zamykamy aplikację w "_poprawny_" sposób? Odpowiedzi na to pytanie będziemy szukać w dzisiejszym artykułe. Implementację mechanizmu **Graceful Shutdown** oprzemy na przykładzie aplikacji napisanej przy wykorzystaniu **Spring Boot 2**.
 <!-- more -->

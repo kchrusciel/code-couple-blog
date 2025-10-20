@@ -23,7 +23,7 @@ Aby zacząć swoją przygodę z **Docker'em,** należy pobrać pliki z oficjalne
 
 *   [https://docs.docker.com/windows](https://docs.docker.com/windows/)/
 
-Po pomyślnej instalacji możemy uruchomić terminal **Dockerowy** (fajny wieloryb :P): [![dockerTerminal](http://codecouple.pl/wp-content/uploads/2016/03/dockerTerminal.png)](http://codecouple.pl/wp-content/uploads/2016/03/dockerTerminal.png)
+Po pomyślnej instalacji możemy uruchomić terminal **Dockerowy** (fajny wieloryb :P): [![dockerTerminal](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerTerminal.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerTerminal.png)
 
 Polecenia poprzedzamy słowem "**docker**".
 
@@ -31,7 +31,7 @@ docker polecenie argument
 
 **Obraz** (ang. _image_) jest to czysta kopia systemu **Linux** z najważniejszymi elementami, aby uruchomić dane środowisko. **Marek Goldmann** określił obraz jako klasę, natomiast kontener jest instancją klasy (obrazu). **Obrazy** przechowywane są w [Docker Hub](https://hub.docker.com/), znajdują się tam oficjalne repozytoria z obrazami (coś na wzór Github'a). Na górze strony znajduje się wyszukiwarka. Wyszukujemy interesujący nas obraz. Dla przykładu wpiszmy "**java**". Po wpisaniu ukaże nam się strona z dostępnymi tagami. **Tag** określa nazwę wersji.
 
-[![dockerJavaImages](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaImages.png)](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaImages.png) Aby pobrać **obraz** należy wydać polecenie:
+[![dockerJavaImages](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaImages.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaImages.png) Aby pobrać **obraz** należy wydać polecenie:
 
 docker pull nazwa\_obrazu
 
@@ -57,7 +57,7 @@ Po pobraniu **obrazu** powinien on być widoczny na liście obrazów. Lista nasz
 
 docker images
 
-[![dockerImages](http://codecouple.pl/wp-content/uploads/2016/03/dockerImages.png)](http://codecouple.pl/wp-content/uploads/2016/03/dockerImages.png)
+[![dockerImages](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerImages.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerImages.png)
 
 Widzimy, że nasz obraz jest dostępny z tagiem "**latest**". Pora na uruchomienie obrazu.
 
@@ -79,13 +79,13 @@ Uruchomiliśmy lekki kontener **Linuxowy** z wszystkim minimalnymi składkami, �
 
 java -version
 
-[![dockerJavaContainer](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaContainer.png)](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaContainer.png) Jak widzicie na naszym kontenerze jest najnowsza **Java**.
+[![dockerJavaContainer](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaContainer.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaContainer.png) Jak widzicie na naszym kontenerze jest najnowsza **Java**.
 
 Aby wyjść z kontenera wydajemy polecenie **exit**.
 
 Uruchamiamy **kontener** po raz kolejny:
 
-[![dockerJavaContainerVersion](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaContainerVersion.png)](http://codecouple.pl/wp-content/uploads/2016/03/dockerJavaContainerVersion.png)
+[![dockerJavaContainerVersion](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaContainerVersion.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/dockerJavaContainerVersion.png)
 
 ID **kontenera** jest inne, dzięki czemu mamy pewność, że pracujemy na świeżym **kontenerze**.
 

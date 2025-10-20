@@ -12,7 +12,7 @@ date: 2017-08-18 12:05:25
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/katas.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/katas.png)
 
 Godzina 5.00, za oknami ciemno, pora na codzienne ćwiczenia. Zgodnie z definicją: "Kata - wysoce sformalizowany rodzaj ćwiczeń stosowanych w wielu tradycyjnych sztukach i sportach walki...", "Są to sekwencje technik ataku i obrony, połączone z określonym poruszaniem, przyjęciem ściśle określonej pozycji i sposobu oddychania. Niektóre techniki w kata mają charakter wyłącznie symboliczny."
 <!-- more -->

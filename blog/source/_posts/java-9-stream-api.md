@@ -13,7 +13,7 @@ date: 2017-10-06 12:05:19
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Ah! Co to był za wrzesień, niedawno premierę miała nowa wersja biblioteki **JUnit 5**, a teraz mamy oficjalne wydanie **Javy 9**. Dziewiątka nie jest tak przełomową wersją **Javy** jak ósemka, jednakże wprowadza kilka ciekawych featurów i usprawnień. W tym wpisie bierzemy na tapetę **Stream API**.
 <!-- more -->

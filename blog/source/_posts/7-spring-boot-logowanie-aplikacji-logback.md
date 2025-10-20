@@ -120,7 +120,7 @@ Bardzo fajnym dodatkiem w Spring Boot'cie jest możliwość konfiguracji logów 
 
 Jeśli korzystacie z **IntelliJ** pomocne może być dodanie **LiveTemplate** dla loggerów:
 
-[![livetemplatelog](http://codecouple.pl/wp-content/uploads/2016/09/LiveTemplateLog.png)](http://codecouple.pl/wp-content/uploads/2016/09/LiveTemplateLog.png) Lub drugim rozwiązaniem, bardziej inwazyjnym jest zastosowanie **Lombok'a**. W `pom.xml` należy dodać odpowiednią zależność:
+[![livetemplatelog](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/09/LiveTemplateLog.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/09/LiveTemplateLog.png) Lub drugim rozwiązaniem, bardziej inwazyjnym jest zastosowanie **Lombok'a**. W `pom.xml` należy dodać odpowiednią zależność:
 
 <dependency>
     <groupId>org.projectlombok</groupId>

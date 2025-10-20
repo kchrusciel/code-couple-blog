@@ -10,7 +10,7 @@ date: 2019-05-10 12:01:22
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/05/03/3-spring-boot-2-actuator/) poznaliśmy narzędzie **actuator**. Jest to **narzędzie**, które dostarcza **metryki** oraz dodatkowe **informacje** na temat aplikacji. _Out-of-the-box_ **actuator** daje nam między innymi możliwość sprawdzenia **metryk** wirtualnej maszyny **Javy** czy **statusu** naszej aplikacji. Jednakże, czasem potrzebujemy dodać **własny** adres dostarczający dodatkowe **informacje** o naszej aplikacji. W tym wpisie opowiemy sobie jak dodać **własny** endpoint.
 <!-- more -->

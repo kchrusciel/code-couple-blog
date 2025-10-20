@@ -9,13 +9,13 @@ date: 2017-01-13 14:00:54
 author: 'Krzysztof Chruściel'
 ---
 
-[![gradlelogo](http://codecouple.pl/wp-content/uploads/2017/01/GradleLogo.png)](http://codecouple.pl/wp-content/uploads/2017/01/GradleLogo.png)
+[![gradlelogo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/GradleLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/GradleLogo.png)
 
 **Maven** z wielu względów cały czas jest dla mnie narzędziem do budowania numer jeden. Jednakże mam tylko porównanie do **Ant'a** z **Ivy**. Od kilku lat na rynku bardzo mocno przebija się **Gradle**. Wykorzystywany jest on jako podstawowe narzędzie do budowania na platformę **Android**.
 <!-- more -->
 Na początek jeden wykres, który pokazuje, że **Maven** ciągle jest narzędziem do budowania numer jeden:
 
-\[caption id="attachment\_1278" align="aligncenter" width="622"\][![https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/](http://codecouple.pl/wp-content/uploads/2017/01/GradleWykres.png)](http://codecouple.pl/wp-content/uploads/2017/01/GradleWykres.png) _źródło: https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/_\[/caption\]
+\[caption id="attachment\_1278" align="aligncenter" width="622"\][![https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/GradleWykres.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/GradleWykres.png) _źródło: https://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-2016/_\[/caption\]
 
 Brakuje mi wiedzy, aby określić, który tool bardziej mi odpowiada, a miałem ochotę pobawić się **Groovy'm**, dlatego też zakupiłem książkę "_Introducing Gradle_" autorstwa **Balaji Varanasi** i **Sudha Belida** (w najbliższym czasie napiszę recenzję tej książki).
 

@@ -10,7 +10,7 @@ Po raz kolejny wybierzemy się w podróż w stronę metalu. Tym razem sprawdzimy
 <!-- more -->
 ### Czym jest Java Native Memory?
 
-W momencie uruchomienia każdego procesu alokowany jest dla niego nowy obszar pamięci. W przypadku "zwykłego procesu" (nie JVM), alokowany jest obszar pamięci zwany **heap'em**. W przypadku procesu **JVM** oprócz **heap'a** (na którym przechowywane jest większość obiektów) mamy obszar pamięci określany jako **off-heap** (w nim znajduje się pamięć natywna procesu dlatego wykorzystujemy nazwę **Java** **Native** **Memory**): ![](https://codecouple.pl/wp-content/uploads/2019/10/processes-1024x694.png)
+W momencie uruchomienia każdego procesu alokowany jest dla niego nowy obszar pamięci. W przypadku "zwykłego procesu" (nie JVM), alokowany jest obszar pamięci zwany **heap'em**. W przypadku procesu **JVM** oprócz **heap'a** (na którym przechowywane jest większość obiektów) mamy obszar pamięci określany jako **off-heap** (w nim znajduje się pamięć natywna procesu dlatego wykorzystujemy nazwę **Java** **Native** **Memory**): ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/10/processes-1024x694.png)
 
 ### Co znajduje się w Java Native Memory?
 
@@ -22,7 +22,7 @@ Wewnątrz obszaru **off-heap** znajdują się dodatkowe informacje wymagane do p
 *   **GC** - obszar wykorzystywany przez **GC**
 *   inne...
 
-### ![](https://codecouple.pl/wp-content/uploads/2019/10/off-heap.png)
+### ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/10/off-heap.png)
 
 ### Native Memory Tracking
 

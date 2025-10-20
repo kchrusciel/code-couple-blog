@@ -13,7 +13,7 @@ date: 2017-07-21 13:13:19
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Każdy z nas, korzystając z architektury **microserwisów** posiada kilka usług które "**rozmawiają**" ze sobą. Jedna logiczna operacja, na przykład zakup czegoś w sklepie to tak na prawdę odwiedzenie kilku serwisów. Niestety podczas zakupu wystąpił błąd. Jak dowiedzieć się teraz w którym miejscu coś poszło nie tak? Można wchodzić po **SSH** na maszyny i robić **grepa** z **tailem** i szukać słówka **Error** ale jest to robota ręczna i męcząca. W odpowiedzi na zapotrzebowanie na rozproszone logowanie pokaże wam dziś **Zipkina**.
 <!-- more -->
@@ -103,15 +103,15 @@ Jak widzicie, **traceID** jest takie same, natomiast **spanID** oraz nazwa usłu
 
 ### Zipkin UI
 
-Dzięki wykorzystaniu **Zipkin UI** możemy przeglądać przebiegi  oraz czas wykonania naszych operacji. Domyślnym portem **UI** jest port **9411**. Jeśli wykonaliśmy uprzednio jakieś akcje powinniśmy widzieć w przebiegach różne **traces**. [![](http://codecouple.pl/wp-content/uploads/2017/06/zipkinTraces.png)](http://codecouple.pl/wp-content/uploads/2017/06/zipkinTraces.png)
+Dzięki wykorzystaniu **Zipkin UI** możemy przeglądać przebiegi  oraz czas wykonania naszych operacji. Domyślnym portem **UI** jest port **9411**. Jeśli wykonaliśmy uprzednio jakieś akcje powinniśmy widzieć w przebiegach różne **traces**. [![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/zipkinTraces.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/zipkinTraces.png)
 
 Po wybraniu interesującego nas **trace**, pojawi nam się szczegółowy wynik z **spanami** które zawarte są w tym **trace**.
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/zipkinTraceDetails.png)](http://codecouple.pl/wp-content/uploads/2017/06/zipkinTraceDetails.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/zipkinTraceDetails.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/zipkinTraceDetails.png)
 
 Możemy teraz podejrzeć także szczegóły **spana**, należy tylko wybrać interesujący nas **span**, ja wybrałem **zipkin-service**.
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/spanInfo.png)](http://codecouple.pl/wp-content/uploads/2017/06/spanInfo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/spanInfo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/spanInfo.png)
 
 Znajduję się tu wiele informacji, jak przebieg naszych **eventów** opisanych we wstępie, oraz wiele różnych kluczy i wartości.
 

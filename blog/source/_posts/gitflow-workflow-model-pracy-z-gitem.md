@@ -13,7 +13,7 @@ author: 'Krzysztof Chruściel'
 <!-- more -->
 Na początku przyjrzyjmy się rysunkowi, który przedstawia schemat pracy w modelu **Gitflow**:
 
-[![gitflow](http://codecouple.pl/wp-content/uploads/2016/02/gitflow.png)](http://codecouple.pl/wp-content/uploads/2016/02/gitflow.png) Głównymi gałęziami są:
+[![gitflow](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/02/gitflow.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/02/gitflow.png) Głównymi gałęziami są:
 
 *   **Master**
 *   **Develop**
@@ -50,7 +50,7 @@ $ git push origin develop
 
 **\--no --ff** - czyli "_no_ _fast forward_" jest to opcja, na którą warto zwrócić uwagę. Ustawienie tych flag powoduje utworzenie pustego **commita** w przypadku, gdy nie było zmian w **develop'ie.** Dzięki temu mamy możliwość przywrócenia zmian po wprowadzeniu jakiegoś **feature'a**, który miał kilka **commitów**. Gdy nie ustawimy tych flag, a w **develop'ie** nie będzie innych zmian niż nasze, wtedy występuje automatyczne przesunięcie "_fast_ _forward_" wskaźnika poprzez **feature** do **develop**. Poniżej znajduje się rysunek prezentujący koncepcje "_no_ _fast forward_".
 
-[![fast-forward-merge](http://codecouple.pl/wp-content/uploads/2016/02/fast-forward-merge.jpg)](http://codecouple.pl/wp-content/uploads/2016/02/fast-forward-merge.jpg)
+[![fast-forward-merge](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/02/fast-forward-merge.jpg)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/02/fast-forward-merge.jpg)
 
 **Hotfix** - jest do gałąź, która ma swój korzeń w **master**. Wykonywane są w niej zadania, które związane są z naprawą błędów w aktualnie wydanej wersji. Wtedy wszyscy programiści powinni skupić się na tym zadaniu. Po rozwiązaniu problemu bardzo ważne jest scalenie brancha **hotfix** z branchami **master** oraz **develop**. W **master** umieszczona jest wersja bez błędu (każdorazowe umieszczenie czegoś w gałęzi master oznacza **release**). Należy także scalić poprawkę z **develop'em**, aby móc pracować na najnowszej wersji (czyli tej z poprawką). Nazewnictwo:
 

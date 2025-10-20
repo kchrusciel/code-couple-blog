@@ -11,7 +11,7 @@ date: 2019-01-18 12:01:57
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 **ClassLoader'y** są mechanizmem odpowiedzialnym za ładowanie klas. Pełnią one bardzo istotną rolę w trakcie działania wirtualnej maszyny Javy. **ClassLoader'y** są to klasy napisane w **Javie**, no dobra to kto załadował pierwszą klasę? Zapraszam do wpisu, aby się tego dowiedzieć!
 <!-- more -->
@@ -23,7 +23,7 @@ author: 'Krzysztof Chruściel'
 
 Poniższy obrazek prezentuje **hierachię** **ClassLoader'ów**:
 
-![](https://codecouple.pl/wp-content/uploads/2018/12/class_loader_hierachy-1024x461.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/12/class_loader_hierachy-1024x461.png)
 
 ### Bootstrap Class Loader
 

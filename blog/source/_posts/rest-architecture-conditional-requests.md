@@ -9,7 +9,7 @@ date: 2017-07-28 12:04:11
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)](http://codecouple.pl/wp-content/uploads/2017/06/restLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/restLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/restLogo.png)
 
 Mechanizm **Conditional requests** czyli warunkowych zapytań służy do optymalizacji żądań **HTTP**. Bardzo często odpytujemy o dany zasób po mimo iż jego stan się nie zmienił. W odpowiedzi dostajemy cały zasób i musimy zaimplementować logikę porównywania czy pojawiła się jakaś zmiana w obiekcie. Jednakże standard **HTTP** dostarcza nam mechanizmy do realizacji tego zagadnienia, są to słabe oraz silne nagłówki **cachowania**.
 <!-- more -->
@@ -30,11 +30,11 @@ HTTP domyślnie używa silnej walidacji. Natomiast do wykonywanie warunkowych za
 
 Przykładowe flow znajduje się poniżej. Pierwsze wykonanie to wysłanie żądania **GET** o dowolny zasób. W odpowiedzi dostajemy ten zasób wraz z dwoma nagłówkami **ETag** oraz **Last-Modified**. Jeden z nich jest nadmiarowy, do realizacji warunkowych żądań wystarczy jeden mechanizm, ja po prostu chciałem zaprezentować dwa od razu.
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/conditionalRequest1.png)](http://codecouple.pl/wp-content/uploads/2017/06/conditionalRequest1.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/conditionalRequest1.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/conditionalRequest1.png)
 
 Teraz jeśli chcemy sprawdzić czy zasób się zmienił nie musimy ponownie odpytywać o cały zasób. Wystarczy wykorzystać odpowiednie nagłówki. Dla **ETag** należy dodać **If-None-Match** z wartością otrzymaną za pierwszym razem natomiast dla **Last-Modified** należy użyć **If-Modified-Since** z datą otrzymaną wcześniej. Jeśli zasób się nie zmienił powinniśmy otrzymać kod **304 Not Modified**. W przypadku gdy zasób zmienił się od tego czasu otrzymamy kod **200** wraz z tym zasobem oraz nową wersją **ETagu** i z zaktualizowaną datą **Last-Modified**.
 
-[![](http://codecouple.pl/wp-content/uploads/2017/06/conditionalRequest2.png)](http://codecouple.pl/wp-content/uploads/2017/06/conditionalRequest2.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/conditionalRequest2.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/06/conditionalRequest2.png)
 
 W **Springu** możemy zrealizować **ETagi** na dwa sposoby. Pierwszy z nich to wykorzystanie adnotacji `@Version` z pakietu `javax.persistence,` która umieszczona na polu przechowującym wersję będzie ją automatycznie aktualizować:
 

@@ -10,7 +10,7 @@ date: 2018-12-28 12:01:05
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 W moim przypadku praca z **kodem bajtowym** zawsze uczy mnie czegoś nowego. Postanowiłem dodać ten wpis, aby zachęcić was do eksperymentów. Aktualnie kompilator oraz **JIT** wykonuje za nas całą robotę. Prowadzi to do sytuacji, w których bardzo wiele aspektów języka przyjmujemy na zasadzie "no bo tak jest". Odczarujmy trochę ten **kod bajtowy**!
 <!-- more -->

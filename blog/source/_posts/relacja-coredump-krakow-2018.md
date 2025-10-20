@@ -10,7 +10,7 @@ date: 2018-11-30 12:01:00
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/coreDump-White-Full.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/coreDump-White-Full.png)
 
 W **listopadzie** 2018 roku w **Krakowie** odbyła się pierwsza edycja konferencji **CoreDump**. Była to od dłuższego czasu wyczekiwana przez nas **konferencja**. Wyczekiwana, ponieważ znając organizatorów spodziewaliśmy się dużej ilości ciekawych informacji. Zapraszamy na krótką **relację** z tego wydarzenia.
 <!-- more -->

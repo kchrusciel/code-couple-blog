@@ -10,7 +10,7 @@ date: 2019-04-26 16:16:53
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 **8 kwietnia 2019** odbyła się kolejna **Warszawska** edycja konferencji 4 **Developers**. Jest to spotkanie sympatyków świata IT z różnych działów. W tym roku dostępnych było aż **czternaście** ścieżek. Każdy z uczestników z pewnością znalazł temat dla siebie. Jak co roku odbyły się konkursy, w których można było wygrać książki, kubki oraz koszulki (nam się udało). Zapraszamy do **relacji** z wydarzenia!
 <!-- more -->

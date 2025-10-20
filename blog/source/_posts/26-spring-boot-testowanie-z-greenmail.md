@@ -12,7 +12,7 @@ date: 2018-02-09 12:11:43
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Podczas przygotowania mojej prezentacji na **SpreadIT**, obracałem się wokół domeny związanej z mejlami.  Ponieważ była to prezentacja o **TDD**, musiałem w jakiś sposób przetestować moją usługę do wysyłania mejli. Po wyszukaniu dostępnych rozwiązań postanowiłem wybrać bibliotekę [GreenMail](http://www.icegreen.com/greenmail/). Jest to prawdopodobnie jedyna biblioteka, która może być wykorzystywana jednocześnie do wysyłania jak i odbierania **emaili**.
 <!-- more -->

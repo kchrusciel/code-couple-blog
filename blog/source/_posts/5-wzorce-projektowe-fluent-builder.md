@@ -15,7 +15,7 @@ date: 2018-01-26 12:04:12
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 Dzisiaj na tapete bierzemy wzorzec **Test Data Builder**. Nazywany jest również **Fluent Builder'em** lub **Appender'em**. Z jego pomocą jesteśmy w stanie budować obiekty w prosty i przejrzysty sposób. Zetknęliście się kiedyś z kodem, w którym tworzenie obiektu z dużą ilością pól odbywało się przez konstruktor, a wy kilka razy musieliście sprawdzać w jakiej kolejności podawać następne parametry? Jest na to proste rozwiązanie - **Test Data Builder**.
 <!-- more -->

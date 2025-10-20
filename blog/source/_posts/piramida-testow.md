@@ -10,11 +10,11 @@ date: 2017-05-12 15:30:33
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)
 
 Rozmawiając z kilkoma osobami na temat podziału ilości testów względem ich przeznaczenia okazało się, że pojęcie **piramidy testów** nie jest aż tak popularne jak mi się wydawało. Ponad pół roku temu **Agnieszka** w bardzo fajny sposób [opisała rodzaje testów](http://codecouple.pl/2016/02/17/testy-poziomy-i-typy/), dlatego też ten wpis jest tylko uzupełnieniem jej postu. Także w pierwszej kolejności zapraszam do przeczytania jej artykułu i zapraszam z powrotem!
 <!-- more -->
-**Piramida testów** to nic innego jak przedstawienie w sposób graficzny **hierarchii ilości** wykonywanych testów: [![](http://codecouple.pl/wp-content/uploads/2017/05/testPyramid.png)](http://codecouple.pl/wp-content/uploads/2017/05/testPyramid.png)
+**Piramida testów** to nic innego jak przedstawienie w sposób graficzny **hierarchii ilości** wykonywanych testów: [![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testPyramid.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testPyramid.png)
 
 ### Testy jednostkowe
 

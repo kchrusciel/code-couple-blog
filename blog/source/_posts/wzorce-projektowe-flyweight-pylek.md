@@ -14,7 +14,7 @@ date: 2016-06-26 11:57:17
 author: 'Agnieszka Chruściel'
 ---
 
-![designPatternArt](http://codecouple.pl/wp-content/uploads/2017/03/designPatternArt.png)
+![designPatternArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/03/designPatternArt.png)
 
 Postanowiłam zacząć serię wpisów o wzorcach projektowych. Dążymy przecież do tworzenia kodu idealnego, tworząc go zastanawiamy się czy można go jakoś uprościć, zmodyfikować tak, żeby działał bardziej wydajnie oraz dało się go rozbudować w łatwy sposób. Dlaczego nie skorzystać z rozwiązań, które już istnieją? Pierwszy na tapecie **flyweight**, czyli mówiąc po polsku **pyłek**. Jest to **wzorzec strukturalny**, który przydaje się w aplikacjach, które korzystają z większej liczby identycznych obiektów.
 <!-- more -->

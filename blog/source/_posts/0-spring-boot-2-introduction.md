@@ -12,7 +12,7 @@ date: 2018-07-13 20:01:57
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Z początkiem roku już oficjalnie dołączył do nas **Spring Boot** w wersji **2.0**. Wiele się zmieniło w porównaniu do wersji poprzedniej. Od teraz **Spring Boot** stoi pod hasłem programowanie reaktywne. Najnowszy **Spring Boot** oparty jest na projekcie [Project Reactor](https://projectreactor.io/), który jest **Spring'ową** implementacją specyfikacji [Reactive Streams](https://github.com/reactive-streams/reactive-streams-jvm).
 <!-- more -->

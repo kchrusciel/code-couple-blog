@@ -11,7 +11,7 @@ date: 2018-04-06 12:01:17
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Klasa **CompletableFuture** jest z nami od dłuższego czasu, jednakże ostatnimi czasy stosowałem ją bardzo często. Podczas swojej pracy postanowiłem spisać między innymi na co warto zwrócić szczególną uwagę stosując **CompletableFuture**, jak działają poszczególne transformacje oraz jak obsłużyć sytuacje wyjątkow, zapraszam!
 <!-- more -->

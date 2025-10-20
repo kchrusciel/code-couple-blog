@@ -26,11 +26,11 @@ Aby móc korzystać z **LiveReload** w **Spring** **Boot'cie** musimy zacząć o
 
 Następnie w naszym **IDE** musimy ustawić automatyczne budowanie projektu (przykład w **IntelliJ**):
 
-[![setupAutomaticallyMake](http://codecouple.pl/wp-content/uploads/2016/08/setupAutomaticallyMake.png)](http://codecouple.pl/wp-content/uploads/2016/08/setupAutomaticallyMake.png)
+[![setupAutomaticallyMake](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/setupAutomaticallyMake.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/setupAutomaticallyMake.png)
 
 Musimy także aktywować wpis w rejestrach **IDE** `compiler.automake.allow.when.app.running`.  Aby dostać się do ustawień rejestrów **IntelliJ** można użyć skrótu `Shift+CTRL+A` i wpisać `registry`:
 
-[![compilerRegistry](http://codecouple.pl/wp-content/uploads/2016/08/compilerRegistry.png)](http://codecouple.pl/wp-content/uploads/2016/08/compilerRegistry.png)
+[![compilerRegistry](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/compilerRegistry.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/08/compilerRegistry.png)
 
 Teraz wystarczy uruchomić aplikację. Następnie można zmienić coś w pliku stylów i wystarczy odświeżyć **przeglądarkę**.
 

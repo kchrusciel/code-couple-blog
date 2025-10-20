@@ -15,7 +15,7 @@ date: 2018-02-02 12:05:55
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/spring-by-pivotal.png)
 
 Rozpoczynamy kolejny cykl wpisów. Tym razem na tapecie framework **Spring**. Zamierzamy przedstawić wam podstawowe funkcjonalności **Spring'a**. Wiele osób zaczyna przygodę ze **Spring'iem** od **Spring Boot'a**, bez zrozumienia co dzieje się pod spodem. Poruszymy tematy takie jak tworzenie beanów, zasięg beanów czy rodzaje wstrzykiwania zależności. Jednakże, na początek zapraszamy na wpis wprowadzający do **Spring'a**,
 <!-- more -->
@@ -31,7 +31,7 @@ Rozpoczynamy kolejny cykl wpisów. Tym razem na tapecie framework **Spring**. Za
 
 **Killer featurem Spring'a** jest własny, bardzo dobrze działający **kontener IoC**. Kontener ten odpowiedzialny jest za tworzenie i zarządzanie obiektami, które nazywane są ziarnami (ang. _bean,_ tak też będę je dalej nazywał). Przeniesienie odpowiedzialności tworzenia obiektów zwane jest wzorcem **Inversion of Control.** W przypadku **Spring'a** to kontener tworzy i zarządza **beanami**. [**Dependency Injection**](http://codecouple.pl/2017/12/29/3-wzorce-projektowe-wstrzykiwanie-zaleznosci/) jest jednym ze sposobów realizacji wzorca **IoC**. Dzięki temu, że **Spring** posiada **własny kontener** można z powodzeniem stosować **wstrzykiwanie zależności**. Stosując **DI** nasz kod staje się bardziej **testowalny** (można wstrzykiwać zamockowane zależności) oraz zmniejsza się ilość powiązań pomiędzy innymi komponentami. W podejściu odwrotnym (bez stosowania **odwróconej kontroli**) to klasa tworzy obiekty powiązane oraz wie jakiego mają być typu. To powoduje, iż klasa staje się z nimi bardzo silnie związana.
 
-![](https://codecouple.pl/wp-content/uploads/2018/02/spring_ioc-1024x634.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/spring_ioc-1024x634.png)
 
 Powyższy obrazek prezentuję jak działa kontener w **Spring'u**. Przygotowujemy proste obiekty typu **POJO** (ang. Plain Old Java Object), które następnie tworzone są przez kontener w taki sposób w jaki zdefiniowaliśmy je w konfiguracji. W świecie **Javy** stosowanie **wstrzykiwania zależności** jest standardem, a bardzo duży wkład w to ma właśnie **Spring Framework**.
 

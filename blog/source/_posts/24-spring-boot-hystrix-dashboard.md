@@ -12,7 +12,7 @@ date: 2017-12-08 12:12:44
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Kolejny wpis na temat **Hystrix'a**, czyli biblioteki realizującej wzorzec **CircuitBreaker**. [W poprzednim wpisie](http://codecouple.pl/2017/11/24/23-spring-boot-hystrix/) opisałem jak zaimplementować funkcjonalność **Hystrix'a** w naszej aplikacji. Dziś przedstawię wam projekt **Hystrix Dashboard**, na którym prezentowane są wyniki z naszych metod opakowanych w **commandy Hystrix'owe**.
 <!-- more -->
@@ -31,13 +31,13 @@ Musimy dodać kolejną zależność **Mavenową**:
 
 Po uruchomieniu naszej aplikacji pod adresem `http://localhost:8080/hystrix.stream` mamy dostępny strumień danych generowany przez **Hystrixa**. Pod adresem `http://localhost:8080/hystrix` znajduje się pole, w którym musimy wskazać źródło, dla którego ma być stworzony **dashboard**.
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/hystrix.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/hystrix.png)
 
 ### Wykres
 
 Wskazujemy nasz `hystrix.stream`, następnie powinien ukazać się nam nasz **dashboard**. Teraz najlepiej jest uruchomić stres testy i obserwować wyniki:
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/hystrixDashboard.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/hystrixDashboard.png)
 
 ### GitHub
 

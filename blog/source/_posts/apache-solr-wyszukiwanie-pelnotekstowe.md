@@ -10,7 +10,7 @@ date: 2016-12-09 08:00:52
 author: 'Krzysztof Chruściel'
 ---
 
-![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)
+![SolrLogo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/11/Solr_Logo_on_white-300x152.png)
 
 **Apache Solr** to serwer wyszukiwania pełnotekstowego (ang. _full-text search_) napisany w **Javie.** Oparty jest on na **Apache Lucene** i może bardzo szybko usprawnić wyszukiwarkę w naszej aplikacji. Możemy uzyskiwać wyniki w formatach takich jak **JSON**, **Python**, **XML** czy **PHP**. Bardzo popularne rozwiązanie, posiada funkcje facetów, jest skalowalne i potrafi wiele więcej.
 <!-- more -->
@@ -88,27 +88,27 @@ Pierwsze kroki skierujmy w stronę sprawdzenia możliwości **Solr'a**. Wystarcz
 
 **Autocomplete** - podpowiadanie szukanej frazy, jak w **google,** gdy wpiszemy pierwsze litery słowa.
 
-[![solrbrowser](http://codecouple.pl/wp-content/uploads/2016/12/solrBrowser-1024x624.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrBrowser.png)
+[![solrbrowser](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrBrowser-1024x624.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrBrowser.png)
 
 ## 4\. Panel administracyjny
 
-Aby uruchomić panel administracyjny aplikacji wystarczy w przeglądarce wpisać [http://localhost:8983/solr/](http://localhost:8983/solr/). [![SolrAdminPanel](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel-1024x424.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrAdminPanel.png)
+Aby uruchomić panel administracyjny aplikacji wystarczy w przeglądarce wpisać [http://localhost:8983/solr/](http://localhost:8983/solr/). [![SolrAdminPanel](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrAdminPanel-1024x424.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrAdminPanel.png)
 
 Teraz wybierzmy stworzony przez nas przykładowy Core o nazwie **techproducts**.
 
-[![solrcorechoose](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreChoose.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreChoose.png)
+[![solrcorechoose](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrCoreChoose.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrCoreChoose.png)
 
 ## 5\. Budowanie zapytań w panelu administracyjny
 
 Po wybraniu odpowiedniego Core'a wybieramy opcję **query,** gdzie możemy zacząć zabawę z danymi (dane posiadamy dzięki temu, że uruchomiliśmy **Solr'a** z przykładowymi danymi - flaga `-e`).
 
-[![solrcorequerychoose](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreQueryChoose.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrCoreQueryChoose.png)
+[![solrcorequerychoose](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrCoreQueryChoose.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrCoreQueryChoose.png)
 
 Pojawiło  nam się dość mocno rozbudowane okno do tworzenia zapytań. Jest ono bardzo fajnym ułatwieniem, ponieważ nie musimy ręcznie tworzyć zapytań tylko wypisujemy odpowiednie pola i dzięki temu mamy od razu stworzony URL z zapytaniem. Utworzony URL komunikuje się z naszym serwerem i dzięki temu w naszym panelu administracyjnym mamy od razu wynik.
 
 Po lewej stronie mamy wynik naszego zapytania. Po kliknięciu w górną belkę z całym naszym zapytaniem aplikacja przeniesie nas do przeglądarki, gdzie będziemy mieli wynik w formacie określonym poprzez pole `wt`. Wynik składa się minimum z dwóch części. Pierwsza z nich `responseHeader` zawiera informacje na temat zapytania, natomiast w drugiej części `response` zawarte są wyniki.
 
-[![solrqueryresult](http://codecouple.pl/wp-content/uploads/2016/12/solrQueryResult.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrQueryResult.png)
+[![solrqueryresult](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrQueryResult.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrQueryResult.png)
 
 Po lewej stronie natomiast mamy wiele input boxów:
 

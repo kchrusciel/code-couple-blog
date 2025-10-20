@@ -9,7 +9,7 @@ date: 2020-03-20 12:02:01
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Aby **przyśpieszyć** wydajność naszych aplikacji bardzo często decydujemy się na **zrównoleglenie** pracy. Przy zmianie modelu pracy dostarczamy **pulę wątków**, która będzie odpowiedzialna za **równoległe** wykonywanie zadań. Czasami jednak przy pracy w **wielowątkowym** środowisku może zdarzyć się sytuacja, w której **wysycimy** całą **pulę wątków**. **Java** dostarcza mechanizmy (**polityki**), które instruują pulę jak ma się zachować w przypadku **wysycenia** zasobów.
 <!-- more -->
@@ -58,7 +58,7 @@ Jak widzicie powyżej, przekazaliśmy tylko wartość 10 mimo to dostaliśmy wie
 
 Nie każdy o tym wie, ale większość **puli wątków** ma wbudowaną **kolejkę**. Jej zadaniem jest **kolejkowanie** zadań, które aktualnie nie mogą być wykonywane, ponieważ cała **pula** jest aktualnie zajęta. Jednakże należy się zastanowić co się stanie jeśli również **kolejka** jest już pełna?
 
-![](https://codecouple.pl/wp-content/uploads/2020/03/ThreadPool-1024x425.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/03/ThreadPool-1024x425.png)
 
 ### Zlecanie zadania
 

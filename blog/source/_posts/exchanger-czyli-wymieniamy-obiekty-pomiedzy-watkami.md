@@ -11,7 +11,7 @@ date: 2018-12-14 12:01:45
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Dalej pozostajemy w tematach związanych z pakietem `java.util.concurrent`. Dzisiejszy synchronizator pracy to `Exchanger`. Jak nazwa sugeruje służy on do wymiany danych pomiędzy dwoma wątkami. Podczas tworzenia tego synchronizatora określamy jakiego typu dane chcemy wymienić. Dane zostaną wymienione dopiero, gdy dwa wątki będą gotowe.
 <!-- more -->
@@ -23,7 +23,7 @@ W naszej aplikacji chcielibyśmy wymieniać dane w sposób asynchroniczny pomię
 
 Rozwiązaniem tego problemu jest klasa `Exchanger`, która pochodzi z pakietu `java.util.concurrent`. Pozwala wymieniać ona dane pomiędzy wątkami:
 
-![](http://codecouple.pl/wp-content/uploads/2018/12/Screen-Shot-2018-11-19-at-12.35.49-1024x372.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/12/Screen-Shot-2018-11-19-at-12.35.49-1024x372.png)
 
 Zaczynamy od stworzenia klasy `Exchanger`, która jest parametryzowana typem:
 

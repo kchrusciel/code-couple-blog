@@ -12,7 +12,7 @@ date: 2016-03-20 11:36:21
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Schodzimy nisko, ale czy to coś złego? Według **IBM** developerWorks: „_Znajomość kodu bajtowego Javy pomaga programiście tak, jak znajomość asemblera pomaga programistom języków C i C++_" i ja z tym stwierdzeniem się zgadzam. W tym wpisie postaram się przybliżyć wam kod bajtowych.
 <!-- more -->
@@ -47,7 +47,7 @@ public class Main {
 
 Aby samemu móc **skompilować** kod do postaci **kodu bajtowego** należy skorzystać z narzędzia **javap,** które jest dostępne w pakiecie **JDK**. Należy wskazać klasę \*.java (w Intellij, normalnie należy wskazać plik .class) i uruchomić **javap**. Fajnym rozwiązaniem w **Intellij** jest dodanie **External Tool**.
 
-[![javap](http://codecouple.pl/wp-content/uploads/2016/03/javap.png)](http://codecouple.pl/wp-content/uploads/2016/03/javap.png) Dzięki temu możemy od razu podejrzeć sobie wynik w konsoli: [![javapResult](http://codecouple.pl/wp-content/uploads/2016/03/javapResult.png)](http://codecouple.pl/wp-content/uploads/2016/03/javapResult.png)
+[![javap](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/javap.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/javap.png) Dzięki temu możemy od razu podejrzeć sobie wynik w konsoli: [![javapResult](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/javapResult.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/03/javapResult.png)
 
 Od razu nasuwa się pytanie czy jest to rozwiązanie bezpiecznie, niestety nie. Można wziąć kod i zmienić dowolną instrukcję. Do czego można wykorzystać wiedzę o kodzie bajtowy? Możemy podejrzeć jak wykonywane są operacje "**od środka**".
 

@@ -10,11 +10,11 @@ date: 2018-07-03 19:50:21
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 To będzie już nasza trzecia edycja **Quality Excites**.  Podobnie jak rok temu, firma **Future Processing** rozbiła konferencję na dzień poświęcony warsztatom oraz osobny tylko z prelekcjami. My wybraliśmy się tym razem tylko na wykłady. Serdecznie zapraszam do relacji z ostatniej soboty 23 czerwca w Gliwicach!
 <!-- more -->
-### ![](http://codecouple.pl/wp-content/uploads/2018/06/IMG_20180623_085235-225x300.jpg)Rejestracja uczestników
+### ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/06/IMG_20180623_085235-225x300.jpg)Rejestracja uczestników
 
 Muszę powtórzyć to co dwa lata temu i rok temu - rejestracja przebiegła szybko i sprawnie, a my otrzymaliśmy identyfikatory oraz notesy z długopisami. Podobno w tym roku pobity został rekord pod względem ilości chętnych, ale miejsca w obiekcie nie wystarczyło dla wszystkich. Przed otwarciem skorzystaliśmy z bogato zastawionych stołów - kawka, ciacho i można powoli przemieszczać się do drewnianej auli na **oficjalne otwarcie**.
 
@@ -78,7 +78,7 @@ Ze Sparkiem żadne z nas nie miało wcześniej praktycznego do czynienia, ale op
 
 W porze obiadowej udało nam się odebrać nagrody książkowe. Poniżej nagrodzona fotka wrzucona z **hashtagiem** #_qualityexcites_ na **Twittera** i nasze książkowe zdobycze. Dziękujemy **Quality Excites** za nowe pozycje na naszej półce.
 
-         ![](http://codecouple.pl/wp-content/uploads/2018/06/IMG_20180623_130002-300x225.jpg)      ![](http://codecouple.pl/wp-content/uploads/2018/06/books-1.png)
+         ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/06/IMG_20180623_130002-300x225.jpg)      ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/06/books-1.png)
 
 ### Mocne powiewy wiatru w chmurach
 
@@ -92,7 +92,7 @@ Już na wstępie **Bartek Szulc** zaznaczył, że prezentacja jest jego własnym
 
 Następnie przedstawił, wady i zalety **feature flag ** oraz jak testować aplikacje w takim środowisku. Dużą zaletą tego modelu (cloudowego), jest możliwość monitoringu aplikacji. Dzięki obserwacji wartości oraz reakcji na skrajne sytuacje, możemy testować nasz system na produkcji. Na koniec prelegent podkreślił to, iż powinniśmy zadawać pytanie "dlaczego to testujemy?".
 
-**![](http://codecouple.pl/wp-content/uploads/2018/06/IMG_20180623_143506-225x300.jpg)**
+**![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/06/IMG_20180623_143506-225x300.jpg)**
 
 ### Konkurs
 

@@ -8,7 +8,7 @@ date: 2019-03-01 12:01:42
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2018/02/spring-by-pivotal-300x98.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/spring-by-pivotal-300x98.png)
 
 W dzisiejszym wpisie pokażę Wam jak szybko można stworzyć własny **walidator**. Spring oferuje szereg podstawowych **walidatorów**, które zaspokajają większość naszych potrzeb. Czasem jednak pojawiają się **niestandardowe** wymagania, które chcemy obsłużyć. Wtedy warto napisać swoje **własne** rozwiązanie. Zapraszam do wpisu po więcej szczegółów.
 <!-- more -->
@@ -93,7 +93,7 @@ public class CarController {
   }
 }
 
-W kontrolerze dodajemy tylko adnotację `@Valid`, żeby uruchomić walidację na przekazanym **DTO**. W przypadku podania niepoprawnych wartości otrzymamy: ![](https://codecouple.pl/wp-content/uploads/2019/02/Screenshot-2019-02-27-at-12.50.26-266x300.png)
+W kontrolerze dodajemy tylko adnotację `@Valid`, żeby uruchomić walidację na przekazanym **DTO**. W przypadku podania niepoprawnych wartości otrzymamy: ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/Screenshot-2019-02-27-at-12.50.26-266x300.png)
 
 ### GitHub
 

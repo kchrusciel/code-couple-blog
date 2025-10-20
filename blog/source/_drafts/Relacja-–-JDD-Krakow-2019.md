@@ -6,7 +6,7 @@ categories:
   - - Java
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/08/JDDbaner.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/08/JDDbaner.png)
 
 **JDD** po raz kolejny gościło nas w Krakowie. W dniach 14 i 15 października bieżącego roku odbyła się dwudniowa konferencja, która napełniła nas po raz kolejny sporą dawką wiedzy. Zapraszamy do relacji z tegorocznej edycji
 <!-- more -->

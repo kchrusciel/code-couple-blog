@@ -15,13 +15,13 @@ date: 2017-04-21 15:18:08
 author: 'Krzysztof Chruściel'
 ---
 
-[![springBootArt](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![springBootArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Media społecznościowe zawładnęły XXI wiekiem. Ciężko wyobrazić nam sobie aplikację, w której nie możemy zalogować się za pomocą **Facebook'a** lub **Twitter'a**. Dlatego właśnie przygotowałam krótki wpis, dzięki któremu dowiecie się jak szybko i łatwo można zaimplementować takie logowanie w kodzie swojej aplikacji wykorzystując **Spring Boot'owe** biblioteki.
 <!-- more -->
 Główna logika odbywa się w klasie **ConnectController**, która pod endpointem `/connect/{providerID}` wykonuje flow związane z wartością **providerID**. Providerem jest nazwa usługi np. `twitter` lub `facebook`. Następnie na podstawie nazwy usługi wykorzystywane jest odpowiednie **factory**, które tworzy połączenie. Połączenia przechowywane są w **ConnectionRepository**.
 
-![spring_social_graf](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_graf.png)  
+![spring_social_graf](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/spring_social_graf.png)  
 
 Przejdźmy teraz do implementacji. Należy dodać zależności w naszym `pom.xml`:
 
@@ -53,20 +53,20 @@ spring.social.auto\_connection\_views=true
 
 Dzięki temu nie musimy pisać ani jednej linii kodu i mamy gotowe logowanie. Wchodzą teraz pod adres `/connect/twitter` zobaczymy taki widok:
 
-![spring_social_view1](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_view1.png)
+![spring_social_view1](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/spring_social_view1.png)
 
 Łączymy się z **Twitterem** i zostajemy poproszeni o zalogowanie się na swoje konto:
 
-![spring_social_view2](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_view2.png)
+![spring_social_view2](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/spring_social_view2.png)
 
 A to widok po zalogowaniu:
 
-![spring_social_view3](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_view3.png) Analogiczne widoki otrzymamy dla **Facebook'a**.
+![spring_social_view3](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/spring_social_view3.png) Analogiczne widoki otrzymamy dla **Facebook'a**.
 
 Widzicie jakie to proste? Mamy ustawione tak naprawdę tylko propertiesy, a całość załatwia za nas **Spring Social**. Widoki te oczywiście możemy dostosować do własnych potrzeb. Należy przede wszystkim usunąć wpis o domyślnych widokach z properties'ów. Potem stworzyć swoje widoki w plikach _**{providerID}Connect**_ i _**{providerID}Connected**_ (w naszym przypadku twitterConnect i twitterConnected) i umieścić je w folderze _**connect**_.
 
 Należy zauważyć, że **Spring Social** to nie tylko **Facebook** czy **Twitter**. Możemy wykorzystać go również do połączeń z wieloma innymi usługami:
 
-![](http://codecouple.pl/wp-content/uploads/2017/04/spring_social_services-1024x408.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/spring_social_services-1024x408.png)
 
 Jednym z ciekawszych projektów jest [Ecobee](https://github.com/gregturn/spring-social-ecobee), czyli system do zarządzania **termostatami**. Patrząc na spis dostępnym usług widzimy, że nie wszystkie dotyczą mediów społecznościowych, dlatego nawet sam kierownik projektu **Gary Russell**, jest zdania, że określenie Social nie jest do końca poprawne. Może lepsze byłoby Connect!

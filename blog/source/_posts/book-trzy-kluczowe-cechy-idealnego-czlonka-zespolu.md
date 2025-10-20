@@ -11,7 +11,7 @@ date: 2018-09-28 12:01:12
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2018/09/book-patrick-trzy-klczuowe.png)W **nowej pracy** na start otrzymałem książkę pt. "_Trzy kluczowe cechy idealnego członka zespołu_" napisaną przez **Patricka Lencioni**. Znajduje się w niej historia, która opisuje proces **wybierania cech idealnego członka** w danym zespole oraz jak takich ludzi szukać. Zapraszam do krótkej recenzji!
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/09/book-patrick-trzy-klczuowe.png)W **nowej pracy** na start otrzymałem książkę pt. "_Trzy kluczowe cechy idealnego członka zespołu_" napisaną przez **Patricka Lencioni**. Znajduje się w niej historia, która opisuje proces **wybierania cech idealnego członka** w danym zespole oraz jak takich ludzi szukać. Zapraszam do krótkej recenzji!
 <!-- more -->
 ### Autor
 

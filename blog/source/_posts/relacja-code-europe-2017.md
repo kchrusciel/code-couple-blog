@@ -11,7 +11,7 @@ date: 2017-05-05 15:30:41
 author: 'Krzysztof Chruściel'
 ---
 
-[](http://codecouple.pl/wp-content/uploads/2016/12/CodeEurope2016Relacja.png)[![relacjaKonferencja](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)26 kwietnia odbyła się w Krakowie (**ICE**) konferencja **Code Europe** nazwana największą konferencją programistyczną w Polsce. Oprócz Krakowa odbywać będzie się ona również we Wrocławiu 23 maja w **Hali Stulecia** oraz w Warszawie 25 maja na **PGE Narodowym**. Zapraszamy na relację z krakowskiej edycji, ze ścieżki wybranej przez **CodeCouple**.
+[](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/CodeEurope2016Relacja.png)[![relacjaKonferencja](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)26 kwietnia odbyła się w Krakowie (**ICE**) konferencja **Code Europe** nazwana największą konferencją programistyczną w Polsce. Oprócz Krakowa odbywać będzie się ona również we Wrocławiu 23 maja w **Hali Stulecia** oraz w Warszawie 25 maja na **PGE Narodowym**. Zapraszamy na relację z krakowskiej edycji, ze ścieżki wybranej przez **CodeCouple**.
 <!-- more -->
 Rejestracja zaczęła się od godziny 8.30 pomimo tego, iż uczestnicy nauczeni doświadczeniem stali już w kolejce od godziny ósmej. Rok temu był problem z rejestracją uczestników przez co wiele osób spóźniło się lub w ogóle nie dotarło na pierwszą prelekcję. Niestety, w tym roku historia się powtórzyła. Nam udało się dotrzeć na pierwszy wykład 5 min przed czasem.
 

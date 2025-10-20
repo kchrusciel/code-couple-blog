@@ -10,7 +10,7 @@ date: 2018-12-07 12:01:46
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Stany wątków są częstym pytaniem na rozmowie kwalifikacyjnej z działu wielowątkowości. W **Javie** wątki mogą znajdować się w sześciu stanach. Każda zmiana stanu poprzedzona jest jakimś zdarzeniem. Co to za zdarzenia? Zapraszam do wpisu, aby się o tym dowiedzieć!
 <!-- more -->
@@ -25,7 +25,7 @@ newThread.getState();
 
 Jak napisałem we wstępie, wątek może znajdować się w jednym z sześciu stanów:
 
-![](http://codecouple.pl/wp-content/uploads/2018/11/Screen-Shot-2018-11-14-at-12.39.37-1024x281.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/11/Screen-Shot-2018-11-14-at-12.39.37-1024x281.png)
 
 ### NEW
 

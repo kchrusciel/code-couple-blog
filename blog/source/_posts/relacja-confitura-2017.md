@@ -10,7 +10,7 @@ date: 2017-08-04 12:01:23
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 Stolica przywitała nas bardzo dobrą pogodą. 1-ego lipca w **Warszawie** odbyła się 11-sta edycja **Confitury**. Jest to największa darmowa konferencja w Polsce o podłożu **JVM**. Występują na niej osoby obecne na polskiej scenie Javy. Jak w poprzednich latach nie mogło i nas zabraknąć, zapraszamy na relację!
 <!-- more -->

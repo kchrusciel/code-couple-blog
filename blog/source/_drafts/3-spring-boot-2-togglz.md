@@ -11,7 +11,7 @@ categories:
   - - Spring Boot
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Szybkość dostarczania nowych funkcjonalności, jest jedym z kluczowych elementów w nowoczesnym procesie wytwarzania oprogramowania.
 <!-- more -->

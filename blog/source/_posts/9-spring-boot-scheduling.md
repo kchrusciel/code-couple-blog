@@ -14,7 +14,7 @@ date: 2016-12-22 20:01:06
 author: 'Krzysztof Chruściel'
 ---
 
-![schedulerpost](http://codecouple.pl/wp-content/uploads/2016/12/SchedulerPost.png)
+![schedulerpost](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/SchedulerPost.png)
 
 W tym wpisie chciałam przedstawić proces tworzenia planowanych zadań. W Spring Boocie jest to wyjątkowo proste. Nie musimy tworzyć żadnych plików konfiguracyjnych. Wszystko opiera się na dwóch adnotacjach. Przekonajcie się sami.
 <!-- more -->
@@ -49,7 +49,7 @@ public class ScheduledTask {
     }
 }
 
-Po uruchomieniu naszej aplikacji co 5 sekund w konsoli wyświetlany będzie komunikat z metody `executeTask()` ![scheduler](http://codecouple.pl/wp-content/uploads/2016/12/Scheduler-1.png)
+Po uruchomieniu naszej aplikacji co 5 sekund w konsoli wyświetlany będzie komunikat z metody `executeTask()` ![scheduler](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/Scheduler-1.png)
 
 ### **Parametry atrybutu @Scheduled:**
 
@@ -97,7 +97,7 @@ public class SchedulerConfig implements SchedulingConfigurer {
 
 Wynik działania zmodyfikowanego programu poniżej. Przez 20 pierwszych sekund (14:55:46-14:56:06) task uruchamiany jest co 5 sekund, a później co 1 sekundę.
 
-![SchedulingRuntime](http://codecouple.pl/wp-content/uploads/2016/12/SchedulingRuntime.png) Cały projekt można znaleźć [TUTAJ](https://github.com/apieszczek/CodeCouple/tree/master/Scheduling). Scheduling wykorzystać możemy przy cyklicznym wysyłaniu maili (np. przy wysyłaniu ofert). Jeżeli chcecie się dowiedzieć czegoś więcej zapraszam [TUTAJ](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/scheduling.html).
+![SchedulingRuntime](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/SchedulingRuntime.png) Cały projekt można znaleźć [TUTAJ](https://github.com/apieszczek/CodeCouple/tree/master/Scheduling). Scheduling wykorzystać możemy przy cyklicznym wysyłaniu maili (np. przy wysyłaniu ofert). Jeżeli chcecie się dowiedzieć czegoś więcej zapraszam [TUTAJ](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/scheduling.html).
 
 Zachęcam również do obejrzenia video:
 

@@ -10,7 +10,7 @@ date: 2018-06-15 12:01:35
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Dziś zejdziemy poziom niżej w stosunku do kodu, z którym mamy styczność na co dzień. Postaram się pokazać wam co znajduje się w skompilowany pliku **.class** oraz jaki ma to wpływ na JVM'a na przykładzie aplikacji enterprise, czyli **HelloWorld**. W samym skompilowanym pliku oprócz **kodu bajtowego** z instrukcjami dla JVM, znajdziemy także metadane. Jeśli chcesz się dowiedzieć co dokładnie siedzi w środku, zapraszam!
 <!-- more -->

@@ -12,7 +12,7 @@ date: 2017-12-22 12:11:14
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 [W poprzednim wpis](http://codecouple.pl/2017/11/24/23-spring-boot-hystrix/)ie pokazywałem jak wykorzystać **Hystrix'a** jako jeden ze sposób realizacji wzorca **Circuit Breaker**. Pojawił się [także wpis dotyczący](http://codecouple.pl/2017/12/08/24-spring-boot-hystrix-dashboard/) **dashboard'u**, na którym wyświetlane były informacje dla danego **Circuit Breaker'a**. Niestety wadą tego rozwiązania było to, iż mieliśmy jeden **dashboard** per aplikacja, więc jeśli chcielibyśmy sprawdzać stan kilku **Circuit Breaker'ów** musielibyśmy przełączać się pomiędzy **dashboardami**. Rozwiązaniem tego problemu jest stworzenie jednego **strumienia** przy wykorzystaniu biblioteki **Turbine**.
 <!-- more -->
@@ -82,7 +82,7 @@ eureka.client.service-url.defaultZone=http://localhost:8761/eureka
 
 Aby sprawdzić czy **Hystrix** działa, odświeżamy nasz endpoint `http://localhost:8080/` kilka razy i oglądamy wynik na dashboardzie `http://localhost:8080/hystrix`, gdzie jako adres podajemy `http://localhost:8080/hystrix.stream`. W wyniku powinniśmy zobaczyć:
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/hystrixDashboard.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/hystrixDashboard.png)
 
 ### Drugi serwis
 
@@ -124,7 +124,7 @@ turbine.cluster-name-expression=new String("default")
 
 Następnie udajemy się pod adres naszego dashboardu `http://localhost:8989/hystrix/` jako strumień podajemy `http://localhost:8989/turbine.stream`
 
-![](http://codecouple.pl/wp-content/uploads/2018/01/turbine.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/01/turbine.png)
 
 ### GitHub
 

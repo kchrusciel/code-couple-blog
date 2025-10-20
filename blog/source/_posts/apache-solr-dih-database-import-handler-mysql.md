@@ -13,7 +13,7 @@ date: 2016-12-30 08:00:32
 author: 'Krzysztof Chruściel'
 ---
 
-[![SolrLogo](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)](http://codecouple.pl/wp-content/uploads/2016/11/Solr_Logo_on_white-300x152.png)
+[![SolrLogo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/11/Solr_Logo_on_white-300x152.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/11/Solr_Logo_on_white-300x152.png)
 
 W poprzednim [wpisie](http://codecouple.pl/2016/12/09/apache-solr-wyszukiwanie-pelnotekstowe/) opisywałem jak zainstalować silnik wyszukiwania pełnotekstowego **Apache Solr**. Dziś przedstawię wam jak zaimportować dane wykorzystując wbudowany w **Solr'a** mechanizm **DIH** (ang. _Database Import Handler_). Importowane dane będą pochodzić z bazy **MySQL**.
 <!-- more -->
@@ -94,7 +94,7 @@ Następnie musimy zdefiniować jakie pola chcemy persystować w naszej kolekcji.
 
 Stopujemy aplikację **Solr'a** (`solr stop -all`). Następnie usuwamy plik `managed-schema`, teraz podczas uruchomienia serwera wygeneruje nam się nowy plik z naszą definicją pola `product_name`. Uruchamiamy serwer **Solr.** W panelu administracyjnym wybieramy nasz Core, czyli products i wchodzimy w zakładkę **Dataimport**. Jeśli widzimy treść to znaczy, że dodaliśmy poprawny importer.
 
-[![solrdih](http://codecouple.pl/wp-content/uploads/2016/12/solrDIH.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrDIH.png)
+[![solrdih](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrDIH.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrDIH.png)
 
 Teraz import możemy wywołać poprzez panel administracyjny lub używając linków:
 
@@ -103,6 +103,6 @@ Teraz import możemy wywołać poprzez panel administracyjny lub używając link
 
 Teraz wystarczy udać się do sekcji **Query** i wykonać selekcję. Jeśli wszystko przebiegło pomyślnie powinniśmy otrzymać trzy rekordy, które wstawiliśmy uprzednio do bazy **MySQL**.
 
-[![solrdihselection](http://codecouple.pl/wp-content/uploads/2016/12/solrDIHSelection.png)](http://codecouple.pl/wp-content/uploads/2016/12/solrDIHSelection.png)
+[![solrdihselection](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrDIHSelection.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/solrDIHSelection.png)
 
 Mechanizm importu możemy wykorzystać w naszej aplikacji korzystając z triggerów w **MySQL,** które wywołają skrypt na operację **INSERT** lub **UPDATE,** który wywoła delta-import. Dzięki temu będziemy mieli zawsze aktualne dane w naszym silniku wyszukiwania. Następnie możemy go wykorzystać jako jeden z mikroserwisów w naszej aplikacji. Praktyczne wykorzystanie **Solr'a** wraz ze **Springiem** znajdzie się w kolejnym artykule dotyczącym tego silnika wyszukiwania pełnotekstowego.

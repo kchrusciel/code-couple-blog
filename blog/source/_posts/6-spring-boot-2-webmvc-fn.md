@@ -9,7 +9,7 @@ date: 2019-05-31 12:01:34
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Wraz ze **Spring Boot 2** w wersji **2.2.0** pojawiła się nowa funkcjonalność **WebMvc.fn**. Jest to implementacja **funkcyjnego** podejścia do definiownia **endpointów** podobnie jak jest to realizowane przy wykorzystaniu **Spring WebFlux** o czym można było przeczytać w jednym z naszych artykułów [#1 Spring Boot 2 – Router functions](https://codecouple.pl/2018/07/20/1-spring-boot-2-router-functions/). Dziś sprawdzimy jak to **funkcyjne** podejście sprawdzi się w klasycznym stosie **MVC**.
 <!-- more -->

@@ -7,7 +7,7 @@ date: 2020-04-28 12:01:32
 author: 'Krzysztof Chruściel'
 ---
 
-[![](https://codecouple.pl/wp-content/uploads/2020/04/file-3.svg)](https://codecouple.pl/wp-content/uploads/2020/04/file-3.svg)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-3.svg)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-3.svg)
 
 **Flame Graphs** jest techniką, która pozwala zlokalizować nam tak zwane "**bottlenecki**" w naszym kodzie. Dzięki swojej **graficznej** reprezentacji przypominającej **płomienie** jesteśmy w stanie w bardzo łatwy sposób zaobserwować **procesy**, które konsumują największą ilość czasu **CPU**. Zapraszamy do wpisu aby zobaczyć jak wygenerować własne "**płomienie**".
 <!-- more -->
@@ -15,7 +15,7 @@ author: 'Krzysztof Chruściel'
 
 **Flame Graphs** są sposobem reprezentacji **danych** związanych z **wydajnością** aplikacji. Dane przedstawione są w formie wykresu przypominającego **płomienie**:
 
-[![](https://codecouple.pl/wp-content/uploads/2020/04/cpu-mysql-updated.svg)](https://codecouple.pl/wp-content/uploads/2020/04/cpu-mysql-updated.svg)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/cpu-mysql-updated.svg)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/cpu-mysql-updated.svg)
 
 Jest to sposób reprezentacji danych zaproponowany przez [Brendana Gregga](http://www.brendangregg.com/flamegraphs.html), który jest "gościem od performance" w firmie **Netflix**. Dzięki takiej reprezentacji unikniemy nadmiernej analizy danych, które w większości nie są danymi **najważniejszymi**.
 
@@ -44,20 +44,20 @@ a();b();c() 1
 a();b();d() 1
 ```
 
-[![](https://codecouple.pl/wp-content/uploads/2020/04/file-1.svg)](https://codecouple.pl/wp-content/uploads/2020/04/file-1.svg)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-1.svg)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-1.svg)
 
 ```shell
 a();b();c() 1
 a();b();d() 2
 ```
 
-[![](https://codecouple.pl/wp-content/uploads/2020/04/file-2.svg)](https://codecouple.pl/wp-content/uploads/2020/04/file-2.svg)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-2.svg)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file-2.svg)
 
 ### Jak czytać wykres
 
 Na wykresie znajdują się **dwie** osie:
 
-![](https://codecouple.pl/wp-content/uploads/2020/04/file.svg)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2020/04/file.svg)
 
 *   oś y (pionowa) - pokazuje głębokość/**wysokość** stosu wywołań
 *   oś x (pozioma) - pokazuje nazwy procesów w kolejności **alfabetycznej**

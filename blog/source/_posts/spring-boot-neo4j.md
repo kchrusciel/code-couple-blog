@@ -18,7 +18,7 @@ date: 2018-01-05 12:04:13
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/neo4j_logo-facebook-300x156.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/neo4j_logo-facebook-300x156.png)
 
 W poprzednim wpisie pokazałam [jak zainstalować Neo4j](http://codecouple.pl/2017/02/10/neo4j-instalacja/). Teraz możemy spróbować napisać prostą aplikację z użyciem **Spring Boot'a**, która wykorzystuje bazę grafową **Neo4j**.  Dzięki wykorzystaniu **Spring Data** otrzymujemy całą abstrakcję związaną z warstwą persystencji. Ponadto operacje **CRUD'owe** wywoływane są w taki sam sposób jak dla innych, znanych nam typów baz.
 <!-- more -->

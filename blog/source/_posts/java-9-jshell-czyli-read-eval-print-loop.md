@@ -12,7 +12,7 @@ date: 2018-03-09 12:13:28
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 **Java 9** jest już z nami oficjalnie od pewnego czasu, pewnie u niektórych osób działa już na produkcji. Najnowsza wersja nie przyniosła aż tak dużych zmian jak **Java 8**. Oprócz modularności czy zmian związanych ze składnią tak zwanych _syntactic sugar_, pojawił się mechanizm, który występuje w wielu innych językach, a mianowicie **REPL** (ang. _Read-Eval-Print Loop_). W **Javie 9** nazywa się **JShell** i jest najczęściej wykorzystywany do prototypowania oraz nauki języka.
 <!-- more -->
@@ -101,7 +101,7 @@ Pamiętacie jeszcze **Swing'a**? Tak, taką bibliotekę **Javową** do tworzenia
 
 jshell> /edit toUpperCase
 
-![](http://codecouple.pl/wp-content/uploads/2018/02/jshellEditor.png) Jeśli ktoś ma złe wspomnienia ze **Swing'iem**, można w łatwy sposób zmienić edytor `/set edit nazwa_naszego_edytora`.
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2018/02/jshellEditor.png) Jeśli ktoś ma złe wspomnienia ze **Swing'iem**, można w łatwy sposób zmienić edytor `/set edit nazwa_naszego_edytora`.
 
 ### Podpowiadanie składni
 

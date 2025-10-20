@@ -13,7 +13,7 @@ date: 2017-08-11 12:05:04
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)](http://codecouple.pl/wp-content/uploads/2017/05/testingLogo.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/05/testingLogo.png)
 
 JUnity, JUnity, i jeszcze raz JUnity. Tak do jakiegoś czasu wyglądało moje testowanie. Na konferencjach coraz częściej pojawiał się skrót **BDD**, czyli **Behavior Driven Development** oraz kojarzące się ze Star Trekiem słowo **Spock**. Spock jest frameworkiem do testowania kodu w języku **Java** jak i **Groovy**, który został wydany w wersji **1.0** w roku **2015**. Znacznie różni się on od testów jednostkowych, które korzystają z biblioteki **JUnit**. Framework ten jest zbiorem wszystkich dobrych bibliotek stosowanych dotychczas razem!
 <!-- more -->

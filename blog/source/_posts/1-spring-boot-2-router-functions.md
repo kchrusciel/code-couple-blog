@@ -12,7 +12,7 @@ date: 2018-07-20 12:01:13
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 [Poprzedni wpis](http://codecouple.pl/2018/07/13/0-spring-boot-2-introduction/) był jedynie wprowadzeniem do **Spring Boot'a 2.0**. Pojawiło się tam pojęcie **WebFlux**. Jest to element, który w sposób reaktywny pozwala współpracować z warstwą **webową**. Ponadto, funkcjonalość ta dostarcza nam nowy sposób tworzenia endpointów poprzez użycie **Router Functions**. Zapraszam do wpisu!
 <!-- more -->

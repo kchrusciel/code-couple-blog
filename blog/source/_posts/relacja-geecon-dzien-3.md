@@ -10,7 +10,7 @@ date: 2017-06-29 11:42:39
 author: 'Krzysztof Chruściel'
 ---
 
-#### ![](http://codecouple.pl/wp-content/uploads/2017/04/relacjaKonferencja.png)
+#### ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/04/relacjaKonferencja.png)
 
 Wpis trochę oddalony w czasie od poprzedniego dnia konferencji, ale udało się - ostatni dzień konferencji opisany. Serdecznie zapraszam do przeczytania relacji.
 <!-- more -->

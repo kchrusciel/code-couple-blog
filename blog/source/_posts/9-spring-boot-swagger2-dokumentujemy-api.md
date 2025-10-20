@@ -12,7 +12,7 @@ date: 2017-01-07 11:42:18
 author: 'Krzysztof Chruściel'
 ---
 
-[![swagger-logo-bw](http://codecouple.pl/wp-content/uploads/2016/12/swagger-logo-bw.png)](http://codecouple.pl/wp-content/uploads/2016/12/swagger-logo-bw.png)
+[![swagger-logo-bw](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/swagger-logo-bw.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2016/12/swagger-logo-bw.png)
 
 Aktualnie modną architekturą wśród systemów informatycznych są **mikroserwisy**. Najczęściej komunikują się one poprzez **API REST'owe,** które wykorzystuje notacje **JSON**. Często systemy te składają się z wielu **mikroserwisów,** które rozwijane są poprzez różne teamy w firmie. Jednym ze sposobów komunikacji pomiędzy teamami jest dokumentowanie całego **API REST'owego**. Narzędziem, które bardzo ułatwia dokumentowanie naszego API jest **Swagger**.
 <!-- more -->
@@ -105,7 +105,7 @@ W polu `globalResponseMessage` ustawiamy globalne **messages** dla różnych kod
 
 Wszystkie ustawienia zostały zawarte w naszej klasie `SwaggerConfig`. Od teraz aplikacja **Swaggera** znajduje się pod adresem `http://your_address/swagger-ui.html`
 
-### [![swaggerui](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUI.png)](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUI.png)
+### [![swaggerui](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/swaggerUI.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/swaggerUI.png)
 
 ### 5. Dokumentowanie API
 
@@ -144,7 +144,7 @@ public @ResponseBody Book getBooksByTitle(@PathVariable(required = true) Long id
     return bookRepository.findOne(id);
 }
 
-[![swaggeruiparameter](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUIParameter.png)](http://codecouple.pl/wp-content/uploads/2017/01/swaggerUIParameter.png)
+[![swaggeruiparameter](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/swaggerUIParameter.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/01/swaggerUIParameter.png)
 
 ### 8. Więcej
 

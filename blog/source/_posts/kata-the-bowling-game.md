@@ -11,7 +11,7 @@ date: 2017-09-01 12:05:44
 author: 'Krzysztof Chruściel'
 ---
 
-[![](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)](http://codecouple.pl/wp-content/uploads/2017/08/katas.png)
+[![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/katas.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/08/katas.png)
 
 **The bowling game** jest kolejną propozycją ćwiczenia, która zostało mocno spopularyzowana przez **Wujka Boba**. Związana jest ona z grą w kręgle. W tym ćwiczeniu bardzo ciekawym elementem jest system naliczania punktów. W bardzo dobry sposób sprawdza tok algorytmicznego myślenia.
 <!-- more -->

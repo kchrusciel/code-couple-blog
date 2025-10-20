@@ -13,7 +13,7 @@ date: 2017-02-03 13:39:04
 author: 'Krzysztof Chruściel'
 ---
 
-[![java-logo](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)](http://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+[![java-logo](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 Dziś krótszy wpis jednakże pierwszy z serii "**Java Performance**", w której będę opisywał rozwiązania związane z wydajnością **JVM'a** oraz **Javy**. Pierwszy wpis dotyczy optymalizacji stosu wywołań (ang. _stack trace_), który jest wywoływany w momencie wystąpienia **wyjątku**.
 <!-- more -->

@@ -9,7 +9,7 @@ categories:
   - - Java
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travisci.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travisci.png)
 
 W poprzednim wpisie stworzyliśmy naprawde prosty proces ciągłej intregacji. W przypadku gdy testy nie przeszły nasz build również nie zakończył się sukcesem. W Travis CI zostało to przedstawione jako "czerowny" build. Jednakże aby dowiedzieć się czy nas proces budowania zakończył się sukcesem musimy co jakiś czas sprawdzać Travis'a. Rozwiązaniem tego problemu są notyfikacje, które poinformują nas o wydarzeniach w procesie budowania.
 <!-- more -->
@@ -35,7 +35,7 @@ Ponadto możemy wyłączyć całkowicie notyfikacje **email**:
 notifications:
   email: false
 
-dsad ![](https://codecouple.pl/wp-content/uploads/2019/02/travis-email.png)
+dsad ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-email.png)
 
 Czasem może zdarzyć się że nie otrzymaliśmy powiadomienia na email. Travis CI zastrzega, iż wysyła email tylko na [adresy umieszczone](https://github.com/settings/emails) w serwisie GitHub.
 
@@ -43,11 +43,11 @@ Czasem może zdarzyć się że nie otrzymaliśmy powiadomienia na email. Travis 
 
 Drugim sposobem informowania nas o postępach jest aplikacja **Slack**. Aktualnie **Slack** jest jednym z najpopularniejszych komunikatorów wykorzystywanych w branży **IT**. Aby dodać integrację należy wejść pod adres [https://my.slack.com/services/new/travis](https://my.slack.com/services/new/travis) i wybrać kanał, na który chcemy aby publikowane były wiadomości:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-channel.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-channel.png)
 
 Po wybraniu odpowiedniego kanału ukaże się kolejna strona. Na tej stronie znajdziemy wpis, który musimy wstawić w pliku .travis.yml:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-channel-cred.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-channel-cred.png)
 
 sasa
 

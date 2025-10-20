@@ -13,7 +13,7 @@ date: 2019-02-08 12:01:05
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travisci.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travisci.png)
 
 W aktualnych czasach ciężko wyobrazić sobie proces wytwarzania oprogramowania bez **CI** (ciągła integracja). W środowisku **JVM** najpopularniejszymi narzędziami do ciągłej intergacji są **Jenkins** i **Bamboo**. Niestety przy **małych** projektach lub projektach typu **open source** nie chcemy wykupywać maszyn, aby uruchomić **proces CI**. Rozwiązaniem tego problemu jest **darmowe** narzędzie **Travis CI**, które jest cloud'owym **systemem ciągłej integracji**.
 <!-- more -->
@@ -21,7 +21,7 @@ W aktualnych czasach ciężko wyobrazić sobie proces wytwarzania oprogramowania
 
 Zanim zaczniemy stawiać pierwsze środowisko **CI** musimy zaopatrzyć się w **repozytorium kodu**. Rozwiązaniem bardzo dobrze współpracującym z **Travis CI** jest **GitHub**. Po założeniu konta możemy stworzyć **repozytorium**, które będzie wykorzystywane przez **Travis'a**. Nadajmy mu nazwę `travis-example`:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/github-travis-test.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/github-travis-test.png)
 
 ### Projekt
 
@@ -69,15 +69,15 @@ Jeśli stworzyliśmy nowy projekt **Maven** musimy pamiętać o dodaniu **plugin
 
 Aby zacząć korzystać z **Travis CI** musimy założyć konto na [https://travis-ci.org/](https://travis-ci.org/):
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/travis-ci-1024x383.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/travis-ci-1024x383.png)
 
 Najlepiej połączyć nasze nowe konto **Travis CI** z **Github'em** klikając:
 
-![](https://codecouple.pl/wp-content/uploads/2019/01/travis-ci-sign-in.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/01/travis-ci-sign-in.png)
 
 Po połączeniu naszego konta z **Travis'em** należy wskazać, które **repozytorium** chcemy wykorzystać w **procesie budowania**. Po wybraniu interesującego nas **repozytorium** przełączamy suwak obok:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-travis-example.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-ci-travis-example.png)
 
 Udało nam się włączyć **ciągłą integrację** dla naszego **repozytorium**. Teraz pora na wskazanie **Travis'owi** co i jak chcemy budować.
 
@@ -89,7 +89,7 @@ language: java
 
 **Commitujemy** i **pushujemy** wszystkie wprowadzone przez nas zmiany. Jeśli wszystko wykonaliśmy pomyślnie to pierwszy **build** (proces budowania) powinien odpalić się **automatycznie**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-build-status.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-ci-build-status.png)
 
 ### Benefit
 
@@ -105,7 +105,7 @@ class Calculator {
 
  **Commit**, **push** i obserwujemy **Travis CI**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-build-failed.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-ci-build-failed.png)
 
 Jak widzicie, **Travis CI** zwrócił nam informację o niepoprawnym **zbudowaniu** **aplikacji**.
 
@@ -113,7 +113,7 @@ Jak widzicie, **Travis CI** zwrócił nam informację o niepoprawnym **zbudowani
 
 Mechanizm **Badge** pozwala nam umieścić grafikę informującą o statusie naszego **procesu budowania**:
 
-![](https://codecouple.pl/wp-content/uploads/2019/02/travis-ci-badge.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-ci-badge.png)
 
  
 

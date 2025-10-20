@@ -12,7 +12,7 @@ date: 2019-06-07 12:01:09
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/12/springBoot2Art.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
 Kolejna nowa funkcjonalność/usprawnienie, która udostępniona będzie w wersji **2.2.0** frameworku **Spring Boot 2** dotyczyć będzie szybszego startowania aplikacji. Autorzy Spring'a dostarczyli nowy wpis, który można umieścić w pliku `application.properties`. **Wpis** ten sprawi, iż nasza aplikacja będzie uruchamiać się szybciej. Zapraszam do lektury, aby dowiedzieć się co to za nowy wpis!
 <!-- more -->

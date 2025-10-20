@@ -10,7 +10,7 @@ date: 2019-09-02 12:01:05
 author: 'Krzysztof Chruściel'
 ---
 
-![](https://codecouple.pl/wp-content/uploads/2017/02/java-logo.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/java-logo.png)
 
 W dzisiejszym wpisie wykorzystamy **funkcjonalność**, która pojawiła się wraz z wydaniem **Javy 9**. Jest to funkcjonalność o nazwie **Multi-Release Jar**. Pozwala ona na dostarczenie jednego **artefaktu** z plikami w różnych wersjach. Zapraszam do wpisu po więcej szczegółów.
 <!-- more -->

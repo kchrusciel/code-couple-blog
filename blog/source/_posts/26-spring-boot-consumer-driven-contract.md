@@ -13,7 +13,7 @@ date: 2018-01-19 12:12:50
 author: 'Krzysztof Chruściel'
 ---
 
-![](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Z każdym kolejny mikroserwisem testowanie naszej aplikacji staje się **coraz bardziej trudne** (w przypadku gdy są one ze sobą powiązane). Oczywiście możemy zamokować zachowanie innych serwisów korzystając na przykład z biblioteki **WireMock**, jednakże po wdrożeniu naszej aplikacji na produkcję okazuje się, że aplikacja nie integruje się poprawnie. A no właśnie, okazało się, iż mój serwis odpytywał zły endpoint, ale jak to możliwe, skoro wszystkie testy były uzależniająco zielone?
 <!-- more -->

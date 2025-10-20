@@ -12,7 +12,7 @@ date: 2017-02-24 15:48:07
 author: 'Krzysztof Chruściel'
 ---
 
-[![springBootArt](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)](http://codecouple.pl/wp-content/uploads/2017/02/springBootArt.png)
+[![springBootArt](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/02/springBootArt.png)
 
 Jednym z głównych założeń **Spring Boot'a** jest to, aby był on production ready. Autorzy frameworku poprzez **production ready** rozumieli między innymi to, iż aplikacja dostanie metryki **out-of-the-box**. Aby dodać metryki do swojego projektu wystarczy dodać jedną pozycje w mavenowych zależnościach. Nazywa się ona **Actuator**.
 <!-- more -->
