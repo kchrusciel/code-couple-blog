@@ -12,31 +12,31 @@ author: 'Krzysztof Chruściel'
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2017/12/springBoot2Art.png)
 
-W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/05/03/3-spring-boot-2-actuator/) poznaliśmy narzędzie **actuator**. Jest to **narzędzie**, które dostarcza **metryki** oraz dodatkowe **informacje** na temat aplikacji. _Out-of-the-box_ **actuator** daje nam między innymi możliwość sprawdzenia **metryk** wirtualnej maszyny **Javy** czy **statusu** naszej aplikacji. Jednakże, czasem potrzebujemy dodać **własny** adres dostarczający dodatkowe **informacje** o naszej aplikacji. W tym wpisie opowiemy sobie jak dodać **własny** endpoint.
+W poprzednim wpisie [#3 Spring Boot 2 – Actuator](https://codecouple.pl/2019/05/03/3-spring-boot-2-actuator/) poznaliśmy narzędzie **Actuator**. Jest to mechanizm, który dostarcza **metryki** oraz dodatkowe **informacje** na temat aplikacji. _Out-of-the-box_ **Actuator** daje nam między innymi możliwość sprawdzenia **metryk** wirtualnej maszyny **Javy** czy **statusu** naszej aplikacji. Jednakże, czasem potrzebujemy dodać **własny** endpoint dostarczający dodatkowe **informacje** o naszej aplikacji. W tym wpisie opowiemy sobie, jak dodać taki własny endpoint.
 <!-- more -->
 ### Spring Boot 2
 
-**Spring Boot 2** zmodyfikował nieznacznie sposób dodawania nowych **endpointów**. W poprzedniej wersji należało zaimplementować odpowiedni **interfejs**. W najnowszej wersji do dodania **nowego** adresu wykorzystywana jest adnotacja `@Endpoint`:
+**Spring Boot 2** nieznacznie zmodyfikował sposób dodawania nowych **endpointów**. W poprzedniej wersji frameworku należało zaimplementować odpowiedni **interfejs**. W najnowszej wersji do dodania **nowego** endpointu wykorzystywana jest adnotacja `@Endpoint` (lub jej warianty, takie jak `@WebEndpoint`):
 
 ```java
 @Component
 @Endpoint(id = "integrations")
 public class IntegrationsEndpoint {
 
-   //logic
+   // logic
 
 }
 ```
 
-W parametrze `id` określamy pod jakim adresem dostępny będzie nowy **endpoint**. W naszym przypadku jest to adres `/actuator/integrations`. Dodatkowo każdy dodany przez nas **endpoint** jest domyślnie włączony, możemy to zmienić poprzez użycie klucza `enableByDefault` `@Endpoint(id = "integrations", enableByDefault = false)`.
+W parametrze `id` określamy, pod jakim adresem dostępny będzie nowy **endpoint**. W naszym przypadku jest to adres `/actuator/integrations`. Dodatkowo, każdy dodany przez nas **endpoint** jest domyślnie włączony. Możemy to zmienić, używając klucza `enableByDefault`: `@Endpoint(id = "integrations", enableByDefault = false)`.
 
-### CRUD
+### Operacje CRUD
 
-Po **dodaniu** nowego adresu, pora na dodanie **funkcjonalności**. W **Spring Boot 2** oprócz **rejestracji** nowych adresów zmienił się też sposób obsługi operacji **CRUD**. **Spring Boot 2** dostarcza nam trzy nowe adnotacje:
+Po **dodaniu** nowego adresu, pora na dodanie **funkcjonalności**. W **Spring Boot 2** oprócz **rejestracji** nowych adresów, zmienił się też sposób obsługi operacji **CRUD**. **Spring Boot 2** dostarcza nam trzy nowe adnotacje do mapowania operacji HTTP:
 
-*   `@ReadOperation` - **odczyt** wartości przy wykorzystaniu metody **GET**
-*   `@WriteOperation` - **zapis** wartości przy wykorzystaniu metody **POST**
-*   `@DeleteOperation` - **usunięcie** wartości przy wykorzystaniu metody **DELETE**
+* `@ReadOperation` - **odczyt** wartości przy wykorzystaniu metody **GET**.
+* `@WriteOperation` - **zapis** wartości przy wykorzystaniu metody **POST**.
+* `@DeleteOperation` - **usunięcie** wartości przy wykorzystaniu metody **DELETE**.
 
 Spróbujmy zaimplementować **klasę**, która pozwala **dodawać**, **usuwać** oraz **odczytywać** wykorzystane **integracje** w naszej aplikacji:
 
@@ -83,11 +83,11 @@ class Integration {
 }
 ```
 
-W powyższej klasie pojawiła się także adnotacja `@Selector`, która mapuje **klucz** przekazanej wartości.
+W powyższej klasie pojawiła się także adnotacja `@Selector`, która mapuje **klucz** przekazanej wartości z części ścieżki URL.
 
 ### Extension
 
-Czasami oprócz podstawowej funkcjonalności **endpointów**, chcielibyśmy mieć przykładowo wpływ na zwracane **nagłówki** lub kody **statusów**. Jest to możliwe dzięki adnotacji `@EndpointWebExtension(endpoint = IntegrationsEndpoint.class)`. Adnotacja pod kluczem `endpoint` przyjmuje nazwę klasy **adresu**, któremu chcemy dodać dodatkową **funkcjonalność**:
+Czasami, oprócz podstawowej funkcjonalności **endpointów**, chcielibyśmy mieć wpływ na zwracane **nagłówki** lub kody **statusów**. Jest to możliwe dzięki adnotacji `@EndpointWebExtension(endpoint = IntegrationsEndpoint.class)`. Adnotacja ta pod kluczem `endpoint` przyjmuje nazwę klasy **endpointu**, któremu chcemy dodać dodatkową **funkcjonalność**:
 
 ```java
 @Component
@@ -110,11 +110,11 @@ public class IntegrationsEndpointExtension {
       }
       return new WebEndpointResponse<>(
               integrations, 
-              HttpStatus.I\_AM\_A\_TEAPOT.value());
+              HttpStatus.I_AM_A_TEAPOT.value());
    }
 }
 ```
 
 ### Github
 
-Całość jak zawsze na [Github'ie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-actuator-custom-example).
+Całość jak zawsze na [GitHubie](https://github.com/kchrusciel/Spring-Boot-2-Examples/tree/master/spring-boot-actuator-custom-example).
