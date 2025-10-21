@@ -109,3 +109,7 @@ feed:
   path: feed.xml
   limit: 20
   order_by: -date
+
+disqus:
+  enable: true
+  shortname: codecouple
