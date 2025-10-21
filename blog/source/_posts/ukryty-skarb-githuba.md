@@ -1,5 +1,5 @@
 ---
-title: Ukryty skarb GitHub'a
+title: Ukryty skarb GitHuba
 tags:
   - github
   - git
