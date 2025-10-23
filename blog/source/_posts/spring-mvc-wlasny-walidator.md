@@ -20,15 +20,17 @@ Klient zgłosił nam **błąd**. Okazało się, że w naszej aplikacji tworzące
 
 Zacznijmy od stworzenia **adnotacji**:
 
+```java
 @Constraint(validatedBy = ExpectedNumbersValidator.class)
 @Target(ElementType.FIELD)
 @Retention(RetentionPolic.RUNTIME)
 public @interface ExpectedNumbers {
-    int\[\] expectedNumbers();
+    int[] expectedNumbers();
     String message() default "";
-    Class<?>\[\] groups() default {};
-    Class<? extends Payload>\[\] payload() default {};
+    Class<?>[] groups() default {};
+    Class<? extends Payload>[] payload() default {};
 }
+```
 
 Musimy wskazać, którą implementację **walidatora** będziemy wykorzystywać. W naszym przypadku będzie to nasza klasa, którą stworzymy poniżej. Wybieramy jeszcze miejsce, na którym chcemy umieszczać adnotację **walidatora**. Możemy wskazać tablicę z kilkoma wartościami. W naszym przykładzie wykorzystamy element typu `ElementType.FIELD`. Ostatnia adnotacja to **retencja**, czyli wskazanie jak długo nasza **adnotacja** będzie dostępna w programie. W samej **adnotacji** dodajemy:
 
@@ -38,9 +40,10 @@ Musimy wskazać, którą implementację **walidatora** będziemy wykorzystywać.
 
 ### Implementacja walidatora
 
+```java
 public class ExpectedNumbersValidator implements ConstraintValidator<ExpectedNumbers, Integer> {
 
-  private int\[\] expectedNumbers;
+  private int[] expectedNumbers;
 
   @Override
   public void initialize(ExpectedNumbers expectedNumbers) {
@@ -49,18 +52,20 @@ public class ExpectedNumbersValidator implements ConstraintValidator<ExpectedNum
 
   @Override
   public boolean isValid(Integer fieldValue, ConstraintValidatorContext cxt) {
-    return fieldValue == null  Arrays.stream(expectedNumbers)
+    return fieldValue == null || Arrays.stream(expectedNumbers)
                                        .boxed()
                                        .collect(Collectors.toList())
                                        .contains(fieldValue);
   }
 }
+```
 
 Stwórzmy **klasę**, która będzie **implementowała** interfejs `ConstraintValidator`. W typie generycznym wskazujemy **nazwę** adnotacji, która będzie wykorzystywała tą implementację oraz **typ** sprawdzanej wartości. Należy zaimplementować dwie metody:
 
 *   `initialize` - służy do przypisania wartości parametrów adnotacji
 *   `isValid` - tutaj umieszczamy logikę **walidacji**, zwracamy wartość `boolean`
 
+```java
 public class CarDto {
 
   String model;
@@ -71,9 +76,11 @@ public class CarDto {
 
   //constructor, getter, setter
 }
+```
 
 Wykorzystanie stworzonej **adnotacji** sprowadza się do dodania jednej linii kodu. Jako parametry podajemy listę akceptowanych liczb (`expectedNumbers`) oraz wiadomość (`message`), którą otrzymamy w przypadku **błędu**.
 
+```java
 @RestController
 @RequestMapping("/cars")
 public class CarController {
@@ -92,6 +99,7 @@ public class CarController {
         .collect(Collectors.joining("\\n"));
   }
 }
+```
 
 W kontrolerze dodajemy tylko adnotację `@Valid`, żeby uruchomić walidację na przekazanym **DTO**. W przypadku podania niepoprawnych wartości otrzymamy: ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/Screenshot-2019-02-27-at-12.50.26-266x300.png)
 
