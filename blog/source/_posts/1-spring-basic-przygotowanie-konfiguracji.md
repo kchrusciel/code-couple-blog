@@ -16,11 +16,13 @@ W poprzednim wpisie opisałem czym jest **Spring** i jaki [problem rozwiązuje](
 
 Aby zacząć korzystanie z frameworku **Spring** (i wszystkich dobrodziejstw **IoC**) musimy dodać do naszego projektu nową zależność `spring-context` (w tym przypadku korzystamy z narzędzia **Maven**, ale może być to dowolne inne narzędzie do zarządzania **zależnościami**):
 
+```xml
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
     <version>5.1.4.RELEASE</version>
 </dependency>
+```
 
 ### Bean
 
@@ -40,6 +42,7 @@ Kontener IoC w **Spring'u** zarządza tak zwanymi **Bean'ami**. Bean tworzony je
 
 Konfigurację w **XML** umieszczamy w nowym pliku `.xml`. Najczęściej jest to plik o nazwie `Beans.xml`, nazwa ta może być dowolna. Plik ten musi znaleźć się na tak zwanym `CLASSPATH` (w naszym przykładach będziemy umieszczać go w folderze `src/main/resources`). Wszystkie definicje **Bean’ów** umieszczamy pomiędzy znacznikami `<beans></beans>`, natomiast definicje jednego **Bean’a** umieszczamy pomiędzy `<bean></bean>`:
 
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -53,6 +56,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     </bean>
     <!-- kolejne definicje -->
 </beans>
+```
 
 ### Konfiguracja w Javie
 
@@ -65,6 +69,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 Pierwszym opisywanym typem **konfiguracji** jest konfiguracja **jawna**. **Jawna**, ponieważ jawnie musimy określić w jaki sposób ma być tworzony **Bean**. Deklarację **Bean’a** oznaczamy adnotacją `@Bean`:
 
+```java
 @Configuration
 class CarConfiguration {
 
@@ -88,6 +93,7 @@ class CarConfiguration {
         return new Car(winterTire);
     }
 }
+```
 
 W metodach `carWithWinterTires` i `carWithSummerTires` przygotowaliśmy konfigurację klasy `Car`. Nazwy tych metodą to unikalne identyfikatory **Bean'ów** (podobnie jak wartość atrybutu `id` w pliku **XML**). Wartość tych **identyfikatorów** można zmienić korzystając z pola `name` w adnotacji `@Bean(name = "identyfikator")`.
 
@@ -95,6 +101,7 @@ W metodach `carWithWinterTires` i `carWithSummerTires` przygotowaliśmy konfigur
 
 Drugim opisywanym typem konfiguracji jest konfiguracja **automatyczna**. Automatyczna, ponieważ **Bean’y** tworzone są automatycznie na podstawie ich definicji. Deklarację **Bean’a** oznaczamy adnotacją `@Component`:
 
+```java
 package pl.sda;
 
 @Component
@@ -106,25 +113,31 @@ class Car {
         this.tire = tire;
     }
 }
+```
 
 Natomiast w samej **konfiguracji** należy wskazać, gdzie **Spring** ma tych komponentów szukać. Ustawiamy to za pomocą adnotacji `@ComponentScan`:
 
+```java
 package pl.sda;
 
 @Configuration
 @ComponentScan("pl.sda")
 class CarConfiguration {
 }
+```
 
- Jednakże, po uruchomieniu naszego kodu dostajemy **wyjątek**:
+Jednakże, po uruchomieniu naszego kodu dostajemy **wyjątek**:
 
+```shell
 exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException:
 No qualifying bean of type 'pl.sda.Tire' available:
 expected single matching bean but found 2:
 winterTire,summerTire
+```
 
 Komunikat błędu jest bardzo czytelny. Przygotowaliśmy automatyczną **konfigurcję**, więc **Spring** próbuje **wstrzyknąć** pierwszą odnalezioną implementację interfejsu `Tire`. W tym przypadku odnalazł, aż dwie jego implementacje. Do wskazania interesującej nas implementacji wykorzystujemy adnotacje `@Qualifier`:
 
+```java
 @Component
 public class CarComponent {
     private Tire tire;
@@ -137,6 +150,7 @@ public class CarComponent {
         tire.turn();
     }
 }
+```
 
 W ramach **konfiguracji automatycznej** zostaje do rozpatrzenia jeszcze kwestia **unikalnego** identyfikatora. W przypadku konfiguracji **XML** była to wartość atrybutu **id** lub pełna **nazwa** klasy, natomiast w przypadku konfiguracji **jawnej** nazwa metody lub parametr name adnotacji `@Bean`. Tutaj z racji, iż jest to konfiguracja **automatyczna** naszemu **Bean’owi** odpowiada nazwa klasy pisanej mała literą (dla klasy `CarSomething` będzie to `carSomething`). Wartość tą można zmienić podobnie jak przy adnotacji `@Bean`. Adnotacja `@Component` dostarcza pole value (`@Component(value = "indentyfikator")`).
 
