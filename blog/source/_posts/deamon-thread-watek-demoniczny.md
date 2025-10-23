@@ -27,12 +27,15 @@ Najczęściej w takich **wątkach** realizowane są zadania niezwiązane ściśl
 
 Określenie czy wątek ma być **demoniczny** musi odbyć się przed jego utworzeniem:
 
+```java
 Thread daemonThread = new Thread(job);
 daemonThread.setDaemon(true);
 daemonThread.start();
+```
 
 Jeśli natomiast spróbujemy to zrobić po uruchomieniu wątku, dostaniemy wyjątek `IllegalThreadStateException`:
 
+```java
 @Test
 void shouldThrowIllegalThreadStateException() {
     // Given
@@ -48,9 +51,11 @@ void shouldThrowIllegalThreadStateException() {
     // Then
     assertThrows(IllegalThreadStateException.class, () -> thread.setDaemon(true));
 }
+```
 
 Typ **wątku** **dziedziczony** jest z **wątku** z jakiego został stworzony. Głównym **wątkiem** jest **wątek** **main**, który jest **wątkiem** klienckim. Oznacza to, że każdy tworzonym **wątek** jest domyślnie **wątkiem** klienckim:
 
+```java
 @Test
 void shouldCreateClientThread() {
     // Given
@@ -61,11 +66,13 @@ void shouldCreateClientThread() {
     // Then
     assertThat(daemon).isFalse();
 }
+```
 
 ### Testowanie
 
 Dodajmy jeszcze prosty **test** sprawdzający czy **wątek** na pewno został utworzony jako **demoniczny**:
 
+```java
 @Test
 void shouldCreateDaemonThreadFromDaemonThread() throws InterruptedException {
     // Given
@@ -90,17 +97,20 @@ void shouldCreateDaemonThread() {
     // Then
     assertThat(daemon).isTrue();
 }
+```
 
 ### Pula wątków
 
 Jak pisałem we wstępie, kiedyś pojawił się już artykuł o [ThreadFactory](http://codecouple.pl/2018/03/31/threadfactory-czyli-pool-n-thread-m/). Dzięki tej klasie, możemy określić, aby została utworzona **pula** **wątków**, w której każdy **wątek** jest **demoniczny**:
 
+```java
 ThreadFactory factory = new ThreadFactoryBuilder()
         .setNameFormat("task-name-%d")
         .setDaemon(true)
         .build();
 
 ExecutorService executorService = Executors.newFixedThreadPool(numberOfThread, factory);
+```
 
 ### Github
 
