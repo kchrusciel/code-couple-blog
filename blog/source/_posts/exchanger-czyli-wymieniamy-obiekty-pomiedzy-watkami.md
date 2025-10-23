@@ -27,14 +27,19 @@ Rozwiązaniem tego problemu jest klasa `Exchanger`, która pochodzi z pakietu `j
 
 Zaczynamy od stworzenia klasy `Exchanger`, która jest parametryzowana typem:
 
+```java
 Exchanger<String> stringExchanger = new Exchanger<>();
+```
 
 Po utworzeniu klasy do wymiany możemy stworzyć dwa zadania, które po wykonaniu pracy wymienią się danymi:
 
-stringExchanger.exchange("First Value")
+```java
+stringExchanger.exchange("First Value");
+```
 
 Napiszmy teraz test sprawdzający poprawność klasy `Exchanger`:
 
+```java
 @Test
 void shouldExchangeValuesBetweenThreads() throws InterruptedException {
     // Given
@@ -54,9 +59,11 @@ void shouldExchangeValuesBetweenThreads() throws InterruptedException {
     assertThat(firstJob.getExchangedValue()).isEqualTo("second");
     assertThat(secondJob.getExchangedValue()).isEqualTo("first");
 }
+```
 
 Implementacja wygląda następująco:
 
+```java
 class Job extends Thread {
 
     private final Exchanger<String> exchanger;
@@ -83,6 +90,7 @@ class Job extends Thread {
         return exchangedValue;
     }
 }
+```
 
 ### GitHub
 
