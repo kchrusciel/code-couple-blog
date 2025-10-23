@@ -27,6 +27,7 @@ Zanim zaczniemy stawiać pierwsze środowisko **CI** musimy zaopatrzyć się w *
 
 Po stworzeniu nowego **repozytorium** możemy umieścić tam **źródła**. W naszym przykładzie dodamy prosty projekt **Maven**, który będzie zawierał dwie **klasy**. Jedną z tych klas będzie klasa `pl.codecouple.Calculator`:
 
+```java
 class Calculator {
     
     int add(final int first, final int second) {
@@ -34,9 +35,11 @@ class Calculator {
     }
     
 }
+```
 
 Natomiast w folderze `src/test/java/pl/codecouple` znajdzie się klasa testowa `CalculatorTest`:
 
+```java
 class CalculatorTest {
 
     @Test
@@ -50,11 +53,13 @@ class CalculatorTest {
     }
 
 }
+```
 
 ### Odpalamy testy
 
 Jeśli stworzyliśmy nowy projekt **Maven** musimy pamiętać o dodaniu **pluginu**, który będzie odpalał testy:
 
+```xml
 <build>
     <plugins>
         <plugin>
@@ -64,6 +69,7 @@ Jeśli stworzyliśmy nowy projekt **Maven** musimy pamiętać o dodaniu **plugin
         </plugin>
     </plugins>
 </build>
+```
 
 ### Włączamy integracje
 
@@ -85,7 +91,9 @@ Udało nam się włączyć **ciągłą integrację** dla naszego **repozytorium*
 
 W głównym folderze naszego repozytorium umieszczamy plik `.travis.yml`. Jest to plik, w którym **konfigurujemy** proces budowania. W naszym przypadku wystarczy wskazać, iż budujemy projekt związany z językiem **Java**:
 
+```shell
 language: java
+```
 
 **Commitujemy** i **pushujemy** wszystkie wprowadzone przez nas zmiany. Jeśli wszystko wykonaliśmy pomyślnie to pierwszy **build** (proces budowania) powinien odpalić się **automatycznie**:
 
@@ -95,13 +103,15 @@ language: java
 
 Wprowadźmy teraz zmianę w naszym kodzie, która powinna zepsuć proces budowania:
 
+```java
 class Calculator {
 
     int add(final int first, final int second) {
-        return first \* second;
+        return first * second;
     }
 
 }
+```
 
  **Commit**, **push** i obserwujemy **Travis CI**:
 
@@ -115,11 +125,12 @@ Mechanizm **Badge** pozwala nam umieścić grafikę informującą o statusie nas
 
 ![](https://raw.githubusercontent.com/kchrusciel/code-couple-blog-assets/main/2019/02/travis-ci-badge.png)
 
- 
 
 Najczęstszym rozwiązaniem jest wstawienie poniższego wpisu do pliku `README.md` naszego **repozytorium**:
 
-\[!\[Build Status\](https://travis-ci.org/kchrusciel/travis-example.svg?branch=master)\](https://travis-ci.org/kchrusciel/travis-example)
+```shell
+[![Build Status](https://travis-ci.org/kchrusciel/travis-example.svg?branch=master)](https://travis-ci.org/kchrusciel/travis-example)
+```
 
 Gdzie w odpowiednie miejsca wstawiamy nazwę **repozytorium** oraz **brancha**.
 
@@ -129,4 +140,4 @@ Będzie! **Travis CI** posiada bardzo dużo ciekawych **funkcjonalności**. Zapr
 
 ### GitHub
 
-Całość jak zawsze na [GitHub'ie](https://github.com/kchrusciel/travis-example).
+Całość jak zawsze na [GitHubie](https://github.com/kchrusciel/travis-example).
